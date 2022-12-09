@@ -1,8 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-use Illuminate\Support\Facades\Route;
-=======
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\MailController;
@@ -15,7 +12,6 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\RegisterMail;
 use App\Mail\ApproveMail;
 use App\Mail\OrderMail;
->>>>>>> backup
 
 /*
 |--------------------------------------------------------------------------
@@ -28,11 +24,6 @@ use App\Mail\OrderMail;
 |
 */
 
-<<<<<<< HEAD
-Route::get('/', function () {
-    return view('welcome');
-});
-=======
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -162,4 +153,3 @@ Route::get('/register/mail/{id}', function($id) {
     Mail::to('axel.ferdinand@student.umn.ac.id')->send(new RegisterMail($mailData));
     return redirect('/');
 });
->>>>>>> backup
