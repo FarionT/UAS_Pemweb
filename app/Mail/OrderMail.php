@@ -69,7 +69,7 @@ class OrderMail extends Mailable
      */
     public function attachments()
     {
-        // return ['../public/app/temp/pdf_file.pdf'];
-        return [];
+        return ['../public/app/temp/pdf_file.pdf'];
+        // return [];
     }
 }

@@ -5,6 +5,7 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\MailController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Storage;
 use App\Models\User;
 use App\Models\Order;
 
@@ -128,6 +129,7 @@ Route::get('/orders/mail/{user_id}/{order_id}', function($user_id, $order_id) {
 
     //INI KIRIM KE EMAIL CS
     Mail::to('axel.ferdinand@student.umn.ac.id')->send(new OrderMail($mailData));
+    Storage::disk('local')->delete('temp/pdf_file.pdf');
     return redirect('/');
 });
 

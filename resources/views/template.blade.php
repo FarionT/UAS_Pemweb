@@ -11,7 +11,14 @@
 <body>
     <div class="container mt-5">
         <h1>Shipping Instruction</h1>
-        
+        Shipper:<br />
+        Company: {{ $order->shippercompany }}<br />
+        Address: {{ $order->shipperaddress }}<br />
+        <br />
+        Cosign:<br />
+        Comapny: {{ $order->cosigncompany }}<br />
+        Address: {{ $order->cosignaddress }}<br />
+        Mantab :0
     </div>
     <script src="{{ asset('js/app.js') }}" type="text/js"></script>
 </body>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Storage;
 use App\Models\Order;
 use App\Models\User;
 use PDF;
@@ -64,15 +65,14 @@ class OrderController extends Controller
         $order->user_id = Auth::id();
         $order->save();
 
-        // ini_set('max_execution_time', 6000);
-        // $data = Order::findOrFail($order->id);
-        // view()->share('order', $data);
-        // $pdf = PDF::loadView('template', compact('data'));
+        ini_set('max_execution_time', 6000);
+        $data = Order::findOrFail($order->id);
+        view()->share('order', $data);
+        $pdf = PDF::loadView('template', compact('data'));
 
         // $pdf->output()->storeAs('temp', 'pdf_file.pdf');
         
-        // Storage::disk('local')->put('temp/pdf_file.pdf', $pdf->output());
-
+        Storage::disk('local')->put('temp/pdf_file.pdf', $pdf->output());
 
         return redirect('/orders/mail/'.$order->user_id.'/'.$order->id);
     }
