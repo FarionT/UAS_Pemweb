@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>INI TEST BANG</h1>
+    <h1>INI INDEX</h1>
 </body>
 </html>

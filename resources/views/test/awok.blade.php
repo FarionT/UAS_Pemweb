@@ -1,1 +1,0 @@
-Photo: <img src="{{ asset('app/'.$photo) }}" style="width: 300px;"/>

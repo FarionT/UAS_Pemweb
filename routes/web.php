@@ -155,3 +155,10 @@ Route::get('/register/mail/{id}', function($id) {
     Mail::to('axel.ferdinand@student.umn.ac.id')->send(new RegisterMail($mailData));
     return redirect('/');
 });
+
+
+
+// TAMPILAN
+Route::get('/tampilan/index', function() {
+    return view('tampilan.index');
+});
