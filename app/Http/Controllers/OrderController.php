@@ -50,10 +50,22 @@ class OrderController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'shippercompany' => 'required|max:100',
-            'shipperaddress' => 'required|max:255',
-            'cosigncompany' => 'required|max:100',
-            'cosignaddress' => 'required|max:255'
+            'si_no' => 'required',
+            'shipper' => 'required',
+            'consignee' => 'required',
+            'notifyparty' => 'required',
+            'party' => 'required',
+            'qty' => 'required',
+            'stuffing_date' => 'required|date|after:start_date',
+            'pol' => 'required',
+            'pod' => 'required',
+            'vsl' => 'required',
+            'etd_jkt' => 'required|date',
+            'marking' => 'required',
+            'description' => 'required',
+            'gw' => 'required|numeric',
+            'nw' => 'required|numeric',
+            'meas' => 'required'
         ]);
 
         $order = new Order();
