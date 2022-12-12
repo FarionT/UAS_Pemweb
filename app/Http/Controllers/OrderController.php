@@ -51,10 +51,10 @@ class OrderController extends Controller
     {
         $this->validate($request, [
             'si_no' => 'required',
-            'shipper' => 'required',
-            'consignee' => 'required',
-            'notifyparty' => 'required',
-            'party' => 'required',
+            'shipper' => 'required|max:255',
+            'consignee' => 'required|max:255',
+            'notifyparty' => 'required|max:255',
+            'party' => 'required|max:255',
             'qty' => 'required',
             'stuffing_date' => 'required|date|after:start_date',
             'pol' => 'required',
@@ -62,10 +62,10 @@ class OrderController extends Controller
             'vsl' => 'required',
             'etd_jkt' => 'required|date',
             'marking' => 'required',
-            'description' => 'required',
+            'description' => 'required|max:255',
             'gw' => 'required|numeric',
             'nw' => 'required|numeric',
-            'meas' => 'required'
+            'meas' => 'required|numeric'
         ]);
 
         $order = new Order();
