@@ -20,8 +20,51 @@
     </style>
     @yield('style')
 </head>
+<style>
+    .nav-top {
+        width:90%;
+        margin-left: auto;
+        margin-right: auto;
+        display:flex;
+        justify-content:space-between;
+    }
+    .nav-top-left {
+        display: flex;
+    }
+    .nav-top-right {
+        display: flex;
+    }
+    .nav-top-left > img{
+        width:114.5px;
+        height:72.5px;
+    }
+    .nav-bottom {
+        color:white;
+        justify-content: space-around;
+        width:100%;
+        display:grid;
+        background-color:#011D83;
+        grid-template-columns: auto auto auto auto;
+    }
+</style>
 <body>
-    @yield('isi')  
+    <nav class="nav">
+        <div class="nav-top">
+            <div class="nav-top-left">
+                <img src="{{asset('app/assets/logo_jayamas.png')}}" alt=""><p style="margin-top:auto;margin-bottom:auto;font-size:30px;">PT Indotrans Jayamas Abadi</p>
+            </div>
+            <div class="nav-top-right">
+                <p style="margin-top:auto;margin-bottom:auto;font-size:30px;">USER</p>
+            </div>
+        </div>
+        <div class="nav-bottom">
+            <p>About Us</p>
+            <p>Services</p>
+            <p>Vision & Mission</p>
+            <p>Language</p>
+        </div>
+    </nav>
+    @yield('isi')
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 </body>

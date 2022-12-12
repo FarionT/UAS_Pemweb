@@ -18,23 +18,103 @@
         border-radius:50px;
         text-align:center;
     }
+    .tulisan_company {
+        text-align:start;
+        font-size:65px;
+        padding-left:50px;
+        margin-left:auto;
+        margin-right:auto;
+        gap:10%;
+        margin-bottom: -100px;
+    }
+    .deskripsi_company1 {
+        display:flex;
+        justify-content:center;
+        padding-top:50px;
+        padding-right:50px;
+        padding-left:50px;
+        margin-left:auto;
+        margin-right:auto;
+        gap:10%;
+    }
+    .deskripsi_company2 {
+        grid-column:span 2;
+        font-size:25px;
+        text-align:start;
+        padding:39px 50px 50px 50px; 
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .more {
+        width:90%;
+        background-color: white;
+        display:grid;
+        grid-template-columns: auto 20% auto;
+        margin:83px auto 83px auto;
+        text-align:center;
+        border-radius:40px;
+    }
+    .home_after_more {
+        width:90%;
+        margin-left:auto;
+        margin-right:auto;
+        display:grid;
+        grid-template-columns: 50% 50%;
+        gap:50px;
+    }
+    .home_after_more_services {
+        background-color:white;
+        border-radius:30px;
+        display:grid;
+        grid-template-columns: 30% 70%;
+        justify-content:center;
+        box-shadow: 5px 10px #011D83;
+    }
+    .home_after_more_services div > p {
+        font-size:60px;
+        font-weight: bold;
+    }
+    .home_after_more_card div > p {
+        font-size:60px;
+        font-weight: bold;
+    }
+    .home_after_more_card {
+        background-color:white;
+        border-radius:30px;
+        display:flex;
+        justify-content:center;
+        box-shadow: 5px 10px #011D83;
+    }
+    .button_more {
+        background-color:#011D83;
+        padding:0px;
+        opacity:0.65;
+        width:261px;
+        font-size:50px;
+        border-radius:20px;
+        color:white;
+    }
+    .services {
+        grid-column:span 2;
+    }
 </style>
 @endsection
 @section('isi')
-<?php
-@include('navbar.blade.php');
-?>
-<img src="" alt=""/>
-<div style="display:flex;flex-direction:column;">
+
+{{-- <img src="{{asset('app/assets/image 11.png')}}" alt=""> --}}
+{{-- <img src="{{asset('app/assets/logo_jayamas.png')}}" /> --}}
 <div class="home_company" style="gap:15rem;">
     <div style="height:70%;width:100%;">
         <img src="{{ asset('app/assets/shipment.png') }}" style="width:100%;height:70%;position:absolute;z-index:-1;"/><p style="text-align:center;font-family:kanit;font-size:50px;color:#011D83;"><b>More than 15 years of experience in the Forwarding and Inland Transport \Trucking industry</b></p>
     </div>
+
     <div style="background-color:#B0D1FC">
+        <div style="width:90%;margin-left:auto;margin-right:auto;">
+            <p class="tulisan_company">COMPANY</p>
+        </div>
         <div class="home_company_section">
-            <p style="text-align:start;font-size:65px;width:90%;margin-left:auto;margin-right:auto;gap:10%;">COMPANY</p>
-            <div style="display:flex;justify-content:center;width:90%;margin-left:auto;margin-right:auto;gap:10%;"> 
-                <p style="font-size:25px;text-align:start;">PT. JAYAMAS ABADI started operating in 1999.
+            <div class="deskripsi_company1"> 
+                <p style="font-size:25px;text-align:start;padding-top:39px;">PT. JAYAMAS ABADI started operating in 1999.
                     The business started from scratch as a transporter serving in the city,
                     and then began to grow by serving JABODETABEK in 2002.
                     The great response from our customers made us more confident to
@@ -45,7 +125,7 @@
                 </p>
                 <img src="{{asset('app/assets/image 11.png')}}" style="width:549px;height:411px;"alt="">              
             </div>
-            <p style="grid-column:span 2;font-size:25px;text-align:start;width:90%;margin-left:auto;margin-right:auto">Currently, PT. JAYAMAS ABADI developed by opening a new business
+            <p class="deskripsi_company2">Currently, PT. JAYAMAS ABADI developed by opening a new business
                 in the field of Forwarders under the name PT. INDOTRANS JAYAMAS
                 ABADI. With the support of a solid team and the application of the
                 right technology in managing the business entrusted to us, we are
@@ -54,15 +134,40 @@
                 appropriately.
             </p>
         </div>
+        <div class="more">
+            <hr style="margin-top:auto;margin-bottom:auto;margin-left:20px;"/><p style="margin-left:auto;margin-right:auto;font-size:60px;">MORE</p><hr style="margin-top:auto;margin-bottom:auto;margin-right:20px;"/>
+        </div>
+
+        <div class="home_after_more">
+            <div class="home_after_more_card">
+                <img src="{{asset('app/assets/visi misi.png')}}" style="width:300px;padding-top:50px;padding-bottom:50px;">
+                <div style="padding-top:50px;padding-bottom:50px;">
+                    <p>Vision & <br>Mission</p>
+                    <button class="button_more"><p style="margin-top: auto;margin-bottom:auto;">GO</p></button>
+                </div>
+            </div>
+            <div class="home_after_more_card">
+                <img src="{{asset('app/assets/about_us.png')}}" style="width:300px;padding-top:50px;padding-bottom:50px;">
+                <div style="padding-top:50px;padding-bottom:50px;">
+                    <p>About<br>US</p>
+                    <button class="button_more"><p style="margin-bottom:auto;">CHECK</p></button>
+                </div>
+            </div>
+            <div class="home_after_more_services"  style="grid-column:span 2;gap:50px;">
+                <img src="{{asset('app/assets/services.png')}}" style="width:320px;padding-top:50px;padding-bottom:50px;margin-left:auto;">
+                <div style="padding-top:50px;padding-bottom:50px;">
+                    <p>SERVICES</p>
+                    <p  style="font-size:28px;">Ingin melakukan pemesanan jasa pengantaran barang secara domestik <br> ataupun ekspor dan impor? <br> Melalui jalur apapun?
+                        PT Indotrans Jayamas Abadi <br> menjadi pilihan yang  tepat. </p>
+                    <div style="display:flex; gap:3rem;">
+                        <p style="font-size:28px;">Silahkan Lakukan Pemesanan</p><button class="button_more"><p style="margin-bottom:auto;">GO</p></button>
+                    </div>
+    
+                </div>
+            </div>
+            
+        </div>
     </div>
 </div>
-<div class="more">
-    <hr/><p>MORE</p><hr/>
-</div>
-<div class="vision&mission">
-    <div>
-        <p>VISION & MISSION</p>
-    </div>
-</div>
-</div>
+
 @endsection
