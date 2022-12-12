@@ -35,8 +35,6 @@ return new class extends Migration
             $table->string('vsl');
             $table->date('etd_jkt');
             $table->date('etd_sin');
-            $table->string('vsl');
-            $table->date('etd_sin');
             $table->date('eta_lax');
             $table->date('eta_chi');
             $table->string('kpbc');
