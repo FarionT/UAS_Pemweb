@@ -166,3 +166,7 @@ Route::get('/tampilan/index', function() {
 Route::get('/tampilan/aboutus', function(){
     return view('tampilan.aboutus');
 });
+
+Route::get('/tampilan/expimpform', function(){
+    return view('tampilan.expimpform');
+});
