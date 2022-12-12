@@ -29,6 +29,5 @@ class Order extends Model
         'gw',
         'nw',
         'meas'
-
     ];
 }
