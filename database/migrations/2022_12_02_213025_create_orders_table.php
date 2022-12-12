@@ -15,15 +15,17 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
+
             $table->integer('type_id');
-            $table->string('pickup_add');
-            $table->string('delivery_add');
+            $table->string('pickup_add')->nullable()->default(NULL);
+            $table->string('delivery_add')->nullable()->default(NULL);
+            $table->string('si_no');
             $table->date('order_date');
-            $table->string('batch_no');
+            $table->string('bc_no');
             $table->string('to');
             $table->string('attn');
             $table->string('shipper');
-            $table->string('cosignee');
+            $table->string('consignee');
             $table->string('notifyparty');
             $table->string('party');
             $table->string('qty');
@@ -32,10 +34,11 @@ return new class extends Migration
             $table->integer('tare_weight');
             $table->date('stuffing_date');
             $table->string('pol');
+            $table->string('pod');
             $table->string('vsl');
             $table->date('etd_jkt');
-            $table->date('etd_sin');
-            $table->string('vsl');
+            $table->date('eta_sin');
+            $table->string('m_vsl');
             $table->date('etd_sin');
             $table->date('eta_lax');
             $table->date('eta_chi');
@@ -47,7 +50,21 @@ return new class extends Migration
             $table->integer('gw');
             $table->integer('nw');
             $table->integer('meas');
-            $table->string('notes');
+            $table->string('notes')->nullable();
+
+            $table->string('shipping_ref');
+            $table->string('hbl_num');
+            $table->string('scac_code');
+            $table->string('place_of_receipt');
+            $table->string('port_of_loading');
+            $table->string('port_of_discharge');
+            $table->string('place_of_delivery');
+            $table->string('bl_form');
+            $table->string('place_of_issue');
+            $table->string('freight');
+            $table->integer('container_seal_no');
+
+
             $table->integer('user_id');
             $table->boolean('accept')->default(0);
             $table->timestamps();
