@@ -162,3 +162,7 @@ Route::get('/register/mail/{id}', function($id) {
 Route::get('/tampilan/index', function() {
     return view('tampilan.index');
 });
+
+Route::get('/tampilan/aboutus', function(){
+    return view('tampilan.aboutus');
+});
