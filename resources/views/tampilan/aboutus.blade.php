@@ -30,14 +30,14 @@
 @section('isi')
 <div class="container">
     <div id="judul" class="d-flex justify-content-center">
-        <img src="gambar/aboutus.png"/>
+        <img src="{{  asset('app/assets/image/image 8.png') }}"/>
         <p id="tulisanJudul">ABOUT US</p>
     </div>
     <div id="company" class="mt-5 bg-white p-5 rounded-5 shadow shadow-top-0">
         <div id="upperCompany" class="d-flex flex-row my-5">
             <p>PT. JAYAMAS ABADI started operating in 1999.
             The business started from scratch as a transporter serving in the city,
-            and then began to grow by serving JABODETABEK in 2002.
+            and then began to grow by serving JABODETABEK in 2002
             The great response from our customers made us more confident to
             be able to add units and be able to provide domestic outbound
             transportation services. Currently we have served transportation
