@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
 
-            $table->integer('type_id');
+            $table->integer('type_id')->comment('1:OE, 2:OI, 3:AE, 4:AI, 5:IT, 6:PC, 7:ODOM, 8:ADOM');
             $table->string('pickup_add')->nullable()->default(NULL);
             $table->string('delivery_add')->nullable()->default(NULL);
             $table->string('si_no');
