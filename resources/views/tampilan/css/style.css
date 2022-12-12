@@ -1,0 +1,10 @@
+.home_company_section{
+    color :blue;
+    display:grid;
+    grid-template-columns: auto auto;
+}
+.more {
+    display:flex;
+    width:80%;
+    margin
+}

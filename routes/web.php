@@ -39,7 +39,8 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 Route::get('/', function () {
-    return view('company.index');
+    // return view('company.index');
+    return view('tampilan.home');
 });
 
 Route::get('/aboutus', function () {

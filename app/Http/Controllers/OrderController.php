@@ -22,7 +22,7 @@ class OrderController extends Controller
         if(!Gate::allows('see-all-order')) {
             abort('403');
         }
-
+            // return view('home');
         $orders = Order::all();
         return view('orders.index', ['orders' => $orders]);
     }
