@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\RegisterMail;
 use App\Mail\ApproveMail;
 use App\Mail\OrderMail;
+use App\Mail\AppOrderMail;
 
 /*
 |--------------------------------------------------------------------------
@@ -103,6 +104,30 @@ Route::get('/orders/approve/{id}', function($id) {
     $order->accept = 1;
     $order->save();
     $orders = Order::all();
+    // return view('orders.index', ['orders' => $orders]);
+    return redirect('/orders/approve/mail/'.$order->id);
+});
+Route::get('/orders/approve/mail/{id}', function($id) {
+    $order = Order::find($id);
+    $user = User::find($order->user_id);
+    $mailData = [
+        'subject' => 'Approvement Account',
+        'username' => $user->username,
+        'firstname' => $user->firstname,
+        'lastname' => $user->lastname,
+        'email' => $user->email,
+        'notelp' => $user->notelp,
+        'company' => $user->company,
+        'country' => $user->country,
+        'city' => $user->city,
+        'address' => $user->address,
+        'npwp' => $user->npwp,
+        'nib' => $user->nib
+    ];
+
+    //INI KIRIM KE PEMBUAT ACCOUNT
+    Mail::to($user->email)->send(new AppOrderMail($mailData));
+    $orders = Order::all();
     return view('orders.index', ['orders' => $orders]);
 });
 
@@ -167,6 +192,22 @@ Route::get('/tampilan/index', function() {
     return view('tampilan.index');
 });
 
-Route::get('/tampilan/aboutus', function(){
+Route::get('/tampilan/aboutus', function() {
     return view('tampilan.aboutus');
+});
+
+Route::get('/tampilan/login', function() {
+    return view('tampilan.login');
+});
+
+Route::get('/tampilan/register1', function() {
+    return view('tampilan.register1');
+});
+
+Route::get('/tampilan/register2', function() {
+    return view('tampilan.register2');
+});
+
+Route::get('/tampilan/visimisi', function() {
+    return view('tampilan.visimisi');
 });

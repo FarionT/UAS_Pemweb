@@ -13,9 +13,22 @@ class Order extends Model
     
     use HasFactory;
     protected $fillable = [
-        'shippercompany',
-        'shipperaddress',
-        'cosigncompany',
-        'cosignaddress',
+        'si_no',
+        'shipper',
+        'consignee',
+        'notifyparty',
+        'party',
+        'qty',
+        'stuffing_date',
+        'pol',
+        'pod',
+        'vsl',
+        'etd_jkt',
+        'marking',
+        'description',
+        'gw',
+        'nw',
+        'meas'
+
     ];
 }
