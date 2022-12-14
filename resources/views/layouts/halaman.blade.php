@@ -21,6 +21,23 @@
     @yield('style')
 </head>
 <body>
+    <nav class="nav">
+        <div class="nav-top">
+            <div class="nav-top-left">
+                <img src="{{asset('app/assets/logo_jayamas.png')}}" alt=""><p style="margin-top:auto;margin-bottom:auto;font-size:30px;">PT Indotrans Jayamas Abadi</p>
+            </div>
+            <div class="nav-top-right">
+                <p style="margin-top:auto;margin-bottom:auto;font-size:30px;">USER</p>
+            </div>
+        </div>
+        <div class="nav-bottom">
+            <p class="my-auto">About Us</p>
+            <p class="my-auto">Services</p>
+            <p class="my-auto">Vision & Mission</p>
+            <p class="my-auto">Language</p>
+        </div>
+    </nav>
+    44444hrbgbgtrgrg
     @yield('isi')  
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
