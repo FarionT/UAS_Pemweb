@@ -67,6 +67,11 @@ Route::prefix('admin')->group(function () {
         $users = User::all()->where('role_id', 2);
         return view('admin.confirm', ['users' => $users]);
     });
+
+    Route::get('/detail/{id}', function($id) {
+        $user = User::findOrFail($id);
+        return view('admin.detail', ['user' => $user]);
+    });
     
     Route::get('/approve/{id}', function($id) {
         $user = User::findOrFail($id);
@@ -138,7 +143,7 @@ Route::get('/orders/approve/mail/{id}', function($id) {
 Route::get('/orders/{id}/search', function($id) {
     $orders = Order::all()->where('user_id', $id);
     return view('orders.search', ['orders' => $orders]);
-})->middleware('auth');;
+})->middleware('auth');
 
 Route::get('/orders/mail/{user_id}/{order_id}', function($user_id, $order_id) {
     $user = User::find($user_id);
@@ -191,6 +196,8 @@ Route::get('/register/mail/{id}', function($id) {
 
 
 
+
+
 // TAMPILAN
 Route::get('/tampilan/index', function() {
     return view('tampilan.index');
@@ -198,6 +205,10 @@ Route::get('/tampilan/index', function() {
 
 Route::get('/tampilan/aboutus', function() {
     return view('tampilan.aboutus');
+});
+
+Route::get('/tampilan/service', function() {
+    return view('tampilan.service');
 });
 
 Route::get('/tampilan/login', function() {
