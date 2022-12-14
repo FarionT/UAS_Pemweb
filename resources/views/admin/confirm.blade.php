@@ -25,12 +25,12 @@
             <table class="table table-striped hover table-bordered" id="mydatatable">
                 <thead>
                     <tr style="border-bottom: 1px solid black;">
-                        <th style="width: 170px;"><h3>Nama</h3></th>
-                        <th style="width: 400px;"><h3>Email</h3></th>
-                        <th style="width: 170px;"><h3>NPWP</h3></th>
-                        <th style="width: 170px;"><h3>NIB</h3></th>
-                        <th style="width: 170px;"><h3>Status</h3></th>
-                        <th style="width: 170px;"><h3>Tindakan</h3></th>
+                        <th><h3>Nama</h3></th>
+                        <th><h3>Email</h3></th>
+                        <th><h3>NPWP</h3></th>
+                        <th><h3>NIB</h3></th>
+                        <th><h3>Status</h3></th>
+                        <th><h3>Tindakan</h3></th>
                     </tr>
                 </thead>
                 <tbody>
