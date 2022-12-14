@@ -54,7 +54,7 @@
                 </tbody>
             </table>
             <div class="d-flex justify-content-center">
-                <a href="/" class="btn" style="text-decoration: none; color: white; border-radius: 50px; width: 180px; background-color: #011D83"><h5>Back</h5></a>
+                <a href="/" class="btn" style="text-decoration: none; color: white; border-radius: 50px; width: 180px; background-color: #011D83"><h5 class="mx-auto my-auto">Back</h5></a>
             </div>
         </div>
     </div>
