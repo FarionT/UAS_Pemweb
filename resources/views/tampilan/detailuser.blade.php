@@ -134,7 +134,7 @@
                             <p id="pembatas" class="align-items-center my-auto"><span>User Profile</span></p>
                         </div>
                     </div>
-                    <div class="userprofil" style="height: 310px;">
+                    <div class="userprofil" >
                         <div class="biodataSingkat pt-3 ps-4 form-group form-control-lg">
                             <form action="" method="post" class="mx-auto">
                                 @csrf
@@ -169,9 +169,36 @@
                             </form>
                         </div>
                     </div>
+                    <div class="mt-5">
+                        <div id="pembatas1" class="d-flex justify-content-center">
+                            <p id="pembatas" class="align-items-center my-auto"><span>Booking History</span></p>
+                        </div>
+                    </div>
+                    <div class="userprofil">
+                        <table class="table table-striped hover table-bordered" id="mydatatable">
+                            <thead>
+                                <tr style="border-bottom: 1px solid black;">
+                                    <th style="width: 170px;"><h3>ID</h3></th>
+                                    <th style="width: 400px;"><h3>Order Date</h3></th>
+                                    <th style="width: 170px;"><h3>Shipper</h3></th>
+                                    <th style="width: 170px;"><h3>Cosignee</h3></th>
+                                    <th style="width: 170px;"><h3>Status</h3></th>
+                                    <th style="width: 170px;"><h3>Tindakan</h3></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                               <tr>
+                                    <td>
+                                        <a href="#" class="btn btn-primary" style="text-decoration: none; color: white;">Detail</a>
+                                        <a href="#" class="btn btn-primary" style="text-decoration: none; color: white;">Approve</a>
+                                    </td>
+                                </tr>
+                               
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-                <div>
-                </div>
+        
             </form>
         </div>
     </div>

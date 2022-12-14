@@ -226,3 +226,7 @@ Route::get('/tampilan/register2', function() {
 Route::get('/tampilan/visimisi', function() {
     return view('tampilan.visimisi');
 });
+
+Route::get('/tampilan/detailuser', function() {
+    return view('tampilan.detailuser');
+});
