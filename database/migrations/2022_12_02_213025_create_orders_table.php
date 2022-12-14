@@ -15,10 +15,59 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->string('shippercompany');
-            $table->string('shipperaddress');
-            $table->string('cosigncompany');
-            $table->string('cosignaddress');
+
+            $table->integer('type_id')->comment('1:OE, 2:OI, 3:AE, 4:AI, 5:IT, 6:PC, 7:ODOM, 8:ADOM');
+            $table->string('pickup_add')->nullable()->default(NULL);
+            $table->string('delivery_add')->nullable()->default(NULL);
+            $table->string('si_no');
+            $table->date('order_date');
+            $table->string('bc_no');
+            $table->string('to');
+            $table->string('attn');
+            $table->string('shipper');
+            $table->string('consignee');
+            $table->string('notifyparty');
+            $table->string('party');
+            $table->string('qty');
+            $table->string('cont');
+            $table->string('seal_no');
+            $table->integer('tare_weight');
+            $table->date('stuffing_date');
+            $table->string('pol');
+            $table->string('pod');
+            $table->string('vsl');
+            $table->date('etd_jkt');
+<<<<<<< HEAD
+            $table->date('eta_sin');
+            $table->string('m_vsl');
+=======
+>>>>>>> 531cd2a52e951513de0004dff9e1691534bc6870
+            $table->date('etd_sin');
+            $table->date('eta_lax');
+            $table->date('eta_chi');
+            $table->string('kpbc');
+            $table->integer('peb');
+            $table->date('req_date');
+            $table->string('marking');
+            $table->string('description');
+            $table->integer('gw');
+            $table->integer('nw');
+            $table->integer('meas');
+            $table->string('notes')->nullable();
+
+            $table->string('shipping_ref');
+            $table->string('hbl_num');
+            $table->string('scac_code');
+            $table->string('place_of_receipt');
+            $table->string('port_of_loading');
+            $table->string('port_of_discharge');
+            $table->string('place_of_delivery');
+            $table->string('bl_form');
+            $table->string('place_of_issue');
+            $table->string('freight');
+            $table->integer('container_seal_no');
+
+
             $table->integer('user_id');
             $table->boolean('accept')->default(0);
             $table->timestamps();

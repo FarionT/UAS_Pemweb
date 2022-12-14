@@ -10,14 +10,35 @@
 @section('style')
 <style>
     body {
-        background-color: #B0D1FC;
+        background-color: #B0D1FC !important;
     }
+
+    p{font-family: 'Titillium Web', sans-serif;}
 
     form {
         background-color: white;
         border-radius: 20px;
-        box-shadow: 15px 10px #001560;
+        box-shadow: 20px 15px #001560;
         padding: 30px;
+    }
+
+    input {
+        border-radius: 10px;
+        border-color: black;
+    }
+
+    select {
+        border-radius: 10px;
+        border: 1;
+        border-width: 2px;
+        border-color: black;
+    }
+
+    textarea {
+        border-radius: 10px;
+        border: 1;
+        border-width: 2px;  
+        border-color: black;
     }
     
     .jarak {
@@ -27,10 +48,62 @@
     .jarakexclusive{
         width: 138px;
     }
+
+    button {
+        padding: 5px 15px;
+        border-radius: 50px;
+        border-color: black;
+        border: 0;
+        background-color: white;
+        box-shadow: rgb(0 0 0 / 10%) 8px 8px 8px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        font-size: 15px;
+        transition: all .5s ease;
+    }   
+
+    .clearbutton:hover {
+        letter-spacing: 3px;
+        background-color: hsl(0, 100%, 50%);
+        color: hsl(0, 0%, 100%);
+        box-shadow: rgb(220,20,60) 0px 7px 29px 0px;
+    }
+
+    .clearbutton:active {
+        letter-spacing: 3px;
+        background-color: hsl(0, 100%, 50%);
+        color: hsl(0, 0%, 100%);
+        box-shadow: rgb(220,20,60) 0px 0px 0px 0px;
+        transform: translateY(10px);
+        transition: 100ms;
+    }
+
+    .submitbutton:hover {
+        letter-spacing: 3px;
+        background-color: hsl(261deg 80% 48%);
+        color: hsl(0, 0%, 100%);
+        box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+    }
+
+    .submitbutton:active {
+        letter-spacing: 3px;
+        background-color: hsl(261deg 80% 48%);
+        color: hsl(0, 0%, 100%);
+        box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+        transform: translateY(10px);
+        transition: 100ms;
+    }
 </style>
 @endsection
+
 @section('isi')
-<div class="container">
+<div class="mt-5 mb-3">
+    <div class="d-flex justify-content-center">
+        <img src="{{ asset('app/assets/image/shipping.png') }}" style="width:100px;" />
+        <p class="align-items-center my-auto" style="font-size: 60px;">Shipping Instruction</p>
+    </div>
+</div>
+<div class="container mt-5">
     <form action="/orders" method="post">
         @csrf
         <div class="d-flex justify-content-between">
@@ -102,26 +175,43 @@
         </div>
         <br />
         <hr />
-        <table border="1" style="width: 500px;">
-            <tr>
-                <th style="width: 150px;">Marking</th>
-                <th>QTY</th>
-                <th>DESCRIPTION</th>
-                <th>G.W (KGS)</th>
-                <th>N.W (KGS)</th>
-                <th>MEAS (CBM)</th>
-            </tr>
-            <tr>
-                <td><input type="textarea" name="markingcol" style="width: 150px;"/></td>
-                <td><input type="textarea" name="qtycol" style="width: 100px;"/></td>
-                <td><input type="textarea" name="desccol" style="width: 250px;"/></td>
-                <td><input type="textarea" name="gwcol" style="width: 150px;"/></td>
-                <td><input type="textarea" name="nwcol" style="width: 150px;"/></td>
-                <td><input type="textarea" name="meascol" style="width: 240px;"/></td>
-            </tr>
-        </table>
+        <div class="notes mt-3">
+            <div class="d-flex justify-content-between">
+                <div>
+                    <b><label for="qtynote">QUANTITY</label></b><br />
+                    <input type="text" name="qtynote" style="width: 200px;height:40px"/>
+                </div>
+                <div>
+                    <b><label for="gwnote">G.W (KGS)</label></b><br />
+                    <input type="text" name="gwnote" style="width: 200px;height:40px"/>
+                </div>
+                <div>
+                    <b><label for="nwnote">N.W (KGS)</label></b><br />
+                    <input type="text" name="nwnote" style="width: 200px;height:40px"/>
+                </div>
+                <div>
+                    <b><label for="nwnote">MEAS (CBM)</label></b><br />
+                    <input type="text" name="measnote" style="width: 200px;height:40px"/>
+                </div>
+            </div>
+            <div>
+                <b><label for="markingnote">MARKING</label></b><br />
+                <textarea style="width: 1055px;"></textarea>
+            </div>
+            <div>
+                <b><label for="markingnote">DESCRIPTION</label></b><br />
+                <textarea style="width: 1055px;"></textarea>
+            </div>
+        </div>
         <br />
-        <button type="submit">Submit</button>
+        <div class="d-flex justify-content-between">
+            <div class="d-flex">
+                <button class="clearbutton" type="submit">Clear</button>
+            </div>
+            <div class="d-flex">
+                <button class="submitbutton" type="submit">Submit</button>
+            </div>
+        </div>
     </form>
 </div>
 @endsection
