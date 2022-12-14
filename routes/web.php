@@ -234,3 +234,7 @@ Route::get('/tampilan/profile', function() {
 Route::get('/tampilan/home', function() {
     return view('tampilan.home');
 });
+
+Route::get('/tampilan/detailuser', function() {
+    return view('tampilan.detailuser');
+});

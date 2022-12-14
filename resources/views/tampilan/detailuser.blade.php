@@ -175,22 +175,21 @@
                         </div>
                     </div>
                     <div class="userprofil">
-                        <table class="table table-striped hover table-bordered" id="mydatatable">
+                        <table class="table table-striped hover table-bordered">
                             <thead>
                                 <tr style="border-bottom: 1px solid black;">
-                                    <th style="width: 170px;"><h3>ID</h3></th>
-                                    <th style="width: 400px;"><h3>Order Date</h3></th>
-                                    <th style="width: 170px;"><h3>Shipper</h3></th>
-                                    <th style="width: 170px;"><h3>Cosignee</h3></th>
-                                    <th style="width: 170px;"><h3>Status</h3></th>
-                                    <th style="width: 170px;"><h3>Tindakan</h3></th>
+                                    <th style="width: auto;">ID<</th>
+                                    <th style="width: auto;">Order Date</th>
+                                    <th style="width: auto;">Shipper</th>
+                                    <th style="width: auto;">Cosignee</th>
+                                    <th style="width: auto;">Status</th>
+                                    <th style="width: auto;">Tindakan</th>
                                 </tr>
                             </thead>
                             <tbody>
                                <tr>
                                     <td>
                                         <a href="#" class="btn btn-primary" style="text-decoration: none; color: white;">Detail</a>
-                                        <a href="#" class="btn btn-primary" style="text-decoration: none; color: white;">Approve</a>
                                     </td>
                                 </tr>
                                
