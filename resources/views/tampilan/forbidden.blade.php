@@ -64,7 +64,7 @@
 @endsection
 
 @section('isi')
-    <div class="d-flex justify-content-center my-auto" style="">
+    <div class="d-flex justify-content-center my-auto">
         <div class="warnbox align-self-center my-5 ">
             <div class="atas">
                 <p class="my-auto justify-content-center d-flex">Warning!</p>
