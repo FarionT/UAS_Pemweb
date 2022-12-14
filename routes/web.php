@@ -223,10 +223,18 @@ Route::get('/tampilan/visimisi', function() {
     return view('tampilan.visimisi');
 });
 
+Route::get('/tampilan/forbidden', function() {
+    return view('tampilan.forbidden');
+});
+
 Route::get('/tampilan/profile', function() {
     return view('tampilan.profile');
 });
 
 Route::get('/tampilan/home', function() {
     return view('tampilan.home');
+});
+
+Route::get('/tampilan/detailuser', function() {
+    return view('tampilan.detailuser');
 });

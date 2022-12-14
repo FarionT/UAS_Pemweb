@@ -21,6 +21,9 @@
     @yield('style')
 </head>
 <style>
+    body {
+        font-family:Titillium Web;
+    }
     .nav-top {
         width:90%;
         margin-left: auto;
@@ -42,6 +45,7 @@
         color:white;
         justify-content: space-around;
         width:100%;
+        height:50px;
         display:grid;
         background-color:#011D83;
         grid-template-columns: auto auto auto auto;
@@ -56,7 +60,7 @@
     }
 </style>
 <body>
-    <nav class="nav">
+    <nav class="nav" style="background-color: white;">
         <div class="nav-top">
             <div class="nav-top-left">
                 <a href="/"><img src="{{asset('app/assets/image/logo_jayamas.png')}}" alt="" style="width:100px;"/></a><p style="margin-top:auto;margin-bottom:auto;font-size:30px;">PT Indotrans Jayamas Abadi</p>
