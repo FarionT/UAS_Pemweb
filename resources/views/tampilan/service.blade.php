@@ -88,7 +88,7 @@
 @endsection
 
 @section('isi')
-    <div class="mt-5">
+    <div class="mt-5 mb-10">
         <div class="d-flex justify-content-center">
             <img src="{{ asset('app/assets/image/service.png') }}" style="width:100px;" />
             <p class="align-items-center my-auto" style="font-size: 60px;">SERVICE</p>

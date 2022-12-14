@@ -54,14 +54,6 @@ Route::get('/service', function () {
     return view('company.service');
 });
 
-Route::get('/services', function() {
-    return view('tampilan.service');
-});
-
-Route::get('/profile', function() {
-    return view('tampilan.profile');
-});
-
 Route::prefix('admin')->group(function () {
     Route::get('/account', function() {
         $users = User::all()->where('role_id', 2);
@@ -207,6 +199,10 @@ Route::get('/tampilan/aboutus', function() {
     return view('tampilan.aboutus');
 });
 
+Route::get('/tampilan/expimpform', function() {
+    return view('tampilan.expimpform');
+});
+
 Route::get('/tampilan/service', function() {
     return view('tampilan.service');
 });
@@ -226,6 +222,11 @@ Route::get('/tampilan/register2', function() {
 Route::get('/tampilan/visimisi', function() {
     return view('tampilan.visimisi');
 });
+
+Route::get('/tampilan/profile', function() {
+    return view('tampilan.profile');
+});
+
 Route::get('/tampilan/home', function() {
     return view('tampilan.home');
 });
