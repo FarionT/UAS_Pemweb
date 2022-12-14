@@ -56,7 +56,7 @@ class OrderController extends Controller
             'notifyparty' => 'required|max:255',
             'party' => 'required|max:255',
             'qty' => 'required',
-            'stuffing_date' => 'required|date|after:start_date',
+            'stuffing_date' => 'required|date',
             'pol' => 'required',
             'pod' => 'required',
             'vsl' => 'required',

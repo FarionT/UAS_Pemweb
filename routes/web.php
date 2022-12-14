@@ -54,10 +54,23 @@ Route::get('/service', function () {
     return view('company.service');
 });
 
+Route::get('/services', function() {
+    return view('tampilan.service');
+});
+
+Route::get('/profile', function() {
+    return view('tampilan.profile');
+});
+
 Route::prefix('admin')->group(function () {
     Route::get('/account', function() {
         $users = User::all()->where('role_id', 2);
         return view('admin.confirm', ['users' => $users]);
+    });
+
+    Route::get('/detail/{id}', function($id) {
+        $user = User::findOrFail($id);
+        return view('admin.detail', ['user' => $user]);
     });
     
     Route::get('/approve/{id}', function($id) {
@@ -130,7 +143,7 @@ Route::get('/orders/approve/mail/{id}', function($id) {
 Route::get('/orders/{id}/search', function($id) {
     $orders = Order::all()->where('user_id', $id);
     return view('orders.search', ['orders' => $orders]);
-})->middleware('auth');;
+})->middleware('auth');
 
 Route::get('/orders/mail/{user_id}/{order_id}', function($user_id, $order_id) {
     $user = User::find($user_id);
@@ -183,6 +196,8 @@ Route::get('/register/mail/{id}', function($id) {
 
 
 
+
+
 // TAMPILAN
 Route::get('/tampilan/index', function() {
     return view('tampilan.index');
@@ -192,8 +207,13 @@ Route::get('/tampilan/aboutus', function() {
     return view('tampilan.aboutus');
 });
 
+<<<<<<< HEAD
 Route::get('/tampilan/expimpform', function() {
     return view('tampilan.expimpform');
+=======
+Route::get('/tampilan/service', function() {
+    return view('tampilan.service');
+>>>>>>> 76db72e93b0b6465518a84c98856682ff6a3e0be
 });
 
 Route::get('/tampilan/login', function() {
@@ -211,7 +231,12 @@ Route::get('/tampilan/register2', function() {
 Route::get('/tampilan/visimisi', function() {
     return view('tampilan.visimisi');
 });
+<<<<<<< HEAD
 
 Route::get('/tampilan/service', function() {
     return view('tampilan.service');
+=======
+Route::get('/tampilan/home', function() {
+    return view('tampilan.home');
+>>>>>>> 76db72e93b0b6465518a84c98856682ff6a3e0be
 });

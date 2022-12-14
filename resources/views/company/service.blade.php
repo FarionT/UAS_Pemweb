@@ -1,5 +1,5 @@
 <h1>INI SERVICE</h1>
-<header styel="display: flex;">
+<header style="display: flex;">
     <a href="/">HomePage</a>
     <a href="/aboutus">About Us</a>
     <a href="/service">Service</a>
