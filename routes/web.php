@@ -199,6 +199,10 @@ Route::get('/tampilan/aboutus', function() {
     return view('tampilan.aboutus');
 });
 
+Route::get('/tampilan/expimpform', function() {
+    return view('tampilan.expimpform');
+});
+
 Route::get('/tampilan/service', function() {
     return view('tampilan.service');
 });
@@ -217,10 +221,6 @@ Route::get('/tampilan/register2', function() {
 
 Route::get('/tampilan/visimisi', function() {
     return view('tampilan.visimisi');
-});
-
-Route::get('/tampilan/services', function() {
-    return view('tampilan.service');
 });
 
 Route::get('/tampilan/profile', function() {
