@@ -51,7 +51,7 @@
     <nav class="nav">
         <div class="nav-top">
             <div class="nav-top-left">
-                <img src="{{asset('app/assets/logo_jayamas.png')}}" alt=""><p style="margin-top:auto;margin-bottom:auto;font-size:30px;">PT Indotrans Jayamas Abadi</p>
+                <img src="{{asset('app/assets/image/logo_jayamas.png')}}" alt=""><p style="margin-top:auto;margin-bottom:auto;font-size:30px;">PT Indotrans Jayamas Abadi</p>
             </div>
             <div class="nav-top-right">
                 <p style="margin-top:auto;margin-bottom:auto;font-size:30px;">USER</p>
