@@ -58,10 +58,10 @@
             </div>
         </div>
         <div class="nav-bottom">
-            <p>About Us</p>
-            <p>Services</p>
-            <p>Vision & Mission</p>
-            <p>Language</p>
+            <p class="my-auto">About Us</p>
+            <p class="my-auto">Services</p>
+            <p class="my-auto">Vision & Mission</p>
+            <p class="my-auto">Language</p>
         </div>
     </nav>
     @yield('isi')
