@@ -33,6 +33,7 @@
         margin-bottom: 50px;
         padding:10px;
         display: flex;
+        box-shadow: 5px 5px 5px;
     }
 
     .kotak {
@@ -44,6 +45,7 @@
         margin-bottom: 30px;
         padding:0px;
         border-radius: 20px;
+        box-shadow: 5px 5px 5px;
     }
 
     .kotak>.judul{

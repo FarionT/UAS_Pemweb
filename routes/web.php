@@ -58,6 +58,10 @@ Route::get('/services', function() {
     return view('tampilan.service');
 });
 
+Route::get('/profile', function() {
+    return view('tampilan.profile');
+});
+
 Route::prefix('admin')->group(function () {
     Route::get('/account', function() {
         $users = User::all()->where('role_id', 2);
