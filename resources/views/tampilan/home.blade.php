@@ -2,6 +2,8 @@
 @section('title','home')
 @section('style')
 <style>
+
+    /* ini homepage */
     .home_company {
         display:flex;
         flex-direction: column;
@@ -97,11 +99,19 @@
     .services {
         grid-column:span 2;
     }
+    .footer_content{
+        display:flex;
+        justify-content: space-between;
+    }
+    .footer_left {
+        border-top-right-radius: 1000px;
+        border-top:#011D83 solid 20px;
+        border-right:#011D83 solid 20px;
+        background-color: white;
+    }
 </style>
 @endsection
 @section('isi')
-
-{{-- <img src="{{asset('app/assets/image 11.png')}}" alt=""> --}}
 {{-- <img src="{{asset('app/assets/logo_jayamas.png')}}" /> --}}
 <div class="home_company" style="gap:15rem;">
     <div style="height:70%;width:100%;">
@@ -140,21 +150,21 @@
 
         <div class="home_after_more">
             <div class="home_after_more_card">
-                <img src="{{asset('app/assets/visi misi.png')}}" style="width:300px;padding-top:50px;padding-bottom:50px;">
+                <img src="{{asset('app/assets/image/visi misi.png')}}" style="width:300px;padding-top:50px;padding-bottom:50px;">
                 <div style="padding-top:50px;padding-bottom:50px;">
                     <p>Vision & <br>Mission</p>
                     <button class="button_more"><p style="margin-top: auto;margin-bottom:auto;">GO</p></button>
                 </div>
             </div>
             <div class="home_after_more_card">
-                <img src="{{asset('app/assets/about_us.png')}}" style="width:300px;padding-top:50px;padding-bottom:50px;">
+                <img src="{{asset('app/assets/image/about_us.png')}}" style="width:300px;padding-top:50px;padding-bottom:50px;">
                 <div style="padding-top:50px;padding-bottom:50px;">
                     <p>About<br>US</p>
                     <button class="button_more"><p style="margin-bottom:auto;">CHECK</p></button>
                 </div>
             </div>
             <div class="home_after_more_services"  style="grid-column:span 2;gap:50px;">
-                <img src="{{asset('app/assets/services.png')}}" style="width:320px;padding-top:50px;padding-bottom:50px;margin-left:auto;">
+                <img src="{{asset('app/assets/image/services.png')}}" style="width:320px;padding-top:50px;padding-bottom:50px;margin-left:auto;">
                 <div style="padding-top:50px;padding-bottom:50px;">
                     <p>SERVICES</p>
                     <p  style="font-size:28px;">Ingin melakukan pemesanan jasa pengantaran barang secara domestik <br> ataupun ekspor dan impor? <br> Melalui jalur apapun?
@@ -169,5 +179,46 @@
         </div>
     </div>
 </div>
+<footer style="background-color:#DCEBFF;">
+    <div>
+        <hr/><p>GET MORE INFORMATION</p>
+    </div>
+    <div class="footer_content">
+        <div class="footer_left flex-grow-1 gap-4">
+            <div class="contact_us gap-5">
+                <p style="font-weight:bold;font-size:32px;">Contact Us</p>
+                <div class="d-flex">
+                    <img src="{{asset('app/assets/image/whatsapp.png')}}" style="width:61px;height:62px;">
+                    <div>
+                        <p>+6221 8899 2122(Hunting)</p>
+                        <p>+6281 1122 6395</p>
+                        <p>+6281 1122 6396</p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <img src="{{asset('app/assets/image/email.png')}}" style="width:61px;height:62px;"/>
+                    <div>
+                        <p>cs@jayamasabadi.id</p>
+                        <p>Sales@jayamasabadi.id</p>
+                    </div>
+                </div>
+                <div>
+                    <b><p style="font-size:24px;">Member of APTRINDO</p></b>
+                    <img src="{{asset('app/assets/image/aptrindo.png')}}" style="width:125px;height:120.5px;"alt="">
+                </div>
+                
+            </div>
+        </div>
+        <div class="footer-right">
+            <div class="our_office">
+                <p >Our Office</p>
+            </div>
+        </div>
+        <div class="footer_right rounded-circle" style="background-color: red;width:539px;height:539px;">
+            
+        </div>
+    </div>
+    
+</footer>
 
 @endsection
