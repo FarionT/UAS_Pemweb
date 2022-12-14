@@ -84,6 +84,55 @@
         font-size: 28px;
     }
 
+    .kotak-kanan {
+        margin-left: 62px;
+    }
+    
+    .image {
+        width: 250px;
+        margin-left: 10px;
+    }
+
+    .impor {display: flex;}
+    .ekspor {display: flex;}
+    .domestic1 {display: flex;}
+    .domestic2 {display: flex;}
+    
+    @media screen and (max-width: 1100px) {
+        .image {width: 230px;}
+        .isi>p {font-size: 25px;}
+        .isi {margin-bottom: 20px;}
+    }
+    @media screen and (max-width: 1000px) {
+        .image {width: 210px;}
+        .isi>p {font-size: 22px;}
+        .isi {margin-bottom: 40px;}
+    }
+    @media screen and (max-width: 950px) {
+        .impor {display: block;}
+        .ekspor {display: block;}
+        .domestic1 {display: block;}
+        .domestic2 {display: block;}
+        .image {width: 250px;}
+        .isi>p {font-size: 35px;}
+        .isi {margin-bottom: 0px;}
+        .kotak, .kotak-kanan{
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 100px;
+        }
+    }
+    @media screen and (max-width: 700px) {
+        .image {width: 230px;}
+        .isi>p {font-size: 30px;}
+        .isi {margin-bottom: 20px;}
+    }
+    @media screen and (max-width: 630px) {
+        .image {width: 200px;}
+        .isi>p {font-size: 25px;}
+        .isi {margin-bottom: 50px;}
+    }
 </style>
 @endsection
 
@@ -99,29 +148,29 @@
             <p id="pembatas" class="align-items-center my-auto"><span>Export</span></p>
         </div>
     </div>
-    <div class="ekspor d-flex">
+    <div class="ekspor">
         <div class="kotak">
             <div class="judul">
                 <p class="align-items-center my-auto">Air Freight (AE)</p>
             </div>
             <div class="isi mt-2 d-flex">
-                <img src="{{ asset('app/assets/image/pesawat.png') }}" style="width:250px; height:auto; margin-left:10px" />
+                <img src="{{ asset('app/assets/image/pesawat.png') }}" class="image" />
                 <p class="my-auto text-center">Layanan penyedia transportasi ekspor melalui jalur udara</p>
             </div>
             <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
-                <a href="/" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
+                <a href="/orders/create/AE" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
             </div>
         </div>
-        <div class="kotak" style="margin-left: 62px;">
+        <div class="kotak kotak-kanan">
             <div class="judul">
                 <p class="align-items-center my-auto">Sea Freight (OE)</p>
             </div>
             <div class="isi mt-2 d-flex">
-                <img src="{{ asset('app/assets/image/kapal.png') }}" style="width:250px; height:auto; margin-left:10px" />
+                <img src="{{ asset('app/assets/image/kapal.png') }}" class="image" />
                 <p class="my-auto text-center">Layanan penyedia transportasi ekspor melalui jalur laut</p>
             </div>
             <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
-                <a href="/" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
+                <a href="/orders/create/OE" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
             </div>
         </div>
     </div>
@@ -130,29 +179,29 @@
             <p id="pembatas" class="align-items-center my-auto"><span>Import</span></p>
         </div>
     </div>
-    <div class="impor d-flex">
+    <div class="impor">
         <div class="kotak">
             <div class="judul">
                 <p class="align-items-center my-auto">Air Freight (AI)</p>
             </div>
             <div class="isi mt-2 d-flex">
-                <img src="{{ asset('app/assets/image/pesawat.png') }}" style="width:250px; height:auto; margin-left:10px" />
+                <img src="{{ asset('app/assets/image/pesawat.png') }}" class="image" />
                 <p class="my-auto text-center">Layanan penyedia transportasi ekspor melalui jalur udara</p>
             </div>
             <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
-                <a href="/" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
+                <a href="/orders/create/AI" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
             </div>
         </div>
-        <div class="kotak" style="margin-left: 62px;">
+        <div class="kotak kotak-kanan">
             <div class="judul">
                 <p class="align-items-center my-auto">Sea Freight (OI)</p>
             </div>
             <div class="isi mt-2 d-flex">
-                <img src="{{ asset('app/assets/image/kapal.png') }}" style="width:250px; height:auto; margin-left:10px" />
+                <img src="{{ asset('app/assets/image/kapal.png') }}" class="image" />
                 <p class="my-auto text-center">Layanan penyedia transportasi ekspor melalui jalur laut</p>
             </div>
             <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
-                <a href="/" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
+                <a href="/orders/create/OI" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
             </div>
         </div>
     </div>
@@ -162,55 +211,55 @@
         </div>
     </div>
     <div class="domestic d-flex flex-column">
-        <div class="d-flex mb-5">
+        <div class="domestic1 mb-5">
             <div class="kotak">
                 <div class="judul">
                     <p class="align-items-center my-auto">Inland Truck (IT)</p>
                 </div>
                 <div class="isi mt-2 d-flex">
-                    <img src="{{ asset('app/assets/image/inland.png') }}" style="width:250px; height:auto; margin-left:20px" />
+                    <img src="{{ asset('app/assets/image/inland.png') }}" class="image" />
                     <p class="my-auto text-center">Layanan penyedia transportasi domestik melalui jalur darat</p>
                 </div>
                 <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
-                    <a href="/" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
+                    <a href="/orders/create/IT" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
                 </div>
             </div>
-            <div class="kotak" style="margin-left: 62px;">
+            <div class="kotak kotak-kanan">
                 <div class="judul">
                     <p class="align-items-center my-auto">Project Cargo (PC)</p>
                 </div>
                 <div class="isi mt-2 d-flex">
-                    <img src="{{ asset('app/assets/image/cargo.png') }}" style="width:250px; height:auto;" />
+                    <img src="{{ asset('app/assets/image/cargo.png') }}" class="image" />
                     <p class="mx-auto my-auto text-center" style="padding-right: 30px;">Layanan penyedia transportasi project cargo</p>
                 </div>
                 <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
-                    <a href="/" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
+                    <a href="/orders/create/PC" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
                 </div>
             </div>
         </div>
-        <div class="d-flex mt-5 mb-5">
+        <div class="domestic2 mt-5 mb-5">
             <div class="kotak">
                 <div class="judul">
                     <p class="align-items-center my-auto">Air Freight (ADOM)</p>
                 </div>
                 <div class="isi mt-2 d-flex">
-                    <img src="{{ asset('app/assets/image/pesawat.png') }}" style="width:250px; height:auto; margin-left:10px" />
+                    <img src="{{ asset('app/assets/image/pesawat.png') }}" class="image" />
                     <p class="my-auto text-center">Layanan penyedia transportasi ekspor melalui jalur udara</p>
                 </div>
                 <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
-                    <a href="/" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
+                    <a href="/orders/create/ADOM" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
                 </div>
             </div>
-            <div class="kotak" style="margin-left: 62px;">
+            <div class="kotak kotak-kanan">
                 <div class="judul">
                     <p class="align-items-center my-auto">Sea Freight (ODOM)</p>
                 </div>
                 <div class="isi mt-2 d-flex">
-                    <img src="{{ asset('app/assets/image/kapal.png') }}" style="width:250px; height:auto; margin-left:10px" />
+                    <img src="{{ asset('app/assets/image/kapal.png') }}" class="image" />
                     <p class="my-auto text-center">Layanan penyedia transportasi ekspor melalui jalur laut</p>
                 </div>
                 <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
-                    <a href="/" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
+                    <a href="/orders/create/ODOM" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
                 </div>
             </div>
         </div>

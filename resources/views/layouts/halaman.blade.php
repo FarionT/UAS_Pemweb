@@ -63,7 +63,7 @@
     <nav class="nav" style="background-color: white;">
         <div class="nav-top">
             <div class="nav-top-left">
-                <a href="/"><img src="{{asset('app/assets/image/logo_jayamas.png')}}" alt="" style="width:100px;"/></a><p style="margin-top:auto;margin-bottom:auto;font-size:30px;">PT Indotrans Jayamas Abadi</p>
+                <a href="/"><img src="{{asset('app/assets/image/logo_jayamas.png')}}" alt="" style="width:100px; margin-right: 15px;"/></a><p style="margin-top:auto;margin-bottom:auto;font-size:30px;">PT Indotrans Jayamas Abadi</p>
             </div>
             <div class="nav-top-right">
                 <p style="margin-top:auto;margin-bottom:auto;font-size:30px;">USER</p>

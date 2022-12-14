@@ -107,7 +107,7 @@
     <form action="/orders" method="post">
         @csrf
         <div class="d-flex justify-content-between">
-            <p style="font-size: 30px;">SI NO: SI-XX-XXXX / XX / XX / 20XX</p>
+            <p style="font-size: 30px;">SI NO: SI-{{ $type_id }}-XXXX / XX / XX / 20XX</p>
             <img src="{{asset('app/assets/image/logo_jayamas.png')}}" style="width: 100px;" />
         </div>
         <p><b>*Shipper:</b></p>

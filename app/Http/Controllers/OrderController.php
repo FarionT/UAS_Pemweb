@@ -35,6 +35,7 @@ class OrderController extends Controller
     public function create()
     {
         if(!Gate::allows('create-order')) {
+            // return view('tampilan.forbidden');
             abort('403');
         }
         

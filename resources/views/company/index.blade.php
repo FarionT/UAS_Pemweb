@@ -34,7 +34,8 @@
             <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a><br />
 
             @if (Route::has('register'))
-                <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+                <!-- <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a> -->
+                <a href="/privacy" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
             @endif
         @endauth
     </div>
@@ -45,8 +46,6 @@
         <p>Maaf bang akun anda belum di konfirmasi</p>
     @endif
 @endauth
-
-<a href="/orders/create">Order Shipping</a><br />
 
 @auth
     @if (Auth::user()->role_id == 1)
