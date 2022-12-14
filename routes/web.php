@@ -226,3 +226,7 @@ Route::get('/tampilan/register2', function() {
 Route::get('/tampilan/visimisi', function() {
     return view('tampilan.visimisi');
 });
+
+Route::get('/tampilan/forbidden', function() {
+    return view('tampilan.forbidden');
+});
