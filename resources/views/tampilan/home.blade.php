@@ -115,7 +115,7 @@
 {{-- <img src="{{asset('app/assets/logo_jayamas.png')}}" /> --}}
 <div class="home_company" style="gap:15rem;">
     <div style="height:70%;width:100%;">
-        <img src="{{ asset('app/assets/shipment.png') }}" style="width:100%;height:70%;position:absolute;z-index:-1;"/><p style="text-align:center;font-family:kanit;font-size:50px;color:#011D83;"><b>More than 15 years of experience in the Forwarding and Inland Transport \Trucking industry</b></p>
+        <img src="{{ asset('app/assets/image/shipment.png') }}" style="width:100%;height:70%;position:absolute;z-index:-1;"/><p style="text-align:center;font-family:kanit;font-size:50px;color:#011D83;"><b>More than 15 years of experience in the Forwarding and Inland Transport \Trucking industry</b></p>
     </div>
 
     <div style="background-color:#B0D1FC">
@@ -133,7 +133,7 @@
                     outside Java, namely Sumatra, Kalimantan, as well as several
                     destinations in Eastern Indonesia.
                 </p>
-                <img src="{{asset('app/assets/image 11.png')}}" style="width:549px;height:411px;"alt="">              
+                <img src="{{asset('app/assets/image/image 11.png')}}" style="width:549px;height:411px;"alt="">              
             </div>
             <p class="deskripsi_company2">Currently, PT. JAYAMAS ABADI developed by opening a new business
                 in the field of Forwarders under the name PT. INDOTRANS JAYAMAS
