@@ -46,22 +46,30 @@
         background-color:#011D83;
         grid-template-columns: auto auto auto auto;
     }
+    .nav-text {
+        color: white;
+        text-decoration: none;
+    }
+    .nav-text:hover {
+        color: white;
+        font-weight: bold;
+    }
 </style>
 <body>
     <nav class="nav">
         <div class="nav-top">
             <div class="nav-top-left">
-                <img src="{{asset('app/assets/image/logo_jayamas.png')}}" alt=""><p style="margin-top:auto;margin-bottom:auto;font-size:30px;">PT Indotrans Jayamas Abadi</p>
+                <a href="/"><img src="{{asset('app/assets/image/logo_jayamas.png')}}" alt="" style="width:100px;"/></a><p style="margin-top:auto;margin-bottom:auto;font-size:30px;">PT Indotrans Jayamas Abadi</p>
             </div>
             <div class="nav-top-right">
                 <p style="margin-top:auto;margin-bottom:auto;font-size:30px;">USER</p>
             </div>
         </div>
         <div class="nav-bottom">
-            <p class="my-auto">About Us</p>
-            <p class="my-auto">Services</p>
-            <p class="my-auto">Vision & Mission</p>
-            <p class="my-auto">Language</p>
+            <a href="/aboutus" class="nav-text my-auto">About Us</a>
+            <a href="/service" class="nav-text my-auto">Services</a>
+            <a href="/visi&misi" class="nav-text my-auto">Vision & Mission</a>
+            <a href="/" class="nav-text my-auto">Language</a>
         </div>
     </nav>
     @yield('isi')  
