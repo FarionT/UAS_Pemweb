@@ -2,23 +2,236 @@
 @section('title','home')
 @section('style')
 <style>
-    @media only screen and (max-width: 791px) {
+    @media only screen and (max-width: 1250px) {
+        
+        .home_after_more_card >img {
+            width: 250px !important; 
+
+        }
+        .deskripsi_company1 > img {
+            width: 500px !important;
+            height: 361px !important;
+        }
+        .deskripsi_company1 > p {
+            font-size:1.2rem!important;
+        }
+        .deskripsi_company2  {
+            font-size:1.2rem!important;
+        }
+        .button_more {
+            background-color:#011D83;
+            padding:0px;
+            opacity:0.65;
+            width:200px !important;
+            font-size:50px !important;
+            border-radius:20px;
+            color:white;
+        }
+        
+        .footer_left {
+            
+        }
+      
+    }
+    @media only screen and (max-width: 1000px) {
+        .home_company {
+            gap:10px !important;
+        }
         .deskripsi_company1 {
             flex-direction:column-reverse!important;
-            /* display:flex;
-            justify-content:center;
-            padding-top:50px;
-            padding-right:50px;
-            padding-left:50px;
-            margin-left:auto;
-            margin-right:auto;
-            gap:10%; */
+        }
+        .home_after_more_card >img {
+            width: 200px !important; 
+
+        }
+        .home_after_more_services >img {
+            width: 200px !important; 
+
+        }
+        .deskripsi_pesanan {
+            font-size:1rem !important;
+        }
+        .button_more {
+            width:200px !important;
+            font-size:50px !important;
         }
         .tulisan_company {
             font-size:3rem !important;
         }
         .company_box {
-            margin-top:-100px!important;
+            margin-top:-120px!important;
+        }
+        .deskripsi_company1 > img {
+            width:100%!important;
+        }
+        .deskripsi_company1 > p {
+            font-size:1.3rem!important;
+        }
+        .deskripsi_company2  {
+            font-size:1.3rem!important;
+        }
+        
+        .service_button {
+            flex-direction: column !important;
+        }
+        /* .footer_left {
+            flex-direction: column;
+        } */
+        .footer_content {
+            flex-direction: column-reverse;
+            justify-content: center !important;
+            align-items: center;
+            gap:20px;
+        }
+        .footer_left {
+            border-radius:0px !important;
+            border-right: none !important;
+            width: 100% !important;
+            justify-content: space-around !important;
+        }
+        .more {
+            margin-top: 50px !important;
+        }
+    }
+    @media only screen and (max-width: 820px) {
+        .deskripsi_company1 {
+            flex-direction:column-reverse!important;
+        }
+        .tulisan_company {
+            font-size:3rem !important;
+        }
+        .company_box {
+            margin-top:-120px!important;
+        }
+        .deskripsi_company1 > img {
+            width:100%!important;
+        }
+        .deskripsi_company1 > p {
+            font-size:1.3rem!important;
+        }
+        .deskripsi_company2  {
+            font-size:1.3rem!important;
+        }
+        .home_after_more {
+            grid-template-columns:100% !important;
+        }
+        .home_after_more_services {
+            display:flex !important;
+            align-items: center;
+            gap:50px !important;
+            grid-column: span 1 !important;
+        }
+        .deskripsi_pesanan {
+            display: none;
+        }
+        .service_button {
+            flex-direction: column !important;
+        }
+        /* .footer_left {
+            flex-direction: column;
+        } */
+        .footer_content {
+            flex-direction: column-reverse;
+            justify-content: center !important;
+            align-items: center;
+            gap:20px;
+        }
+        .footer_left {
+            border-radius:0px !important;
+            border-right: none !important;
+            width: 100% !important;
+            justify-content: space-around !important;
+        }
+        .home_after_more_card {
+            align-items: center;
+            gap:50px !important;
+            /* justify-content: space-around !important; */
+        }
+        .service_button > p {
+            font-size: 2rem !important;
+        }
+    }
+    @media only screen and (max-width: 450px) {
+        .text_big {
+            font-size:0.8rem !important;
+        }
+        .service_button {
+            gap:0px !important;
+        }
+        .home_after_more img {
+            width:120px !important;
+        }
+        .home_after_more_card div > p {
+            font-size: 1.5rem !important;
+        }
+        .home_after_more_services div > p {
+            font-size: 1.5rem !important;
+        }
+        .home_after_more_services div div > p {
+            font-size: 0.5rem !important;
+        }
+        .home_company {
+            gap:5px !important;
+        }
+        .button_more {
+            width:100px !important;
+        }
+        .button_more > p {
+            font-size: 1rem !important;
+        }
+        .footer_content {
+            flex-direction: column-reverse;
+            justify-content: center !important;
+            align-items: center;
+            gap:20px;
+        }
+        .footer_left {
+            border-radius:0px !important;
+            border-right: none !important;
+            width: 100% !important;
+            /* align-items: center !important; */
+            padding-left:0px !important;
+            padding-top:20px !important;
+            justify-content: space-around !important;
+        }
+        .footer_left p {
+            font-size:0.5rem;
+        }
+        .footer_right {
+            width:300px !important;
+            /* height: 100% !important; */
+            height: 300px !important;
+        }
+        .footer_right p {
+            font-size: 0.7rem !important;
+            width: 100% !important;
+        }
+        .contact_img {
+            width:40px !important;
+            height: 40px !important
+        }
+        .aptrindo {
+            width:60px !important;
+            height:60px !important;
+        }
+        .footer_right img {
+            width:120px !important;
+            height:120px !important;
+        }
+        .deskripsi_company1 > img {
+            width:100%!important;
+            height: 100%!important;
+        }
+        .deskripsi_company1 > p{
+            font-size:0.7rem !important;
+        }
+        .deskripsi_company2 {
+            padding:20px !important;
+            padding-top: 0px !important;
+            font-size :0.7rem !important;
+        }
+        .deskripsi_company1 {
+            padding:50px 20px 10px 20px!important;
         }
     }
     body {
@@ -73,7 +286,7 @@
         background-color: white;
         display:grid;
         grid-template-columns: auto 20% auto;
-        margin:83px auto 83px auto;
+        margin:50px auto 50px auto;
         text-align:center;
         border-radius:40px;
     }
@@ -82,7 +295,7 @@
         margin-left:auto;
         margin-right:auto;
         display:grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: auto auto;
         gap:50px;
     }
     .home_after_more_services {
@@ -130,6 +343,7 @@
         border-top:#011D83 solid 20px;
         border-right:#011D83 solid 20px;
         background-color: white;
+        padding-left:50px;
     }
     .contact_list >p {
         margin-top:0px;
@@ -182,7 +396,7 @@
     <div style="margin-top:-130px;" class="company_box">
         <div class="home_company_section">
             <div class="deskripsi_company1"> 
-                <p style="font-size:25px;text-align:start;padding-top:39px;">PT. JAYAMAS ABADI started operating in 1999.
+                <p style="font-size:25px;text-align:start;">PT. JAYAMAS ABADI started operating in 1999.
                     The business started from scratch as a transporter serving in the city,
                     and then began to grow by serving JABODETABEK in 2002.
                     The great response from our customers made us more confident to
@@ -203,7 +417,7 @@
             </p>
         </div>
         <div class="more">
-            <hr style="margin-top:auto;margin-bottom:auto;margin-left:20px;"/><p style="margin-left:auto;margin-right:auto;font-size:60px;">MORE</p><hr style="margin-top:auto;margin-bottom:auto;margin-right:20px;"/>
+            <hr style="margin-top:auto;margin-bottom:auto;margin-left:20px;"/><p style="margin-left:auto;margin-right:auto;font-size:30px;" class="my-auto">MORE</p><hr style="margin-top:auto;margin-bottom:auto;margin-right:20px;"/>
         </div>
 
         <div class="home_after_more">
@@ -222,13 +436,13 @@
                 </div>
             </div>
             <div class="home_after_more_services"  style="grid-column:span 2;gap:50px;">
-                <img src="{{asset('app/assets/image/service.png')}}" style="width:320px;padding-top:50px;padding-bottom:50px;margin-left:auto;">
+                <img src="{{asset('app/assets/image/service.png')}}" style="width:320px;padding-top:50px;padding-bottom:50px;">
                 <div style="padding-top:50px;padding-bottom:50px;">
                     <p>SERVICES</p>
-                    <p  style="font-size:28px;">Ingin melakukan pemesanan jasa pengantaran barang secara domestik <br> ataupun ekspor dan impor? <br> Melalui jalur apapun?
+                    <p  style="font-size:28px;" class="deskripsi_pesanan">Ingin melakukan pemesanan jasa pengantaran barang secara domestik <br> ataupun ekspor dan impor? <br> Melalui jalur apapun?
                         PT Indotrans Jayamas Abadi <br> menjadi pilihan yang  tepat. </p>
-                    <div style="display:flex; gap:3rem;">
-                        <p style="font-size:28px;">Silahkan Lakukan Pemesanan</p><button class="button_more"><p style="margin-bottom:auto;">GO</p></button>
+                    <div style="display:flex; gap:3rem;" class="service_button">
+                        <p style="font-size:28px;" class="silahkan_pesan">Silahkan Lakukan Pemesanan</p><button class="button_more"><p style="margin-bottom:auto;">GO</p></button>
                     </div>
     
                 </div>
@@ -242,11 +456,11 @@
 </div>
 <footer style="background-color:#DCEBFF;margin-top:-2.5rem" class="pt-5">
     <div class="footer_content">
-        <div class="footer_left flex-grow-1 gap-5 ps-5 pt-5">
+        <div class="footer_left flex-grow-1 gap-5 pt-5">
             <div class="contact_us">
-                <p style="font-weight:bold;font-size:32px;">Contact Us</p>
+                <p style="font-weight:bold;font-size:32px;" class="text_big">Contact Us</p>
                 <div class="d-flex mt-3 gap-3">
-                    <img src="{{asset('app/assets/image/whatsapp.png')}}" style="width:61px;height:62px;">
+                    <img src="{{asset('app/assets/image/whatsapp.png')}}" class="contact_img" style="width:61px;height:62px;">
                     <div class="contact_list">
                         <p>+6221 8899 2122(Hunting)</p>
                         <p>+6281 1122 6395</p>
@@ -254,34 +468,34 @@
                     </div>
                 </div>
                 <div class="d-flex mt-3 gap-3">
-                    <img src="{{asset('app/assets/image/email.png')}}" style="width:61px;height:62px;"/>
+                    <img src="{{asset('app/assets/image/email.png')}}" class="contact_img" style="width:61px;height:62px;"/>
                     <div>
                         <p>cs@jayamasabadi.id</p>
                         <p>Sales@jayamasabadi.id</p>
                     </div>
                 </div>
                 <div class="mt-3">
-                    <b><p style="font-size:24px;">Member of APTRINDO</p></b>
-                    <img src="{{asset('app/assets/image/aptrindo.png')}}" style="width:125px;height:120.5px;"alt="">
+                    <b><p style="font-size:24px;" class="text_big">Member of APTRINDO</p></b>
+                    <img src="{{asset('app/assets/image/aptrindo.png')}}" class="aptrindo" style="width:125px;height:120.5px;"alt="">
                 </div>
             </div>
             <div class="footer-right">
                 <div class="our_office" style="font-family: Titillium Web">
-                    <p style="font-weight:bold;font-size:32px;">Our Office</p>
-                    <p style="">
-                        <b>Head Office :</b><br/>
+                    <p style="font-weight:bold;font-size:32px;" class="text_big">Our Office</p>
+                    <p>
+                        <b class="text_big">Head Office :</b><br/>
                         Jl. Marunda Makmur No. 1 RT 002 RW 008 <br>
                         Kebon Kelapa Segara Makmur, <br>
                         Taruma Jaya, Bekasi 17211 Indonesia <br>
                     </p>
                     <p>
-                        <b>Sales / Operational Office : </b>
+                        <b class="text_big">Sales / Operational Office : </b>
                         Kirana Commercial Avenue, <br>
                         Bella Terra Lifestyle Center Lt. 1 No. 26 <br>
                         Jl. Boulevard Raya A2 No. 1 Kelapa Gading, Jakarta Utara
                     </p>
                     <p>
-                        <b>Cilegon Office : </b>
+                        <b class="text_big">Cilegon Office : </b>
                         Jl. Lingkar Selatan KM.5, <br>
                         Karangasem, Kec. Cibeber, <br>
                         Kota Cilegon, Banten 42426 <br>
