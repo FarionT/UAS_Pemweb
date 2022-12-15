@@ -312,7 +312,7 @@
         background-color:white;
         border-radius:30px;
         display:grid;
-        grid-template-columns: 30% 70%;
+        grid-template-columns: auto auto;
         justify-content:center;
         box-shadow: 5px 10px #011D83;
     }
@@ -446,7 +446,7 @@
                 </div>
             </div>
             <div class="home_after_more_services"  style="grid-column:span 2;gap:50px;">
-                <img src="{{asset('app/assets/image/service.png')}}" style="width:320px;padding-top:50px;padding-bottom:50px;">
+                <img src="{{asset('app/assets/image/service.png')}}" style="width:300px;padding-top:50px;padding-bottom:50px;">
                 <div style="padding-top:50px;padding-bottom:50px;">
                     <p>SERVICES</p>
                     <p  style="font-size:28px;" class="deskripsi_pesanan">Ingin melakukan pemesanan jasa pengantaran barang secara domestik <br> ataupun ekspor dan impor? <br> Melalui jalur apapun?
