@@ -198,7 +198,7 @@
                 </div>
             </div>
             <div class="home_after_more_services"  style="grid-column:span 2;gap:50px;">
-                <img src="{{asset('app/assets/image/services.png')}}" style="width:320px;padding-top:50px;padding-bottom:50px;margin-left:auto;">
+                <img src="{{asset('app/assets/image/service.png')}}" style="width:320px;padding-top:50px;padding-bottom:50px;margin-left:auto;">
                 <div style="padding-top:50px;padding-bottom:50px;">
                     <p>SERVICES</p>
                     <p  style="font-size:28px;">Ingin melakukan pemesanan jasa pengantaran barang secara domestik <br> ataupun ekspor dan impor? <br> Melalui jalur apapun?

@@ -37,11 +37,6 @@ return new class extends Migration
             $table->string('pod');
             $table->string('vsl');
             $table->date('etd_jkt');
-<<<<<<< HEAD
-            $table->date('eta_sin');
-            $table->string('m_vsl');
-=======
->>>>>>> 531cd2a52e951513de0004dff9e1691534bc6870
             $table->date('etd_sin');
             $table->date('eta_lax');
             $table->date('eta_chi');
