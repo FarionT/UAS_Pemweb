@@ -21,6 +21,43 @@
     @yield('style')
 </head>
 <style>
+    @media only screen and (max-width: 820px) {
+        .nav-top-left > img{
+            width:74.5px !important;
+            height:42.5px !important;
+        }
+        .nav-top-left > p {
+            font-size:18px!important;
+        }
+        .nav-top-right > p {
+            font-size:16px !important;
+        }
+        .nav-bottom > p{
+            font-size:12px!important;
+        }
+        .nav-bottom {
+            height:40px!important;
+        }
+    }
+    @media only screen and (max-width: 450px) {
+        .nav-top-left > img{
+            width:54.5px !important;
+            height:28.5px !important;
+        }
+        .nav-top-left > p {
+            font-size:14px!important;
+        }
+        .nav-top-right > p {
+            font-size:11px !important;
+        }
+        .nav-bottom {
+            height:30px!important;
+        }
+        .nav-bottom a {
+            font-size:12px !important;
+        }
+
+    }
     body {
         font-family:Titillium Web;
     }
@@ -68,6 +105,7 @@
     <nav class="nav" style="background-color: white;">
         <div class="nav-top">
             <div class="nav-top-left">
+<<<<<<< HEAD
                 <a href="/"><img src="{{asset('app/assets/image/logo_jayamas.png')}}" alt="" style="width:100px; margin-right: 15px;"/></a>
                 <p style="margin-top:auto;margin-bottom:auto;font-size:30px;">PT Indotrans Jayamas Abadi</p>
             </div>
@@ -76,6 +114,13 @@
             <div class="d-flex nav-top-right">
                 <p style="margin-top:auto;margin-bottom:auto;font-size:30px;">{{ Auth::user()->username }}</p>
                 <a href="/profile" class="my-auto"><img src="{{ asset('app/'.Auth::user()->photo )}}" class="rounded-circle ms-3" style="width: 60px;" /></a>
+=======
+                <img src="{{asset('app/assets/image/logo_jayamas.png')}}" alt="" style="width:100px; margin-right: 15px;"/><p style="margin-top:auto;margin-bottom:auto;font-size:30px;">PT Indotrans Jayamas Abadi</p>
+            </div>
+            <div class="nav-top-right">
+                {{-- ini diisi apo lagi? --}}
+                <p style="margin-top:auto;margin-bottom:auto;font-size:30px;">USER</p>
+>>>>>>> 2051963b65d81a79ec2e60b334096b153f3b7202
             </div>
             @endauth
             @else
