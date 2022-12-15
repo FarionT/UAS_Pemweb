@@ -1,12 +1,6 @@
 @extends('layouts.halaman')
 @section('title', 'Shipping Instruction')
-@if($errors)
-    <ul>
-        @foreach($errors->all() as $error)
-            <li>{{$error}}</li>
-        @endforeach
-    </ul>
-@endif
+
 @section('style')
 <style>
     body {
@@ -60,7 +54,22 @@
         text-transform: uppercase;
         font-size: 15px;
         transition: all .5s ease;
-    }   
+    }
+
+    .atobtn {
+        padding: 5px 15px;
+        border-radius: 50px;
+        border-color: black;
+        border: 0;
+        background-color: white;
+        box-shadow: rgb(0 0 0 / 10%) 8px 8px 8px;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        font-size: 15px;
+        transition: all .5s ease;
+        text-decoration: none;
+        color: black;
+    }
 
     .clearbutton:hover {
         letter-spacing: 3px;
@@ -106,107 +115,114 @@
 <div class="container mt-5">
     <form action="/orders" method="post">
         @csrf
-        <div class="d-flex justify-content-between">
-            <p style="font-size: 30px;">SI NO: SI-{{ $type_id }}-XXXX / XX / XX / 20XX</p>
+        <div class="d-flex justify-content-between mb-5">
+            <p style="font-size: 30px;">SI NO: SI-{{ $type_id }}-{{ str_pad($order->id + 1,4,'0',STR_PAD_LEFT) }} / IJA / {{ date('m') }} / {{ date('Y') }}</p>
+            <input hidden name="order_date" value="{{ date('Y-m-d') }}" />
+            <input hidden name="type_id" value="{{ $type_id }}" />
             <img src="{{asset('app/assets/image/logo_jayamas.png')}}" style="width: 100px;" />
         </div>
-        <p><b>*Shipper:</b></p>
+        @if($errors)
+            <ul>
+                @foreach($errors->all() as $error)
+                    <li>{{$error}}</li>
+                @endforeach
+            </ul>
+        @endif
         <div class="d-flex mb-3">
-            <p class="jarak">Company</p><input type="text" name="shippercompany" value="{{ old('shippercompany') }}" style="width: 992px;height: 40px;"/><br />
+            <p class="jarak"><b>*Shipper</b></p><input type="text" name="shipper" value="{{ old('shipper') }}" style="width: 992px;height: 40px;"/><br />
         </div>
-        <div class="d-flex">
-            <p class="jarak">Address</p><input type="text" name="shipperaddress" value="{{ old('shipperaddress') }}"  style="width: 992px;height: 100px;"/><br />
-        </div>
-        <br />
-        <p><b>*Cosignee:</b></p>
         <div class="d-flex mb-3">
-           <p class="jarak">Company</p><input type="text" name="cosigncompany" value="{{ old('cosigncompany') }}" style="width: 992px;height: 40px;" /><br />
+           <p class="jarak"><b>*Consignee</b></p><input type="text" name="consignee" value="{{ old('consignee') }}" style="width: 992px;height: 40px;" /><br />
         </div>
-        <div class="d-flex">
-           <p class="jarak">Address</p><input type="text" name="cosignaddress" value="{{ old('cosignaddress') }}" style="width: 992px;height: 100px;" /><br />
+        @if($type_id == 'IT' || $type_id == 'PC' || $type_id == 'ADOM' || $type_id == 'ODOM')
+        <div class="d-flex mb-3">
+            <p class="jarak"><b>*Pickup Address:</b></p><input type="text" name="pickup_add" value="{{ old('pickup_add') }}" style="width: 992px;height: 40px;"/><br />
         </div>
-        <br />
-        <div class="d-flex">
-            <p class="jarak"><b>*Pickup Address:</b></p><input type="text" name="pickupaddress" value="{{ old('pickupaddress') }}" style="width: 992px;height: 40px;"/><br />
+        <div class="d-flex mb-3">
+            <p class="jarak"><b>*Delivery Address:</b></p><input type="text" name="delivery_add" value="{{ old('delivery_add') }}" style="width: 992px;height: 40px;" /><br />
         </div>
-        <br />
-        <div class="d-flex">
-            <p class="jarak"><b>*Delivery Address:</b></p><input type="text" name="deliveryaddress" value="{{ old('deliveryaddress') }}" style="width: 992px;height: 40px;" /><br />
-        </div>
-        <br />
-        <div class="d-flex">
+        @endif
+        <div class="d-flex mb-3">
             <p class="jarak"><b>*Notify Party:</b></p> <input type="text" name="notifyparty" value="{{ old('notifyparty') }}" style="width: 992px;height: 40px;" /><br />
         </div>
-        <br />
         <div class="d-flex justify-content-between">
             <div class="d-flex">
-                <p class="jarakexclusive"><b>*Party:</b></p>
+                <p class="jarakexclusive" style="margin-right: 12px;"><b>*Party:</b></p>
                 <select name="party" style="width: 200px;height: 40px;">
-                    <option value="">AWIKWOK</option>
-                    <option value="">AWIKWOK</option>
-                    <option value="">AWOKAOWK</option>
-                    <option value="">NGIKNGOK</option>
+                    <option value="1X20'">1X20'</option>
+                    <option value="1X40'">1X40'</option>
+                    <option value="1X40'HC">1X40'HC</option>
+                    <option value="1X20'RF">1X20'RF</option>
+                    <option value="1X40'RF">1X40'RF</option>
+                    <option value="1X20'OT">1X20'OT</option>
+                    <option value="1X40'OT">1X40'OT</option>
+                    <option value="1X20'FR">1X20'FR</option>
+                    <option value="1X40'FR">1X40'FR</option>
                 </select>
             </div>
-            <div class="d-flex">
+            <div class="d-flex" style="margin-right: 95px;">
                 <p class="jarakexclusive"><b>*Qty:</b></p><input type="text" name="qty" value="{{ old('qty') }}" style="width: 200px;height: 40px;" /><br />
             </div>
         </div>
         <br />
         <div class="d-flex">
-            <p class="jarakexclusive"><b>*Stuffing Date:</b></p><input type="date" name="stuffingdate" value="{{ old('stuffingdate') }}" style="width: 200px;height: 40px;" /><br />
+            <p class="jarakexclusive" style="margin-right: 12px;"><b>*Stuffing Date:</b></p><input type="date" name="stuffing_date" value="{{ old('stuffing_date') }}" style="width: 200px;height: 40px;" /><br />
         </div>
         <br />
         <div class="d-flex justify-content-between">
             <div class="d-flex">
-                <p class="jarakexclusive"><b>*Loading Port:</b></p><input type="text" name="loadingport" value="{{ old('loadingport') }}" style="width: 350px;height: 40px;" />
+                <p class="jarakexclusive" style="margin-right: 12px;"><b>*Loading Port:</b></p><input type="text" name="pol" value="{{ old('pol') }}" style="width: 350px;height: 40px;" />
             </div>
-            <div class="d-flex">
-                <p class="jarakexclusive"><b>*Destination Port:</b></p><input type="text" name="destinationport" value="{{ old('destinationport') }}" style="width: 350px;height: 40px;" /><br />
+            <div class="d-flex" style="margin-right: 95px;">
+                <p class="jarakexclusive"><b>*Destination Port:</b></p><input type="text" name="pod" value="{{ old('pod') }}" style="width: 350px;height: 40px;" /><br />
             </div>
         </div>
         <br />
         <div class="d-flex">
-            <p class="jarak"><b>*Vessel:</b></p><input type="text" name="vessel" value="{{ old('vessel') }}" style="width: 992px;height: 40px;" /><br />
+            <p class="jarak"><b>*Vessel:</b></p><input type="text" name="vsl" value="{{ old('vsl') }}" style="width: 992px;height: 40px;" /><br />
         </div>
         <br />
         <div class="d-flex">
-            <p class="jarakexclusive"><b>*ETD:</b></p><input type="date" name="etd" value="{{ old('etd') }}" style="width: 200px;height: 40px;" /><br />
+            <p class="jarakexclusive" style="margin-right: 12px;"><b>*ETD:</b></p><input type="date" name="etd" value="{{ old('etd') }}" style="width: 200px;height: 40px;" /><br />
         </div>
         <br />
         <hr />
         <div class="notes mt-3">
-            <div class="d-flex justify-content-between">
-                <div>
+            <div class="mb-3">
+                <b><label for="marking">MARKING</label></b><br />
+                <textarea name="marking" style="width: 100%;"></textarea>
+            </div>
+            <div class="mb-3">
+                <b><label for="description">DESCRIPTION</label></b><br />
+                <textarea name="description" style="width: 100%;"></textarea>
+            </div>
+            <div class="d-flex justify-content-between mb-3">
+                <!-- <div>
                     <b><label for="qtynote">QUANTITY</label></b><br />
                     <input type="text" name="qtynote" style="width: 200px;height:40px"/>
-                </div>
+                </div> -->
                 <div>
                     <b><label for="gwnote">G.W (KGS)</label></b><br />
-                    <input type="text" name="gwnote" style="width: 200px;height:40px"/>
+                    <input type="text" name="gw" style="width: 200px;height:40px"/>
                 </div>
                 <div>
                     <b><label for="nwnote">N.W (KGS)</label></b><br />
-                    <input type="text" name="nwnote" style="width: 200px;height:40px"/>
+                    <input type="text" name="nw" style="width: 200px;height:40px"/>
                 </div>
                 <div>
                     <b><label for="nwnote">MEAS (CBM)</label></b><br />
-                    <input type="text" name="measnote" style="width: 200px;height:40px"/>
+                    <input type="text" name="meas" style="width: 200px;height:40px"/>
                 </div>
             </div>
-            <div>
-                <b><label for="markingnote">MARKING</label></b><br />
-                <textarea style="width: 1055px;"></textarea>
-            </div>
-            <div>
-                <b><label for="markingnote">DESCRIPTION</label></b><br />
-                <textarea style="width: 1055px;"></textarea>
+            <div class="mb-3">
+                <b><label for="notes">Notes</label></b><br />
+                <textarea name="notes" style="width: 100%;"></textarea>
             </div>
         </div>
         <br />
         <div class="d-flex justify-content-between">
             <div class="d-flex">
-                <button class="clearbutton" type="submit">Clear</button>
+                <a href="" class="atobtn clearbutton">Clear</a>
             </div>
             <div class="d-flex">
                 <button class="submitbutton" type="submit">Submit</button>

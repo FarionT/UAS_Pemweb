@@ -1,5 +1,5 @@
 @extends('layouts.halaman')
-@section('title', 'Visi & Misi')
+@section('title', 'Privacy')
 
 @section('style')
 <style>

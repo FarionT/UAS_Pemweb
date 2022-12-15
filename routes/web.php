@@ -62,7 +62,8 @@ Route::prefix('admin')->group(function () {
 
     Route::get('/detail/{id}', function($id) {
         $user = User::findOrFail($id);
-        return view('admin.detail', ['user' => $user]);
+        $orders = Order::all()->where('user_id', $user->id);
+        return view('admin.detail', ['user' => $user, 'orders' => $orders]);
     });
     
     Route::get('/approve/{id}', function($id) {
@@ -102,11 +103,12 @@ Route::prefix('admin')->group(function () {
 Route::resource('orders', OrderController::class)->middleware('auth');
 Route::get('/orders/create/{id}', function($id) {
     if(!Gate::allows('create-order')) {
-        // return view('tampilan.forbidden');
-        abort('403');
+        return view('company.forbidden');
+        // abort('403');
     }
+    $order = Order::orderBy('id', 'desc')->first();
     $type_id = $id;
-    return view('orders.create', ['type_id' => $type_id]);
+    return view('orders.create', ['type_id' => $type_id, 'order' => $order]);
 });
 Route::get('/orders/approve/{id}', function($id) {
     $order = Order::findOrFail($id);

@@ -50,6 +50,11 @@
         background-color:#011D83;
         grid-template-columns: auto auto auto auto;
     }
+    .top-text {
+        font-size: 30px;
+        text-decoration: none;
+        color: black;
+    }
     .nav-text {
         color: white;
         text-decoration: none;
@@ -63,11 +68,23 @@
     <nav class="nav" style="background-color: white;">
         <div class="nav-top">
             <div class="nav-top-left">
-                <a href="/"><img src="{{asset('app/assets/image/logo_jayamas.png')}}" alt="" style="width:100px; margin-right: 15px;"/></a><p style="margin-top:auto;margin-bottom:auto;font-size:30px;">PT Indotrans Jayamas Abadi</p>
+                <a href="/"><img src="{{asset('app/assets/image/logo_jayamas.png')}}" alt="" style="width:100px; margin-right: 15px;"/></a>
+                <p style="margin-top:auto;margin-bottom:auto;font-size:30px;">PT Indotrans Jayamas Abadi</p>
             </div>
-            <div class="nav-top-right">
-                <p style="margin-top:auto;margin-bottom:auto;font-size:30px;">USER</p>
+            @auth
+            @if (Auth::user())
+            <div class="d-flex nav-top-right">
+                <p style="margin-top:auto;margin-bottom:auto;font-size:30px;">{{ Auth::user()->username }}</p>
+                <a href="/profile" class="my-auto"><img src="{{ asset('app/'.Auth::user()->photo )}}" class="rounded-circle ms-3" style="width: 60px;" /></a>
             </div>
+            @endauth
+            @else
+            <div class="d-flex nav-top-right">
+                <a href="{{ route('login') }}" class="top-text my-auto">Login</a>
+                <p class="top-text my-auto">&nbsp;|&nbsp;</p>
+                <a href="{{ route('register') }}" class="top-text my-auto">Register</a>
+            </div>
+            @endif
         </div>
         <div class="nav-bottom">
             <a href="/aboutus" class="nav-text my-auto">About Us</a>

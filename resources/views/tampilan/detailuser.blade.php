@@ -105,7 +105,7 @@
     <div class="profilebox">
         <div class="iniform">
             <div class="d-flex flex-row">
-                <div class="kotakprofil d-flex flex-row">
+                <div class="kotakprofil d-flex flex-row mx-auto">
                     <div class="d-flex justify-content-center align-items-center flex-column">
                         <img class="m-3" src="{{ asset('app/assets/image/profile.png') }}" style="border:1px solid gray;border-radius:15px;width:250px; height:auto;"/>
                         <a href="/" class="tombol d-flex justify-content-center rounded-circle mx-auto " style="background-color:#001560; border:3px solid #001560;  margin-top: -45px; "><img src="{{ asset('app/assets/image/edit.png') }}" style="width:47px; height:47px;"></a>
@@ -175,7 +175,7 @@
                         <table class="table table-striped hover table-bordered">
                             <thead>
                                 <tr style="border-bottom: 1px solid black;">
-                                    <th style="width: auto;">ID<</th>
+                                    <th style="width: auto;">ID</th>
                                     <th style="width: auto;">Order Date</th>
                                     <th style="width: auto;">Shipper</th>
                                     <th style="width: auto;">Cosignee</th>

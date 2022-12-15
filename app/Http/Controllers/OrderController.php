@@ -34,6 +34,7 @@ class OrderController extends Controller
      */
     public function create()
     {
+        // YANG DIPAKAI DI WEB.PHP
         if(!Gate::allows('create-order')) {
             // return view('tampilan.forbidden');
             abort('403');
@@ -51,7 +52,6 @@ class OrderController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'si_no' => 'required',
             'shipper' => 'required|max:255',
             'consignee' => 'required|max:255',
             'notifyparty' => 'required|max:255',
@@ -61,7 +61,7 @@ class OrderController extends Controller
             'pol' => 'required',
             'pod' => 'required',
             'vsl' => 'required',
-            'etd_jkt' => 'required|date',
+            'etd' => 'required|date',
             'marking' => 'required',
             'description' => 'required|max:255',
             'gw' => 'required|numeric',
@@ -71,51 +71,27 @@ class OrderController extends Controller
 
         $order = new Order();
         $order->type_id = $request->type_id;
-        $order->pickup_add = $request->pickup_add;
-        $order->delivery_add = $request->delivery_add;
-        $order->si_no = $request->si_no;
         $order->order_date = $request->order_date;
-        $order->bc_no = $request->bc_no;
-        $order->to = $request->to;
-        $order->attn = $request->attn;
         $order->shipper = $request->shipper;
         $order->consignee = $request->consignee;
         $order->notifyparty = $request->notifyparty;
         $order->party = $request->party;
         $order->qty = $request->qty;
-        $order->cont = $request->cont;
-        $order->seal_no = $request->seal_no;
-        $order->tare_weight = $request->tare_weight;
         $order->stuffing_date = $request->stuffing_date;
         $order->pol = $request->pol;
         $order->pod = $request->pod;
         $order->vsl = $request->vsl;
-        $order->etd_jkt = $request->etd_jkt;
-        $order->eta_sin = $request->eta_sin;
-        $order->m_vsl = $request->m_vsl;
-        $order->etd_sin = $request->etd_sin;
-        $order->eta_lax = $request->eta_lax;
-        $order->eta_chi = $request->eta_chi;
-        $order->kpbc = $request->kpbc;
-        $order->peb = $request->peb;
-        $order->req_date = $request->req_date;
+        $order->etd = $request->etd;
         $order->marking = $request->marking;
         $order->description = $request->description;
         $order->gw = $request->gw;
         $order->nw = $request->nw;
         $order->meas = $request->meas;
         $order->notes = $request->notes;
-        $order->shipping_ref = $request->shipping_ref;
-        $order->hbl_num = $request->hbl_num;
-        $order->scac_code = $request->scac_code;
-        $order->place_of_receipt = $request->place_of_receipt;
-        $order->port_of_loading = $request->port_of_loading;
-        $order->port_of_discharge = $request->port_of_discharge;
-        $order->place_of_delivery = $request->place_of_delivery;
-        $order->bl_form = $request->bl_form;
-        $order->place_of_issue = $request->place_of_issue;
-        $order->freight = $request->freight;
-        $order->container_seal_no = $request->container_seal_no;
+
+        $order->pickup_add = $request->pickup_add;
+        $order->delivery_add = $request->delivery_add;
+        
         $order->user_id = $request->user()->id;
         $order->user_id = Auth::id();
         $order->save();
