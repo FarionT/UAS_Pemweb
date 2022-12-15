@@ -95,9 +95,6 @@
         box-shadow: 5px 5px 5px;
     }
 
-    #form-control{
-        max-width: 75px;
-    }
 </style>
 @endsection
 
@@ -117,11 +114,11 @@
                         <form action="" method="post">
                             @csrf
                             <label style="color: #011D83;">Username</label><br/>
-                            <input class="form-control" type="text" name="username" id="" value="Ini Username"/><br/>
+                            <input class="form-control" disabled="true" type="text" name="username" id="" value="Ini Username"/><br/>
                             <label style="color: #011D83;">Email</label><br/>
-                            <input class="form-control" type="text" name="email" id="" value="Ini Email"/><br/>
+                            <input class="form-control" disabled="true" type="text" name="email" id="" value="Ini Email"/><br/>
                             <label style="color: #011D83">NPWP</label><br/>
-                            <input class="form-control" type="text" name="telepon" id="" value="Ini Telepon"/><br/>
+                            <input class="form-control" disabled="true" type="text" name="telepon" id="" value="Ini Telepon"/><br/>
                         </form>
                     </div>
                 </div>
@@ -139,11 +136,11 @@
                             <form action="" method="post" class="mx-auto">
                                 @csrf
                                 <label style="color: #011D83;">First Name</label><br/>
-                                <input class="form-control" type="text" name="username" id="" value="Ini Username"/><br/>
+                                <input class="form-control" disabled="true" type="text" name="username" id="" value="Ini Username"/><br/>
                                 <label style="color: #011D83;">Last Name</label><br/>
-                                <input class="form-control" type="text" name="email" id="" value="Ini Email"/><br/>
+                                <input class="form-control" disabled="true" type="text" name="email" id="" value="Ini Email"/><br/>
                                 <label style="color: #011D83;">Telepon</label><br/>
-                                <input class="form-control" type="text" name="telepon" id="" value="Ini Telepon"/><br/>
+                                <input class="form-control" disabled="true" type="text" name="telepon" id="" value="Ini Telepon"/><br/>
                             </form>
                         </div>
                     </div>
@@ -157,15 +154,15 @@
                             <form action="" method="post">
                                 @csrf
                                 <label style="color: #011D83;">Company Name</label><br/>
-                                <input class="form-control" type="text" name="username" id="" value="Ini Username"/><br/>
+                                <input class="form-control" disabled="true" type="text" name="username" id="" value="Ini Username"/><br/>
                                 <label style="color: #011D83;">Country/District</label><br/>
-                                <input class="form-control" type="text" name="email" id="" value="Ini Email"/><br/>
+                                <input class="form-control" disabled="true" type="text" name="email" id="" value="Ini Email"/><br/>
                                 <label style="color: #011D83;">City</label><br/>
-                                <input class="form-control" type="text" name="telepon" id="" value="Ini Telepon"/><br/>
+                                <input class="form-control" disabled="true" type="text" name="telepon" id="" value="Ini Telepon"/><br/>
                                 <label style="color: #011D83;">Address</label><br/>
-                                <input class="form-control" type="text" name="telepon" id="" value="Ini Telepon"/><br/>
+                                <input class="form-control" disabled="true" type="text" name="telepon" id="" value="Ini Telepon"/><br/>
                                 <label style="color: #011D83;">NIB</label><br/>
-                                <input class="form-control" type="text" name="telepon" id="" value="Ini Telepon"/><br/>
+                                <input class="form-control" disabled="true" type="text" name="telepon" id="" value="Ini Telepon"/><br/>
                             </form>
                         </div>
                     </div>

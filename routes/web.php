@@ -100,6 +100,14 @@ Route::prefix('admin')->group(function () {
 });
 
 Route::resource('orders', OrderController::class)->middleware('auth');
+Route::get('/orders/create/{id}', function($id) {
+    if(!Gate::allows('create-order')) {
+        // return view('tampilan.forbidden');
+        abort('403');
+    }
+    $type_id = $id;
+    return view('orders.create', ['type_id' => $type_id]);
+});
 Route::get('/orders/approve/{id}', function($id) {
     $order = Order::findOrFail($id);
     $order->accept = 1;
@@ -163,6 +171,9 @@ Route::get('/orders/mail/{user_id}/{order_id}', function($user_id, $order_id) {
     return redirect('/');
 });
 
+Route::get('/privacy', function() {
+    return view('auth.privacy');
+});
 
 Route::get('/register/mail/{id}', function($id) {
     $user = User::find($id);
