@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
+    <link rel="icon" href="{{asset('app/assets/image/logo_jayamas.png')}}">
     <link rel="stylesheet" href="././css/style.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -105,7 +106,6 @@
     <nav class="nav" style="background-color: white;">
         <div class="nav-top">
             <div class="nav-top-left">
-<<<<<<< HEAD
                 <a href="/"><img src="{{asset('app/assets/image/logo_jayamas.png')}}" alt="" style="width:100px; margin-right: 15px;"/></a>
                 <p style="margin-top:auto;margin-bottom:auto;font-size:30px;">PT Indotrans Jayamas Abadi</p>
             </div>
@@ -114,13 +114,6 @@
             <div class="d-flex nav-top-right">
                 <p style="margin-top:auto;margin-bottom:auto;font-size:30px;">{{ Auth::user()->username }}</p>
                 <a href="/profile" class="my-auto"><img src="{{ asset('app/'.Auth::user()->photo )}}" class="rounded-circle ms-3" style="width: 60px;" /></a>
-=======
-                <img src="{{asset('app/assets/image/logo_jayamas.png')}}" alt="" style="width:100px; margin-right: 15px;"/><p style="margin-top:auto;margin-bottom:auto;font-size:30px;">PT Indotrans Jayamas Abadi</p>
-            </div>
-            <div class="nav-top-right">
-                {{-- ini diisi apo lagi? --}}
-                <p style="margin-top:auto;margin-bottom:auto;font-size:30px;">USER</p>
->>>>>>> 2051963b65d81a79ec2e60b334096b153f3b7202
             </div>
             @endauth
             @else
