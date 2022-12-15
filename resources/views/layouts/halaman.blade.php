@@ -21,6 +21,24 @@
     @yield('style')
 </head>
 <style>
+    @media only screen and (max-width: 791px) {
+        .nav-top-left > img{
+            width:74.5px !important;
+            height:42.5px !important;
+        }
+        .nav-top-left > p {
+            font-size:18px!important;
+        }
+        .nav-top-right > p {
+            font-size:16px !important;
+        }
+        .nav-bottom > p{
+            font-size:12px!important;
+        }
+        .nav-bottom {
+            height:30px!important;
+        }
+    }
     body {
         font-family:Titillium Web;
     }
@@ -61,6 +79,7 @@
                 <img src="{{asset('app/assets/image/logo_jayamas.png')}}" alt=""><p style="margin-top:auto;margin-bottom:auto;font-size:30px;">PT Indotrans Jayamas Abadi</p>
             </div>
             <div class="nav-top-right">
+                {{-- ini diisi apo lagi? --}}
                 <p style="margin-top:auto;margin-bottom:auto;font-size:30px;">USER</p>
             </div>
         </div>

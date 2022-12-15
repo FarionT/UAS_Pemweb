@@ -2,6 +2,25 @@
 @section('title','home')
 @section('style')
 <style>
+    @media only screen and (max-width: 791px) {
+        .deskripsi_company1 {
+            flex-direction:column-reverse!important;
+            /* display:flex;
+            justify-content:center;
+            padding-top:50px;
+            padding-right:50px;
+            padding-left:50px;
+            margin-left:auto;
+            margin-right:auto;
+            gap:10%; */
+        }
+        .tulisan_company {
+            font-size:3rem !important;
+        }
+        .company_box {
+            margin-top:-100px!important;
+        }
+    }
     body {
         background-color: #B0D1FC
     }
@@ -9,6 +28,7 @@
     .home_company {
         display:flex;
         flex-direction: column;
+        gap:20px;
     }
     .home_company_section {
         /* display:grid;
@@ -29,7 +49,6 @@
         margin-left:auto;
         margin-right:auto;
         gap:10%;
-        margin-bottom: -100px;
     }
     .deskripsi_company1 {
         display:flex;
@@ -112,11 +131,17 @@
         border-right:#011D83 solid 20px;
         background-color: white;
     }
+    .contact_list >p {
+        margin-top:0px;
+        margin-bottom:0px;
+    }
+    .home_company_section {
+    }
 </style>
 @endsection
 @section('isi')
 {{-- <img src="{{asset('app/assets/logo_jayamas.png')}}" /> --}}
-<div class="home_company" style="gap:15rem;">
+<div class="home_company">
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -151,11 +176,10 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-
-    <div style="background-color:#B0D1FC">
-        <div style="width:90%;margin-left:auto;margin-right:auto;">
-            <p class="tulisan_company">COMPANY</p>
-        </div>
+    <div style="width:90%;margin-left:auto;margin-right:auto;z-index:2;">
+        <p class="tulisan_company">COMPANY</p>
+    </div>
+    <div style="margin-top:-130px;" class="company_box">
         <div class="home_company_section">
             <div class="deskripsi_company1"> 
                 <p style="font-size:25px;text-align:start;padding-top:39px;">PT. JAYAMAS ABADI started operating in 1999.
@@ -223,7 +247,7 @@
                 <p style="font-weight:bold;font-size:32px;">Contact Us</p>
                 <div class="d-flex mt-3 gap-3">
                     <img src="{{asset('app/assets/image/whatsapp.png')}}" style="width:61px;height:62px;">
-                    <div>
+                    <div class="contact_list">
                         <p>+6221 8899 2122(Hunting)</p>
                         <p>+6281 1122 6395</p>
                         <p>+6281 1122 6396</p>
