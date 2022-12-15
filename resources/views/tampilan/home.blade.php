@@ -162,16 +162,16 @@
             gap:20px !important;
         }
         .home_after_more img {
-            width:120px !important;
+            width:150px !important;
         }
         .home_after_more_card div > p {
-            font-size: 1.5rem !important;
+            font-size: 2rem !important;
         }
         .home_after_more_services div > p {
-            font-size: 1.5rem !important;
+            font-size: 2rem !important;
         }
         .home_after_more_services div div > p {
-            font-size: 0.5rem !important;
+            font-size: 0.8rem !important;
         }
         .home_company {
             gap:5px !important;
