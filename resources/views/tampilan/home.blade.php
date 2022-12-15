@@ -158,6 +158,9 @@
         .service_button {
             gap:0px !important;
         }
+        .home_after_more {
+            gap:20px !important;
+        }
         .home_after_more img {
             width:120px !important;
         }
@@ -232,6 +235,13 @@
         }
         .deskripsi_company1 {
             padding:50px 20px 10px 20px!important;
+        }
+        .more {
+            margin-top: 20px !important;
+            margin-bottom: 20px !important;
+        }
+        .get_more_info {
+            font-size:1rem !important;
         }
     }
     body {
@@ -452,7 +462,7 @@
     </div>
 </div>
 <div class="d-flex gap-5" style="margin-top:80px"> 
-    <hr class="flex-grow-1 my-auto" style="height:5px;color:#011D83;opacity:1;background-color:#011D83;"/><p class="" style="font-size:40px;color:#011D83;font-weight:900">GET MORE INFORMATION</p>
+    <hr class="flex-grow-1 my-auto" style="height:5px;color:#011D83;opacity:1;background-color:#011D83;"/><p style="font-size:40px;color:#011D83;font-weight:900" class="get_more_info">GET MORE INFORMATION</p>
 </div>
 <footer style="background-color:#DCEBFF;margin-top:-2.5rem" class="pt-5">
     <div class="footer_content">

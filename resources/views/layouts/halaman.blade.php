@@ -21,7 +21,7 @@
     @yield('style')
 </head>
 <style>
-    @media only screen and (max-width: 791px) {
+    @media only screen and (max-width: 820px) {
         .nav-top-left > img{
             width:74.5px !important;
             height:42.5px !important;
@@ -36,8 +36,27 @@
             font-size:12px!important;
         }
         .nav-bottom {
+            height:40px!important;
+        }
+    }
+    @media only screen and (max-width: 450px) {
+        .nav-top-left > img{
+            width:54.5px !important;
+            height:28.5px !important;
+        }
+        .nav-top-left > p {
+            font-size:14px!important;
+        }
+        .nav-top-right > p {
+            font-size:11px !important;
+        }
+        .nav-bottom {
             height:30px!important;
         }
+        .nav-bottom a {
+            font-size:12px !important;
+        }
+
     }
     body {
         font-family:Titillium Web;
@@ -81,7 +100,7 @@
     <nav class="nav" style="background-color: white;">
         <div class="nav-top">
             <div class="nav-top-left">
-                <a href="/"><img src="{{asset('app/assets/image/logo_jayamas.png')}}" alt="" style="width:100px; margin-right: 15px;"/></a><p style="margin-top:auto;margin-bottom:auto;font-size:30px;">PT Indotrans Jayamas Abadi</p>
+                <img src="{{asset('app/assets/image/logo_jayamas.png')}}" alt="" style="width:100px; margin-right: 15px;"/><p style="margin-top:auto;margin-bottom:auto;font-size:30px;">PT Indotrans Jayamas Abadi</p>
             </div>
             <div class="nav-top-right">
                 {{-- ini diisi apo lagi? --}}
