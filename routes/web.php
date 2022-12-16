@@ -207,13 +207,12 @@ Route::get('/tampilan/aboutus', function() {
     return view('tampilan.aboutus');
 });
 
-<<<<<<< HEAD
 Route::get('/tampilan/expimpform', function() {
     return view('tampilan.expimpform');
-=======
+});
+
 Route::get('/tampilan/service', function() {
     return view('tampilan.service');
->>>>>>> 76db72e93b0b6465518a84c98856682ff6a3e0be
 });
 
 Route::get('/tampilan/login', function() {
@@ -231,12 +230,7 @@ Route::get('/tampilan/register2', function() {
 Route::get('/tampilan/visimisi', function() {
     return view('tampilan.visimisi');
 });
-<<<<<<< HEAD
 
-Route::get('/tampilan/service', function() {
-    return view('tampilan.service');
-=======
 Route::get('/tampilan/home', function() {
     return view('tampilan.home');
->>>>>>> 76db72e93b0b6465518a84c98856682ff6a3e0be
 });
