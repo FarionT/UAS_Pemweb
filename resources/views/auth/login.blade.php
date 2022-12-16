@@ -7,9 +7,14 @@
 
     body{
         /* background-color: #B0D1FC !important; */
-        background-image: url(" {{ asset('app/assets/image/bg_login.png') }}");
+        /* background-image: url(" {{ asset('app/assets/image/bg_login.png') }}");
+        background-repeat: no-repeat; 
+        background-size: 100%; */
+        background-image: linear-gradient(to bottom, #B0D1FC, #001560);
         background-repeat: no-repeat; 
         background-size: 100%;
+        /* height: 120%; */
+        height: 757px;
     }
 
     .outside {
@@ -22,6 +27,10 @@
         border-radius: 20px;
         box-shadow: 10px 10px #001560;
         padding: 30px;
+    }
+
+    @media screen and (max-width: 940px) {
+        
     }
 </style>
 @endsection

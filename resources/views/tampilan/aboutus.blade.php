@@ -1,4 +1,6 @@
 @extends('layouts.halaman')
+@section('title', 'About Us')
+
 @section('style')
     <style>
         body{
@@ -32,7 +34,6 @@
             padding:10px;
             display: flex;
         }
-
 
         p#tulisanService:before, p#tulisanService:after{
             content:"";

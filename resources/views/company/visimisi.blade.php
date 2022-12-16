@@ -59,38 +59,51 @@
 @section('isi')
 @auth
     @if (Auth::user()->language == 1)
-    <div class="title">
-        <img src="{{ asset('app/assets/image/visi misi.png') }}" style="width: 100px; height: auto; margin-right: 20px;"/>
-        <h1><b>VISION & MISSION</b></h1>
-    </div>
-    <div class="main">
-        <div class="card">
-            <h1><b>VISION</b></h1>
-            <p>To be a reliable, professional and Trusted Expedition Service Company.</p>
+        <div class="title">
+            <img src="{{ asset('app/assets/image/visi misi.png') }}" style="width: 100px; height: auto; margin-right: 20px;"/>
+            <h1><b>VISION & MISSION</b></h1>
         </div>
-        <div class="card">
-            <h1><b>MISSION</b></h1>
-            <p>To provide reliable expedition services that will implement a work culture based on professionalism and integrity. It will play an active role in the distribution of goods throughout the world.</p>
-        </div>
-    </div>
-    @endif
-@endauth
-@auth
-    @if (Auth::user()->language == 2)
-    <div class="title">
-        <img src="{{ asset('app/assets/image/visi misi.png') }}" style="width: 100px; height: auto; margin-right: 20px;"/>
-        <h1><b>VISI & MISI</b></h1>
-    </div>
-    <div class="main">
-        <div class="card">
-            <h1><b>VISI</b></h1>
-            <p>Menjadi Perusahaan Jasa Ekspedisi yang handal, profesional dan Terpercaya.</p>
+        <div class="main">
+            <div class="card">
+                <h1><b>VISION</b></h1>
+                <p>To be a reliable, professional and Trusted Expedition Service Company.</p>
             </div>
             <div class="card">
-                <h1><b>MISI</b></h1>
-                <p>Menyediakan jasa ekspedisi terpercaya yang menerapkan budaya kerja berlandaskan profesionalisme dan integritas. Ini akan memainkan peran aktif dalam distribusi barang di seluruh dunia.</p>
+                <h1><b>MISSION</b></h1>
+                <p>To provide reliable expedition services that will implement a work culture based on professionalism and integrity. It will play an active role in the distribution of goods throughout the world.</p>
             </div>
         </div>
-        @endif
-@endauth
+    @elseif (Auth::user()->language == 2)
+        <div class="title">
+            <img src="{{ asset('app/assets/image/visi misi.png') }}" style="width: 100px; height: auto; margin-right: 20px;"/>
+            <h1><b>VISI & MISI</b></h1>
+        </div>
+        <div class="main">
+            <div class="card">
+                <h1><b>VISI</b></h1>
+                <p>Menjadi Perusahaan Jasa Ekspedisi yang handal, profesional dan Terpercaya.</p>
+                </div>
+                <div class="card">
+                    <h1><b>MISI</b></h1>
+                    <p>Menyediakan jasa ekspedisi terpercaya yang menerapkan budaya kerja berlandaskan profesionalisme dan integritas. Ini akan memainkan peran aktif dalam distribusi barang di seluruh dunia.</p>
+                </div>
+            </div>
+        </div>
+    @endauth
+    @else
+        <div class="title">
+            <img src="{{ asset('app/assets/image/visi misi.png') }}" style="width: 100px; height: auto; margin-right: 20px;"/>
+            <h1><b>VISION & MISSION</b></h1>
+        </div>
+        <div class="main">
+            <div class="card">
+                <h1><b>VISION</b></h1>
+                <p>To be a reliable, professional and Trusted Expedition Service Company.</p>
+            </div>
+            <div class="card">
+                <h1><b>MISSION</b></h1>
+                <p>To provide reliable expedition services that will implement a work culture based on professionalism and integrity. It will play an active role in the distribution of goods throughout the world.</p>
+            </div>
+        </div>
+    @endif
 @endsection
