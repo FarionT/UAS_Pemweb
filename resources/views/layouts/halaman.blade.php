@@ -171,8 +171,8 @@
                 <button class="dropbtn">Language</button>
                 <div class="dropdown-content">
                     @auth
-                    <a href="/change/language/{{ Auth::user()->id }}/en">English</a>
-                    <a href="/change/language/{{ Auth::user()->id }}/id">Indonesia</a>
+                    <a href="/change/language/{{ Auth::user()->id }}/1">English</a>
+                    <a href="/change/language/{{ Auth::user()->id }}/2">Indonesia</a>
                     @endauth
                 </div>
             </div>
