@@ -75,9 +75,8 @@
             </div>
         </div>
     @endif
-
 @auth
-    @if(Auth::user()->language == 'id')
+    @if (Auth::user()->language == 'id')
 @endauth
         <div class="title">
             <img src="{{ asset('app/assets/image/visi misi.png') }}" style="width: 100px; height: auto; margin-right: 20px;"/>
@@ -85,11 +84,11 @@
         </div>
         <div class="main">
             <div class="card">
-                <h1><b>VISION</b></h1>
+                <h1><b>VISI</b></h1>
                 <p>Menjadi Perusahaan Jasa Ekspedisi yang handal, profesional dan Terpercaya.</p>
             </div>
             <div class="card">
-                <h1><b>MISSION</b></h1>
+                <h1><b>MISI</b></h1>
                 <p>Menyediakan jasa ekspedisi terpercaya yang menerapkan budaya kerja berlandaskan profesionalisme dan integritas. Ini akan memainkan peran aktif dalam distribusi barang di seluruh dunia.</p>
             </div>
         </div>

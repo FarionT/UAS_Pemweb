@@ -54,6 +54,13 @@ Route::get('/service', function () {
     return view('company.service');
 });
 
+Route::get('/change/language/{id}/{type_id}', function($id, $type_id) {
+    $user = User::findOrFail($id);
+    $user->language = $type_id;
+    $user->save();
+    return view('company.index');
+});
+
 Route::prefix('admin')->group(function () {
     Route::get('/account', function() {
         $users = User::all()->where('role_id', 2);
