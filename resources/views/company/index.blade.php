@@ -27,11 +27,6 @@
             border-radius:20px;
             color:white;
         }
-        
-        .footer_left {
-            
-        }
-      
     }
     @media only screen and (max-width: 1000px) {
         .home_company {
@@ -358,8 +353,6 @@
     .contact_list >p {
         margin-top:0px;
         margin-bottom:0px;
-    }
-    .home_company_section {
     }
 </style>
 @endsection
