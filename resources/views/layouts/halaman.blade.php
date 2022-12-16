@@ -101,6 +101,45 @@
         color: white;
         font-weight: bold;
     }
+
+    /* DROPDOWN */
+
+    .dropbtn {
+        background-color:#011D83;
+        color: white;
+        padding: 13px;
+        font-size: 16px;
+        border: none;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 9999;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {background-color: #ddd;}
+
+    .dropdown:hover .dropdown-content {display: block;}
+
+    .dropdown:hover .dropbtn {background-color:#011D83;}
+
+    /* DROPDOWN */
 </style>
 <body>
     <nav class="nav" style="background-color: white;">
@@ -128,7 +167,16 @@
             <a href="/aboutus" class="nav-text my-auto">About Us</a>
             <a href="/service" class="nav-text my-auto">Services</a>
             <a href="/visi&misi" class="nav-text my-auto">Vision & Mission</a>
-            <a href="/" class="nav-text my-auto">Language</a>
+            <div class="dropdown">
+                <button class="dropbtn">Language</button>
+                <div class="dropdown-content">
+                    @auth
+                    <a href="/change/language/{{ Auth::user()->id }}/1">English</a>
+                    <a href="/change/language/{{ Auth::user()->id }}/2">Indonesia</a>
+                    @endauth
+                </div>
+            </div>
+            <!-- <a href="/" class="nav-text my-auto">Language</a> -->
         </div>
     </nav>
     @yield('isi')  
