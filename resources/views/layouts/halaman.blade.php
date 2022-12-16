@@ -10,13 +10,22 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     {{-- ini font --}}
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    {{-- titilium web --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Titillium+Web&display=swap" rel="stylesheet">
+    {{-- kanit --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Kanit&family=Titillium+Web&display=swap" rel="stylesheet">
     <style> 
         @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600&family=Titillium+Web&display=swap'); 
-        p{
-            font-family: 'Dosis', sans-serif;
+        @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+        .titilium{
             font-family: 'Titillium Web', sans-serif;
+        }
+        .kanit{
+            font-family: 'Kanit', sans-serif;
         }
     </style>
     @yield('style')
@@ -182,7 +191,51 @@
             @endif
         </div>
     </nav>
-    @yield('isi') 
+    @yield('isi')
+    
+    <footer class="">
+        <div class="px-5 py-3 w-100 d-flex flex-lg-row flex-column bg-white">
+            <div class="col col-12 col-lg-4">
+                <p class="footer-head">Contact Us</p>
+                <div class="col col-12 d-flex">
+                    <img class="col col-2 col-lg-2"src="{{ asset('app/assets/image/wa.png') }}" style=""/>
+                    <div class="col col-9 col-lg-9 mx-2 my-auto">
+                        <p class="mb-0 isi-footer">+6221 8899 2212 ( Hunting )</p>
+                        <p class="mb-0 isi-footer">+6281 1122 6395</p>
+                        <p class="mb-0 isi-footer">+6281 1122 6396</p>
+                    </div>
+                </div>
+                <div class="col col-12 d-flex my-4">
+                    <img class="col col-2 col-lg-2" src="{{ asset('app/assets/image/email.png') }}" style=""/>
+                    <div class="col col-9 col-lg-9 mx-2 my-auto">
+                        <p class="mb-0 isi-footer">cs@jayamasabadi.id</p>
+                        <p class="mb-0 isi-footer">Sales@jayamasabadi.id</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-12 col-lg-4 my-3 my-lg-0">
+                <p class="footer-head">Our Office</p>
+                <p class="mb-0 office-head">Head Office :</p>
+                <p class="isi-footer">Jl. Marunda Makmur No. 1 RT 002 RW 008
+                    Kebon Kelapa Segara Makmur,
+                    Taruma Jaya, Bekasi 17211 Indonesia</p>
+                <p class="mb-0 office-head">Sales/Operational Office</p>
+                <p class="isi-footer">Kirana Commercial Avenue,
+                    Bella Terra Lifestyle Center Lt. 1 No. 26
+                    Jl. Boulevard Raya A2 No. 1 Kelapa Gading, Jakarta Utara</p>
+                <p class="mb-0 office-head">Cilegon Office</p>
+                <p class="isi-footer">
+                    Jl. Lingkar Selatan KM.5,
+                    Karangasem, Kec. Cibeber,
+                    Kota Cilegon, Banten 42426
+                </p>
+            </div>
+            <div class="col col-12 col-lg-4 d-flex justfy-content-center flex-column">
+                <p class="text-center footer-head">Member of APTRINDO</p>
+                <img src="{{ asset('app/assets/image/aptrindo.png') }}" class="mx-auto"/>
+            </div>
+        </div>
+    </footer>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 </body>
