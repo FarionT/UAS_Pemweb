@@ -5,13 +5,11 @@
 </head>
 <body>
     <h1>Account anda sudah di approve</h1>
+    <p>Username: {{ $mailData['username'] }}</p>
     <p>Nama Lengkap: {{ $mailData['firstname'] }} {{ $mailData['lastname'] }}</p>
     <p>Email: {{ $mailData['email'] }}</p>
+    <p>Email Company: {{ $mailData['emailcompany'] }}</p>
     <p>Nomor Telepon: {{ $mailData['notelp'] }}</p>
-    <p>Company: {{ $mailData['company'] }}</p>
-    <p>Country: {{ $mailData['country'] }}</p>
-    <p>City: {{ $mailData['city'] }}</p>
-    <p>Address: {{ $mailData['address'] }}</p>
     <p>NPWP: {{ $mailData['npwp'] }}</p>
     <p>NIB: {{ $mailData['nib'] }}</p>
 

@@ -89,12 +89,10 @@ Route::prefix('admin')->group(function () {
             'username' => $user->username,
             'firstname' => $user->firstname,
             'lastname' => $user->lastname,
-            'email' => $user->email,
-            'notelp' => $user->notelp,
             'company' => $user->company,
-            'country' => $user->country,
-            'city' => $user->city,
-            'address' => $user->address,
+            'email' => $user->email,
+            'emailcompany' => $user->emailcompany,
+            'notelp' => $user->notelp,
             'npwp' => $user->npwp,
             'nib' => $user->nib
         ];
@@ -110,7 +108,7 @@ Route::prefix('admin')->group(function () {
 Route::resource('orders', OrderController::class)->middleware('auth');
 Route::get('/orders/create/{id}', function($id) {
     if(!Gate::allows('create-order')) {
-        return view('company.forbidden');
+        return view('company.accountapprove');
         // abort('403');
     }
     $order = Order::orderBy('id', 'desc')->first();
@@ -129,18 +127,21 @@ Route::get('/orders/approve/mail/{id}', function($id) {
     $order = Order::find($id);
     $user = User::find($order->user_id);
     $mailData = [
-        'subject' => 'Approvement Account',
+        'subject' => 'Approvement Order',
         'username' => $user->username,
         'firstname' => $user->firstname,
         'lastname' => $user->lastname,
-        'email' => $user->email,
-        'notelp' => $user->notelp,
         'company' => $user->company,
-        'country' => $user->country,
-        'city' => $user->city,
-        'address' => $user->address,
+        'email' => $user->email,
+        'emailcompany' => $user->emailcompany,
+        'notelp' => $user->notelp,
         'npwp' => $user->npwp,
-        'nib' => $user->nib
+        'nib' => $user->nib,
+        'order_id' => $order->id,
+        'type_id' => $order->type_id,
+        'created_at' => $order->created_at,
+        'shipper' => $order->shipper,
+        'consignee' => $order->consignee
     ];
 
     //INI KIRIM KE PEMBUAT ACCOUNT
@@ -162,16 +163,17 @@ Route::get('/orders/mail/{user_id}/{order_id}', function($user_id, $order_id) {
         'username' => $user->username,
         'firstname' => $user->firstname,
         'lastname' => $user->lastname,
-        'email' => $user->email,
-        'notelp' => $user->notelp,
         'company' => $user->company,
-        'country' => $user->country,
-        'city' => $user->city,
-        'address' => $user->address,
+        'email' => $user->email,
+        'emailcompany' => $user->emailcompany,
+        'notelp' => $user->notelp,
         'npwp' => $user->npwp,
         'nib' => $user->nib,
-        'shippercompany' => $order->shippercompany,
-        'cosigncompany' => $order->cosigncompany
+        'order_id' => $order->id,
+        'type_id' => $order->type_id,
+        'created_at' => $order->created_at,
+        'shipper' => $order->shipper,
+        'consignee' => $order->consignee
     ];
 
     //INI KIRIM KE EMAIL CS
@@ -191,12 +193,10 @@ Route::get('/register/mail/{id}', function($id) {
         'username' => $user->username,
         'firstname' => $user->firstname,
         'lastname' => $user->lastname,
-        'email' => $user->email,
-        'notelp' => $user->notelp,
         'company' => $user->company,
-        'country' => $user->country,
-        'city' => $user->city,
-        'address' => $user->address,
+        'email' => $user->email,
+        'emailcompany' => $user->emailcompany,
+        'notelp' => $user->notelp,
         'npwp' => $user->npwp,
         'nib' => $user->nib
     ];

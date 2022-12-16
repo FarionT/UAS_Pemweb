@@ -51,7 +51,7 @@
 </style>
 @endsection
 @section('isi')
-<div class="outside mt-5">
+<div class="outside my-5">
     <div class="logo-text">
         <img src="{{ asset('app/assets/image/logo_jayamas.png') }}" style="width: 200px;"/>
         <h1 style="font-family: 'Titillium Web', sans-serif; color: white;" class="mb-3"><b>PT. INDOTRANS</b></h1>

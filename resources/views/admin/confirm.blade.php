@@ -16,7 +16,7 @@
     </style>
 @endsection
 @section('isi')
-    <div class="container">
+    <div class="container mb-5">
         <div class="d-flex justify-content-center">
             <!-- <img src="{{ asset('app/assets/image/service.png') }}" style="width:100px;" /> -->
             <p class="mx-auto" style="font-size: 60px;">APPROVE ACCOUNT</p>

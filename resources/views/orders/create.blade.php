@@ -102,6 +102,58 @@
         transform: translateY(10px);
         transition: 100ms;
     }
+
+    .party-qty {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .qty {
+        margin-right: 95px;
+    }
+
+    .pol-pod {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .pod {
+        margin-right: 95px;
+    }
+
+    .trio {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @media screen and (max-width: 1200px) {
+        .party-qty {
+            display: block;
+        }
+        .party {
+            margin-bottom: 16px;
+        }
+        .party>p {
+            width: 104px;
+        }
+        .qty>p {
+            width: 114px;
+        }
+        .pol-pod {
+            display: block;
+        }
+        .pol {
+            margin-bottom: 16px;
+        }
+        .pod>p {
+            width: 150px;
+        }
+    }
+    @media screen and (max-width: 780px) {
+        .trio {
+            display: block;
+        }
+    }
 </style>
 @endsection
 
@@ -112,11 +164,15 @@
         <p class="align-items-center my-auto" style="font-size: 60px;">Shipping Instruction</p>
     </div>
 </div>
-<div class="container mt-5">
+<div class="container my-5">
     <form action="/orders" method="post">
         @csrf
         <div class="d-flex justify-content-between mb-5">
-            <p style="font-size: 30px;">SI NO: SI-{{ $type_id }}-{{ str_pad($order->id + 1,4,'0',STR_PAD_LEFT) }} / IJA / {{ date('m') }} / {{ date('Y') }}</p>
+            @if($order) 
+                <p style="font-size: 30px;">SI NO: SI-{{ $type_id }}-{{ str_pad($order->id + 1,4,'0',STR_PAD_LEFT) }} / IJA / {{ date('m') }} / {{ date('Y') }}</p>
+            @else
+                <p style="font-size: 30px;">SI NO: SI-{{ $type_id }}-0001 / IJA / {{ date('m') }} / {{ date('Y') }}</p>
+            @endif
             <input hidden name="order_date" value="{{ date('Y-m-d') }}" />
             <input hidden name="type_id" value="{{ $type_id }}" />
             <img src="{{asset('app/assets/image/logo_jayamas.png')}}" style="width: 100px;" />
@@ -145,8 +201,8 @@
         <div class="d-flex mb-3">
             <p class="jarak"><b>*Notify Party:</b></p> <input type="text" name="notifyparty" value="{{ old('notifyparty') }}" style="width: 992px;height: 40px;" /><br />
         </div>
-        <div class="d-flex justify-content-between">
-            <div class="d-flex">
+        <div class="party-qty">
+            <div class="d-flex party">
                 <p class="jarakexclusive" style="margin-right: 12px;"><b>*Party:</b></p>
                 <select name="party" style="width: 200px;height: 40px;">
                     <option value="1X20'">1X20'</option>
@@ -160,20 +216,20 @@
                     <option value="1X40'FR">1X40'FR</option>
                 </select>
             </div>
-            <div class="d-flex" style="margin-right: 95px;">
+            <div class="d-flex qty">
                 <p class="jarakexclusive"><b>*Qty:</b></p><input type="text" name="qty" value="{{ old('qty') }}" style="width: 200px;height: 40px;" /><br />
             </div>
         </div>
         <br />
-        <div class="d-flex">
+        <div class="d-flex sutffingdate">
             <p class="jarakexclusive" style="margin-right: 12px;"><b>*Stuffing Date:</b></p><input type="date" name="stuffing_date" value="{{ old('stuffing_date') }}" style="width: 200px;height: 40px;" /><br />
         </div>
         <br />
-        <div class="d-flex justify-content-between">
-            <div class="d-flex">
+        <div class="pol-pod">
+            <div class="d-flex pol">
                 <p class="jarakexclusive" style="margin-right: 12px;"><b>*Loading Port:</b></p><input type="text" name="pol" value="{{ old('pol') }}" style="width: 350px;height: 40px;" />
             </div>
-            <div class="d-flex" style="margin-right: 95px;">
+            <div class="d-flex pod">
                 <p class="jarakexclusive"><b>*Destination Port:</b></p><input type="text" name="pod" value="{{ old('pod') }}" style="width: 350px;height: 40px;" /><br />
             </div>
         </div>
@@ -196,22 +252,22 @@
                 <b><label for="description">DESCRIPTION</label></b><br />
                 <textarea name="description" style="width: 100%;"></textarea>
             </div>
-            <div class="d-flex justify-content-between mb-3">
+            <div class="trio mb-3">
                 <!-- <div>
                     <b><label for="qtynote">QUANTITY</label></b><br />
                     <input type="text" name="qtynote" style="width: 200px;height:40px"/>
                 </div> -->
                 <div>
                     <b><label for="gwnote">G.W (KGS)</label></b><br />
-                    <input type="text" name="gw" style="width: 200px;height:40px"/>
+                    <input type="text" name="gw" value="{{ old('gw') }}" style="width: 200px;height:40px"/>
                 </div>
                 <div>
                     <b><label for="nwnote">N.W (KGS)</label></b><br />
-                    <input type="text" name="nw" style="width: 200px;height:40px"/>
+                    <input type="text" name="nw" value="{{ old('nw') }}" style="width: 200px;height:40px"/>
                 </div>
                 <div>
                     <b><label for="nwnote">MEAS (CBM)</label></b><br />
-                    <input type="text" name="meas" style="width: 200px;height:40px"/>
+                    <input type="text" name="meas" value="{{ old('meas') }}" style="width: 200px;height:40px"/>
                 </div>
             </div>
             <div class="mb-3">

@@ -307,7 +307,7 @@
                         @endif
                         <td>
                             <a href="/orders/{{ $order->id }}" class="btn btn-primary" style="text-decoration: none; color: white;">Detail</a>
-                            <a href="/orders/approve/{{ $order->id }}" class="btn btn-primary" style="text-decoration: none; color: white;">Approve</a>
+                            <a href="/orders/{{$order->id}}/edit" class="btn btn-primary" style="text-decoration: none; color: white;">Edit</a>
                         </td>
                     </tr>
                     @endforeach

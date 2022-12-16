@@ -31,6 +31,43 @@
     @yield('style')
 </head>
 <style>
+    /* DROPDOWN */
+
+    .dropbtn {
+        background-color:#011D83;
+        color: white;
+        padding: 13px;
+        font-size: 16px;
+        border: none;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 9999;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {background-color: #ddd;}
+
+    .dropdown:hover .dropdown-content {display: block;}
+
+    .dropdown:hover .dropbtn {background-color:#011D83;}
+
     @media only screen and (max-width: 820px) {
         .nav-top-left > img{
             width:74.5px !important;
@@ -47,6 +84,9 @@
         }
         .nav-bottom {
             height:40px!important;
+        }
+        .dropbtn {
+            padding: 8px;
         }
     }
     @media only screen and (max-width: 450px) {
@@ -110,45 +150,6 @@
         color: white;
         font-weight: bold;
     }
-
-    /* DROPDOWN */
-
-    .dropbtn {
-        background-color:#011D83;
-        color: white;
-        padding: 13px;
-        font-size: 16px;
-        border: none;
-    }
-
-    .dropdown {
-        position: relative;
-        display: inline-block;
-    }
-
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f1f1f1;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 9999;
-    }
-
-    .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    }
-
-    .dropdown-content a:hover {background-color: #ddd;}
-
-    .dropdown:hover .dropdown-content {display: block;}
-
-    .dropdown:hover .dropbtn {background-color:#011D83;}
-
-    /* DROPDOWN */
 </style>
 <body>
     <nav class="nav" style="background-color: white;">
