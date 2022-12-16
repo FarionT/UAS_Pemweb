@@ -167,16 +167,19 @@
             <a href="/aboutus" class="nav-text my-auto">About Us</a>
             <a href="/service" class="nav-text my-auto">Services</a>
             <a href="/visi&misi" class="nav-text my-auto">Vision & Mission</a>
+            @auth
+            @if(Auth::user())
             <div class="dropdown">
                 <button class="dropbtn">Language</button>
                 <div class="dropdown-content">
-                    @auth
                     <a href="/change/language/{{ Auth::user()->id }}/1">English</a>
                     <a href="/change/language/{{ Auth::user()->id }}/2">Indonesia</a>
-                    @endauth
                 </div>
             </div>
-            <!-- <a href="/" class="nav-text my-auto">Language</a> -->
+            @endauth    
+            @else
+            <a href="/login" class="nav-text my-auto">Language</a>
+            @endif
         </div>
     </nav>
     @yield('isi')  

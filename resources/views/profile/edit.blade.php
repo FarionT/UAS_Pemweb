@@ -385,7 +385,7 @@
                 </p>
             </header>
 
-            <div class="d-flex">
+            <div class="d-flex mt-3">
                 <x-danger-button
                 x-data=""
                 x-on:click.prevent="$dispatch('open-modal', 'confirm-user-deletion')"

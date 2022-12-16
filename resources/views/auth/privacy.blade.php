@@ -5,7 +5,12 @@
 <style>
     p{font-family: 'Titillium Web', sans-serif;}
 
-    body{background-color: #B0D1FC !important}
+    body{
+        /* background-color: #B0D1FC !important; */
+        background-image: url(" {{ asset('app/assets/image/bg_login.png') }}");
+        background-repeat: no-repeat; 
+        background-size: 100%;
+    }
 
     .title {
         padding: 10px;

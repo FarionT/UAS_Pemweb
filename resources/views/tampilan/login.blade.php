@@ -2,58 +2,86 @@
 @section('title', 'Login')
 
 @section('style')
-    <style>
-        p{font-family: 'Titillium Web', sans-serif;}
+<style>
+    p{font-family: 'Titillium Web', sans-serif;}
 
-        body{
-            background-color: #B0D1FC !important;
-        }
+    body{
+        /* background-color: #B0D1FC !important; */
+        background-image: url(" {{ asset('app/assets/image/bg_login.png') }}");
+        background-repeat: no-repeat; 
+        background-size: 100%;
+    }
 
-        #judul>p{
-            font-size: 60px;
-            font-weight: bold;
-        }
+    .outside {
+        display: flex;
+        justify-content: space-around;
+    }
 
-        #judul>img{
-            width:268px;
-            height:auto;
-        }
-
-        .kotak {
+    .form-login {
         background-color: white;
         border-radius: 20px;
-        width: 45%;
-        height: 400px;
-        margin-left: 35px;
-        margin-bottom: 30px;
-        padding:0px;
-        border-radius: 20px;
-        box-shadow: 5px 5px 5px;
-        }
-
-        .kotak-kanan {
-        margin-left: 62px;
-        }
-
-    </style>
-@section('content')
-<div class="mt-5 mb-10">
-    <div class="d-flex justify-content-center">
-        <img src="{{ asset('app/assets/image/service.png') }}" style="width:100px;" />
-        <p class="align-items-center my-auto" style="font-size: 60px;">LOGIN</p>
+        box-shadow: 10px 10px #001560;
+        padding: 30px;
+    }
+</style>
+@endsection
+@section('isi')
+<div class="outside mt-5">
+    <div>
+        <img src="{{ asset('app/assets/image/logo_jayamas.png') }}" style="width: 200px;"/>
+        <h1 style="font-family: 'Titillium Web', sans-serif; color: white;" class="mb-3"><b>PT. INDOTRANS</b></h1>
+        <h1 style="font-family: 'Titillium Web', sans-serif; color: white;"><b>JAYAMAS ABADI</b></h1>
     </div>
-</div>
-
-<div class ="kotak kotak-kanan">
-    <form>
-        <div class="form-group">
-          <label for="Username">Username</label>
-          <input type="name" class="form-control" id="Username">
+    <div>
+        <div class="d-flex justify-content-center mb-5">
+            <img src="{{ asset('app/assets/image/profile.png') }}" style="width: 100px;" />
+            <h1 class="ms-3 my-auto" style="font-family: 'Titillium Web', sans-serif;"><b>Login</b></h1>
         </div>
-        <div class="form-group">
-          <label for="Password">Password</label>
-          <input type="password" class="form-control" id="Password">
+        <div class="form-login mx-auto" style="width: 500px;">
+            <form method="POST" action="{{ route('login') }}">
+                @csrf
+    
+                <!-- Email Address -->
+                <div class="d-flex flex-column">
+                    <x-input-label for="email" :value="__('Email')" style="font-family: 'Titillium Web', sans-serif; font-weight: bold;"/>
+                    <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus style="border-radius: 5px; background-color: #D9D9D9;"/>
+                </div>
+                <x-input-error :messages="$errors->get('email')" class="mt-2" />
+    
+                <!-- Password -->
+                <div class="d-flex flex-column mt-4">
+                    <x-input-label for="password" :value="__('Password')" style="font-family: 'Titillium Web', sans-serif; font-weight: bold;"/>
+    
+                    <x-text-input id="password" class="block mt-1 w-full"
+                                    type="password"
+                                    name="password"
+                                    required autocomplete="current-password" 
+                                    style="border-radius: 5px; background-color: #D9D9D9;" />
+    
+                </div>
+                <x-input-error :messages="$errors->get('password')" class="mt-2" />
+    
+                <!-- Remember Me -->
+                <div class="block mt-4">
+                    <label for="remember_me" class="inline-flex items-center">
+                        <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
+                        <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                    </label>
+                </div>
+    
+                <div class="d-flex items-center justify-content-between mt-4">
+                    @if (Route::has('password.request'))
+                        <a style="text-decoration: none; color: black;" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 my-auto" href="{{ route('password.request') }}">
+                            {{ __('Forgot your password?') }}
+                        </a>
+                    @endif
+    
+                    <x-primary-button class="rounded-pill ml-3" style="background-color: #001560;">
+                        {{ __('Log in') }}
+                    </x-primary-button>
+                </div>
+            </form>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
 </div>
 @endsection

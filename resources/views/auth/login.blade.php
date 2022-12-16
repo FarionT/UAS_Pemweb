@@ -1,55 +1,87 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+@extends('layouts.halaman')
+@section('title', 'Login')
 
-        <!-- Session Status -->
-        <x-auth-session-status class="mb-4" :status="session('status')" />
+@section('style')
+<style>
+    p{font-family: 'Titillium Web', sans-serif;}
 
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
+    body{
+        /* background-color: #B0D1FC !important; */
+        background-image: url(" {{ asset('app/assets/image/bg_login.png') }}");
+        background-repeat: no-repeat; 
+        background-size: 100%;
+    }
 
-            <!-- Email Address -->
-            <div>
-                <x-input-label for="email" :value="__('Email')" />
-                <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+    .outside {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .form-login {
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 10px 10px #001560;
+        padding: 30px;
+    }
+</style>
+@endsection
+@section('isi')
+<div class="outside mt-5">
+    <div>
+        <img src="{{ asset('app/assets/image/logo_jayamas.png') }}" style="width: 200px;"/>
+        <h1 style="font-family: 'Titillium Web', sans-serif; color: white;" class="mb-3"><b>PT. INDOTRANS</b></h1>
+        <h1 style="font-family: 'Titillium Web', sans-serif; color: white;"><b>JAYAMAS ABADI</b></h1>
+    </div>
+    <div>
+        <div class="d-flex justify-content-center mb-5">
+            <img src="{{ asset('app/assets/image/profile.png') }}" style="width: 100px;" />
+            <h1 class="ms-3 my-auto" style="font-family: 'Titillium Web', sans-serif;"><b>Login</b></h1>
+        </div>
+        <div class="form-login mx-auto" style="width: 500px;">
+            <form method="POST" action="{{ route('login') }}">
+                @csrf
+    
+                <!-- Email Address -->
+                <div class="d-flex flex-column">
+                    <x-input-label for="email" :value="__('Email')" style="font-family: 'Titillium Web', sans-serif; font-weight: bold;"/>
+                    <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus style="border-radius: 5px; background-color: #D9D9D9;"/>
+                </div>
                 <x-input-error :messages="$errors->get('email')" class="mt-2" />
-            </div>
-
-            <!-- Password -->
-            <div class="mt-4">
-                <x-input-label for="password" :value="__('Password')" />
-
-                <x-text-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="current-password" />
-
+    
+                <!-- Password -->
+                <div class="d-flex flex-column mt-4">
+                    <x-input-label for="password" :value="__('Password')" style="font-family: 'Titillium Web', sans-serif; font-weight: bold;"/>
+    
+                    <x-text-input id="password" class="block mt-1 w-full"
+                                    type="password"
+                                    name="password"
+                                    required autocomplete="current-password" 
+                                    style="border-radius: 5px; background-color: #D9D9D9;" />
+    
+                </div>
                 <x-input-error :messages="$errors->get('password')" class="mt-2" />
-            </div>
-
-            <!-- Remember Me -->
-            <div class="block mt-4">
-                <label for="remember_me" class="inline-flex items-center">
-                    <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
-
-                <x-primary-button class="ml-3">
-                    {{ __('Log in') }}
-                </x-primary-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
+    
+                <!-- Remember Me -->
+                <div class="block mt-4">
+                    <label for="remember_me" class="inline-flex items-center">
+                        <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
+                        <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                    </label>
+                </div>
+    
+                <div class="d-flex items-center justify-content-between mt-4">
+                    @if (Route::has('password.request'))
+                        <a style="text-decoration: none; color: black;" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 my-auto" href="{{ route('password.request') }}">
+                            {{ __('Forgot your password?') }}
+                        </a>
+                    @endif
+    
+                    <x-primary-button class="rounded-pill ml-3" style="background-color: #001560;">
+                        {{ __('Log in') }}
+                    </x-primary-button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@endsection
