@@ -243,6 +243,10 @@ Route::get('/tampilan/visimisi', function() {
     return view('tampilan.visimisi');
 });
 
+Route::get('/tampilan/home', function() {
+    return view('tampilan.home');
+});
+
 Route::get('/tampilan/forbidden', function() {
     return view('tampilan.forbidden');
 });
