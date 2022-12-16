@@ -3,7 +3,19 @@
 @section('style')
 <style>
     @media only screen and (max-width: 1250px) {
-        
+        .footer_left {
+            padding-left:20px !important;
+            gap:20px !important;
+        }
+        .footer_left p {
+            font-size:12px !important;
+        }
+        .text_big {
+            font-size:16px !important;
+        }
+        .footer_right p{
+            font-size:14px !important; 
+        }
         .home_after_more_card >img {
             width: 250px !important; 
 
@@ -28,9 +40,6 @@
             color:white;
         }
         
-        .footer_left {
-            
-        }
       
     }
     @media only screen and (max-width: 1000px) {
@@ -41,19 +50,22 @@
             flex-direction:column-reverse!important;
         }
         .home_after_more_card >img {
-            width: 200px !important; 
+            width: 40% !important; 
 
         }
         .home_after_more_services >img {
-            width: 200px !important; 
+            width: 100%!important; 
 
         }
         .deskripsi_pesanan {
             font-size:1rem !important;
         }
         .button_more {
-            width:200px !important;
+            width:100px !important;
             font-size:50px !important;
+        }
+        .button_more > p {
+            font-size:2rem !important;
         }
         .tulisan_company {
             font-size:3rem !important;
@@ -81,13 +93,17 @@
             flex-direction: column-reverse;
             justify-content: center !important;
             align-items: center;
-            gap:20px;
+            gap:50px;
         }
         .footer_left {
             border-radius:0px !important;
             border-right: none !important;
             width: 100% !important;
             justify-content: space-around !important;
+        }
+        .footer_right {
+            width:70% !important;
+            height:auto !important;
         }
         .more {
             margin-top: 50px !important;
@@ -103,9 +119,9 @@
         .company_box {
             margin-top:-120px!important;
         }
-        .deskripsi_company1 > img {
+        /* .deskripsi_company1 > img {
             width:100%!important;
-        }
+        } */
         .deskripsi_company1 > p {
             font-size:1.3rem!important;
         }
@@ -118,7 +134,7 @@
         .home_after_more_services {
             display:flex !important;
             align-items: center;
-            gap:50px !important;
+            gap:10px !important;
             grid-column: span 1 !important;
         }
         .deskripsi_pesanan {
@@ -150,8 +166,15 @@
         .service_button > p {
             font-size: 2rem !important;
         }
+        .footer_right {
+            width:94% !important;
+            height:94% !important;
+        }
+        .home_after_more_services img {
+            width:40% !important;
+        }
     }
-    @media only screen and (max-width: 450px) {
+    @media only screen and (max-width: 475px) {
         .text_big {
             font-size:0.8rem !important;
         }
@@ -161,9 +184,9 @@
         .home_after_more {
             gap:20px !important;
         }
-        .home_after_more img {
+        /* .home_after_more img {
             width:150px !important;
-        }
+        } */
         .home_after_more_card div > p {
             font-size: 2rem !important;
         }
@@ -201,9 +224,9 @@
             font-size:0.5rem;
         }
         .footer_right {
-            width:300px !important;
+            width:94% !important;
             /* height: 100% !important; */
-            height: 300px !important;
+            height: 100% !important;
         }
         .footer_right p {
             font-size: 0.7rem !important;
@@ -243,6 +266,9 @@
         .get_more_info {
             font-size:1rem !important;
         }
+        .pesanan {
+            width:60% !important;
+        } 
     }
     body {
         background-color: #B0D1FC
@@ -312,6 +338,7 @@
         background-color:white;
         border-radius:30px;
         display:grid;
+        gap:50px;
         grid-template-columns: auto auto;
         justify-content:center;
         box-shadow: 5px 10px #011D83;
@@ -432,20 +459,20 @@
 
         <div class="home_after_more">
             <div class="home_after_more_card">
-                <img src="{{asset('app/assets/image/visi misi.png')}}" style="width:300px;padding-top:50px;padding-bottom:50px;">
+                <img src="{{asset('app/assets/image/visi misi.png')}}" style="width:50%;padding-top:50px;padding-bottom:50px;">
                 <div style="padding-top:50px;padding-bottom:50px;">
                     <p>Vision & <br>Mission</p>
                     <button class="button_more"><p style="margin-top: auto;margin-bottom:auto;">GO</p></button>
                 </div>
             </div>
             <div class="home_after_more_card">
-                <img src="{{asset('app/assets/image/about_us.png')}}" style="width:300px;padding-top:50px;padding-bottom:50px;">
+                <img src="{{asset('app/assets/image/about_us.png')}}" style="width:50%;padding-top:50px;padding-bottom:50px;">
                 <div style="padding-top:50px;padding-bottom:50px;">
                     <p>About<br>US</p>
                     <button class="button_more"><p style="margin-bottom:auto;">CHECK</p></button>
                 </div>
             </div>
-            <div class="home_after_more_services"  style="grid-column:span 2;gap:50px;">
+            <div class="home_after_more_services"  style="grid-column:span 2;">
                 <img src="{{asset('app/assets/image/service.png')}}" style="width:300px;padding-top:50px;padding-bottom:50px;">
                 <div style="padding-top:50px;padding-bottom:50px;">
                     <p>SERVICES</p>
@@ -466,7 +493,7 @@
 </div>
 <footer style="background-color:#DCEBFF;margin-top:-2.5rem" class="pt-5">
     <div class="footer_content">
-        <div class="footer_left flex-grow-1 gap-5 pt-5">
+        <div class="footer_left flex-grow-1 pt-5">
             <div class="contact_us">
                 <p style="font-weight:bold;font-size:32px;" class="text_big">Contact Us</p>
                 <div class="d-flex mt-3 gap-3">
@@ -489,8 +516,8 @@
                     <img src="{{asset('app/assets/image/aptrindo.png')}}" class="aptrindo" style="width:125px;height:120.5px;"alt="">
                 </div>
             </div>
-            <div class="footer-right">
-                <div class="our_office" style="font-family: Titillium Web">
+            <div class="our-office">
+                <div  style="font-family: Titillium Web">
                     <p style="font-weight:bold;font-size:32px;" class="text_big">Our Office</p>
                     <p>
                         <b class="text_big">Head Office :</b><br/>
@@ -499,13 +526,13 @@
                         Taruma Jaya, Bekasi 17211 Indonesia <br>
                     </p>
                     <p>
-                        <b class="text_big">Sales / Operational Office : </b>
+                        <b class="text_big">Sales / Operational Office : </b> <br>
                         Kirana Commercial Avenue, <br>
                         Bella Terra Lifestyle Center Lt. 1 No. 26 <br>
                         Jl. Boulevard Raya A2 No. 1 Kelapa Gading, Jakarta Utara
                     </p>
                     <p>
-                        <b class="text_big">Cilegon Office : </b>
+                        <b class="text_big">Cilegon Office : </b> <br>
                         Jl. Lingkar Selatan KM.5, <br>
                         Karangasem, Kec. Cibeber, <br>
                         Kota Cilegon, Banten 42426 <br>
@@ -514,10 +541,10 @@
             </div>
         </div>
         
-        <div class="footer_right rounded-circle " style="background-color: white;border:#011D83 solid 20px;width:539px;height:539px;">
+        <div class="footer_right rounded-circle " style="background-color: white;border:#011D83 solid 20px;width:35%;height:auto;">
             <div class="p-4 d-flex flex-column">
                 <img src="{{asset('app/assets/image/customer_support.png')}}" class="mx-auto" style="width:150px;height:150px;"alt=""/>
-                <p style="width:439px;font-size:23px;text-align:center;" class="mx-auto">We are always open to answer you, if you have something to tell us, whether it is a question, suggestion or critics don’t hesitate to contact us.</p>
+                <p style="width:80%;font-size:23px;text-align:center;" class="mx-auto">We are always open to answer you, if you have something to tell us, whether it is a question, suggestion or critics don’t hesitate to contact us.</p>
             </div>
             
         </div>
