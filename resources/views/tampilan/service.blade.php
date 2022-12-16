@@ -33,6 +33,7 @@
         margin-bottom: 50px;
         padding:10px;
         display: flex;
+        box-shadow: 5px 5px 5px;
     }
 
     .kotak {
@@ -44,6 +45,7 @@
         margin-bottom: 30px;
         padding:0px;
         border-radius: 20px;
+        box-shadow: 5px 5px 5px;
     }
 
     .kotak>.judul{
@@ -86,7 +88,7 @@
 @endsection
 
 @section('isi')
-    <div class="mt-5">
+    <div class="mt-5 mb-10">
         <div class="d-flex justify-content-center">
             <img src="{{ asset('app/assets/image/service.png') }}" style="width:100px;" />
             <p class="align-items-center my-auto" style="font-size: 60px;">SERVICE</p>

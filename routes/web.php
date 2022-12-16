@@ -54,6 +54,13 @@ Route::get('/service', function () {
     return view('company.service');
 });
 
+Route::get('/change/language/{id}/{type_id}', function($id, $type_id) {
+    $user = User::findOrFail($id);
+    $user->language = $type_id;
+    $user->save();
+    return view('company.index');
+});
+
 Route::prefix('admin')->group(function () {
     Route::get('/account', function() {
         $users = User::all()->where('role_id', 2);
@@ -62,7 +69,8 @@ Route::prefix('admin')->group(function () {
 
     Route::get('/detail/{id}', function($id) {
         $user = User::findOrFail($id);
-        return view('admin.detail', ['user' => $user]);
+        $orders = Order::all()->where('user_id', $user->id);
+        return view('admin.detail', ['user' => $user, 'orders' => $orders]);
     });
     
     Route::get('/approve/{id}', function($id) {
@@ -100,6 +108,15 @@ Route::prefix('admin')->group(function () {
 });
 
 Route::resource('orders', OrderController::class)->middleware('auth');
+Route::get('/orders/create/{id}', function($id) {
+    if(!Gate::allows('create-order')) {
+        return view('company.forbidden');
+        // abort('403');
+    }
+    $order = Order::orderBy('id', 'desc')->first();
+    $type_id = $id;
+    return view('orders.create', ['type_id' => $type_id, 'order' => $order]);
+});
 Route::get('/orders/approve/{id}', function($id) {
     $order = Order::findOrFail($id);
     $order->accept = 1;
@@ -163,6 +180,9 @@ Route::get('/orders/mail/{user_id}/{order_id}', function($user_id, $order_id) {
     return redirect('/');
 });
 
+Route::get('/privacy', function() {
+    return view('auth.privacy');
+});
 
 Route::get('/register/mail/{id}', function($id) {
     $user = User::find($id);
@@ -199,6 +219,10 @@ Route::get('/tampilan/aboutus', function() {
     return view('tampilan.aboutus');
 });
 
+Route::get('/tampilan/expimpform', function() {
+    return view('tampilan.expimpform');
+});
+
 Route::get('/tampilan/service', function() {
     return view('tampilan.service');
 });
@@ -217,4 +241,20 @@ Route::get('/tampilan/register2', function() {
 
 Route::get('/tampilan/visimisi', function() {
     return view('tampilan.visimisi');
+});
+
+Route::get('/tampilan/forbidden', function() {
+    return view('tampilan.forbidden');
+});
+
+Route::get('/tampilan/profile', function() {
+    return view('tampilan.profile');
+});
+
+Route::get('/tampilan/home', function() {
+    return view('tampilan.home');
+});
+
+Route::get('/tampilan/detailuser', function() {
+    return view('tampilan.detailuser');
 });

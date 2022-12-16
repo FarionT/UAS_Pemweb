@@ -101,7 +101,7 @@
             <x-input-error class="mt-2" :messages="$errors->get('nib')" />
         </div>
 
-        Photo: <img src="{{ asset('app/'.$user->photo )}}" style="width: 300px;" class="mt-2"/>
+        Photo: <img src="{{ asset('app/'.$user->photo) }}" style="width: 300px;" class="mt-2"/>
 
         <div>
             <x-input-label for="photo" :value="__('Photo')" />

@@ -30,20 +30,6 @@
                 <x-input-error :messages="$errors->get('lastname')" class="mt-2" />
             </div>
 
-            <!-- Email Address -->
-            <div class="mt-4">
-                <x-input-label for="email" :value="__('Email')" />
-                <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
-                <x-input-error :messages="$errors->get('email')" class="mt-2" />
-            </div>
-
-            <!-- Nomor Telepon -->
-            <div class="mt-4">
-                <x-input-label for="notelp" :value="__('Nomor Telepon')" />
-                <x-text-input id="notelp" class="block mt-1 w-full" type="text" name="notelp" :value="old('notelp')" required />
-                <x-input-error :messages="$errors->get('notelp')" class="mt-2" />
-            </div>
-
             <!-- Company -->
             <div class="mt-4">
                 <x-input-label for="company" :value="__('Company')" />
@@ -51,25 +37,25 @@
                 <x-input-error :messages="$errors->get('company')" class="mt-2" />
             </div>
 
-            <!-- Country -->
+            <!-- Email Address -->
             <div class="mt-4">
-                <x-input-label for="country" :value="__('Country')" />
-                <x-text-input id="country" class="block mt-1 w-full" type="text" name="country" :value="old('country')" required />
-                <x-input-error :messages="$errors->get('country')" class="mt-2" />
+                <x-input-label for="email" :value="__('Email')" />
+                <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
+                <x-input-error :messages="$errors->get('email')" class="mt-2" />
             </div>
 
-            <!-- City -->
+            <!-- Email Company -->
             <div class="mt-4">
-                <x-input-label for="city" :value="__('City')" />
-                <x-text-input id="city" class="block mt-1 w-full" type="text" name="city" :value="old('city')" required />
-                <x-input-error :messages="$errors->get('city')" class="mt-2" />
+                <x-input-label for="emailcompany" :value="__('Email Company')" />
+                <x-text-input id="emailcompany" class="block mt-1 w-full" type="email" name="emailcompany" :value="old('emailcompany')" required />
+                <x-input-error :messages="$errors->get('emailcompany')" class="mt-2" />
             </div>
 
-            <!-- Address -->
+            <!-- Nomor Telepon -->
             <div class="mt-4">
-                <x-input-label for="address" :value="__('Address')" />
-                <x-text-input id="address" class="block mt-1 w-full" type="text" name="address" :value="old('address')" required />
-                <x-input-error :messages="$errors->get('address')" class="mt-2" />
+                <x-input-label for="notelp" :value="__('Nomor Telepon')" />
+                <x-text-input id="notelp" class="block mt-1 w-full" type="text" name="notelp" :value="old('notelp')" required />
+                <x-input-error :messages="$errors->get('notelp')" class="mt-2" />
             </div>
 
             <!-- NPWP -->
