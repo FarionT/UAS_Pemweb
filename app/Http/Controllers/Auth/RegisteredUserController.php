@@ -41,12 +41,10 @@ class RegisteredUserController extends Controller
             'username' => ['required', 'string', 'max:255'],
             'firstname' => ['required', 'string', 'max:255'],
             'lastname' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
-            'notelp' => ['required', 'string', 'max:15', 'unique:'.User::class],
             'company' => ['required', 'string'],
-            'country' => ['required', 'string'],
-            'city' => ['required', 'string'],
-            'address' =>  ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
+            'emailcompany' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
+            'notelp' => ['required', 'string', 'max:15', 'unique:'.User::class],
             'npwp' => ['required', 'max:20'],
             'nib' => ['required', 'integer'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
@@ -54,8 +52,12 @@ class RegisteredUserController extends Controller
         ]);
 
         if($request->photo) {
+            // date_default_timezone_set('Asia/Jakarta');
+            // $date = date("Y-m-d h:i:sa");
             // $file_name = $request->photo->getClientOriginalName();
-            // $path = $request->photo->storeAs('photo', 'photo_profile'.$file_name);
+            // $full_file = 'photo_profile_'.$file_name.'_'.$date;
+            // $request->photo->storeAs('photo', $full_file);
+            // $path = 'photo/'.$full_file;
             $path = $request->photo->store('photo');
         }
         else {
@@ -66,15 +68,14 @@ class RegisteredUserController extends Controller
             'username' => $request->username,
             'firstname' => $request->firstname,
             'lastname' => $request->lastname,
-            'email' => $request->email,
-            'notelp' => $request->notelp,
             'company' => $request->company,
-            'country' => $request->country,
-            'city' => $request->city,
-            'address' => $request->address,
+            'email' => $request->email,
+            'emailcompany' => $request->emailcompany,
+            'notelp' => $request->notelp,
             'npwp' => $request->npwp,
             'nib' => $request->nib,
             'password' => Hash::make($request->password),
+            'photo' => $path,
         ]);
 
         $user->photo = $path;

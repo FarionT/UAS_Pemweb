@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\File;
+use App\Models\Order;
 
 class ProfileController extends Controller
 {
@@ -18,9 +19,8 @@ class ProfileController extends Controller
      */
     public function edit(Request $request)
     {
-        return view('profile.edit', [
-            'user' => $request->user(),
-        ]);
+        $orders = Order::all()->where('user_id', $request->user()->id);
+        return view('profile.edit', ['user' => $request->user(), 'orders' => $orders]);
     }
 
     /**
@@ -34,12 +34,10 @@ class ProfileController extends Controller
         $request->user()->username = $request->username;
         $request->user()->firstname = $request->firstname;
         $request->user()->lastname = $request->lastname;
-        $request->user()->email = $request->email;
-        $request->user()->notelp = $request->notelp;
         $request->user()->company = $request->company;
-        $request->user()->country = $request->country;
-        $request->user()->city = $request->city;
-        $request->user()->address = $request->address;
+        $request->user()->email = $request->email;
+        $request->user()->emailcompany = $request->emailcompany;
+        $request->user()->notelp = $request->notelp;
         $request->user()->npwp = $request->npwp;
         $request->user()->nib = $request->nib;
 
@@ -56,8 +54,6 @@ class ProfileController extends Controller
         }
 
         $request->user()->save();
-
-        
 
         return Redirect::route('profile.edit')->with('status', 'profile-updated');
     }

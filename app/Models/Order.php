@@ -13,7 +13,6 @@ class Order extends Model
     
     use HasFactory;
     protected $fillable = [
-        'si_no',
         'shipper',
         'consignee',
         'notifyparty',
@@ -23,11 +22,12 @@ class Order extends Model
         'pol',
         'pod',
         'vsl',
-        'etd_jkt',
+        'etd',
         'marking',
         'description',
         'gw',
         'nw',
-        'meas'
+        'meas',
+        'notes',
     ];
 }
