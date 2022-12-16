@@ -132,6 +132,18 @@
         text-decoration: none;
         display: block;
     }
+    .sticky_login {
+        background-color: #4D65AE;
+        display:flex;
+        position:fixed;
+        bottom:0px;
+        margin-top:auto;
+        width:100%;
+        /* justify-content: space-between; */
+        /* top:100%; */
+        z-index:2;
+        justify-content: space-between;
+    }
 
     .dropdown-content a:hover {background-color: #ddd;}
 
@@ -179,7 +191,14 @@
             <!-- <a href="/" class="nav-text my-auto">Language</a> -->
         </div>
     </nav>
-    @yield('isi')  
+    <div class="sticky_login">
+        <p>You are not logged in</p>
+        <div>
+            <button>Register</button>
+            <button>Login</button>
+        </div>
+    </div>
+    @yield('isi') 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 </body>
