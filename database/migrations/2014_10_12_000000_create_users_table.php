@@ -27,7 +27,7 @@ return new class extends Migration
             $table->string('photo')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('language')->default('en');
+            $table->integer('language')->comment('1:en, 2:id')->default(1);
             $table->integer('role_id')->comment('1:admin, 2:member')->default(2);
             $table->boolean('accept')->default(0);
             $table->rememberToken();
