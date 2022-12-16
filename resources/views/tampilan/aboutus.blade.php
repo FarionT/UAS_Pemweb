@@ -8,6 +8,30 @@
         #judul>p{
             font-weight: bold;
         }
+        #pembatas1 p {
+            width: 100%; 
+            text-align: center; 
+            border-bottom: 1px solid #001560; 
+            line-height: 0.1em;
+            margin: 12px 0 12px; 
+            font-family: 'Titillium Web';
+            color: #001560;
+            font-size: 60px;
+        } 
+
+        #pembatas span { 
+            background:#B0D1FC; 
+            padding:0 10px; 
+        }
+
+        #pembatas1 {
+            width: 100%;
+            height:50px;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            padding:10px;
+            display: flex;
+        }
 
 
         p#tulisanService:before, p#tulisanService:after{
@@ -136,7 +160,7 @@
 @endsection
 @section('isi')
 @auth
-    @if(Auth::user()->language == 'en')
+    @if(Auth::user()->language == 2)
 @endauth
         <div class="container">
             <div id="judul" class="d-flex justify-content-center">
@@ -165,12 +189,12 @@
                     appropriately.
                 </p>
             </div>
-            <p id="tulisanService">SERVICES</p>
+
         </div>
     @endif
 
 @auth
-    @if(Auth::user()->language == 'id')   
+    @if(Auth::user()->language == 2)   
 @endauth
         <div class="container">
             <div id="judul" class="d-flex justify-content-center">
@@ -199,7 +223,7 @@
                     appropriately.
                 </p>
             </div>
-            <p id="tulisanService">SERVICES</p>
+
         </div>
     @endif
 <div class="container">
@@ -234,7 +258,11 @@
             appropriately.
         </p>
     </div>
-    <p id="tulisanService" class="tulisanJudul my-5" style="color:black !important">SERVICES</p>
+    <div class="mb-5">
+        <div id="pembatas1" class="d-flex justify-content-center">
+            <p id="pembatas" class="tulisanJudul align-items-center my-auto"><span>SERVICES</span></p>
+        </div>
+    </div>
     <div class="bg-white rounded-5 p-3 d-flex flex-column my-5">
         <div  class="d-flex ms-4">
             <p style="margin-top:-60px;" class="tulisanJudul">
@@ -279,7 +307,11 @@
             <img src="{{  asset('app/assets/image/image 8.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
         </div>
     </div>
-    <p id="tulisanService" class="tulisanJudul my-5" style="color:black !important">ADVANTAGES</p>
+    <div class="mb-5">
+        <div id="pembatas1" class="d-flex justify-content-center">
+            <p id="pembatas" class="tulisanJudul align-items-center my-auto"><span>ADVANTAGES</span></p>
+        </div>
+    </div>
     <div class="bg-white rounded-5 p-5 my-5 shadow">
         <ol>
             <li class="isi-konten">More than 15 years of experience in the Forwarding and Inland Transport \Trucking industry.</li>
