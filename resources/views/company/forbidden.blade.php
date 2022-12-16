@@ -48,17 +48,28 @@
         align-items: center;
     }
 
-    .tombol {
-        border-radius: 20px;
+    .gambar {
+        width:125px; 
+        height:auto; 
+        margin-top: 30px;
     }
 
-    .tombol>a {
-        width: 100%; 
-        text-align: center; 
-        margin: 30px 0 0; 
-        font-family: 'Titillium Web';
-        color: white;
-        font-size: 28px;
+    @media screen and (max-width: 650px) {
+        .gambar {
+            width: 110px;
+        }
+        .isi>p {
+            font-size: 20px;
+        }
+    }
+
+    @media screen and (max-width: 650px) {
+        .gambar {
+            width: 100px;
+        }
+        .isi>p {
+            font-size: 15px;
+        }
     }
 </style>
 @endsection
@@ -70,11 +81,11 @@
                 <p class="my-auto justify-content-center d-flex">Warning!</p>
             </div>
             <div class="isi ms-3 my-auto d-flex">
-                <img src="{{ asset('app/assets/image/warning.png') }}" style="width:125px; height:auto; margin-top: 30px;" />
+                <img src="{{ asset('app/assets/image/warning.png') }}" class="gambar" />
                 <p class="my-auto">Maaf anda tidak punya akses ke laman ini.</p>
             </div>
-            <div class="justify-content-center d-flex">
-                <a href="/service" class="text-center mx-auto btn btn-danger">Back to Previous Page</a>
+            <div class="justify-content-center d-flex mt-3">
+                <a href="/service" class="button text-center mx-auto btn btn-danger">Back to Previous Page</a>
             </div>
         </div>
     </div>
