@@ -7,6 +7,35 @@
 
     body{background-color: #B0D1FC !important}
 
+    @media only screen and (max-width: 650px) {
+        .kotakprofil{
+            flex-direction: column;
+        }
+        /* .biodataSingkat {
+            align-items: center;
+            display: flex;
+        } */
+        .form-control {
+            width:100%;
+            padding-left:16px !important; 
+            padding-right: 16px !important;
+        }
+        .biodataSingkat > form {
+            width:94%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .biodataSingkat {
+        width:100%;
+    }
+    form {
+        padding-right:24px;
+    }
+    .form-control {
+        /* width:90 %; */
+        padding-left:24px;
+    }
     .subjudul {
         position: relative;
         background-color: #011D83;
@@ -37,7 +66,7 @@
     .kotakprofil {
         background-color: #fff;
         border-radius: 30px;
-        width: 1045px;
+        width:100%;
         height: auto;
         margin-left: 20px;
         margin-bottom: 10px;
@@ -49,7 +78,7 @@
     .userprofil {
         background-color: #fff;
         border-radius: 30px;
-        width: 1045px;
+        width: 100%;
         height: auto;
         margin-right: auto;
         margin-left: auto;
@@ -84,7 +113,7 @@
     #pembatas1 {
         background-color: #011D83;
         border-radius: 20px;
-        width: 1045px;
+        width: 100%;
         height:50px;
         margin-right: auto;
         margin-left: auto;
@@ -108,12 +137,12 @@
     <div class="profilebox">
         <div class="iniform">
             <div class="d-flex flex-row">
-                <div class="kotakprofil d-flex flex-row mx-auto">
+                <div class="kotakprofil d-flex mx-auto">
                     <div class="d-flex justify-content-center align-items-center flex-column">
-                        <img class="m-3" src="{{ asset('app/assets/image/profile.png') }}" style="border:1px solid gray;border-radius:15px;width:250px; height:auto;"/>
+                        <img class="m-3 profile_image" src="{{ asset('app/assets/image/profile.png') }}" style="border:1px solid gray;border-radius:15px;width:250px; height:auto;"/>
                         <a href="/" class="tombol d-flex justify-content-center rounded-circle mx-auto " style="background-color:#001560; border:3px solid #001560;  margin-top: -45px; "><img src="{{ asset('app/assets/image/edit.png') }}" style="width:47px; height:47px;"></a>
                     </div>
-                    <div class="biodataSingkat my-auto mx-auto form-group col-lg-8">
+                    <div class="biodataSingkat my-auto form-group">
                         <form action="" method="post">
                             @csrf
                             <label style="color: #011D83;">Username</label><br/>
@@ -135,7 +164,7 @@
                         </div>
                     </div>
                     <div class="userprofil" style="height: 310px;">
-                        <div class="biodataSingkat pt-3 ps-4 form-group form-control-lg">
+                        <div class="biodataSingkat pt-3 form-group form-control-lg">
                             <form action="" method="post" class="mx-auto">
                                 @csrf
                                 <label style="color: #011D83;">First Name</label><br/>
@@ -175,4 +204,10 @@
             </form>
         </div>
     </div>
+    <script src="/web/assets/416c9703/yii.js"></script>
+    <script src="/web/assets/e12c4efc/jquery.js"></script>
+    <script src="/web/assets/268198b0/js/kv-widgets.js"></script>
+    <script src="/web/assets/416c9703/yii.validation.js"></script>
+    <script src="/web/assets/b89e3f00/js/bootstrap.js"></script>
+    <script src="/web/assets/b55f7612/js/fileinput.js"></script>
 @endsection

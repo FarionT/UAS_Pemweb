@@ -60,6 +60,31 @@
         color: white;
         font-size: 28px;
     }
+
+    #pembatas1 p {
+        width: 100%; 
+        text-align: center; 
+        border-bottom: 1px solid #000; 
+        line-height: 0.1em;
+        margin: 12px 0 12px; 
+        font-family: 'Titillium Web';
+        color: #001560;
+        font-size: 30px;
+    } 
+
+    #pembatas span { 
+        background:#B0D1FC; 
+        padding:0 10px; 
+    }
+
+    #pembatas1 {
+        width: 100%;
+        height:50px;
+        margin-top: 100px;
+        margin-bottom: 50px;
+        padding:10px;
+        display: flex;
+    }
 </style>
 @endsection
 
@@ -75,6 +100,11 @@
             </div>
             <div class="justify-content-center d-flex">
                 <a href="/" class="text-center mx-auto btn btn-danger">Back to Previous Page</a>
+            </div>
+            <div class="mt-10">
+                <div id="pembatas1" class="d-flex justify-content-center">
+                    <p id="pembatas" class="align-items-center my-auto"><span>Export</span></p>
+                </div>
             </div>
         </div>
     </div>
