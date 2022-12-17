@@ -196,7 +196,7 @@
                 </div>
                 <div class="mt-5">
                     <div id="pembatas1" class="d-flex justify-content-center">
-                        <p id="pembatas" class="align-items-center my-auto"><span>Company Profile</span></p>
+                        <p id="pembatas" class="judul-atas align-items-center my-auto"><span>Company Profile</span></p>
                     </div>
                 </div>
                 <div class="userprofil">
