@@ -194,14 +194,13 @@
         border-radius: 10px;
     }
 
-    .footer-kiri{
-        border-top: 10px solid #011D83;
-        border-right: 10px solid #011D83;
-        border-top-right-radius: 500px;
-    }
+    
 
     .footer-kanan{
         border: 10px solid #011D83;
+    }
+    footer{
+        margin-bottom: 58px;
     }
     .sticky_login {
         background-color: #6586F8;
@@ -262,7 +261,40 @@
             font-size: 17px;
         }
         /* footer */
-        
+        .our-office{
+            font-size: 16px;
+        }
+        .head-office{
+            font-size: 12px;
+        }
+        .isi-footer{
+            font-size: 10px;
+        }
+        .footer-kiri{
+            width:100%;
+            height:auto;
+            border-top: 8px solid #011D83;
+        }
+        .footer-kanan{
+            width:300px;
+            height:300px;
+        }
+        .contact_img{
+            width:35px;
+            height:35px;
+        }
+        .aptrindo{
+            width:70px;
+            height:auto;
+        }
+        .button-sticky{
+            width:90px;
+            font-size: 10px;
+        }
+        .gambar_cs{
+            width:110px;
+            height:110px;
+        }
     }
 
     @media screen and (min-width:576px){
@@ -299,6 +331,40 @@
         }
         
         /* footer */
+        .our-office{
+            font-size: 16px;
+        }
+        .head-office{
+            font-size: 12px;
+        }
+        .isi-footer{
+            font-size: 10px;
+        }
+        .footer-kiri{
+            width:100%;
+            height:auto;
+            border-top: 8px solid #011D83;
+        }
+        .footer-kanan{
+            width:350px;
+            height:350px;
+        }
+        .contact_img{
+            width:39px;
+            height:39px;
+        }
+        .aptrindo{
+            width:75px;
+            height:auto;
+        }
+        .button-sticky{
+            width:100px;
+            font-size: 12px;
+        }
+        .gambar_cs{
+            width:120px;
+            height:120px;
+        }
     }
 
     @media screen and (min-width:767px){
@@ -346,21 +412,35 @@
             font-size: 17px;
         }
         .head-office{
-            font-size: 13px;
+            font-size: 14px;
         }
         .isi-footer{
             font-size: 11px;
         }
         .footer-kiri{
-            border-top: 10px solid #011D83;
-            border-right: 10px solid #011D83;
-            border-top-right-radius: 500px;
-            width:65%;
+            width:100%;
             height:auto;
+            border-top: 10px solid #011D83;
         }
         .footer-kanan{
-            width:35%;
+            width:370px;
+            height:370px;
+        }
+        .contact_img{
+            width:44px;
             height:auto;
+        }
+        .aptrindo{
+            width:85px;
+            height:auto;
+        }
+        .button-sticky{
+            width:110px;
+            font-size: 13px;
+        }
+        .gambar_cs{
+            width:130px;
+            height:130px;
         }
     }
 
@@ -418,7 +498,23 @@
         }
         .footer-kanan{
             width:35%;
+            
+        }
+        .contact_img{
+            width:48px;
             height:auto;
+        }
+        .aptrindo{
+            width:95px;
+            height:auto;
+        }
+        .button-sticky{
+            width:125px;
+            font-size: 15px;
+        }
+        .gambar_cs{
+            width:140px;
+            height:140px;
         }
     }
 
@@ -477,6 +573,23 @@
         .footer-kanan{
             width:35%;
             height:auto;
+        }
+        .contact_img{
+            width:54px;
+            height:auto;
+        }
+        .aptrindo{
+            width:110px;
+            height:auto;
+        }
+
+        .button-sticky{
+            width:150px;
+            font-size: 17px;
+        }
+        .gambar_cs{
+            width:150px;
+            height:150px;
         }
     }
     
@@ -621,17 +734,17 @@
             </div>
         </div>
     </div>
-    <footer style="background-color: #DCEBFF !important" class="my-5">
-        <div class="d-flex gap-5" style="margin-top:80px"> 
+    <footer style="background-color: #DCEBFF !important" class="">
+        <div class="d-flex gap-5" style=""> 
             <hr class="flex-grow-1 my-auto" style="height:5px;color:#011D83;opacity:1;background-color:#011D83;"/><p style="color:#011D83;font-weight:900" class="titillium tulisan-tiga">GET MORE INFORMATION</p>
         </div>
-        <div class="footer-bawah d-flex flex-column-reverse flex-lg-row">
-            <div class="footer-kiri titillium bg-white d-flex flex-row p-3">
-                <div class="">
+        <div class="footer-bawah d-flex flex-column-reverse flex-lg-row justify-content-center">
+            <div class="footer-kiri titillium bg-white d-flex flex-row p-3 mx-auto mt-lg-0 mt-3 justify-content-around justify-content-lg-start">
+                <div class="kiri-bawah ">
                     <div class="contact-us">
                         <p class="our-office"><b>Contact Us</b></p>
                         <div class="wa d-flex flex-row">
-                            <img src="{{asset('app/assets/image/whatsapp.png')}}" class="contact_img" style="width:61px;height:62px;">
+                            <img src="{{asset('app/assets/image/whatsapp.png')}}" class="contact_img me-2"/>
                             <div class="no-telp">
                                 <p class="isi-footer mb-0">+6221 8899 2212 ( Hunting )</p>
                                 <p class="isi-footer mb-0">+6281 1122 6395</p>
@@ -639,16 +752,16 @@
                             </div>
                         </div>
                         <div class="mail d-flex flex-row my-3">
-                            <img src="{{asset('app/assets/image/email.png')}}" class="contact_img" style="width:61px;height:62px;"/>
+                            <img src="{{asset('app/assets/image/email.png')}}" class="contact_img me-2" />
                             <div class="my-auto">
                                 <p class="isi-footer mb-0">cs@jayamasabadi.id</p>
                                 <p class="isi-footer mb-0">Sales@jayamasabadi.id</p>
                             </div>
                         </div>
                     </div>
-                    <div class="member">
+                    <div class="d-flex flex-column member justify-content-center">
                         <p class="mx-auto my-3 our-office"><b>Member of APTRINDO</b></p>
-                        <img src="{{asset('app/assets/image/aptrindo.png')}}" class="aptrindo mx-auto" style="width:125px;height:120.5px;"alt="">
+                        <img src="{{asset('app/assets/image/aptrindo.png')}}" class="aptrindo mx-auto" alt="">
                     </div>
                 </div>
                 <div class="office titillium col col-4 mx-3">
@@ -667,19 +780,19 @@
                         Kota Cilegon, Banten 42426</p>
                 </div>
             </div>
-            <div class="footer-kanan bg-white d-flex flex-column p-5 rounded-circle">
-                <img src="{{asset('app/assets/image/customer_support.png')}}" class="mx-auto" style="width:150px;height:150px;"alt=""/>
+            <div class="footer-kanan bg-white d-flex flex-column p-5 rounded-circle mx-auto">
+                <img src="{{asset('app/assets/image/customer_support.png')}}" class="mx-auto gambar_cs" style=""alt=""/>
                 <p class="titillium isi-footer text-center">We are always open to answer you, if you have something to tell us,
                      whether it is a question, suggestion or critics don’t hesitate to contact us.</p>
                 
             </div>
         </div>
     </footer>
-    <div class="sticky_login">
-        <p class="my-auto" style="color: white;">Login or register first to unlock more features, and get more information about our updates</p>
-        <div class="d-flex my-auto">
-            <a href="{{ route('login') }}" class="btn rounded-pill me-3" style="background-color: #B0D1FC; width: 150px;">Login</a>
-            <a href="{{ route('register') }}" class="btn rounded-pill" style="background-color: #B0D1FC; width: 150px;">Register</a>
+    <div class="sticky_login d-flex flex-md-row flex-column">
+        <p class="my-md-auto ms-md-5 ms-0 isi-footer my-2 text-center" style="color: white;">Login or register first to unlock more features, and get more information about our updates</p>
+        <div class="d-flex my-auto mx-auto">
+            <a href="{{ route('login') }}" class="btn button-sticky rounded-pill me-3 titillium" style="background-color: #B0D1FC;">Login</a>
+            <a href="{{ route('register') }}" class="btn button-sticky rounded-pill titillium" style="background-color: #B0D1FC;">Register</a>
         </div>
     </div>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
