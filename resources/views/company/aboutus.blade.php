@@ -458,7 +458,7 @@
             </div>
             <div class="my-xl-5 my-lg-4 my-md-3 my-sm-2 my-1 py-xl-5 py-lg-4 py-md-3 py-sm-2 py-">
                 <div id="pembatas1" class="d-flex justify-content-center">
-                    <p id="pembatas" class="tulisanJudul align-items-center my-auto titillium"><span>SERVICES</span></p>
+                    <p id="pembatas" class="tulisanJudul align-items-center my-auto titillium"><span>LAYANAN</span></p>
                 </div>
             </div>
             <div class="bg-white rounded-5 p-3 d-flex flex-column my-5">
@@ -469,9 +469,9 @@
                 </div>
                 <div class="mx-5">
                     <ol style="list-style:lower-latin">
-                        <li class="isi-konten kanit">Inland Transport (JABODETABEK, Inter Island) charter and cargo. We provide Trailer, CDE, CDD, FUSO and other transportation services to various destinations in Indonesia.</li>
-                        <li class="isi-konten kanit">Employee Shuttle Tourism Charter (JABODETABEK)</li>
-                        <li class="isi-konten kanit">Our Services Export Import by Air PT. Indotrans Jayamas Abadi, which serves Export and Import through trusted airlines to all destinations in the world, both small and large parties.</li>
+                        <li class="isi-konten kanit">Transportasi Darat (JABODETABEK, Antar Pulau) charter dan kargo. Kami menyediakan Trailer, CDE, CDD, FUSO dan layanan transportasi lainnya ke berbagai destinasi di Indonesia.</li>
+                        <li class="isi-konten kanit">Piagam Wisata Antar Jemput Karyawan (JABODETABEK)</li>
+                        <li class="isi-konten kanit">Jasa Kami Ekspor Import by Air PT Indotrans Jayamas Abadi, yang melayani Ekspor dan Impor melalui maskapai terpercaya ke semua destinasi di dunia, baik partai kecil maupun besar.</li>
                     </ol>
                 </div>
                 <div class="d-flex flex-row justify-content-between">
