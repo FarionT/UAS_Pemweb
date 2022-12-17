@@ -262,3 +262,7 @@ Route::get('/tampilan/home', function() {
 Route::get('/tampilan/detailuser', function() {
     return view('tampilan.detailuser');
 });
+
+Route::get('/tampilan/home2', function(){
+    return view('tampilan.home2');
+});
