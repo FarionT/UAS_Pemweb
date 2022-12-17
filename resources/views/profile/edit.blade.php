@@ -84,6 +84,10 @@
         display: flex;
         box-shadow: 5px 5px 5px;
     }
+
+    .btn-delete:hover{
+        background-color: #0B5ED7;
+    }
 /* ... */
     #form-control{
         max-width: 75px;
@@ -364,9 +368,14 @@
                         @else
                             <td class="titillium">Waiting</td>
                         @endif
-                        <td class="titillium">
-                            <a href="/orders/{{ $order->id }}" class="btn btn-primary" style="text-decoration: none; color: white;">Detail</a>
-                            <a href="/orders/{{$order->id}}/edit" class="btn btn-primary" style="text-decoration: none; color: white;">Edit</a>
+                        <td class="titillium d-flex">
+                            <a href="/orders/{{ $order->id }}" class="btn btn-primary me-3" style="text-decoration: none; color: white;">Detail</a>
+                            <a href="/orders/{{$order->id}}/edit" class="btn btn-primary me-3" style="text-decoration: none; color: white;">Edit</a>
+                            <form action="/orders/{{$order->id}}" method="post">
+                                @method('DELETE')
+                                @csrf
+                                <button class="btn btn-primary btn-delete" style="background-color: #0D6EFD;" type="submit">Cancel</button>
+                            </form>
                         </td>
                     </tr>
                     @endforeach

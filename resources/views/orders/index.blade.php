@@ -74,9 +74,9 @@
                         @else
                             <td><h5>Not Approved</h5></td>
                         @endif
-                        <td>
-                            <a href="/orders/{{ $order->id }}" class="btn btn-primary" style="text-decoration: none; color: white;">Detail</a>
-                            <a href="/orders/approve/{{ $order->id }}" class="btn btn-primary" style="text-decoration: none; color: white;">Approve</a>
+                        <td class="d-flex">
+                            <a href="/orders/{{ $order->id }}" class="btn btn-primary me-3" style="text-decoration: none; color: white;">Detail</a>
+                            <a href="/orders/approve/{{ $order->id }}" class="btn btn-primary me-3" style="text-decoration: none; color: white;">Approve</a>
                         </td>
                     </tr>
                     @endforeach

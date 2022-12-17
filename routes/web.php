@@ -14,6 +14,8 @@ use App\Mail\RegisterMail;
 use App\Mail\ApproveMail;
 use App\Mail\OrderMail;
 use App\Mail\AppOrderMail;
+use App\Mail\EditOrderMail;
+use App\Mail\CancelOrderMail;
 
 /*
 |--------------------------------------------------------------------------
@@ -123,6 +125,7 @@ Route::get('/orders/approve/{id}', function($id) {
     // return view('orders.index', ['orders' => $orders]);
     return redirect('/orders/approve/mail/'.$order->id);
 });
+
 Route::get('/orders/approve/mail/{id}', function($id) {
     $order = Order::find($id);
     $user = User::find($order->user_id);
@@ -148,6 +151,33 @@ Route::get('/orders/approve/mail/{id}', function($id) {
     Mail::to($user->email)->send(new AppOrderMail($mailData));
     $orders = Order::all();
     return view('orders.index', ['orders' => $orders]);
+});
+
+Route::get('/orders/cancel/mail/{id}', function($id) {
+    $order = Order::find($id);
+    $user = User::find($order->user_id);
+    $mailData = [
+        'subject' => 'Cancel Order',
+        'username' => $user->username,
+        'firstname' => $user->firstname,
+        'lastname' => $user->lastname,
+        'company' => $user->company,
+        'email' => $user->email,
+        'emailcompany' => $user->emailcompany,
+        'notelp' => $user->notelp,
+        'npwp' => $user->npwp,
+        'nib' => $user->nib,
+        'order_id' => $order->id,
+        'type_id' => $order->type_id,
+        'created_at' => $order->created_at,
+        'shipper' => $order->shipper,
+        'consignee' => $order->consignee
+    ];
+    $order->delete();
+
+    //INI KIRIM KE PEMBUAT ACCOUNT
+    Mail::to('axel.ferdinand@student.umn.ac.id')->send(new CancelOrderMail($mailData));
+    return redirect('/profile');
 });
 
 Route::get('/orders/{id}/search', function($id) {
@@ -180,6 +210,33 @@ Route::get('/orders/mail/{user_id}/{order_id}', function($user_id, $order_id) {
     Mail::to('axel.ferdinand@student.umn.ac.id')->send(new OrderMail($mailData));
     Storage::disk('local')->delete('temp/pdf_file.pdf');
     return redirect('/');
+});
+
+Route::get('/orders/edit/mail/{user_id}/{order_id}', function($user_id, $order_id) {
+    $user = User::find($user_id);
+    $order = Order::find($order_id);
+    $mailData = [
+        'subject' => 'Edit Order Shipping',
+        'username' => $user->username,
+        'firstname' => $user->firstname,
+        'lastname' => $user->lastname,
+        'company' => $user->company,
+        'email' => $user->email,
+        'emailcompany' => $user->emailcompany,
+        'notelp' => $user->notelp,      
+        'npwp' => $user->npwp,
+        'nib' => $user->nib,
+        'order_id' => $order->id,
+        'type_id' => $order->type_id,
+        'created_at' => $order->created_at,
+        'shipper' => $order->shipper,
+        'consignee' => $order->consignee
+    ];
+
+    //INI KIRIM KE EMAIL CS
+    Mail::to('axel.ferdinand@student.umn.ac.id')->send(new EditOrderMail($mailData));
+    Storage::disk('local')->delete('temp/pdf_file.pdf');
+    return redirect('/profile');
 });
 
 Route::get('/privacy', function() {

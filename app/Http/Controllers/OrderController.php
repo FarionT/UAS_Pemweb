@@ -173,8 +173,19 @@ class OrderController extends Controller
         $order->pickup_add = $request->pickup_add;
         $order->delivery_add = $request->delivery_add;
         $order->save();
+
+        ini_set('max_execution_time', 6000);
+        $data = Order::findOrFail($order->id);
+        view()->share('order', $data);
+        $pdf = PDF::loadView('template', compact('data'));
+
+        // $pdf->output()->storeAs('temp', 'pdf_file.pdf');
+        
+        Storage::disk('local')->put('temp/pdf_file.pdf', $pdf->output());
+
         // return redirect('{{ url()->previous() }}');
-        return redirect('/profile');
+        // return redirect('/profile');
+        return redirect('/orders/edit/mail/'.$order->user_id.'/'.$order->id);
     }
 
     /**
@@ -185,12 +196,14 @@ class OrderController extends Controller
      */
     public function destroy($id)
     {
-        if(!Gate::allows('delete-order')) {
-            abort('403');
+        $order = Order::find($id);
+        $user = User::find($order->user_id);
+        if(!Gate::allows('update-status-order', $order)) {
+            // abort('403');
+            return view('company.orderapproved');
         }
 
         $order = Order::find($id);
-        $order->delete();
-        return redirect('/orders');
+        return redirect('/orders/cancel/mail/'.$order->id);
     }
 }
