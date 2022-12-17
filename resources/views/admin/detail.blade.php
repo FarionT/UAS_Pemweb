@@ -101,6 +101,20 @@
     .image-upload>input {
     display: none;
     }
+
+    #form-control{
+        max-width: 75px;
+    }
+    .image-upload>input {
+    display: none;
+    }
+
+    .table{
+        overflow:auto;
+    }
+
+    /* ini bagian responsive */
+    
 </style>
 @endsection
 

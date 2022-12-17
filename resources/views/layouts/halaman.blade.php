@@ -64,7 +64,6 @@
             .nav-bottom a {
                 font-size:12px !important;
             }
-    
         }
     
         .nav-top {
@@ -144,218 +143,187 @@
     
         .dropdown:hover .dropbtn {background-color:#011D83;}
     
+        @media only screen and (max-width: 820px) {
+            .nav-top-left > img{
+                width:74.5px !important;
+                height:42.5px !important;
+            }
+            .nav-top-left > p {
+                font-size:18px!important;
+            }
+            .nav-top-right > p {
+                font-size:16px !important;
+            }
+            .nav-bottom > p{
+                font-size:12px!important;
+            }
+            .nav-bottom {
+                height:40px!important;
+            }
+        }
+        @media only screen and (max-width: 450px) {
+            .nav-top-left > img{
+                width:54.5px !important;
+                height:28.5px !important;
+            }
+            .nav-top-left > p {
+                font-size:14px!important;
+            }
+            .nav-top-right > p {
+                font-size:11px !important;
+            }
+            .nav-bottom {
+                height:30px!important;
+            }
+            .nav-bottom a {
+                font-size:12px !important;
+            }
+            .dropbtn {
+                padding: 0px;
+                font-size: 12px;
+            }
+        }
+        @media screen and (max-width: 821px) {
+            .dropbtn {
+                padding: 0;
+            }
+        }
+
         /* DROPDOWN */
     
     
         /* FOOTER */
     
         @media screen and (max-width:575px){
-                /* footer */
-                .footer-head{
-                    font-size: 20px;
-                }
-    
-                .isi-footer{
-                    font-size: 10px;
-                }
-    
-                .office-head{
-                    font-size: 12px;
-                }
-    
-                .gambar-footer{
-                    width:100px;
-                    height:auto;
-                }
-    
-                .gambar-footer-kiri{
-                    width:40px;
-                    height:auto;
-                }
+            /* footer */
+            .footer-head{
+                font-size: 20px;
             }
     
-            @media screen and (min-width:576px){
-                /* footer */
-                .footer-head{
-                    font-size: 23px;
-                }
-    
-                .isi-footer{
-                    font-size: 11px;
-                }
-    
-                .office-head{
-                    font-size: 14px;
-                }
-    
-                .gambar-footer{
-                    width:110px;
-                    height:auto;
-                }
-    
-                .gambar-footer-kiri{
-                    width:50px;
-                    height:auto;
-                }
+            .isi-footer{
+                font-size: 10px;
             }
     
-            @media screen and (min-width:767px){
-                /* footer */
-                .footer-head{
-                    font-size: 26px;
-                }
-    
-                .isi-footer{
-                    font-size: 12px;
-                }
-    
-                .office-head{
-                    font-size: 16px;
-                }
-    
-                .gambar-footer{
-                    width:120px;
-                    height:auto;
-                }
-    
-                .gambar-footer-kiri{
-                    width:60px;
-                    height:auto;
-                }
+            .office-head{
+                font-size: 12px;
             }
     
-            @media screen and (min-width:992px){
-                /* footer */
-                .footer-head{
-                    font-size: 29px;
-                }
-    
-                .isi-footer{
-                    font-size: 14px;
-                }
-    
-                .office-head{
-                    font-size: 18px;
-                }
-    
-                .gambar-footer{
-                    width:130px;
-                    height:auto;
-                }
-    
-                .gambar-footer-kiri{
-                    width:70px;
-                    height:auto;
-                }
+            .gambar-footer{
+                width:100px;
+                height:auto;
             }
     
-            @media screen and (min-width:1200px){
-                /* footer */
-                .footer-head{
-                    font-size: 32px;
-                }
-    
-                .isi-footer{
-                    font-size: 16px;
-                }
-    
-                .office-head{
-                    font-size: 20px;
-                }
-    
-                .gambar-footer{
-                    width:140px;
-                    height:auto;
-                }
-    
-                .gambar-footer-kiri{
-                    width:80px;
-                    height:auto;
-                }
+            .gambar-footer-kiri{
+                width:40px;
+                height:auto;
             }
-    </style>
-    @yield('style')
-</head>
-<style>
-    /* DROPDOWN */
+        }
+    
+        @media screen and (min-width:576px){
+            /* footer */
+            .footer-head{
+                font-size: 23px;
+            }
+    
+            .isi-footer{
+                font-size: 11px;
+            }
+    
+            .office-head{
+                font-size: 14px;
+            }
+    
+            .gambar-footer{
+                width:110px;
+                height:auto;
+            }
+    
+            .gambar-footer-kiri{
+                width:50px;
+                height:auto;
+            }
+        }
+    
+        @media screen and (min-width:767px){
+            /* footer */
+            .footer-head{
+                font-size: 26px;
+            }
+    
+            .isi-footer{
+                font-size: 12px;
+            }
 
-    .dropbtn {
-        background-color:#011D83;
-        color: white;
-        padding: 13px;
-        font-size: 16px;
-        border: none;
-    }
-
-    .dropdown {
-        position: relative;
-        display: inline-block;
-    }
-
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f1f1f1;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 9999;
-    }
-
-    .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    }
-
-    .dropdown-content a:hover {background-color: #ddd;}
-
-    .dropdown:hover .dropdown-content {display: block;}
-
-    .dropdown:hover .dropbtn {background-color:#011D83;}
-
-    @media only screen and (max-width: 820px) {
-        .nav-top-left > img{
-            width:74.5px !important;
-            height:42.5px !important;
+            .office-head{
+                font-size: 16px;
+            }
+    
+            .gambar-footer{
+                width:120px;
+                height:auto;
+            }
+    
+            .gambar-footer-kiri{
+                width:60px;
+                height:auto;
+            }
         }
-        .nav-top-left > p {
-            font-size:18px!important;
+    
+        @media screen and (min-width:992px){
+            /* footer */
+            .footer-head{
+                font-size: 29px;
+            }
+    
+            .isi-footer{
+                font-size: 14px;
+            }
+    
+            .office-head{
+                font-size: 18px;
+            }
+    
+            .gambar-footer{
+                width:130px;
+                height:auto;
+            }
+    
+            .gambar-footer-kiri{
+                width:70px;
+                height:auto;
+            }
         }
-        .nav-top-right > p {
-            font-size:16px !important;
-        }
-        .nav-bottom > p{
-            font-size:12px!important;
-        }
-        .nav-bottom {
-            height:40px!important;
-        }
-        .dropbtn {
-            padding: 8px;
-        }
-    }
-    @media only screen and (max-width: 450px) {
-        .nav-top-left > img{
-            width:54.5px !important;
-            height:28.5px !important;
-        }
-        .nav-top-left > p {
-            font-size:14px!important;
-        }
-        .nav-top-right > p {
-            font-size:11px !important;
-        }
-        .nav-bottom {
-            height:30px!important;
-        }
-        .nav-bottom a {
-            font-size:12px !important;
+    
+        @media screen and (min-width:1200px){
+            /* footer */
+            .footer-head{
+                font-size: 32px;
+            }
+    
+            .isi-footer{
+                font-size: 16px;
+            }
+    
+            .office-head{
+                font-size: 20px;
+            }
+    
+            .gambar-footer{
+                width:140px;
+                height:auto;
+            }
+    
+            .gambar-footer-kiri{
+                width:80px;
+                height:auto;
+            }
         }
 
-    }
     body {
         font-family:Titillium Web;
+    }
+    .nav {
+        width: 100%;
     }
     .nav-top {
         width:90%;
@@ -396,6 +364,11 @@
         color: white;
         font-weight: bold;
     }
+    </style>
+@yield('style')
+</head>
+<style>
+    
 </style>
 <body>
     <nav class="nav" style="background-color: white;">
