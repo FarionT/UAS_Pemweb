@@ -265,7 +265,7 @@
                         <th style="width: auto;">ID</th>
                         <th style="width: auto;">Order Date</th>
                         <th style="width: auto;">Shipper</th>
-                        <th style="width: auto;">Cosignee</th>
+                        <th style="width: auto;">Consignee</th>
                         <th style="width: auto;">Status</th>
                         <th style="width: auto;">Tindakan</th>
                     </tr>
@@ -276,14 +276,14 @@
                         <td>{{ $order->id }}</td>
                         <td>{{ $order->order_date }}</td>
                         <td>{{ $order->shipper }}</td>
-                        <td>{{ $order->cosignee }}</td>
+                        <td>{{ $order->consignee }}</td>
                         @if( $order->accept == 1)
                             <td>Accepted</td>
                         @else
                             <td>Waiting</td>
                         @endif
                         <td>
-                            <a href="#" class="btn btn-primary" style="text-decoration: none; color: white;">Detail</a>
+                        <a href="/orders/{{ $order->id }}" class="btn btn-primary me-3" style="text-decoration: none; color: white;">Detail</a>
                         </td>
                     </tr>
                     @endforeach

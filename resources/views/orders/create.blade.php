@@ -126,6 +126,14 @@
         justify-content: space-between;
     }
 
+    .sub-logo {
+        width: 100px;
+    }
+
+    .sub-text {
+        font-size: 60px;
+    }
+
     @media screen and (max-width: 1200px) {
         .party-qty {
             display: block;
@@ -153,6 +161,23 @@
         .trio {
             display: block;
         }
+
+        .sub-logo {
+            width: 80px;
+        }
+
+        .sub-text {
+            font-size: 50px;
+        }
+    }
+    @media screen and (max-width: 780px) {
+        .sub-logo {
+            width: 60px;
+        }
+
+        .sub-text {
+            font-size: 40px;
+        }
     }
 </style>
 @endsection
@@ -160,8 +185,8 @@
 @section('isi')
 <div class="mt-5 mb-3">
     <div class="d-flex justify-content-center">
-        <img src="{{ asset('app/assets/image/shipping.png') }}" style="width:100px;" />
-        <p class="align-items-center my-auto" style="font-size: 60px;">Shipping Instruction</p>
+        <img src="{{ asset('app/assets/image/shipping.png') }}" class="sub-logo" />
+        <p class="sub-text align-items-center my-auto" >Shipping Instruction</p>
     </div>
 </div>
 <div class="container my-5">

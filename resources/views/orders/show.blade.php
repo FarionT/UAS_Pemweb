@@ -102,6 +102,83 @@
         transform: translateY(10px);
         transition: 100ms;
     }
+
+    .party-qty {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .qty {
+        margin-right: 95px;
+    }
+
+    .pol-pod {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .pod {
+        margin-right: 95px;
+    }
+
+    .trio {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .sub-logo {
+        width: 100px;
+    }
+
+    .sub-text {
+        font-size: 60px;
+    }
+
+    @media screen and (max-width: 1200px) {
+        .party-qty {
+            display: block;
+        }
+        .party {
+            margin-bottom: 16px;
+        }
+        .party>p {
+            width: 104px;
+        }
+        .qty>p {
+            width: 114px;
+        }
+        .pol-pod {
+            display: block;
+        }
+        .pol {
+            margin-bottom: 16px;
+        }
+        .pod>p {
+            width: 150px;
+        }
+    }
+    @media screen and (max-width: 780px) {
+        .trio {
+            display: block;
+        }
+
+        .sub-logo {
+            width: 80px;
+        }
+
+        .sub-text {
+            font-size: 50px;
+        }
+    }
+    @media screen and (max-width: 780px) {
+        .sub-logo {
+            width: 60px;
+        }
+
+        .sub-text {
+            font-size: 40px;
+        }
+    }
 </style>
 @endsection
 
@@ -136,27 +213,27 @@
         <div class="d-flex mb-3">
             <p class="jarak"><b>*Notify Party:</b></p> <input disabled type="text" name="notifyparty" value="{{ $order->notifyparty }}" style="width: 992px;height: 40px;" /><br />
         </div>
-        <div class="d-flex justify-content-between">
-            <div class="d-flex">
+        <div class="party-qty">
+            <div class="d-flex party">
                 <p class="jarakexclusive" style="margin-right: 12px;"><b>*Party:</b></p>
                 <select disabled name="party" style="width: 200px;height: 40px;">
                     <option value="{{ $order->party }}">{{ $order->party }}</option>
                 </select>
             </div>
-            <div class="d-flex" style="margin-right: 95px;">
+            <div class="d-flex qty">
                 <p class="jarakexclusive"><b>*Qty:</b></p><input disabled type="text" name="qty" value="{{ $order->qty }}" style="width: 200px;height: 40px;" /><br />
             </div>
         </div>
         <br />
-        <div class="d-flex">
+        <div class="d-flex stuffingdate">
             <p class="jarakexclusive" style="margin-right: 12px;"><b>*Stuffing Date:</b></p><input disabled type="date" name="stuffing_date" value="{{ $order->stuffing_date }}" style="width: 200px;height: 40px;" /><br />
         </div>
         <br />
-        <div class="d-flex justify-content-between">
-            <div class="d-flex">
+        <div class="pol-pod">
+            <div class="d-flex pol">
                 <p class="jarakexclusive" style="margin-right: 12px;"><b>*Loading Port:</b></p><input disabled type="text" name="pol" value="{{ $order->pol }}" style="width: 350px;height: 40px;" />
             </div>
-            <div class="d-flex" style="margin-right: 95px;">
+            <div class="d-flex pod">
                 <p class="jarakexclusive"><b>*Destination Port:</b></p><input disabled type="text" name="pod" value="{{ $order->pod }}" style="width: 350px;height: 40px;" /><br />
             </div>
         </div>
@@ -179,7 +256,7 @@
                 <b><label for="description">DESCRIPTION</label></b><br />
                 <input disabled name="description" value="{{ $order->description }}" style="width: 100%;"></input>
             </div>
-            <div class="d-flex justify-content-between mb-3">
+            <div class="trio mb-3">
                 <!-- <div>
                     <b><label for="qtynote">QUANTITY</label></b><br />
                     <input type="text" name="qtynote" style="width: 200px;height:40px"/>

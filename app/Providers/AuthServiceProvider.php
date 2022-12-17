@@ -36,8 +36,8 @@ class AuthServiceProvider extends ServiceProvider
             return $user->accept === 1;
         });
         
-        Gate::define('delete-order', function(User $user){
-            return $user->role_id === 1;
+        Gate::define('delete-order', function(User $user, Order $order){
+            return $user->id === $order->user_id;
         });
 
         Gate::define('update-status-order', function(User $user, Order $order){

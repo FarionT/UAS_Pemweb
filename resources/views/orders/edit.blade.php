@@ -182,11 +182,6 @@
                     @endforeach
                 </ul>
             @endif
-
-
-
-
-
             <div class="d-flex mb-3">
                 <p class="jarak"><b>*Shipper</b></p><input type="text" name="shipper" value="{{ old('shipper') ?? $order->shipper }}" style="width: 992px;height: 40px;"/><br />
             </div>
@@ -285,10 +280,6 @@
                     <button class="submitbutton" type="submit">Save</button>
                 </div>
             </div>
-
-
-
-
     </form>
 </div>
 @endsection
