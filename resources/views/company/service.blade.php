@@ -28,7 +28,7 @@
         border-radius: 20px;
         width: 95%;
         height:50px;
-        margin-left: 35px;
+        /* margin-left: 35px; */
         margin-top: 100px;
         margin-bottom: 50px;
         padding:10px;
@@ -41,7 +41,7 @@
         border-radius: 20px;
         width: 45%;
         height: 400px;
-        margin-left: 35px;
+        /* margin-left: 35px; */
         margin-bottom: 30px;
         padding:0px;
         border-radius: 20px;
@@ -83,20 +83,16 @@
         color: white;
         font-size: 28px;
     }
-
-    .kotak-kanan {
-        margin-left: 62px;
-    }
     
     .image {
         width: 250px;
         margin-left: 10px;
     }
 
-    .impor {display: flex;}
-    .ekspor {display: flex;}
-    .domestic1 {display: flex;}
-    .domestic2 {display: flex;}
+    .impor {display: flex; justify-content:space-around;}
+    .ekspor {display: flex; justify-content:space-around;}
+    .domestic1 {display: flex; justify-content:space-around;}
+    .domestic2 {display: flex; justify-content:space-around;}
     
     @media screen and (max-width: 1100px) {
         .image {width: 230px;}
@@ -146,7 +142,7 @@
         </div>
     </div>
     <div class="mt-10">
-        <div id="pembatas1" class="d-flex justify-content-center">
+        <div id="pembatas1" class="d-flex justify-content-center mx-auto">
             <p id="pembatas" class="align-items-center my-auto"><span>Export</span></p>
         </div>
     </div>
@@ -177,7 +173,7 @@
         </div>
     </div>
     <div class="mt-10">
-        <div id="pembatas1" class="d-flex justify-content-center">
+        <div id="pembatas1" class="d-flex justify-content-center mx-auto">
             <p id="pembatas" class="align-items-center my-auto"><span>Import</span></p>
         </div>
     </div>
@@ -208,7 +204,7 @@
         </div>
     </div>
     <div class="mt-10">
-        <div id="pembatas1" class="d-flex justify-content-center">
+        <div id="pembatas1" class="d-flex justify-content-center mx-auto">
             <p id="pembatas" class="align-items-center my-auto"><span>Domestic</span></p>
         </div>
     </div>
@@ -274,7 +270,7 @@
         </div>
     </div>
     <div class="mt-10">
-        <div id="pembatas1" class="d-flex justify-content-center">
+        <div id="pembatas1" class="d-flex justify-content-center mx-auto">
             <p id="pembatas" class="align-items-center my-auto"><span>Export</span></p>
         </div>
     </div>
@@ -305,7 +301,7 @@
         </div>
     </div>
     <div class="mt-10">
-        <div id="pembatas1" class="d-flex justify-content-center">
+        <div id="pembatas1" class="d-flex justify-content-center mx-auto">
             <p id="pembatas" class="align-items-center my-auto"><span>Import</span></p>
         </div>
     </div>
@@ -336,7 +332,7 @@
         </div>
     </div>
     <div class="mt-10">
-        <div id="pembatas1" class="d-flex justify-content-center">
+        <div id="pembatas1" class="d-flex justify-content-center mx-auto">
             <p id="pembatas" class="align-items-center my-auto"><span>Domestic</span></p>
         </div>
     </div>
@@ -403,7 +399,7 @@
         </div>
     </div>
     <div class="mt-10">
-        <div id="pembatas1" class="d-flex justify-content-center">
+        <div id="pembatas1" class="d-flex justify-content-center mx-auto">
             <p id="pembatas" class="align-items-center my-auto"><span>Export</span></p>
         </div>
     </div>
@@ -434,7 +430,7 @@
         </div>
     </div>
     <div class="mt-10">
-        <div id="pembatas1" class="d-flex justify-content-center">
+        <div id="pembatas1" class="d-flex justify-content-center mx-auto">
             <p id="pembatas" class="align-items-center my-auto"><span>Import</span></p>
         </div>
     </div>
@@ -465,7 +461,7 @@
         </div>
     </div>
     <div class="mt-10">
-        <div id="pembatas1" class="d-flex justify-content-center">
+        <div id="pembatas1" class="d-flex justify-content-center mx-auto">
             <p id="pembatas" class="align-items-center my-auto"><span>Domestic</span></p>
         </div>
     </div>

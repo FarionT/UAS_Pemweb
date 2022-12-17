@@ -326,8 +326,8 @@
                 
                 @auth
                     @if (Auth::user()->role_id == 1)
-                        <a href="/admin/account" class="titillium btn btn-primary ms-5" style="font-weight: bold; background-color: #011D83; font-size: 22px; padding: 8px 24px;">Confirm Account</a>
-                        <a href="/orders" class="titillium btn btn-primary ms-5" style="font-weight: bold; background-color: #011D83; font-size: 22px; padding: 8px 24px;">View All Order</a>
+                        <a href="/admin/account" class="titillium btn btn-primary ms-5" style="font-weight: bold; background-color: #011D83; font-size: 22px; padding: 8px 24px;">CONFIRM ACCOUNT</a>
+                        <a href="/orders" class="titillium btn btn-primary ms-5" style="font-weight: bold; background-color: #011D83; font-size: 22px; padding: 8px 24px;">VIEW ALL ORDER</a>
                     @endif
                 @endauth
             </div>
