@@ -3,7 +3,6 @@
 
 @section('style')
 <style>
-    p{font-family: 'Titillium Web', sans-serif;}
 
     body{background-color: #B0D1FC !important}
 
@@ -93,17 +92,11 @@
         color: white;
     }
 
-    #pembatas1 p {
-        width: 100%; 
-        text-align: center; 
-        border-bottom: 1px solid white; 
-        line-height: 0.1em;
-        margin: 12px 0 12px; 
-        font-family: 'Titillium Web';
-        color: white;
-        font-size: 30px;
-    } 
-
+    
+    #form-control{
+        max-width: 75px;
+    }
+    /* ini buat tulisan di tengah garis */
     #pembatas span { 
         background: #011D83; 
         padding:0 10px; 
@@ -123,86 +116,108 @@
         display: flex;
         box-shadow: 5px 5px 5px;
     }
-
-    #form-control{
-        max-width: 75px;
+    #pembatas1 p {
+        width: 100%; 
+        text-align: center; 
+        border-bottom: 1px solid white; 
+        line-height: 0.1em;
+        margin: 12px 0 12px; 
+        color: white;
+        font-size: 30px;
+    } 
+    /* ini buat responsive */
+    @media screen and (max-width:575px){
+            
     }
+
+    @media screen and (min-width:576px){
+        
+    }
+
+    @media screen and (min-width:767px){
+        
+    }
+
+    @media screen and (min-width:992px){
+        
+    }
+
+    @media screen and (min-width:1200px){
+        .judul-atas{
+            font-size: 30px;
+        }
+    }
+
 </style>
 @endsection
 
 @section('isi')
     <div class="subjudul d-flex">
-        <p class="mx-auto my-auto" style="font-size: 30px; color:white;">Profile</p>
+        <p class="judul-atas mx-auto my-auto titillium text-white">Profile</p>
     </div>
     <div class="profilebox">
-        <div class="iniform">
-            <div class="d-flex flex-row">
-                <div class="kotakprofil d-flex mx-auto">
-                    <div class="d-flex justify-content-center align-items-center flex-column">
-                        <img class="m-3 profile_image" src="{{ asset('app/assets/image/profile.png') }}" style="border:1px solid gray;border-radius:15px;width:250px; height:auto;"/>
-                        <a href="/" class="tombol d-flex justify-content-center rounded-circle mx-auto " style="background-color:#001560; border:3px solid #001560;  margin-top: -45px; "><img src="{{ asset('app/assets/image/edit.png') }}" style="width:47px; height:47px;"></a>
+        <div class="kotakprofil d-flex mx-auto flex-row">
+            <div class="d-flex justify-content-center align-items-center flex-column">
+                <img class="m-3 profile_image" src="{{ asset('app/assets/image/profile.png') }}" style="border:1px solid gray;border-radius:15px;width:250px; height:auto;"/>
+                <a href="/" class="titillium tombol d-flex justify-content-center rounded-circle mx-auto " style="background-color:#001560; border:3px solid #001560;  margin-top: -45px; "><img src="{{ asset('app/assets/image/edit.png') }}" style="width:47px; height:47px;"></a>
+            </div>
+            <div class="biodataSingkat my-auto form-group">
+                <form action="" method="post">
+                    @csrf
+                    <label class="titillium" style="color: #011D83;">Username</label><br/>
+                    <input class="titillium form-control" type="text" name="username" id="" value="Ini Username"/><br/>
+                    <label class="titillium" style="color: #011D83;">Email</label><br/>
+                    <input class="titillium form-control" type="text" name="email" id="" value="Ini Email"/><br/>
+                    <label class="titillium" style="color: #011D83">NPWP</label><br/>
+                    <input class="titillium form-control" type="text" name="telepon" id="" value="Ini Telepon"/><br/>
+                </form>
+            </div>
+        </div>
+        <form action="" enctype="multipart/form-data">
+            <div class="">
+                
+                <div class="mt-5">
+                    <div id="pembatas1" class="d-flex justify-content-center">
+                        <p id="pembatas" class="judul-atas titillium align-items-center my-auto"><span>Users Profile</span></p>
                     </div>
-                    <div class="biodataSingkat my-auto form-group">
+                </div>
+                <div class="userprofil" style="height: 310px;">
+                    <div class="biodataSingkat pt-3 form-group form-control-lg">
+                        <form action="" method="post" class="mx-auto">
+                            @csrf
+                            <label style="color: #011D83;">First Name</label><br/>
+                            <input class="titillium form-control" type="text" name="username" id="" value="Ini Username"/><br/>
+                            <label style="color: #011D83;">Last Name</label><br/>
+                            <input class="titillium form-control" type="text" name="email" id="" value="Ini Email"/><br/>
+                            <label style="color: #011D83;">Telepon</label><br/>
+                            <input class="titillium form-control" type="text" name="telepon" id="" value="Ini Telepon"/><br/>
+                        </form>
+                    </div>
+                </div>
+                <div class="mt-5">
+                    <div id="pembatas1" class="d-flex justify-content-center">
+                        <p id="pembatas" class="align-items-center my-auto"><span>Company Profile</span></p>
+                    </div>
+                </div>
+                <div class="userprofil">
+                    <div class="biodataSingkat pt-3 ps-4 form-group form-control-lg">
                         <form action="" method="post">
                             @csrf
-                            <label style="color: #011D83;">Username</label><br/>
+                            <label style="color: #011D83;">Company Name</label><br/>
                             <input class="form-control" type="text" name="username" id="" value="Ini Username"/><br/>
-                            <label style="color: #011D83;">Email</label><br/>
+                            <label style="color: #011D83;">Country/District</label><br/>
                             <input class="form-control" type="text" name="email" id="" value="Ini Email"/><br/>
-                            <label style="color: #011D83">NPWP</label><br/>
+                            <label style="color: #011D83;">City</label><br/>
+                            <input class="form-control" type="text" name="telepon" id="" value="Ini Telepon"/><br/>
+                            <label style="color: #011D83;">Address</label><br/>
+                            <input class="form-control" type="text" name="telepon" id="" value="Ini Telepon"/><br/>
+                            <label style="color: #011D83;">NIB</label><br/>
                             <input class="form-control" type="text" name="telepon" id="" value="Ini Telepon"/><br/>
                         </form>
                     </div>
                 </div>
             </div>
-            <form action="" enctype="multipart/form-data">
-                <div class="">
-                    
-                    <div class="mt-5">
-                        <div id="pembatas1" class="d-flex justify-content-center">
-                            <p id="pembatas" class="align-items-center my-auto"><span>User Profile</span></p>
-                        </div>
-                    </div>
-                    <div class="userprofil" style="height: 310px;">
-                        <div class="biodataSingkat pt-3 form-group form-control-lg">
-                            <form action="" method="post" class="mx-auto">
-                                @csrf
-                                <label style="color: #011D83;">First Name</label><br/>
-                                <input class="form-control" type="text" name="username" id="" value="Ini Username"/><br/>
-                                <label style="color: #011D83;">Last Name</label><br/>
-                                <input class="form-control" type="text" name="email" id="" value="Ini Email"/><br/>
-                                <label style="color: #011D83;">Telepon</label><br/>
-                                <input class="form-control" type="text" name="telepon" id="" value="Ini Telepon"/><br/>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="mt-5">
-                        <div id="pembatas1" class="d-flex justify-content-center">
-                            <p id="pembatas" class="align-items-center my-auto"><span>Company Profile</span></p>
-                        </div>
-                    </div>
-                    <div class="userprofil">
-                        <div class="biodataSingkat pt-3 ps-4 form-group form-control-lg">
-                            <form action="" method="post">
-                                @csrf
-                                <label style="color: #011D83;">Company Name</label><br/>
-                                <input class="form-control" type="text" name="username" id="" value="Ini Username"/><br/>
-                                <label style="color: #011D83;">Country/District</label><br/>
-                                <input class="form-control" type="text" name="email" id="" value="Ini Email"/><br/>
-                                <label style="color: #011D83;">City</label><br/>
-                                <input class="form-control" type="text" name="telepon" id="" value="Ini Telepon"/><br/>
-                                <label style="color: #011D83;">Address</label><br/>
-                                <input class="form-control" type="text" name="telepon" id="" value="Ini Telepon"/><br/>
-                                <label style="color: #011D83;">NIB</label><br/>
-                                <input class="form-control" type="text" name="telepon" id="" value="Ini Telepon"/><br/>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                </div>
-            </form>
-        </div>
+        </form>
     </div>
     <script src="/web/assets/416c9703/yii.js"></script>
     <script src="/web/assets/e12c4efc/jquery.js"></script>

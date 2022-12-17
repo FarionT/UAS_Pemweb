@@ -18,7 +18,6 @@
             margin: 12px 0 12px; 
             font-family: 'Titillium Web';
             color: #001560;
-            font-size: 60px;
         } 
 
         #pembatas span { 
@@ -29,8 +28,6 @@
         #pembatas1 {
             width: 100%;
             height:50px;
-            margin-top: 100px;
-            margin-bottom: 100px;
             padding:10px;
             display: flex;
         }
@@ -54,8 +51,7 @@
             font-size: 16px;
         }
 
-        .tulisanJudul{
-            font-size:60px;
+        .tulisanJudul, #tulisan-indotrans{
             color:#011D83;
             font-weight:bolder;
         }
@@ -63,98 +59,265 @@
         .isi-konten{
             font-size: 25px;
         }
-        #aboutus{
-            width:150px;
-            height:auto;
-        }
-        @media screen and (max-width:767px){
-            .footer-head{
-                font-size: 24px;
-                font-weight: 950;
-            }
-            .office-head{
-                font-size: 16px;
-                font-weight:bold;
-            }
-            .isi-footer{
-                font-size: 12px;
-            }
-            .tulisanJudul{
-                font-size:35px;
-            }
-            .isi-konten{
-                font-size: 17px;
-            }
+
+        @media screen and (max-width:575px){
             #aboutus{
-                width:75px;
+                width:80px;
                 height:auto;
             }
-            #tulisanJudul{
-                font-size: 35px;
+            
+            .isi-konten{
+                font-size: 16px;
+            }
+            .advantage{
+                font-size: 18px;
+            }
+
+            .tulisanJudul{
+                font-size: 36px;
+            }
+
+            #tulisan-company{
+                margin-top: -30px;
+            }
+            #tulisan-jayamas{
+                margin-top:-45px;
+            }
+            #tulisan-indotrans{
+                margin-top: -25px;
+                font-size: 27px;
+            }
+            /* footer */
+            .footer-head{
+                font-size: 20px;
+            }
+
+            .isi-footer{
+                font-size: 10px;
+            }
+
+            .office-head{
+                font-size: 12px;
+            }
+
+            .gambar-footer{
+                width:100px;
+                height:auto;
+            }
+
+            .gambar-footer-kiri{
+                width:40px;
+                height:auto;
+            }
+        }
+
+        @media screen and (min-width:576px){
+            #aboutus{
+                width:90px;
+                height:auto;
+            }
+            
+            .advantage{
+                font-size: 20px;
+            }
+            
+            .tulisanJudul{
+                font-size: 42px;
+            }
+
+            .isi-konten{
+                font-size: 18px;
             }
             #tulisan-company{
                 margin-top: -30px;
             }
-        }
 
-        @media screen and (min-width:767px){
+            #tulisan-jayamas{
+                margin-top:-50px;
+            }
+            #tulisan-indotrans{
+                margin-top: -25px;
+                font-size: 31px;
+            }
+            /* footer */
             .footer-head{
-                font-size: 28px;
-                font-weight: bold;
+                font-size: 23px;
             }
-            .office-head{
-                font-size: 18px;
-                font-weight:bold;
-            }
+
             .isi-footer{
+                font-size: 11px;
+            }
+
+            .office-head{
                 font-size: 14px;
             }
-            .tulisanJudul{
-                font-size:50px;
-            }
-            .isi-konten{
-                font-size: 21px;
-            }
-            #aboutus{
+
+            .gambar-footer{
                 width:110px;
                 height:auto;
             }
-            #tulisanJudul{
-                font-size: 45px;
+
+            .gambar-footer-kiri{
+                width:50px;
+                height:auto;
             }
+        }
+
+        @media screen and (min-width:767px){
+            #aboutus{
+                width:105px;
+                height:auto;
+            }
+            
+            .advantage{
+                font-size: 22px;
+            }
+
+            .isi-konten{
+                font-size: 20px;
+            }
+
+            .tulisanJudul{
+                font-size: 48px;
+            }
+
             #tulisan-company{
                 margin-top: -40px;
+            }
+
+            #tulisan-jayamas{
+                margin-top:-50px;
+            }
+            #tulisan-indotrans{
+                margin-top: -35px;
+                font-size: 40px;
+            }
+            /* footer */
+            .footer-head{
+                font-size: 26px;
+            }
+
+            .isi-footer{
+                font-size: 12px;
+            }
+
+            .office-head{
+                font-size: 16px;
+            }
+
+            .gambar-footer{
+                width:120px;
+                height:auto;
+            }
+
+            .gambar-footer-kiri{
+                width:60px;
+                height:auto;
+            }
+        }
+
+        @media screen and (min-width:992px){
+            #aboutus{
+                width:125px;
+                height:auto;
+            }
+            
+            .advantage{
+                font-size: 26px;
+            }
+
+            .tulisanJudul{
+                font-size: 54px;
+            }
+
+            .isi-konten{
+                font-size: 22px;
+            }
+            #tulisan-company{
+                margin-top: -140px;
+            }
+            #tulisan-jayamas{
+                margin-top:-60px;
+            }
+            #tulisan-indotrans{
+                margin-top: -55px;
+                font-size: 50px;
+            }
+            /* footer */
+            .footer-head{
+                font-size: 29px;
+            }
+
+            .isi-footer{
+                font-size: 14px;
+            }
+
+            .office-head{
+                font-size: 18px;
+            }
+
+            .gambar-footer{
+                width:130px;
+                height:auto;
+            }
+
+            .gambar-footer-kiri{
+                width:70px;
+                height:auto;
             }
         }
 
         @media screen and (min-width:1200px){
-            .footer-head{
-                font-size: 32px;
-                font-weight: bold;
-            }
-            .office-head{
-                font-size: 20px;
-                font-weight:bold;
-            }
-            .isi-footer{
-                font-size: 16px;
-            }
-
-            .tulisanJudul{
-                font-size:60px;
-            }
-            .isi-konten{
-                font-size: 25px;
-            }
             #aboutus{
                 width:150px;
                 height:auto;
             }
-            #tulisanJudul{
+
+            .advantage{
+                font-size: 30px;
+            }
+
+            .tulisanJudul{
                 font-size: 60px;
             }
+
+            .isi-konten{
+                font-size: 25px;
+            }
+
             #tulisan-company{
                 margin-top: -140px;
+            }
+
+            #tulisan-jayamas{
+                margin-top:-60px;
+            }
+
+            #tulisan-indotrans{
+                margin-top: -60px;
+                font-size: 60px;
+            }
+            /* footer */
+            .footer-head{
+                font-size: 32px;
+            }
+
+            .isi-footer{
+                font-size: 16px;
+            }
+
+            .office-head{
+                font-size: 20px;
+            }
+
+            .gambar-footer{
+                width:140px;
+                height:auto;
+            }
+
+            .gambar-footer-kiri{
+                width:80px;
+                height:auto;
             }
         }
     </style>
@@ -164,15 +327,15 @@
 <div class="container">
     <div id="judul" class="d-flex justify-content-center">
         <img id="aboutus"  src="{{ asset('app/assets/image/aboutus.png') }}"/>
-        <p id="tulisanJudul" class="text-center my-auto mx-3">ABOUT US</p>
+        <p class="tulisanJudul text-center my-auto mx-3">ABOUT US</p>
     </div>
-    <div id="company" class="mt-5 bg-white p-lg-5 pt-0 pt-lg-5 pb-2 px-4 rounded-5 shadow shadow-top-0">
+    <div id="company" class="my-5 bg-white p-lg-5 pt-0 pt-lg-5 pb-2 px-4 rounded-5 shadow shadow-top-0">
         <div id="upperCompany" class="d-flex flex-column my-0 my-lg-5">
             <div class="d-flex">
-                <p id="tulisan-company"  class="tulisanJudul">COMPANY</p>
+                <p id="tulisan-company"  class="tulisanJudul titillium">COMPANY</p>
             </div>
             <div class="d-flex flex-column flex-lg-row">
-                <p class="isi-konten col col-12 col-lg-6" >PT. JAYAMAS ABADI started operating in 1999.
+                <p class="isi-konten col col-12 col-lg-6 kanit" >PT. JAYAMAS ABADI started operating in 1999.
                 The business started from scratch as a transporter serving in the city,
                 and then began to grow by serving JABODETABEK in 2002
                 The great response from our customers made us more confident to
@@ -184,7 +347,7 @@
                 <img class="col col-lg-6 col-12" style="height:auto" src="{{  asset('app/assets/image/image 8.png') }}" alt="image"/>
             </div>
         </div>
-        <p class="isi-konten">Currently, PT. JAYAMAS ABADI developed by opening a new business
+        <p class="isi-konten kanit">Currently, PT. JAYAMAS ABADI developed by opening a new business
             in the field of Forwarders under the name PT. INDOTRANS JAYAMAS
             ABADI. With the support of a solid team and the application of the
             right technology in managing the business entrusted to us, we are
@@ -193,22 +356,22 @@
             appropriately.
         </p>
     </div>
-    <div class="mb-5">
+    <div class="my-xl-5 my-lg-4 my-md-3 my-sm-2 my-1 py-xl-5 py-lg-4 py-md-3 py-sm-2 py-">
         <div id="pembatas1" class="d-flex justify-content-center">
-            <p id="pembatas" class="tulisanJudul align-items-center my-auto"><span>SERVICES</span></p>
+            <p id="pembatas" class="tulisanJudul align-items-center my-auto titillium"><span>SERVICES</span></p>
         </div>
     </div>
     <div class="bg-white rounded-5 p-3 d-flex flex-column my-5">
         <div  class="d-flex ms-4">
-            <p style="margin-top:-60px;" class="tulisanJudul">
+            <p id="tulisan-jayamas"  class="tulisanJudul titillium">
                 PT. JAYAMAS ABADI
             </p>
         </div>
         <div class="mx-5">
             <ol style="list-style:lower-latin">
-                <li class="isi-konten">Inland Transport (JABODETABEK, Inter Island) charter and cargo. We provide Trailer, CDE, CDD, FUSO and other transportation services to various destinations in Indonesia.</li>
-                <li class="isi-konten">Employee Shuttle Tourism Charter (JABODETABEK)</li>
-                <li class="isi-konten">Our Services Export Import by Air PT. Indotrans Jayamas Abadi, which serves Export and Import through trusted airlines to all destinations in the world, both small and large parties.)</li>
+                <li class="isi-konten kanit">Inland Transport (JABODETABEK, Inter Island) charter and cargo. We provide Trailer, CDE, CDD, FUSO and other transportation services to various destinations in Indonesia.</li>
+                <li class="isi-konten kanit">Employee Shuttle Tourism Charter (JABODETABEK)</li>
+                <li class="isi-konten kanit">Our Services Export Import by Air PT. Indotrans Jayamas Abadi, which serves Export and Import through trusted airlines to all destinations in the world, both small and large parties.)</li>
             </ol>
         </div>
         <div class="d-flex flex-row justify-content-between">
@@ -218,22 +381,22 @@
         </div>
     </div>
     <div class="my-5"></div>
-    <div class="bg-white rounded-5 p-3 d-flex flex-column my-5 justify-content-end">
-        <div  class="d-flex justify-content-end me-5">
-            <p style="margin-top:-60px;" class="tulisanJudul">
+    <div class="bg-white rounded-5 p-lg-3 d-flex flex-column my-5 justify-content-end">
+        <div  class="d-flex justify-content-lg-end justify-content-center me-lg-5 mx-lg-0 mx-3">
+            <p id="tulisan-indotrans"  class="titillium">
                 PT. INDOTRANS JAYAMAS ABADI
             </p>
         </div>
         <div class="mx-5">
             <ol>
-                <li class="isi-konten">Export Import by Sea</li>
+                <li class="isi-konten kanit">Export Import by Sea</li>
                 <ol style="list-style:lower-latin">
-                    <li class="isi-konten">FCL --> We provide Export / Import cargo services for Full Container (20 feet / 40 feet / 40'HC / Refeer)</li>
-                    <li class="isi-konten">LCL --> We also provide LCL export/Import to or from various destinations.</li>
+                    <li class="isi-konten kanit">FCL --> We provide Export / Import cargo services for Full Container (20 feet / 40 feet / 40'HC / Refeer)</li>
+                    <li class="isi-konten kanit">LCL --> We also provide LCL export/Import to or from various destinations.</li>
                 </ol>
-                <li class="isi-konten">Custom Clearance PT. Indotrans Jayamas Abadi provides custom services both for sea and air as well as for import or export purposes.</li>
-                <li class="isi-konten">Project Cargo We can handle Project shipments, such as sending cargo with more specific handling.</li>
-                <li class="isi-konten">Domestic Freight. In collaboration with Domestic Shipping and agents in the area, we also provide inter-regional / inter-island shipping services.</li>
+                <li class="isi-konten kanit">Custom Clearance PT. Indotrans Jayamas Abadi provides custom services both for sea and air as well as for import or export purposes.</li>
+                <li class="isi-konten kanit">Project Cargo We can handle Project shipments, such as sending cargo with more specific handling.</li>
+                <li class="isi-konten kanit">Domestic Freight. In collaboration with Domestic Shipping and agents in the area, we also provide inter-regional / inter-island shipping services.</li>
             </ol>
         </div>
         <div class="d-flex flex-row justify-content-between">
@@ -242,62 +405,19 @@
             <img src="{{  asset('app/assets/image/image 8.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
         </div>
     </div>
-    <div class="mb-5">
+    <div class="my-xl-5 my-lg-4 my-md-3 my-sm-2 my-1 py-xl-5 py-lg-4 py-md-3 py-sm-2 py-1">
         <div id="pembatas1" class="d-flex justify-content-center">
-            <p id="pembatas" class="tulisanJudul align-items-center my-auto"><span>ADVANTAGES</span></p>
+            <p id="pembatas" class="tulisanJudul align-items-center my-auto titillium"><span>ADVANTAGES</span></p>
         </div>
     </div>
     <div class="bg-white rounded-5 p-5 my-5 shadow">
         <ol>
-            <li class="isi-konten">More than 15 years of experience in the Forwarding and Inland Transport \Trucking industry.</li>
-            <li class="isi-konten">A solid and experienced team in their respective fields.</li>
-            <li class="isi-konten">Own Fleet Ownership with safety standards including B3 handling.</li>
-            <li class="isi-konten">Total Solutions that we provide at affordable prices.</li>
-            <li class="isi-konten">Building sustainable relationships with customers with company integrity.</li>
+            <li class="titillium advantage">More than 15 years of experience in the Forwarding and Inland Transport \Trucking industry.</li>
+            <li class="titillium advantage">A solid and experienced team in their respective fields.</li>
+            <li class="titillium advantage">Own Fleet Ownership with safety standards including B3 handling.</li>
+            <li class="titillium advantage">Total Solutions that we provide at affordable prices.</li>
+            <li class="titillium advantage">Building sustainable relationships with customers with company integrity.</li>
         </ol>
     </div>
 </div>
-<footer class="">
-    <div class="px-5 py-3 w-100 d-flex flex-lg-row flex-column bg-white">
-        <div class="col col-12 col-lg-4">
-            <p class="footer-head">Contact Us</p>
-            <div class="col col-12 d-flex">
-                <img class="col col-2 col-lg-2"src="{{ asset('app/assets/image/wa.png') }}" style=""/>
-                <div class="col col-9 col-lg-9 mx-2 my-auto">
-                    <p class="mb-0 isi-footer">+6221 8899 2212 ( Hunting )</p>
-                    <p class="mb-0 isi-footer">+6281 1122 6395</p>
-                    <p class="mb-0 isi-footer">+6281 1122 6396</p>
-                </div>
-            </div>
-            <div class="col col-12 d-flex my-4">
-                <img class="col col-2 col-lg-2" src="{{ asset('app/assets/image/email.png') }}" style=""/>
-                <div class="col col-9 col-lg-9 mx-2 my-auto">
-                    <p class="mb-0 isi-footer">cs@jayamasabadi.id</p>
-                    <p class="mb-0 isi-footer">Sales@jayamasabadi.id</p>
-                </div>
-            </div>
-        </div>
-        <div class="col col-12 col-lg-4 my-3 my-lg-0">
-            <p class="footer-head">Our Office</p>
-            <p class="mb-0 office-head">Head Office :</p>
-            <p class="isi-footer">Jl. Marunda Makmur No. 1 RT 002 RW 008
-                Kebon Kelapa Segara Makmur,
-                Taruma Jaya, Bekasi 17211 Indonesia</p>
-            <p class="mb-0 office-head">Sales/Operational Office</p>
-            <p class="isi-footer">Kirana Commercial Avenue,
-                Bella Terra Lifestyle Center Lt. 1 No. 26
-                Jl. Boulevard Raya A2 No. 1 Kelapa Gading, Jakarta Utara</p>
-            <p class="mb-0 office-head">Cilegon Office</p>
-            <p class="isi-footer">
-                Jl. Lingkar Selatan KM.5,
-                Karangasem, Kec. Cibeber,
-                Kota Cilegon, Banten 42426
-            </p>
-        </div>
-        <div class="col col-12 col-lg-4 d-flex justfy-content-center flex-column">
-            <p class="text-center footer-head">Member of APTRINDO</p>
-            <img src="{{ asset('app/assets/image/aptrindo.png') }}" class="mx-auto"/>
-        </div>
-    </div>
-</footer>
 @endsection
