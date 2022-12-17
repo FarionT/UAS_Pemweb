@@ -169,7 +169,7 @@
             </div>
             <div class="isi mt-2 d-flex">
                 <img src="{{ asset('app/assets/image/kapal.png') }}" class="image" />
-                <p class="my-auto text-center">Import transportation provider services by sea</p>
+                <p class="my-auto text-center">Export transportation provider services by sea</p>
             </div>
             <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
                 <a href="/orders/create/OE" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
@@ -188,7 +188,7 @@
             </div>
             <div class="isi mt-2 d-flex">
                 <img src="{{ asset('app/assets/image/pesawat.png') }}" class="image" />
-                <p class="my-auto text-center">Layanan penyedia transportasi ekspor melalui jalur udara</p>
+                <p class="my-auto text-center">Import transportation provider services by air</p>
             </div>
             <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
                 <a href="/orders/create/AI" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
@@ -200,7 +200,7 @@
             </div>
             <div class="isi mt-2 d-flex">
                 <img src="{{ asset('app/assets/image/kapal.png') }}" class="image" />
-                <p class="my-auto text-center">Layanan penyedia transportasi ekspor melalui jalur laut</p>
+                <p class="my-auto text-center">Import transportation provider services by sea</p>
             </div>
             <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
                 <a href="/orders/create/OI" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
@@ -246,7 +246,7 @@
                 </div>
                 <div class="isi mt-2 d-flex">
                     <img src="{{ asset('app/assets/image/pesawat.png') }}" class="image" />
-                    <p class="my-auto text-center">Export transportation provider services by air</p>
+                    <p class="my-auto text-center">Domestic transportation provider services by air</p>
                 </div>
                 <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
                     <a href="/orders/create/ADOM" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
@@ -258,7 +258,7 @@
                 </div>
                 <div class="isi mt-2 d-flex">
                     <img src="{{ asset('app/assets/image/kapal.png') }}" class="image" />
-                    <p class="my-auto text-center">Export transportation provider services by sea</p>
+                    <p class="my-auto text-center">Domestic transportation provider services by sea</p>
                 </div>
                 <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
                     <a href="/orders/create/ODOM" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
@@ -426,7 +426,7 @@
             </div>
             <div class="isi mt-2 d-flex">
                 <img src="{{ asset('app/assets/image/kapal.png') }}" class="image" />
-                <p class="my-auto text-center">Import transportation provider services by sea</p>
+                <p class="my-auto text-center">Export transportation provider services by sea</p>
             </div>
             <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
                 <a href="/orders/create/OE" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
@@ -445,7 +445,7 @@
             </div>
             <div class="isi mt-2 d-flex">
                 <img src="{{ asset('app/assets/image/pesawat.png') }}" class="image" />
-                <p class="my-auto text-center">Layanan penyedia transportasi ekspor melalui jalur udara</p>
+                <p class="my-auto text-center">Import transportation provider services by air</p>
             </div>
             <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
                 <a href="/orders/create/AI" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
@@ -457,7 +457,7 @@
             </div>
             <div class="isi mt-2 d-flex">
                 <img src="{{ asset('app/assets/image/kapal.png') }}" class="image" />
-                <p class="my-auto text-center">Layanan penyedia transportasi ekspor melalui jalur laut</p>
+                <p class="my-auto text-center">Import transportation provider services by sea</p>
             </div>
             <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
                 <a href="/orders/create/OI" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
@@ -503,7 +503,7 @@
                 </div>
                 <div class="isi mt-2 d-flex">
                     <img src="{{ asset('app/assets/image/pesawat.png') }}" class="image" />
-                    <p class="my-auto text-center">Export transportation provider services by air</p>
+                    <p class="my-auto text-center">Domestic transportation provider services by air</p>
                 </div>
                 <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
                     <a href="/orders/create/ADOM" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
@@ -515,7 +515,7 @@
                 </div>
                 <div class="isi mt-2 d-flex">
                     <img src="{{ asset('app/assets/image/kapal.png') }}" class="image" />
-                    <p class="my-auto text-center">Export transportation provider services by sea</p>
+                    <p class="my-auto text-center">Domestic transportation provider services by sea</p>
                 </div>
                 <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
                     <a href="/orders/create/ODOM" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
