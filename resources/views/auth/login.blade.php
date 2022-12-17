@@ -6,15 +6,15 @@
     p{font-family: 'Titillium Web', sans-serif;}
 
     body{
-        /* background-color: #B0D1FC !important; */
+        background-color: #B0D1FC !important;
         /* background-image: url(" {{ asset('app/assets/image/bg_login.png') }}");
         background-repeat: no-repeat; 
         background-size: 100%; */
-        background-image: linear-gradient(to bottom, #B0D1FC, #001560);
-        background-repeat: no-repeat; 
-        background-size: 100%;
+        /* background-image: linear-gradient(to bottom, #B0D1FC, #001560); */
+        /* background-repeat: no-repeat;  */
+        /* background-size: 100%; */
         /* height: 120%; */
-        height: 757px;
+        /* height: 757px; */
     }
 
     .outside {
@@ -29,24 +29,40 @@
         padding: 30px;
     }
 
+    .form-login {
+        width: 500px;
+    }
+
     @media screen and (max-width: 940px) {
-        
+        .outside {
+            flex-direction: column;
+        }
+
+        .logo-text {
+            margin: 0 auto 50px;
+        }
+        .box {
+            margin-bottom: 50px;
+        }
+        .form-login {
+            width: 450px;
+        }
     }
 </style>
 @endsection
 @section('isi')
-<div class="outside mt-5">
-    <div>
+<div class="outside my-5">
+    <div class="logo-text">
         <img src="{{ asset('app/assets/image/logo_jayamas.png') }}" style="width: 200px;"/>
         <h1 style="font-family: 'Titillium Web', sans-serif; color: white;" class="mb-3"><b>PT. INDOTRANS</b></h1>
         <h1 style="font-family: 'Titillium Web', sans-serif; color: white;"><b>JAYAMAS ABADI</b></h1>
     </div>
-    <div>
+    <div class="box">
         <div class="d-flex justify-content-center mb-5">
             <img src="{{ asset('app/assets/image/profile.png') }}" style="width: 100px;" />
             <h1 class="ms-3 my-auto" style="font-family: 'Titillium Web', sans-serif;"><b>Login</b></h1>
         </div>
-        <div class="form-login mx-auto" style="width: 500px;">
+        <div class="form-login mx-auto">
             <form method="POST" action="{{ route('login') }}">
                 @csrf
     

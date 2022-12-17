@@ -82,7 +82,7 @@
             </div>
             <div class="isi ms-3 my-auto d-flex">
                 <img src="{{ asset('app/assets/image/warning.png') }}" class="gambar" />
-                <p class="my-auto">Maaf anda tidak punya akses ke laman ini.</p>
+                <p class="my-auto">Maaf order sudah di approve.</p>
             </div>
             <div class="justify-content-center d-flex mt-3">
                 <a href="/service" class="button text-center mx-auto btn btn-danger">Back to Previous Page</a>

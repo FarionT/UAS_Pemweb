@@ -45,7 +45,7 @@
     </style>
 @endsection
 @section('isi')
-    <div class="container">
+    <div class="container mb-5">
         <div class="d-flex justify-content-center">
             <!-- <img src="{{ asset('app/assets/image/service.png') }}" style="width:100px;" /> -->
             <p class="mx-auto" style="font-size: 60px;">APPROVE ORDER</p>
@@ -57,7 +57,7 @@
                         <th style="width: 170px;"><h3>ID</h3></th>
                         <th style="width: 400px;"><h3>Order Date</h3></th>
                         <th style="width: 170px;"><h3>Shipper</h3></th>
-                        <th style="width: 170px;"><h3>Cosignee</h3></th>
+                        <th style="width: 170px;"><h3>Consignee</h3></th>
                         <th style="width: 170px;"><h3>Status</h3></th>
                         <th style="width: 170px;"><h3>Tindakan</h3></th>
                     </tr>
@@ -68,7 +68,7 @@
                         <td><h5>{{ $order->id }}</h5></td>
                         <td><h5>{{ $order->order_date }}</h5></td>
                         <td><h5>{{ $order->shipper }}</h5></td>
-                        <td><h5>{{ $order->cosginee }}</h5></td>
+                        <td><h5>{{ $order->consignee }}</h5></td>
                         @if( $order->accept == 1 )
                             <td><h5 style="color: green;">Approved</h5></td>
                         @else

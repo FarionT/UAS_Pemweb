@@ -112,7 +112,7 @@
         <p class="align-items-center my-auto" style="font-size: 60px;">Shipping Instruction</p>
     </div>
 </div>
-<div class="container mt-5">
+<div class="container my-5">
     <form action="/orders" method="post">
         @csrf
         <div class="d-flex justify-content-between mb-5">
