@@ -84,8 +84,8 @@
                 margin-top:-45px;
             }
             #tulisan-indotrans{
-                margin-top: -25px;
-                font-size: 27px;
+                margin-top: -20px;
+                font-size: 23px;
             }
             /* footer */
             .footer-head{
