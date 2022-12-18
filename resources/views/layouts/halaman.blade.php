@@ -230,7 +230,131 @@
         .dropdown:hover .dropdown-content {display: block;}
 
         .dropdown:hover .dropbtn {background-color:#011D83;}
+        /* footer */
+        @media screen and (max-width:575px){
+            /* footer */
+            .footer-head{
+                font-size: 20px;
+            }
 
+            .isi-footer{
+                font-size: 10px;
+            }
+
+            .office-head{
+                font-size: 12px;
+            }
+
+            .gambar-footer{
+                width:100px;
+                height:auto;
+            }
+
+            .gambar-footer-kiri{
+                width:40px;
+                height:auto;
+            }
+        }
+
+        @media screen and (min-width:576px){
+            /* footer */
+            .footer-head{
+                font-size: 23px;
+            }
+
+            .isi-footer{
+                font-size: 11px;
+            }
+
+            .office-head{
+                font-size: 14px;
+            }
+
+            .gambar-footer{
+                width:110px;
+                height:auto;
+            }
+
+            .gambar-footer-kiri{
+                width:50px;
+                height:auto;
+            }
+        }
+
+        @media screen and (min-width:767px){
+            /* footer */
+            .footer-head{
+                font-size: 26px;
+            }
+
+            .isi-footer{
+                font-size: 12px;
+            }
+
+            .office-head{
+                font-size: 16px;
+            }
+
+            .gambar-footer{
+                width:120px;
+                height:auto;
+            }
+
+            .gambar-footer-kiri{
+                width:60px;
+                height:auto;
+            }
+        }
+
+        @media screen and (min-width:992px){
+            /* footer */
+            .footer-head{
+                font-size: 29px;
+            }
+
+            .isi-footer{
+                font-size: 14px;
+            }
+
+            .office-head{
+                font-size: 18px;
+            }
+
+            .gambar-footer{
+                width:130px;
+                height:auto;
+            }
+
+            .gambar-footer-kiri{
+                width:70px;
+                height:auto;
+            }
+        }
+
+        @media screen and (min-width:1200px){
+            /* footer */
+            .footer-head{
+                font-size: 32px;
+            }
+
+            .isi-footer{
+                font-size: 16px;
+            }
+
+            .office-head{
+                font-size: 20px;
+            }
+
+            .gambar-footer{
+                width:140px;
+                height:auto;
+            }
+
+            .gambar-footer-kiri{
+                width:80px;
+                height:auto;
+            }
+        }
         /* DROPDOWN */
     </style>
 @yield('style')
