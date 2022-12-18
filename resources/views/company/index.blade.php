@@ -650,14 +650,14 @@
                         <img src="{{asset('app/assets/image/visi misi.png')}}" style="width:300px;padding-top:50px;padding-bottom:50px;">
                         <div style="padding-top:50px;padding-bottom:50px;">
                             <p>Vision & <br>Mission</p>
-                            <button class="button_more"><p style="margin-top: auto;margin-bottom:auto;">GO</p></button>
+                            <a href="/visi&misi" class="btn btn-primary button_more"><p style="margin-top: auto;margin-bottom:auto;">GO</p></a>
                         </div>
                     </div>
                     <div class="home_after_more_card">
                         <img src="{{asset('app/assets/image/about_us.png')}}" style="width:300px;padding-top:50px;padding-bottom:50px;">
                         <div style="padding-top:50px;padding-bottom:50px;">
                             <p>About<br>US</p>
-                            <button class="button_more"><p style="margin-bottom:auto;">CHECK</p></button>
+                            <a href="/aboutus" class="btn btn-primary button_more"><p style="margin-bottom:auto;">CHECK</p></a>
                         </div>
                     </div>
                     <div class="home_after_more_services"  style="grid-column:span 2;gap:50px;">
@@ -667,9 +667,9 @@
                             <p  style="font-size:28px;" class="deskripsi_pesanan">Want to order goods delivery services domestically <br> or export and import? <br> Through any path?
                                 PT Indotrans Jayamas Abadi <br> is the right choice. </p>
                             <div style="display:flex; gap:3rem;" class="service_button">
-                                <p style="font-size:28px;" class="silahkan_pesan">Please Place an Order</p><button class="button_more"><p style="margin-bottom:auto;">GO</p></button>
+                                <p style="font-size:28px;" class="silahkan_pesan">Please Place an Order</p>
+                                <a href="/service" class="btn btn-primary button_more"><p style="margin-bottom:auto;">GO</p></a>
                             </div>
-            
                         </div>
                     </div>
                     
@@ -809,14 +809,14 @@
                         <img src="{{asset('app/assets/image/visi misi.png')}}" style="width:300px;padding-top:50px;padding-bottom:50px;">
                         <div style="padding-top:50px;padding-bottom:50px;">
                             <p>Visi & <br>Misi</p>
-                            <button class="button_more"><p style="margin-top: auto;margin-bottom:auto;">GO</p></button>
+                            <a href="/visi&misi" class="btn btn-primary button_more"><p style="margin-top: auto;margin-bottom:auto;">GO</p></a>
                         </div>
                     </div>
                     <div class="home_after_more_card">
                         <img src="{{asset('app/assets/image/about_us.png')}}" style="width:300px;padding-top:50px;padding-bottom:50px;">
                         <div style="padding-top:50px;padding-bottom:50px;">
                             <p>Tentang<br>Kami</p>
-                            <button class="button_more"><p style="margin-bottom:auto;">CHECK</p></button>
+                            <a href="/aboutus" class="btn btn-primary button_more"><p style="margin-bottom:auto;">CHECK</p></a>
                         </div>
                     </div>
                     <div class="home_after_more_services"  style="grid-column:span 2;gap:50px;">
@@ -826,7 +826,8 @@
                             <p  style="font-size:28px;" class="deskripsi_pesanan">Ingin melakukan pemesanan jasa pengantaran barang secara domestik <br> ataupun ekspor dan impor? <br> Melalui jalur apapun?
                                 PT Indotrans Jayamas Abadi <br> menjadi pilihan yang  tepat. </p>
                             <div style="display:flex; gap:3rem;" class="service_button">
-                                <p style="font-size:28px;" class="silahkan_pesan">Silahkan Lakukan Pemesanan</p><button class="button_more"><p style="margin-bottom:auto;">GO</p></button>
+                                <p style="font-size:28px;" class="silahkan_pesan">Silahkan Lakukan Pemesanan</p>
+                                <a href="/service" class="btn btn-primary button_more"><p style="margin-bottom:auto;">GO</p></a>
                             </div>
             
                         </div>
@@ -969,14 +970,14 @@
                         <img src="{{asset('app/assets/image/visi misi.png')}}" style="width:300px;padding-top:50px;padding-bottom:50px;">
                         <div style="padding-top:50px;padding-bottom:50px;">
                             <p>Vision & <br>Mission</p>
-                            <button class="button_more"><p style="margin-top: auto;margin-bottom:auto;">GO</p></button>
+                            <a href="/visi&misi" class="btn btn-primary button_more"><p style="margin-top: auto;margin-bottom:auto;">GO</p></a>
                         </div>
                     </div>
                     <div class="home_after_more_card">
                         <img src="{{asset('app/assets/image/about_us.png')}}" style="width:300px;padding-top:50px;padding-bottom:50px;">
                         <div style="padding-top:50px;padding-bottom:50px;">
                             <p>About<br>US</p>
-                            <button class="button_more"><p style="margin-bottom:auto;">CHECK</p></button>
+                            <a href="/aboutus" class="btn btn-primary button_more"><p style="margin-bottom:auto;">CHECK</p></a>
                         </div>
                     </div>
                     <div class="home_after_more_services"  style="grid-column:span 2;gap:50px;">
@@ -986,7 +987,8 @@
                             <p  style="font-size:28px;" class="deskripsi_pesanan">Want to order goods delivery services domestically <br> or export and import? <br> Through any path?
                                 PT Indotrans Jayamas Abadi <br> is the right choice. </p>
                             <div style="display:flex; gap:3rem;" class="service_button">
-                                <p style="font-size:28px;" class="silahkan_pesan">Please Place an Order</p><button class="button_more"><p style="margin-bottom:auto;">GO</p></button>
+                                <p style="font-size:28px;" class="silahkan_pesan">Please Place an Order</p>
+                                <a href="/service" class="btn btn-primary button_more"><p style="margin-bottom:auto;">GO</p></a>
                             </div>
             
                         </div>
