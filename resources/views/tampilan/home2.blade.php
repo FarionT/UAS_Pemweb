@@ -223,7 +223,7 @@
 
     /* DROPDOWN */
     body{
-        background-color: 
+        background-color:#B0D1FC !important; 
     }
     @media screen and (max-width:575px){
         #aboutus{
@@ -596,205 +596,609 @@
     
 </style>
 <body>
-    <nav class="nav" style="background-color: white;">
-        <div class="nav-top">
-            <div class="nav-top-left">
-                <a href="/"><img src="{{asset('app/assets/image/logo_jayamas.png')}}" alt="" style="width:100px; margin-right: 15px;"/></a>
-                <p style="margin-top:auto;margin-bottom:auto;font-size:30px;">PT Indotrans Jayamas Abadi</p>
-            </div>
-            @auth
-            @if (Auth::user())
-            <div class="d-flex nav-top-right">
-                <p style="margin-top:auto;margin-bottom:auto;font-size:30px;">{{ Auth::user()->username }}</p>
-                <a href="/profile" class="my-auto"><img src="{{ asset('app/'.Auth::user()->photo )}}" class="rounded-circle ms-3" style="width: 60px;" /></a>
-            </div>
-            @endauth
-            @else
-            <div class="d-flex nav-top-right">
-                <a href="{{ route('login') }}" class="top-text my-auto">Login</a>
-                <p class="top-text my-auto">&nbsp;|&nbsp;</p>
-                <a href="{{ route('register') }}" class="top-text my-auto">Register</a>
-            </div>
-            @endif
-        </div>
-        <div class="nav-bottom">
-            <a href="/aboutus" class="nav-text my-auto">About Us</a>
-            <a href="/service" class="nav-text my-auto">Services</a>
-            <a href="/visi&misi" class="nav-text my-auto">Vision & Mission</a>
-            @auth
-            @if(Auth::user())
-            <div class="dropdown">
-                <button class="dropbtn">Language</button>
-                <div class="dropdown-content">
-                    <a href="/change/language/{{ Auth::user()->id }}/1">English</a>
-                    <a href="/change/language/{{ Auth::user()->id }}/2">Indonesia</a>
+@auth
+    @if (Auth::user()->language == 1)
+        <nav class="nav" style="background-color: white;">
+            <div class="nav-top">
+                <div class="nav-top-left">
+                    <a href="/"><img src="{{asset('app/assets/image/logo_jayamas.png')}}" alt="" style="width:100px; margin-right: 15px;"/></a>
+                    <p style="margin-top:auto;margin-bottom:auto;font-size:30px;">PT Indotrans Jayamas Abadi</p>
                 </div>
-            </div>
-            @endauth    
-            @else
-            <a href="/login" class="nav-text my-auto">Language</a>
-            @endif
-        </div>
-    </nav>
-    <div id="carouselExampleIndicators" class="carousel slide mb-5" data-bs-ride="true">
-        <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-        </div>
-        <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="{{ asset('app/assets/image/shipment.png') }}" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="{{asset('app/assets/image/slider-2.png')}}" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="{{asset('app/assets/image/slider-3.png')}}" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="{{asset('app/assets/image/slider-4.png')}}" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="{{asset('app/assets/image/slider-5.png')}}" class="d-block w-100" alt="...">
-        </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-    <div class="container my-5">
-        <div id="company" class="my-5 bg-white p-lg-5 pt-0 pt-lg-5 pb-2 px-4 rounded-5 shadow shadow-top-0">
-            <div id="upperCompany" class="d-flex flex-column my-0 my-lg-5">
-                <div class="d-flex">
-                    <p id="tulisan-company"  class="tulisanJudul titillium">COMPANY</p>
+                @auth
+                @if (Auth::user())
+                <div class="d-flex nav-top-right">
+                    <p style="margin-top:auto;margin-bottom:auto;font-size:30px;">{{ Auth::user()->username }}</p>
+                    <a href="/profile" class="my-auto"><img src="{{ asset('app/'.Auth::user()->photo )}}" class="rounded-circle ms-3" style="width: 60px;" /></a>
                 </div>
-                <div class="d-flex flex-column flex-lg-row">
-                    <p class="isi-konten col col-12 col-lg-6 kanit" >PT. JAYAMAS ABADI started operating in 1999.
-                    The business started from scratch as a transporter serving in the city,
-                    and then began to grow by serving JABODETABEK in 2002
-                    The great response from our customers made us more confident to
-                    be able to add units and be able to provide domestic outbound
-                    transportation services. Currently we have served transportation
-                    outside Java, namely Sumatra, Kalimantan, as well as several
-                    destinations in Eastern Indonesia.
-                    </p>
-                    <img class="col col-lg-6 col-12" style="height:auto" src="{{  asset('app/assets/image/image 8.png') }}" alt="image"/>
+                @endauth
+                @else
+                <div class="d-flex nav-top-right">
+                    <a href="{{ route('login') }}" class="top-text my-auto">Login</a>
+                    <p class="top-text my-auto">&nbsp;|&nbsp;</p>
+                    <a href="{{ route('register') }}" class="top-text my-auto">Register</a>
                 </div>
+                @endif
             </div>
-            <p class="isi-konten kanit">Currently, PT. JAYAMAS ABADI developed by opening a new business
-                in the field of Forwarders under the name PT. INDOTRANS JAYAMAS
-                ABADI. With the support of a solid team and the application of the
-                right technology in managing the business entrusted to us, we are
-                confident that we will be able to provide service satisfaction to our
-                customers and realize the CORPORATE MISSION and VISION
-                appropriately.
-            </p>
-        </div>
-        <div class="mt-5">
-            <div id="pembatas1" class="d-flex justify-content-center">
-                <p id="pembatas" class="judul-atas titillium align-items-center my-auto"><span>MORE</span></p>
-            </div>
-        </div>
-        <div class="my-5 d-flex flex-md-row flex-column justify-content-md-between">
-            <div class="kiri bg-white d-flex p-5 mx-1 flex-lg-row flex-column ">
-                <img src="{{asset('app/assets/image/visi misi.png')}}" class="gambar-tiga img-fluid mx-auto mx-lg-0">
-                <div class="d-flex flex-column justify-content-center  mx-auto mx-lg-0">
-                    <h3 class="tulisan-tiga titillium text-center mx-lg-0 d-flex align-items-start">VISION & MISSION</h3>
-                    <a href="" class="titillium mx-auto w-100 text-decoration-none text-white d-flex justify-content-center align-items-center">GO</a>
+            <div class="nav-bottom">
+                <a href="/aboutus" class="nav-text my-auto">About Us</a>
+                <a href="/service" class="nav-text my-auto">Services</a>
+                <a href="/visi&misi" class="nav-text my-auto">Vision & Mission</a>
+                @auth
+                @if(Auth::user())
+                <div class="dropdown">
+                    <button class="dropbtn">Language</button>
+                    <div class="dropdown-content">
+                        <a href="/change/language/{{ Auth::user()->id }}/1">English</a>
+                        <a href="/change/language/{{ Auth::user()->id }}/2">Indonesia</a>
+                    </div>
                 </div>
+                @endauth    
+                @else
+                <a href="/login" class="nav-text my-auto">Language</a>
+                @endif
             </div>
-            <div class="kanan bg-white d-flex p-5 mx-1 flex-lg-row flex-column my-5 my-md-0">
-                <img src="{{asset('app/assets/image/about_us.png')}}" class="gambar-tiga img-fluid mx-auto mx-lg-0">
-                <div class="d-flex flex-column justify-content-center mx-auto mx-lg-0">
-                    <h3 class="tulisan-tiga titillium d-flex align-items-start">ABOUT US</h3>
-                    <a href="" class="titillium mx-auto w-100 text-decoration-none row-2 text-white d-flex justify-content-center align-items-center">GO</a>
-                </div>
+        </nav>
+        <div id="carouselExampleIndicators" class="carousel slide mb-5" data-bs-ride="true">
+            <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
             </div>
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{ asset('app/assets/image/shipment.png') }}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{{asset('app/assets/image/slider-2.png')}}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{{asset('app/assets/image/slider-3.png')}}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{{asset('app/assets/image/slider-4.png')}}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{{asset('app/assets/image/slider-5.png')}}" class="d-block w-100" alt="...">
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <div class="bawah bg-white d-flex flex-lg-row flex-column p-5">
-            <img src="{{asset('app/assets/image/service.png')}}" class="gambar-tiga mx-auto mx-lg-0 img-fluid">
-            <div class="mx-lg-4 mx-auto ">
-                <h3 class="titillium tulisan-tiga d-flex justify-content-center justify-content-lg-start">SERVICES</h3>
-                <p class="titillium isi-service text-center text-lg-start">
-                    Ingin melakukan pemesanan jasa pengantaran barang secara domestik ataupun ekspor dan impor? Melalui jalur apapun?
-                    PT Indotrans Jayamas Abadi menjadi pilihan yang  tepat.
+        <div class="container my-5">
+            <div id="company" class="my-5 bg-white p-lg-5 pt-0 pt-lg-5 pb-2 px-4 rounded-5 shadow shadow-top-0">
+                <div id="upperCompany" class="d-flex flex-column my-0 my-lg-5">
+                    <div class="d-flex">
+                        <p id="tulisan-company"  class="tulisanJudul titillium">COMPANY</p>
+                    </div>
+                    <div class="d-flex flex-column flex-lg-row">
+                        <p class="isi-konten col col-12 col-lg-6 kanit" >PT. JAYAMAS ABADI started operating in 1999.
+                        The business started from scratch as a transporter serving in the city,
+                        and then began to grow by serving JABODETABEK in 2002
+                        The great response from our customers made us more confident to
+                        be able to add units and be able to provide domestic outbound
+                        transportation services. Currently we have served transportation
+                        outside Java, namely Sumatra, Kalimantan, as well as several
+                        destinations in Eastern Indonesia.
+                        </p>
+                        <img class="col col-lg-6 col-12" style="height:auto" src="{{  asset('app/assets/image/image 8.png') }}" alt="image"/>
+                    </div>
+                </div>
+                <p class="isi-konten kanit">Currently, PT. JAYAMAS ABADI developed by opening a new business
+                    in the field of Forwarders under the name PT. INDOTRANS JAYAMAS
+                    ABADI. With the support of a solid team and the application of the
+                    right technology in managing the business entrusted to us, we are
+                    confident that we will be able to provide service satisfaction to our
+                    customers and realize the CORPORATE MISSION and VISION
+                    appropriately.
                 </p>
-                <div class="d-flex flex-lg-row flex-column justify-content-lg-between">
-                    <p class="titillium isi-service d-flex justify-content-center justify-content-lg-start">Silahkan lakukan pemesanan</p>
-                    <a href="" class="titillium isi-service mx-auto mx-lg-0 text-decoration-none d-flex justify-content-center align-items-center text-white">GO</a>
+            </div>
+            <div class="mt-5">
+                <div id="pembatas1" class="d-flex justify-content-center">
+                    <p id="pembatas" class="judul-atas titillium align-items-center my-auto"><span>MORE</span></p>
                 </div>
             </div>
-        </div>
-    </div>
-    <footer style="background-color: #DCEBFF !important" class="">
-        <div class="d-flex gap-5" style=""> 
-            <hr class="flex-grow-1 my-auto" style="height:5px;color:#011D83;opacity:1;background-color:#011D83;"/><p style="color:#011D83;font-weight:900" class="titillium tulisan-tiga">GET MORE INFORMATION</p>
-        </div>
-        <div class="footer-bawah d-flex flex-column-reverse flex-lg-row justify-content-center">
-            <div class="footer-kiri titillium bg-white d-flex flex-row p-3 mx-auto mt-lg-0 mt-3 justify-content-around justify-content-lg-start">
-                <div class="kiri-bawah ">
-                    <div class="contact-us">
-                        <p class="our-office"><b>Contact Us</b></p>
-                        <div class="wa d-flex flex-row">
-                            <img src="{{asset('app/assets/image/whatsapp.png')}}" class="contact_img me-2"/>
-                            <div class="no-telp">
-                                <p class="isi-footer mb-0">+6221 8899 2212 ( Hunting )</p>
-                                <p class="isi-footer mb-0">+6281 1122 6395</p>
-                                <p class="isi-footer mb-0">+6281 1122 6396</p>
-                            </div>
-                        </div>
-                        <div class="mail d-flex flex-row my-3">
-                            <img src="{{asset('app/assets/image/email.png')}}" class="contact_img me-2" />
-                            <div class="my-auto">
-                                <p class="isi-footer mb-0">cs@jayamasabadi.id</p>
-                                <p class="isi-footer mb-0">Sales@jayamasabadi.id</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-column member justify-content-center">
-                        <p class="mx-auto my-3 our-office"><b>Member of APTRINDO</b></p>
-                        <img src="{{asset('app/assets/image/aptrindo.png')}}" class="aptrindo mx-auto" alt="">
+            <div class="my-5 d-flex flex-md-row flex-column justify-content-md-between">
+                <div class="kiri bg-white d-flex p-5 mx-1 flex-lg-row flex-column ">
+                    <img src="{{asset('app/assets/image/visi misi.png')}}" class="gambar-tiga img-fluid mx-auto mx-lg-0">
+                    <div class="d-flex flex-column justify-content-center  mx-auto mx-lg-0">
+                        <h3 class="tulisan-tiga titillium text-center mx-lg-0 d-flex align-items-start">VISION & MISSION</h3>
+                        <a href="" class="titillium mx-auto w-100 text-decoration-none text-white d-flex justify-content-center align-items-center">GO</a>
                     </div>
                 </div>
-                <div class="office titillium col col-4 mx-3">
-                    <p class="our-office"><b>Our Office</b></p>
-                    <p class="head-office"><b>Head Office</b></p>
-                    <p class="isi-footer">Jl. Marunda Makmur No. 1 RT 002 RW 008
-                        Kebon Kelapa Segara Makmur,
-                        Taruma Jaya, Bekasi 17211 Indonesia</p>
-                    <p class="head-office"><b>Sales / Operational Office : </b></p>
-                    <p class="isi-footer">Kirana Commercial Avenue,
-                        Bella Terra Lifestyle Center Lt. 1 No. 26
-                        Jl. Boulevard Raya A2 No. 1 Kelapa Gading, Jakarta Utara</p>
-                    <p class="head-office"><b>Cilegon Office : </b></p>
-                    <p class="isi-footer">Jl. Lingkar Selatan KM.5,
-                        Karangasem, Kec. Cibeber,
-                        Kota Cilegon, Banten 42426</p>
+                <div class="kanan bg-white d-flex p-5 mx-1 flex-lg-row flex-column my-5 my-md-0">
+                    <img src="{{asset('app/assets/image/about_us.png')}}" class="gambar-tiga img-fluid mx-auto mx-lg-0">
+                    <div class="d-flex flex-column justify-content-center mx-auto mx-lg-0">
+                        <h3 class="tulisan-tiga titillium d-flex align-items-start">ABOUT US</h3>
+                        <a href="" class="titillium mx-auto w-100 text-decoration-none row-2 text-white d-flex justify-content-center align-items-center">GO</a>
+                    </div>
                 </div>
             </div>
-            <div class="footer-kanan bg-white d-flex flex-column p-5 rounded-circle mx-auto">
-                <img src="{{asset('app/assets/image/customer_support.png')}}" class="mx-auto gambar_cs" style=""alt=""/>
-                <p class="titillium isi-footer text-center">We are always open to answer you, if you have something to tell us,
-                     whether it is a question, suggestion or critics don’t hesitate to contact us.</p>
-                
+            <div class="bawah bg-white d-flex flex-lg-row flex-column p-5">
+                <img src="{{asset('app/assets/image/service.png')}}" class="gambar-tiga mx-auto mx-lg-0 img-fluid">
+                <div class="mx-lg-4 mx-auto ">
+                    <h3 class="titillium tulisan-tiga d-flex justify-content-center justify-content-lg-start">SERVICES</h3>
+                    <p class="titillium isi-service text-center text-lg-start">
+                        Want to order goods delivery services domestically or export and import? Through any path?
+                        PT Indotrans Jayamas Abadi is the right choice.
+                    </p>
+                    <div class="d-flex flex-lg-row flex-column justify-content-lg-between">
+                        <p class="titillium isi-service d-flex justify-content-center justify-content-lg-start">Please place an order</p>
+                        <a href="" class="titillium isi-service mx-auto mx-lg-0 text-decoration-none d-flex justify-content-center align-items-center text-white">GO</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </footer>
-    <div class="sticky_login d-flex flex-md-row flex-column">
-        <p class="my-md-auto ms-md-5 ms-0 isi-footer my-2 text-center" style="color: white;">Login or register first to unlock more features, and get more information about our updates</p>
-        <div class="d-flex my-auto mx-auto">
-            <a href="{{ route('login') }}" class="btn button-sticky rounded-pill me-3 titillium" style="background-color: #B0D1FC;">Login</a>
-            <a href="{{ route('register') }}" class="btn button-sticky rounded-pill titillium" style="background-color: #B0D1FC;">Register</a>
+        <footer style="background-color: #DCEBFF !important" class="">
+            <div class="d-flex gap-5" style=""> 
+                <hr class="flex-grow-1 my-auto" style="height:5px;color:#011D83;opacity:1;background-color:#011D83;"/><p style="color:#011D83;font-weight:900" class="titillium tulisan-tiga">GET MORE INFORMATION</p>
+            </div>
+            <div class="footer-bawah d-flex flex-column-reverse flex-lg-row justify-content-center">
+                <div class="footer-kiri titillium bg-white d-flex flex-row p-3 mx-auto mt-lg-0 mt-3 justify-content-around justify-content-lg-start">
+                    <div class="kiri-bawah ">
+                        <div class="contact-us">
+                            <p class="our-office"><b>Contact Us</b></p>
+                            <div class="wa d-flex flex-row">
+                                <img src="{{asset('app/assets/image/whatsapp.png')}}" class="contact_img me-2"/>
+                                <div class="no-telp">
+                                    <p class="isi-footer mb-0">+6221 8899 2212 ( Hunting )</p>
+                                    <p class="isi-footer mb-0">+6281 1122 6395</p>
+                                    <p class="isi-footer mb-0">+6281 1122 6396</p>
+                                </div>
+                            </div>
+                            <div class="mail d-flex flex-row my-3">
+                                <img src="{{asset('app/assets/image/email.png')}}" class="contact_img me-2" />
+                                <div class="my-auto">
+                                    <p class="isi-footer mb-0">cs@jayamasabadi.id</p>
+                                    <p class="isi-footer mb-0">Sales@jayamasabadi.id</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column member justify-content-center">
+                            <p class="mx-auto my-3 our-office"><b>Member of APTRINDO</b></p>
+                            <img src="{{asset('app/assets/image/aptrindo.png')}}" class="aptrindo mx-auto" alt="">
+                        </div>
+                    </div>
+                    <div class="office titillium col col-4 mx-3">
+                        <p class="our-office"><b>Our Office</b></p>
+                        <p class="head-office"><b>Head Office</b></p>
+                        <p class="isi-footer">Jl. Marunda Makmur No. 1 RT 002 RW 008
+                            Kebon Kelapa Segara Makmur,
+                            Taruma Jaya, Bekasi 17211 Indonesia</p>
+                        <p class="head-office"><b>Sales / Operational Office : </b></p>
+                        <p class="isi-footer">Kirana Commercial Avenue,
+                            Bella Terra Lifestyle Center Lt. 1 No. 26
+                            Jl. Boulevard Raya A2 No. 1 Kelapa Gading, Jakarta Utara</p>
+                        <p class="head-office"><b>Cilegon Office : </b></p>
+                        <p class="isi-footer">Jl. Lingkar Selatan KM.5,
+                            Karangasem, Kec. Cibeber,
+                            Kota Cilegon, Banten 42426</p>
+                    </div>
+                </div>
+                <div class="footer-kanan bg-white d-flex flex-column p-5 rounded-circle mx-auto">
+                    <img src="{{asset('app/assets/image/customer_support.png')}}" class="mx-auto gambar_cs" style=""alt=""/>
+                    <p class="titillium isi-footer text-center">We are always open to answer you, if you have something to tell us,
+                        whether it is a question, suggestion or critics don’t hesitate to contact us.</p>
+                    
+                </div>
+            </div>
+        </footer>
+        <div class="sticky_login d-flex flex-md-row flex-column">
+            <p class="my-md-auto ms-md-5 ms-0 isi-footer my-2 text-center" style="color: white;">Login or register first to unlock more features, and get more information about our updates</p>
+            <div class="d-flex my-auto mx-auto">
+                <a href="{{ route('login') }}" class="btn button-sticky rounded-pill me-3 titillium" style="background-color: #B0D1FC;">Login</a>
+                <a href="{{ route('register') }}" class="btn button-sticky rounded-pill titillium" style="background-color: #B0D1FC;">Register</a>
+            </div>
         </div>
-    </div>
+    @elseif (Auth::user()->language == 2)
+        <nav class="nav" style="background-color: white;">
+            <div class="nav-top">
+                <div class="nav-top-left">
+                    <a href="/"><img src="{{asset('app/assets/image/logo_jayamas.png')}}" alt="" style="width:100px; margin-right: 15px;"/></a>
+                    <p style="margin-top:auto;margin-bottom:auto;font-size:30px;">PT Indotrans Jayamas Abadi</p>
+                </div>
+                @auth
+                @if (Auth::user())
+                <div class="d-flex nav-top-right">
+                    <p style="margin-top:auto;margin-bottom:auto;font-size:30px;">{{ Auth::user()->username }}</p>
+                    <a href="/profile" class="my-auto"><img src="{{ asset('app/'.Auth::user()->photo )}}" class="rounded-circle ms-3" style="width: 60px;" /></a>
+                </div>
+                @endauth
+                @else
+                <div class="d-flex nav-top-right">
+                    <a href="{{ route('login') }}" class="top-text my-auto">Masuk</a>
+                    <p class="top-text my-auto">&nbsp;|&nbsp;</p>
+                    <a href="{{ route('register') }}" class="top-text my-auto">Registrasi</a>
+                </div>
+                @endif
+            </div>
+            <div class="nav-bottom">
+                <a href="/aboutus" class="nav-text my-auto">Tentang Kami</a>
+                <a href="/service" class="nav-text my-auto">Layanan</a>
+                <a href="/visi&misi" class="nav-text my-auto">Visi & Misi</a>
+                @auth
+                @if(Auth::user())
+                <div class="dropdown">
+                    <button class="dropbtn">Bahasa</button>
+                    <div class="dropdown-content">
+                        <a href="/change/language/{{ Auth::user()->id }}/1">Inggris</a>
+                        <a href="/change/language/{{ Auth::user()->id }}/2">Indonesia</a>
+                    </div>
+                </div>
+                @endauth    
+                @else
+                <a href="/login" class="nav-text my-auto">Bahasa</a>
+                @endif
+            </div>
+        </nav>
+        <div id="carouselExampleIndicators" class="carousel slide mb-5" data-bs-ride="true">
+            <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{ asset('app/assets/image/shipment.png') }}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{{asset('app/assets/image/slider-2.png')}}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{{asset('app/assets/image/slider-3.png')}}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{{asset('app/assets/image/slider-4.png')}}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{{asset('app/assets/image/slider-5.png')}}" class="d-block w-100" alt="...">
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Sebelumnya</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Selanjutnya</span>
+            </button>
+        </div>
+        <div class="container my-5">
+            <div id="company" class="my-5 bg-white p-lg-5 pt-0 pt-lg-5 pb-2 px-4 rounded-5 shadow shadow-top-0">
+                <div id="upperCompany" class="d-flex flex-column my-0 my-lg-5">
+                    <div class="d-flex">
+                        <p id="tulisan-company"  class="tulisanJudul titillium">Perusahaan</p>
+                    </div>
+                    <div class="d-flex flex-column flex-lg-row">
+                        <p class="isi-konten col col-12 col-lg-6 kanit" >PT. INDOTRANS JAYAMAS ABADI mulai beroperasi pada tahun 1999.
+                        Bisnis ini dimulai dari awal sebagai transporter yang melayani di kota,
+                        dan kemudian mulai berkembang dengan melayani JABODETABEK pada tahun 2002
+                        Respon yang luar biasa dari pelanggan kami membuat kami lebih percaya diri untuk
+                        mampu menambah unit dan mampu menyediakan outbound domestik
+                        Transportasi. Saat ini kami telah melayani transportasi
+                        di luar Jawa, yaitu Sumatera, Kalimantan, serta beberapa
+                        destinasi di Indonesia Timur.
+                        </p>
+                        <img class="col col-lg-6 col-12" style="height:auto" src="{{  asset('app/assets/image/image 8.png') }}" alt="image"/>
+                    </div>
+                </div>
+                <p class="isi-konten kanit">Saat ini, PT. INDOTRANS JAYAMAS ABADI berkembang dengan membuka usaha baru
+                    di bidang Forwarder dengan nama PT. INDOTRANS JAYAMAS
+                    ABADI. Dengan dukungan tim yang solid dan penerapan
+                    teknologi yang tepat dalam mengelola bisnis yang dipercayakan kepada kami, kami
+                    yakin bahwa kami akan dapat memberikan kepuasan layanan kepada kami
+                    pelanggan dan mewujudkan MISI dan VISI PERUSAHAAN
+                    Tepat.
+                </p>
+            </div>
+            <div class="mt-5">
+                <div id="pembatas1" class="d-flex justify-content-center">
+                    <p id="pembatas" class="judul-atas titillium align-items-center my-auto"><span>Selengkapnya</span></p>
+                </div>
+            </div>
+            <div class="my-5 d-flex flex-md-row flex-column justify-content-md-between">
+                <div class="kiri bg-white d-flex p-5 mx-1 flex-lg-row flex-column ">
+                    <img src="{{asset('app/assets/image/visi misi.png')}}" class="gambar-tiga img-fluid mx-auto mx-lg-0">
+                    <div class="d-flex flex-column justify-content-center  mx-auto mx-lg-0">
+                        <h3 class="tulisan-tiga titillium text-center mx-lg-0 d-flex align-items-start">Visi & Misi</h3>
+                        <a href="" class="titillium mx-auto w-100 text-decoration-none text-white d-flex justify-content-center align-items-center">GO</a>
+                    </div>
+                </div>
+                <div class="kanan bg-white d-flex p-5 mx-1 flex-lg-row flex-column my-5 my-md-0">
+                    <img src="{{asset('app/assets/image/about_us.png')}}" class="gambar-tiga img-fluid mx-auto mx-lg-0">
+                    <div class="d-flex flex-column justify-content-center mx-auto mx-lg-0">
+                        <h3 class="tulisan-tiga titillium d-flex align-items-start">Tentang Kami</h3>
+                        <a href="" class="titillium mx-auto w-100 text-decoration-none row-2 text-white d-flex justify-content-center align-items-center">GO</a>
+                    </div>
+                </div>
+            </div>
+            <div class="bawah bg-white d-flex flex-lg-row flex-column p-5">
+                <img src="{{asset('app/assets/image/service.png')}}" class="gambar-tiga mx-auto mx-lg-0 img-fluid">
+                <div class="mx-lg-4 mx-auto ">
+                    <h3 class="titillium tulisan-tiga d-flex justify-content-center justify-content-lg-start">Layanan</h3>
+                    <p class="titillium isi-service text-center text-lg-start">
+                        Ingin melakukan pemesanan jasa pengantaran barang secara domestik ataupun ekspor dan impor? Melalui jalur apapun?
+                        PT Indotrans Jayamas Abadi menjadi pilihan yang  tepat.
+                    </p>
+                    <div class="d-flex flex-lg-row flex-column justify-content-lg-between">
+                        <p class="titillium isi-service d-flex justify-content-center justify-content-lg-start">Silahkan lakukan pemesanan</p>
+                        <a href="" class="titillium isi-service mx-auto mx-lg-0 text-decoration-none d-flex justify-content-center align-items-center text-white">GO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer style="background-color: #DCEBFF !important" class="">
+            <div class="d-flex gap-5" style=""> 
+                <hr class="flex-grow-1 my-auto" style="height:5px;color:#011D83;opacity:1;background-color:#011D83;"/><p style="color:#011D83;font-weight:900" class="titillium tulisan-tiga">GET MORE INFORMATION</p>
+            </div>
+            <div class="footer-bawah d-flex flex-column-reverse flex-lg-row justify-content-center">
+                <div class="footer-kiri titillium bg-white d-flex flex-row p-3 mx-auto mt-lg-0 mt-3 justify-content-around justify-content-lg-start">
+                    <div class="kiri-bawah ">
+                        <div class="contact-us">
+                            <p class="our-office"><b>Contact Us</b></p>
+                            <div class="wa d-flex flex-row">
+                                <img src="{{asset('app/assets/image/whatsapp.png')}}" class="contact_img me-2"/>
+                                <div class="no-telp">
+                                    <p class="isi-footer mb-0">+6221 8899 2212 ( Hunting )</p>
+                                    <p class="isi-footer mb-0">+6281 1122 6395</p>
+                                    <p class="isi-footer mb-0">+6281 1122 6396</p>
+                                </div>
+                            </div>
+                            <div class="mail d-flex flex-row my-3">
+                                <img src="{{asset('app/assets/image/email.png')}}" class="contact_img me-2" />
+                                <div class="my-auto">
+                                    <p class="isi-footer mb-0">cs@jayamasabadi.id</p>
+                                    <p class="isi-footer mb-0">Sales@jayamasabadi.id</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column member justify-content-center">
+                            <p class="mx-auto my-3 our-office"><b>Member of APTRINDO</b></p>
+                            <img src="{{asset('app/assets/image/aptrindo.png')}}" class="aptrindo mx-auto" alt="">
+                        </div>
+                    </div>
+                    <div class="office titillium col col-4 mx-3">
+                        <p class="our-office"><b>Our Office</b></p>
+                        <p class="head-office"><b>Head Office</b></p>
+                        <p class="isi-footer">Jl. Marunda Makmur No. 1 RT 002 RW 008
+                            Kebon Kelapa Segara Makmur,
+                            Taruma Jaya, Bekasi 17211 Indonesia</p>
+                        <p class="head-office"><b>Sales / Operational Office : </b></p>
+                        <p class="isi-footer">Kirana Commercial Avenue,
+                            Bella Terra Lifestyle Center Lt. 1 No. 26
+                            Jl. Boulevard Raya A2 No. 1 Kelapa Gading, Jakarta Utara</p>
+                        <p class="head-office"><b>Cilegon Office : </b></p>
+                        <p class="isi-footer">Jl. Lingkar Selatan KM.5,
+                            Karangasem, Kec. Cibeber,
+                            Kota Cilegon, Banten 42426</p>
+                    </div>
+                </div>
+                <div class="footer-kanan bg-white d-flex flex-column p-5 rounded-circle mx-auto">
+                    <img src="{{asset('app/assets/image/customer_support.png')}}" class="mx-auto gambar_cs" style=""alt=""/>
+                    <p class="titillium isi-footer text-center">We are always open to answer you, if you have something to tell us,
+                        whether it is a question, suggestion or critics don’t hesitate to contact us.</p>
+                    
+                </div>
+            </div>
+        </footer>
+        <div class="sticky_login d-flex flex-md-row flex-column">
+            <p class="my-md-auto ms-md-5 ms-0 isi-footer my-2 text-center" style="color: white;">Login or register first to unlock more features, and get more information about our updates</p>
+            <div class="d-flex my-auto mx-auto">
+                <a href="{{ route('login') }}" class="btn button-sticky rounded-pill me-3 titillium" style="background-color: #B0D1FC;">Login</a>
+                <a href="{{ route('register') }}" class="btn button-sticky rounded-pill titillium" style="background-color: #B0D1FC;">Register</a>
+            </div>
+        </div>
+    @endauth
+    @else
+        <nav class="nav" style="background-color: white;">
+            <div class="nav-top">
+                <div class="nav-top-left">
+                    <a href="/"><img src="{{asset('app/assets/image/logo_jayamas.png')}}" alt="" style="width:100px; margin-right: 15px;"/></a>
+                    <p style="margin-top:auto;margin-bottom:auto;font-size:30px;">PT Indotrans Jayamas Abadi</p>
+                </div>
+                @auth
+                @if (Auth::user())
+                <div class="d-flex nav-top-right">
+                    <p style="margin-top:auto;margin-bottom:auto;font-size:30px;">{{ Auth::user()->username }}</p>
+                    <a href="/profile" class="my-auto"><img src="{{ asset('app/'.Auth::user()->photo )}}" class="rounded-circle ms-3" style="width: 60px;" /></a>
+                </div>
+                @endauth
+                @else
+                <div class="d-flex nav-top-right">
+                    <a href="{{ route('login') }}" class="top-text my-auto">Login</a>
+                    <p class="top-text my-auto">&nbsp;|&nbsp;</p>
+                    <a href="{{ route('register') }}" class="top-text my-auto">Register</a>
+                </div>
+                @endif
+            </div>
+            <div class="nav-bottom">
+                <a href="/aboutus" class="nav-text my-auto">About Us</a>
+                <a href="/service" class="nav-text my-auto">Services</a>
+                <a href="/visi&misi" class="nav-text my-auto">Vision & Mission</a>
+                @auth
+                @if(Auth::user())
+                <div class="dropdown">
+                    <button class="dropbtn">Language</button>
+                    <div class="dropdown-content">
+                        <a href="/change/language/{{ Auth::user()->id }}/1">English</a>
+                        <a href="/change/language/{{ Auth::user()->id }}/2">Indonesia</a>
+                    </div>
+                </div>
+                @endauth    
+                @else
+                <a href="/login" class="nav-text my-auto">Language</a>
+                @endif
+            </div>
+        </nav>
+        <div id="carouselExampleIndicators" class="carousel slide mb-5" data-bs-ride="true">
+            <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{ asset('app/assets/image/shipment.png') }}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{{asset('app/assets/image/slider-2.png')}}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{{asset('app/assets/image/slider-3.png')}}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{{asset('app/assets/image/slider-4.png')}}" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{{asset('app/assets/image/slider-5.png')}}" class="d-block w-100" alt="...">
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="container my-5">
+            <div id="company" class="my-5 bg-white p-lg-5 pt-0 pt-lg-5 pb-2 px-4 rounded-5 shadow shadow-top-0">
+                <div id="upperCompany" class="d-flex flex-column my-0 my-lg-5">
+                    <div class="d-flex">
+                        <p id="tulisan-company"  class="tulisanJudul titillium">COMPANY</p>
+                    </div>
+                    <div class="d-flex flex-column flex-lg-row">
+                        <p class="isi-konten col col-12 col-lg-6 kanit" >PT. JAYAMAS ABADI started operating in 1999.
+                        The business started from scratch as a transporter serving in the city,
+                        and then began to grow by serving JABODETABEK in 2002
+                        The great response from our customers made us more confident to
+                        be able to add units and be able to provide domestic outbound
+                        transportation services. Currently we have served transportation
+                        outside Java, namely Sumatra, Kalimantan, as well as several
+                        destinations in Eastern Indonesia.
+                        </p>
+                        <img class="col col-lg-6 col-12" style="height:auto" src="{{  asset('app/assets/image/image 8.png') }}" alt="image"/>
+                    </div>
+                </div>
+                <p class="isi-konten kanit">Currently, PT. JAYAMAS ABADI developed by opening a new business
+                    in the field of Forwarders under the name PT. INDOTRANS JAYAMAS
+                    ABADI. With the support of a solid team and the application of the
+                    right technology in managing the business entrusted to us, we are
+                    confident that we will be able to provide service satisfaction to our
+                    customers and realize the CORPORATE MISSION and VISION
+                    appropriately.
+                </p>
+            </div>
+            <div class="mt-5">
+                <div id="pembatas1" class="d-flex justify-content-center">
+                    <p id="pembatas" class="judul-atas titillium align-items-center my-auto"><span>MORE</span></p>
+                </div>
+            </div>
+            <div class="my-5 d-flex flex-md-row flex-column justify-content-md-between">
+                <div class="kiri bg-white d-flex p-5 mx-1 flex-lg-row flex-column ">
+                    <img src="{{asset('app/assets/image/visi misi.png')}}" class="gambar-tiga img-fluid mx-auto mx-lg-0">
+                    <div class="d-flex flex-column justify-content-center  mx-auto mx-lg-0">
+                        <h3 class="tulisan-tiga titillium text-center mx-lg-0 d-flex align-items-start">VISION & MISSION</h3>
+                        <a href="" class="titillium mx-auto w-100 text-decoration-none text-white d-flex justify-content-center align-items-center">GO</a>
+                    </div>
+                </div>
+                <div class="kanan bg-white d-flex p-5 mx-1 flex-lg-row flex-column my-5 my-md-0">
+                    <img src="{{asset('app/assets/image/about_us.png')}}" class="gambar-tiga img-fluid mx-auto mx-lg-0">
+                    <div class="d-flex flex-column justify-content-center mx-auto mx-lg-0">
+                        <h3 class="tulisan-tiga titillium d-flex align-items-start">ABOUT US</h3>
+                        <a href="" class="titillium mx-auto w-100 text-decoration-none row-2 text-white d-flex justify-content-center align-items-center">GO</a>
+                    </div>
+                </div>
+            </div>
+            <div class="bawah bg-white d-flex flex-lg-row flex-column p-5">
+                <img src="{{asset('app/assets/image/service.png')}}" class="gambar-tiga mx-auto mx-lg-0 img-fluid">
+                <div class="mx-lg-4 mx-auto ">
+                    <h3 class="titillium tulisan-tiga d-flex justify-content-center justify-content-lg-start">SERVICES</h3>
+                    <p class="titillium isi-service text-center text-lg-start">
+                        Want to order goods delivery services domestically or export and import? Through any path?
+                        PT Indotrans Jayamas Abadi is the right choice.
+                    </p>
+                    <div class="d-flex flex-lg-row flex-column justify-content-lg-between">
+                        <p class="titillium isi-service d-flex justify-content-center justify-content-lg-start">Please place an order</p>
+                        <a href="" class="titillium isi-service mx-auto mx-lg-0 text-decoration-none d-flex justify-content-center align-items-center text-white">GO</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer style="background-color: #DCEBFF !important" class="">
+            <div class="d-flex gap-5" style=""> 
+                <hr class="flex-grow-1 my-auto" style="height:5px;color:#011D83;opacity:1;background-color:#011D83;"/><p style="color:#011D83;font-weight:900" class="titillium tulisan-tiga">GET MORE INFORMATION</p>
+            </div>
+            <div class="footer-bawah d-flex flex-column-reverse flex-lg-row justify-content-center">
+                <div class="footer-kiri titillium bg-white d-flex flex-row p-3 mx-auto mt-lg-0 mt-3 justify-content-around justify-content-lg-start">
+                    <div class="kiri-bawah ">
+                        <div class="contact-us">
+                            <p class="our-office"><b>Contact Us</b></p>
+                            <div class="wa d-flex flex-row">
+                                <img src="{{asset('app/assets/image/whatsapp.png')}}" class="contact_img me-2"/>
+                                <div class="no-telp">
+                                    <p class="isi-footer mb-0">+6221 8899 2212 ( Hunting )</p>
+                                    <p class="isi-footer mb-0">+6281 1122 6395</p>
+                                    <p class="isi-footer mb-0">+6281 1122 6396</p>
+                                </div>
+                            </div>
+                            <div class="mail d-flex flex-row my-3">
+                                <img src="{{asset('app/assets/image/email.png')}}" class="contact_img me-2" />
+                                <div class="my-auto">
+                                    <p class="isi-footer mb-0">cs@jayamasabadi.id</p>
+                                    <p class="isi-footer mb-0">Sales@jayamasabadi.id</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column member justify-content-center">
+                            <p class="mx-auto my-3 our-office"><b>Member of APTRINDO</b></p>
+                            <img src="{{asset('app/assets/image/aptrindo.png')}}" class="aptrindo mx-auto" alt="">
+                        </div>
+                    </div>
+                    <div class="office titillium col col-4 mx-3">
+                        <p class="our-office"><b>Our Office</b></p>
+                        <p class="head-office"><b>Head Office</b></p>
+                        <p class="isi-footer">Jl. Marunda Makmur No. 1 RT 002 RW 008
+                            Kebon Kelapa Segara Makmur,
+                            Taruma Jaya, Bekasi 17211 Indonesia</p>
+                        <p class="head-office"><b>Sales / Operational Office : </b></p>
+                        <p class="isi-footer">Kirana Commercial Avenue,
+                            Bella Terra Lifestyle Center Lt. 1 No. 26
+                            Jl. Boulevard Raya A2 No. 1 Kelapa Gading, Jakarta Utara</p>
+                        <p class="head-office"><b>Cilegon Office : </b></p>
+                        <p class="isi-footer">Jl. Lingkar Selatan KM.5,
+                            Karangasem, Kec. Cibeber,
+                            Kota Cilegon, Banten 42426</p>
+                    </div>
+                </div>
+                <div class="footer-kanan bg-white d-flex flex-column p-5 rounded-circle mx-auto">
+                    <img src="{{asset('app/assets/image/customer_support.png')}}" class="mx-auto gambar_cs" style=""alt=""/>
+                    <p class="titillium isi-footer text-center">We are always open to answer you, if you have something to tell us,
+                        whether it is a question, suggestion or critics don’t hesitate to contact us.</p>
+                    
+                </div>
+            </div>
+        </footer>
+        <div class="sticky_login d-flex flex-md-row flex-column">
+            <p class="my-md-auto ms-md-5 ms-0 isi-footer my-2 text-center" style="color: white;">Login or register first to unlock more features, and get more information about our updates</p>
+            <div class="d-flex my-auto mx-auto">
+                <a href="{{ route('login') }}" class="btn button-sticky rounded-pill me-3 titillium" style="background-color: #B0D1FC;">Login</a>
+                <a href="{{ route('register') }}" class="btn button-sticky rounded-pill titillium" style="background-color: #B0D1FC;">Register</a>
+            </div>
+        </div>
+    @endif
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 </body>
