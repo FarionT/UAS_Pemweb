@@ -136,7 +136,10 @@
         text-decoration: none;
         cursor: pointer;
     }
-
+    .all-button{
+        border-radius: 10px;
+        font-weight: bold;
+    }
 
     /* MODAL */
 
@@ -165,6 +168,31 @@
         #pembatas1{
             height:35px;
         }
+        .all-button{
+            font-size: 12px;
+            padding:5px;
+            width:140px;
+        }
+        .ini-foto{
+            width:39px;
+            height:39px;
+        }
+        .ini-profil{
+            width:180px;
+            height:auto;
+        }
+        .label-atas{
+            font-size: 14px;
+        }
+        .ini-input{
+            font-size: 12px;
+        }
+        .delete-head{
+            font-size: 20px;
+        }
+        .delete-isi{
+            font-size:12px; 
+        }
     }
 
     @media screen and (min-width:576px){
@@ -178,6 +206,31 @@
         }
         #pembatas1{
             height:35px;
+        }
+        .all-button{
+            font-size: 12px;
+            padding:5px;
+            width:150px;
+        }
+        .ini-foto{
+            width:39px;
+            height:39px;
+        }
+        .ini-profil{
+            width:180px;
+            height:auto;
+        }
+        .label-atas{
+            font-size: 14px;
+        }
+        .ini-input{
+            font-size: 12px;
+        }
+        .delete-head{
+            font-size: 20px;
+        }
+        .delete-isi{
+            font-size:12px; 
         }
     }
 
@@ -193,6 +246,31 @@
         #pembatas1{
             height:40px;
         }
+        .all-button{
+            font-size: 13px;
+            padding:7px;
+            width:140px;
+        }
+        .ini-foto{
+            width:39px;
+            height:39px;
+        }
+        .ini-profil{
+            width:180px;
+            height:auto;
+        }
+        .label-atas{
+            font-size: 15px;
+        }
+        .ini-input{
+            font-size: 13px;
+        }
+        .delete-head{
+            font-size: 22px;
+        }
+        .delete-isi{
+            font-size:13px; 
+        }
     }
 
     @media screen and (min-width:992px){
@@ -207,6 +285,31 @@
         #pembatas1{
             height:46px;
         }
+        .all-button{
+            font-size: 15px;
+            padding:10px;
+            width:150px;
+        }
+        .ini-foto{
+            width:43px;
+            height:43px;
+        }
+        .ini-profil{
+            width:225px;
+            height:auto;
+        }
+        .label-atas{
+            font-size: 16px;
+        }
+        .ini-input{
+            font-size: 14px;
+        }
+        .delete-head{
+            font-size: 28px;
+        }
+        .delete-isi{
+            font-size:14px; 
+        }
     }
 
     @media screen and (min-width:1200px){
@@ -218,6 +321,31 @@
         }
         #pembatas1{
             height:50px;
+        }
+        .all-button{
+            font-size: 18px;
+            padding:10px;
+            width:200px;
+        }
+        .ini-foto{
+            width:47px;
+            height:47px;
+        }
+        .ini-profil{
+            width:250px;
+            height:auto;
+        }
+        .label-atas{
+            font-size: 18px;
+        }
+        .ini-input{
+            font-size: 16px;
+        }
+        .delete-head{
+            font-size: 32px;
+        }
+        .delete-isi{
+            font-size:16px; 
         }
     }
 </style>
@@ -235,11 +363,11 @@
             @method('patch')
             <div class="kotakprofil w-100 d-flex flex-lg-row flex-column p-3 mx-auto">
                 <div class="d-flex col col-lg-4 col-12 justify-content-center align-items-center flex-column">
-                    <img class="m-3" src="{{ asset('app/'.$user->photo) }}" style="border:1px solid gray;border-radius:15px;width:250px; height:auto;"/>
+                    <img class="m-3 ini-profil" src="{{ asset('app/'.$user->photo) }}" style="border:1px solid gray;border-radius:15px;"/>
                     
                     <div class="image-upload">
-                        <label for="photo">
-                            <img src="{{ asset('app/assets/image/edit.png') }}" class="rounded-circle" style="width:47px; height:47px; border: 2px solid #011D83; cursor: pointer; background-color: black;"/>
+                        <label for="photo" >
+                            <img src="{{ asset('app/assets/image/edit.png') }}" class="rounded-circle ini-foto" style="border: 2px solid #011D83; cursor: pointer; background-color: black;"/>
                         </label>
 
                         <input id="photo" name="photo" type="file" class="mt-1 block w-full" value="{{ old('photo') ?? $user->photo }}" autofocus autocomplete="photo" style="display: none;" />
@@ -250,13 +378,13 @@
                 <div class="biodataSingkat col col-lg-8 col-12 my-auto mx-auto form-group col-lg-8">
                     <!-- Username -->
                     <div class="box-input">
-                        <label>Username</label>
-                        <input id="username" name="username" type="text" class="w-100 titillium mt-1 block" value="{{ old('username') ?? $user->username }}" required autofocus autocomplete="username" />
+                        <label class="label-atas">Username</label>
+                        <input id="username" name="username" type="text" class="w-100 ini-input titillium mt-1 block" value="{{ old('username') ?? $user->username }}" required autofocus autocomplete="username" />
                     </div>
                     <!-- Email -->
                     <div class="box-input">
-                        <label>Email</label>
-                        <input id="email" name="email" type="email" class="w-100 titillium mt-1 block w-full" value="{{ old('email') ?? $user->email }}" required autocomplete="email" />
+                        <label class="label-atas">Email</label>
+                        <input id="email" name="email" type="email" class="w-100 ini-input titillium mt-1 block w-full" value="{{ old('email') ?? $user->email }}" required autocomplete="email" />
 
                         @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && ! $user->hasVerifiedEmail())
                             <div>
@@ -278,8 +406,8 @@
                     </div>
                     <!-- NPWP -->
                     <div class="box-input">
-                        <label>NPWP</label>
-                        <input id="npwp" name="npwp" type="text" class="titillium mt-1 block w-full" value="{{ old('npwp') ?? $user->npwp }}" required autofocus autocomplete="npwp" />
+                        <label class="label-atas">NPWP</label>
+                        <input id="npwp" name="npwp" type="text" class="ini-input titillium mt-1 block w-full" value="{{ old('npwp') ?? $user->npwp }}" required autofocus autocomplete="npwp" />
                     </div>
                 </div>
             </div>
@@ -293,13 +421,13 @@
                 <div class="biodataSingkat py-2 py-lg-4 px-auto form-group form-control-lg">
                     <!-- First Name -->
                     <div class="box-input">
-                        <label>First Name</label>
-                        <input id="firstname" name="firstname" type="text" class="titillium mt-1 block w-full" value="{{ old('firstname') ?? $user->firstname }}" required autofocus autocomplete="firstname" />
+                        <label class="label-atas">First Name</label>
+                        <input id="firstname" name="firstname" type="text" class="ini-input titillium mt-1 block w-full" value="{{ old('firstname') ?? $user->firstname }}" required autofocus autocomplete="firstname" />
                     </div>
                     <!-- Last Name -->
                     <div class="box-input">
-                        <label>Last Name</label>
-                        <input id="lastname" name="lastname" type="text" class="titillium mt-1 block w-full" value="{{ old('lastname') ?? $user->lastname }}" required autofocus autocomplete="lastname" />
+                        <label class="label-atas">Last Name</label>
+                        <input id="lastname" name="lastname" type="text" class="ini-input titillium mt-1 block w-full" value="{{ old('lastname') ?? $user->lastname }}" required autofocus autocomplete="lastname" />
                     </div>
                 </div>
             </div>
@@ -312,13 +440,13 @@
                 <div class="biodataSingkat pt-3 ps-4 form-group form-control-lg">
                     <!-- Company -->
                     <div class="box-input">
-                        <label>Company</label>
-                        <input id="company" name="company" type="text" class="titillium mt-1 block w-full" value="{{ old('company') ?? $user->company }}" required autofocus autocomplete="company" />
+                        <label class="label-atas">Company</label>
+                        <input id="company" name="company" type="text" class="ini-input titillium mt-1 block w-full" value="{{ old('company') ?? $user->company }}" required autofocus autocomplete="company" />
                     </div>
                     <!-- Email Company -->
                     <div class="box-input">
-                        <label>Email Company</label>
-                        <input id="emailcompany" name="emailcompany" type="email" class="titillium mt-1 block w-full" value="{{ old('emailcompany') ?? $user->emailcompany }}" required autocomplete="emailcompany" />
+                        <label class="label-atas">Email Company</label>
+                        <input id="emailcompany" name="emailcompany" type="email" class="ini-input titillium mt-1 block w-full" value="{{ old('emailcompany') ?? $user->emailcompany }}" required autocomplete="emailcompany" />
 
                         @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && ! $user->hasVerifiedEmail())
                             <div>
@@ -340,19 +468,19 @@
                     </div>
                     <!-- Nomor Telepon  -->
                     <div class="box-input">
-                        <label>Nomor Telepon</label>
-                        <input id="notelp" name="notelp" type="text" class="titillium mt-1 block w-full" value="{{ old('notelp') ?? $user->notelp }}" required autofocus autocomplete="notelp" />
+                        <label class="label-atas">Nomor Telepon</label>
+                        <input id="notelp" name="notelp" type="text" class="ini-input titillium mt-1 block w-full" value="{{ old('notelp') ?? $user->notelp }}" required autofocus autocomplete="notelp" />
                     </div>
                     <!-- NIB -->
                     <div class="box-input">
-                        <label>NIB</label>
-                        <input id="nib" name="nib" type="text" class="titillium mt-1 block w-full" value="{{ old('nib') ?? $user->nib }}" required autofocus autocomplete="nib" />
+                        <label class="label-atas">NIB</label>
+                        <input id="nib" name="nib" type="text" class="ini-input titillium mt-1 block w-full" value="{{ old('nib') ?? $user->nib }}" required autofocus autocomplete="nib" />
                     </div>
                 </div>
             </div>
-            <div class="d-flex justify-content-center">
-                <div class="flex items-center gap-4">
-                    <x-primary-button class="titillium btn p-auto d-flex justify-content-center" style="background-color: #011D83; font-size: 22px; width:129.56px;height:51px;">{{ __('Save') }}</x-primary-button>
+            <div class="d-flex justify-content-center flex-column">
+                <div class="d-flex justify-content-center my-2 mx-auto">
+                    <x-primary-button class="titillium all-button p-auto d-flex justify-content-center" style="background-color: #011D83;">{{ __('SAVE') }}</x-primary-button>
 
                     @if (session('status') === 'profile-updated')
                         <p
@@ -368,8 +496,10 @@
                 
                 @auth
                     @if (Auth::user()->role_id == 1)
-                        <a href="/admin/account" class="titillium btn btn-primary ms-5" style="font-weight: bold; background-color: #011D83; font-size: 22px; padding: 8px 24px;">CONFIRM ACCOUNT</a>
-                        <a href="/orders" class="titillium btn btn-primary ms-5" style="font-weight: bold; background-color: #011D83; font-size: 22px; padding: 8px 24px;">VIEW ALL ORDER</a>
+                    <div class="d-flex justify-content-center flex-sm-row flex-column">
+                        <a href="/admin/account" class=" mx-sm-2 mx-auto my-2 d-flex justify-content-center titillium all-button text-decoration-none text-white align-items-center" style="background-color: #011D83; ">CONFIRM ACCOUNT</a>
+                        <a href="/orders" class="mx-sm-2 mx-auto d-flex my-2 justify-content-center titillium all-button text-decoration-none  text-white align-items-center" style=" background-color: #011D83;">VIEW ALL ORDER</a>
+                    </div>
                     @endif
                 @endauth
             </div>
@@ -390,33 +520,33 @@
             <table class="table table-responsive table-striped hover table-bordered">
                 <thead>
                     <tr style="border-bottom: 1px solid black;">
-                        <th class="titillium" style="width: auto;">ID</th>
-                        <th class="titillium" style="width: auto;">Order Date</th>
-                        <th class="titillium" style="width: auto;">Shipper</th>
-                        <th class="titillium" style="width: auto;">Consignee</th>
-                        <th class="titillium" style="width: auto;">Status</th>
-                        <th class="titillium" style="width: auto;">Tindakan</th>
+                        <th class="label-atas titillium" style="width: auto;">ID</th>
+                        <th class="label-atas titillium" style="width: auto;">Order Date</th>
+                        <th class="label-atas titillium" style="width: auto;">Shipper</th>
+                        <th class="label-atas titillium" style="width: auto;">Consignee</th>
+                        <th class="label-atas titillium" style="width: auto;">Status</th>
+                        <th class="label-atas titillium" style="width: auto;">Tindakan</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach($orders as $order)
                     <tr>
-                        <td class="titillium">{{ $order->id }}</td>
-                        <td class="titillium">{{ $order->order_date }}</td>
-                        <td class="titillium">{{ $order->shipper }}</td>
-                        <td class="titillium">{{ $order->consignee }}</td>
+                        <td class="ini-input titillium">{{ $order->id }}</td>
+                        <td class="ini-input titillium">{{ $order->order_date }}</td>
+                        <td class="ini-input titillium">{{ $order->shipper }}</td>
+                        <td class="ini-input titillium">{{ $order->consignee }}</td>
                         @if( $order->accept == 1)
-                            <td class="titillium">Accepted</td>
+                            <td class="ini-input titillium">Accepted</td>
                         @else
-                            <td class="titillium">Waiting</td>
+                            <td class="ini-input titillium">Waiting</td>
                         @endif
                         <td class="titillium d-flex">
-                            <a href="/orders/{{ $order->id }}" class="btn btn-primary me-3" style="text-decoration: none; color: white;">Detail</a>
-                            <a href="/orders/{{$order->id}}/edit" class="btn btn-primary me-3" style="text-decoration: none; color: white;">Edit</a>
+                            <a href="/orders/{{ $order->id }}" class="btn all-button btn-primary me-3" style="text-decoration: none; color: white;">Detail</a>
+                            <a href="/orders/{{$order->id}}/edit" class="btn all-button btn-primary me-3" style="text-decoration: none; color: white;">Edit</a>
                             <form action="/orders/{{$order->id}}" method="post">
                                 @method('DELETE')
                                 @csrf
-                                <button class="btn btn-primary btn-delete" style="background-color: #0D6EFD;" type="submit">Cancel</button>
+                                <button class="btn btn-primary all-button btn-delete" style="background-color: #0D6EFD;" type="submit">Cancel</button>
                             </form>
                         </td>
                     </tr>
@@ -442,27 +572,27 @@
             <div class="userprofil" style="height: 280px;">
                 <div class="biodataSingkat pt-3 ps-4 form-group form-control-lg">
                     <div class="box-input">
-                        <x-input-label class="titillium" for="current_password" value="Current Password" />
-                        <input id="current_password" name="current_password" type="password" class="titillium mt-1 block w-full" autocomplete="current-password" />
+                        <x-input-label class="label-atas titillium" for="current_password" value="Current Password" />
+                        <input id="current_password" name="current_password" type="password" class="ini-input titillium mt-1 block w-full" autocomplete="current-password" />
                         <x-input-error class="titillium" :messages="$errors->updatePassword->get('current_password')" class="mt-2" />
                     </div>
 
                     <div class="box-input">
-                        <x-input-label class="titillium" for="password" value="New Password" />
-                        <input id="password" name="password" type="password" class="titillium mt-1 block w-full" autocomplete="new-password" />
+                        <x-input-label class="label-atas titillium" for="password" value="New Password" />
+                        <input id="password" name="password" type="password" class="ini-input titillium mt-1 block w-full" autocomplete="new-password" />
                         <x-input-error :messages="$errors->updatePassword->get('password')" class="titillium mt-2" />
                     </div>
 
                     <div class="box-input">
-                        <x-input-label class="titillium" for="password_confirmation" value="Confirm Password" />
-                        <input id="password_confirmation" name="password_confirmation" type="password" class="titillium mt-1 block w-full" autocomplete="new-password" />
+                        <x-input-label class="label-atas titillium" for="password_confirmation" value="Confirm Password" />
+                        <input id="password_confirmation" name="password_confirmation" type="password" class="ini-input titillium mt-1 block w-full" autocomplete="new-password" />
                         <x-input-error :messages="$errors->updatePassword->get('password_confirmation')" class="titillium mt-2" />
                     </div>
                 </div>
             </div>
             <div class="d-flex justify-content-center my-4">
                 <!-- <a href="#" class="btn btn-primary" style="background-color: #011D83; font-size: 25px;">Save</a> -->
-                <x-primary-button class="titillium btn p-auto d-flex justify-content-center me-5" style="background-color: #011D83; font-size: 22px; width:129.56px;height:51px;">{{ __('Save') }}</x-primary-button>
+                <x-primary-button class="titillium all-button p-auto d-flex justify-content-center " style="background-color: #011D83;">{{ __('Save') }}</x-primary-button>
                     @if (session('status') === 'password-updated')
                         <p
                             x-data="{ show: true }"
@@ -483,27 +613,28 @@
         </div>
         <div class="iniform">
             <header>
-                <h2 class="titillium text-lg font-medium text-gray-900">
+                <h2 class="delete-head titillium text-lg font-medium text-gray-900">
                     {{ __('Delete Account') }}
                 </h2>
     
-                <p class="titillium mt-1 text-sm text-gray-600">
+                <p class="delete-isi titillium mt-1 text-sm text-gray-600">
                     {{ __('Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.') }}
                 </p>
             </header>
 
-            <div class="d-flex mt-3">
+            <div class="d-flex flex-sm-row flex-column mt-3 flex-sm-start">
                 <button
                 id="btn"
-                class="btn btn-danger titillium"
+                class="btn btn-danger titillium all-button my-2 mx-auto mx-sm-0"
+                style="font-weight:bold"
                 >{{ __('Delete Account') }}</button>
-                <form method="POST" action="{{ route('logout') }}">
+                <form method="POST" action="{{ route('logout') }}" class="mx-auto mx-sm-0">
                     @csrf
                     <a href="route('logout')"
                         onclick="event.preventDefault();
                         this.closest('form').submit();"
-                        class="titillium btn btn-primary ms-5" 
-                        style="font-weight: bold; background-color: #011D83; font-size: 22px; padding: 8px 24px;">
+                        class="titillium btn all-button text-white mx-sm-3 mx-auto my-2" 
+                        style="font-weight: bold; background-color: #011D83;">
                         {{ __('Log Out') }}
                     </a>
                 </form>
