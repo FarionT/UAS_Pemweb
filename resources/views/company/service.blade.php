@@ -317,261 +317,293 @@
 <div class="container">
 @auth
     @if (Auth::user()->language == 1)
-    <div class="mt-5 mb-10">
-        <div class="d-flex justify-content-center">
-            <img src="{{ asset('app/assets/image/service.png') }}" class="main-logo me-3"/>
-            <p class="main-judul align-items-center my-auto">SERVICE</p>
-        </div>
-    </div>
-    <div class="mt-10">
-        <div id="pembatas1" class="d-flex justify-content-center mx-auto">
-            <p id="pembatas" class="align-items-center my-auto"><span>Export</span></p>
-        </div>
-    </div>
-    <div class="ekspor">
-        <div class="kotak">
-            <div class="judul">
-                <p class="align-items-center my-auto">Air Freight (AE)</p>
-            </div>
-            <div class="isi mt-2 d-flex flex-column flex-lg-row">
-                <img src="{{ asset('app/assets/image/pesawat.png') }}" class="image" />
-                <p class="my-auto text-center">Export transportation provider services by air</p>
-            </div>
-            <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
-                <a href="/orders/create/AE" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
+        <div class="mt-5 mb-10">
+            <div class="d-flex justify-content-center">
+                <img src="{{ asset('app/assets/image/service.png') }}" class="main-logo me-3"/>
+                <p class="main-judul align-items-center my-auto">SERVICE</p>
             </div>
         </div>
-        <div class="kotak kotak-kanan">
-            <div class="judul">
-                <p class="align-items-center my-auto">Sea Freight (OE)</p>
-            </div>
-            <div class="isi mt-2 d-flex">
-                <img src="{{ asset('app/assets/image/kapal.png') }}" class="image" />
-                <p class="my-auto text-center">Export transportation provider services by sea</p>
-            </div>
-            <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
-                <a href="/orders/create/OE" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
+        <div class="mt-10">
+            <div id="pembatas1" class="d-flex justify-content-center mx-auto">
+                <p id="pembatas" class="align-items-center my-auto"><span>Export</span></p>
             </div>
         </div>
-    </div>
-    <div class="mt-10">
-        <div id="pembatas1" class="d-flex justify-content-center mx-auto">
-            <p id="pembatas" class="align-items-center my-auto"><span>Import</span></p>
-        </div>
-    </div>
-    <div class="impor">
-        <div class="kotak">
-            <div class="judul">
-                <p class="align-items-center my-auto">Air Freight (AI)</p>
-            </div>
-            <div class="isi mt-2 d-flex">
-                <img src="{{ asset('app/assets/image/pesawat.png') }}" class="image" />
-                <p class="my-auto text-center">Import transportation provider services by air</p>
-            </div>
-            <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
-                <a href="/orders/create/AI" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
-            </div>
-        </div>
-        <div class="kotak kotak-kanan">
-            <div class="judul">
-                <p class="align-items-center my-auto">Sea Freight (OI)</p>
-            </div>
-            <div class="isi mt-2 d-flex">
-                <img src="{{ asset('app/assets/image/kapal.png') }}" class="image" />
-                <p class="my-auto text-center">Import transportation provider services by sea</p>
-            </div>
-            <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
-                <a href="/orders/create/OI" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
-            </div>
-        </div>
-    </div>
-    <div class="mt-10">
-        <div id="pembatas1" class="d-flex justify-content-center mx-auto">
-            <p id="pembatas" class="align-items-center my-auto"><span>Domestic</span></p>
-        </div>
-    </div>
-    <div class="domestic d-flex flex-column">
-        <div class="domestic1 mb-5">
-            <div class="kotak">
-                <div class="judul">
-                    <p class="align-items-center my-auto">Inland Truck (IT)</p>
+        <div class="ekspor d-flex justify-content-md-between flex-md-row flex-column">
+            <div class="kotak-luar mx-auto my-2"> 
+                <div class="kotak bg-white w-100 pb-3">
+                    <div class="judul" >
+                        <p class="align-items-center my-auto">Air Freight (AE)</p>
+                    </div>
+                    <div class="isi mt-2 d-flex flex-column flex-lg-row p-2">
+                        <img src="{{ asset('app/assets/image/pesawat.png') }}" class="image mx-auto" />
+                        <p class="my-auto text-center">Export transportation provider services by air</p>
+                    </div>
                 </div>
-                <div class="isi mt-2 d-flex">
-                    <img src="{{ asset('app/assets/image/inland.png') }}" class="image" />
-                    <p class="my-auto text-center">Services of domestic transport providers by land</p>
-                </div>
-                <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
-                    <a href="/orders/create/IT" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
+                <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
+                    <a href="/orders/create/AE" class="text-center mx-auto my-auto" style="text-decoration:none; color: white;">GO</a> 
                 </div>
             </div>
-            <div class="kotak kotak-kanan">
-                <div class="judul">
-                    <p class="align-items-center my-auto">Project Cargo (PC)</p>
+            <div class="kotak-luar mx-auto my-2"> 
+                <div class="kotak bg-white w-100 pb-3">
+                    <div class="judul" >
+                        <p class="align-items-center my-auto">Sea Freight (OE)</p>
+                    </div>
+                    <div class="isi mt-2 d-flex flex-column flex-lg-row p-2">
+                        <img src="{{ asset('app/assets/image/kapal.png') }}" class="image mx-auto" />
+                        <p class="my-auto text-center">Export transportation provider services by sea</p>
+                    </div>
                 </div>
-                <div class="isi mt-2 d-flex">
-                    <img src="{{ asset('app/assets/image/cargo.png') }}" class="image" />
-                    <p class="mx-auto my-auto text-center" style="padding-right: 30px;">Project cargo transportation provider service</p>
-                </div>
-                <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
-                    <a href="/orders/create/PC" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
+                <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
+                    <a href="/orders/create/OE" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
                 </div>
             </div>
         </div>
-        <div class="domestic2 mt-5 mb-5">
-            <div class="kotak">
-                <div class="judul">
-                    <p class="align-items-center my-auto">Air Freight (ADOM)</p>
+        <div class="mt-10">
+            <div id="pembatas1" class="d-flex justify-content-center mx-auto">
+                <p id="pembatas" class="align-items-center my-auto"><span>Import</span></p>
+            </div>
+        </div>
+        <div class="impor d-flex justify-content-md-between flex-md-row flex-column">
+            <div class="kotak-luar mx-auto my-2"> 
+                <div class="kotak bg-white w-100 pb-3">
+                    <div class="judul" >
+                        <p class="align-items-center my-auto">Air Freight (AI)</p>
+                    </div>
+                    <div class="isi mt-2 d-flex flex-column flex-lg-row p-2">
+                        <img src="{{ asset('app/assets/image/pesawat.png') }}" class="image mx-auto" />
+                        <p class="my-auto text-center">Import transportation provider services by air</p>
+                    </div>
                 </div>
-                <div class="isi mt-2 d-flex">
-                    <img src="{{ asset('app/assets/image/pesawat.png') }}" class="image" />
-                    <p class="my-auto text-center">Domestic transportation provider services by air</p>
-                </div>
-                <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
-                    <a href="/orders/create/ADOM" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
+                <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
+                    <a href="/orders/create/AI" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
                 </div>
             </div>
-            <div class="kotak kotak-kanan">
-                <div class="judul">
-                    <p class="align-items-center my-auto">Sea Freight (ODOM)</p>
+            <div class="kotak-luar mx-auto my-2"> 
+                <div class="kotak bg-white w-100 pb-3">
+                    <div class="judul" >
+                        <p class="align-items-center my-auto">Sea Freight (OI)</p>
+                    </div>
+                    <div class="isi mt-2 d-flex flex-column flex-lg-row p-2">
+                        <img src="{{ asset('app/assets/image/kapal.png') }}" class="image mx-auto" />
+                        <p class="my-auto text-center">Import transportation provider services by sea</p>
+                    </div>
                 </div>
-                <div class="isi mt-2 d-flex">
-                    <img src="{{ asset('app/assets/image/kapal.png') }}" class="image" />
-                    <p class="my-auto text-center">Domestic transportation provider services by sea</p>
-                </div>
-                <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
-                    <a href="/orders/create/ODOM" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
+                <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
+                    <a href="//orders/create/OI" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
                 </div>
             </div>
         </div>
-    </div>
+        <div class="mt-10">
+            <div id="pembatas1" class="d-flex justify-content-center mx-auto">
+                <p id="pembatas" class="align-items-center my-auto"><span>Domestic</span></p>
+            </div>
+        </div>
+        <div class="domestic d-flex justify-content-md-between flex-column">
+            <div class="d-flex justify-content-md-between flex-md-row flex-column">
+                <div class="kotak-luar mx-auto my-2"> 
+                    <div class="kotak bg-white w-100 pb-3">
+                        <div class="judul" >
+                            <p class="align-items-center my-auto">Inland Truck (IT)</p>
+                        </div>
+                        <div class="isi mt-2 d-flex flex-column flex-lg-row p-2">
+                            <img src="{{ asset('app/assets/image/inland.png') }}" class="image mx-auto" />
+                            <p class="my-auto text-center">Services of domestic transport providers by land</p>
+                        </div>
+                    </div>
+                    <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
+                        <a href="/orders/create/IT" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
+                    </div>
+                </div>
+                <div class="kotak-luar mx-auto my-2"> 
+                    <div class="kotak bg-white w-100 pb-3">
+                        <div class="judul" >
+                            <p class="align-items-center my-auto">Project Cargo (PC)</p>
+                        </div>
+                        <div class="isi mt-2 d-flex flex-column flex-lg-row p-2">
+                            <img src="{{ asset('app/assets/image/cargo.png') }}" class="image mx-auto" />
+                            <p class="my-auto text-center">Project cargo transportation provider service</p>
+                        </div>
+                    </div>
+                    <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
+                        <a href="/orders/create/PC" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-md-between flex-md-row flex-column">
+                <div class="kotak-luar mx-auto my-2"> 
+                    <div class="kotak bg-white w-100 pb-3">
+                        <div class="judul" >
+                            <p class="align-items-center my-auto">Air Freight (ADOM)</p>
+                        </div>
+                        <div class="isi mt-2 d-flex flex-column flex-lg-row p-2">
+                            <img src="{{ asset('app/assets/image/pesawat.png') }}" class="image mx-auto" />
+                            <p class="my-auto text-center">Domestic transportation provider services by air</p>
+                        </div>
+                    </div>
+                    <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
+                        <a href="/orders/create/ADOM" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
+                    </div>
+                </div>
+                <div class="kotak-luar mx-auto my-2"> 
+                    <div class="kotak bg-white w-100 pb-3">
+                        <div class="judul" >
+                            <p class="align-items-center my-auto">Sea Freight (ODOM)</p>
+                        </div>
+                        <div class="isi mt-2 d-flex flex-column flex-lg-row p-2">
+                            <img src="{{ asset('app/assets/image/kapal.png') }}" class="image mx-auto" />
+                            <p class="my-auto text-center">Domestic transportation provider services by sea</p>
+                        </div>
+                    </div>
+                    <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
+                        <a href="/orders/create/ODOM" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
     @elseif (Auth::user()->language == 2)
-    <div class="mt-5 mb-10">
-        <div class="d-flex justify-content-center">
-            <img src="{{ asset('app/assets/image/service.png') }}" class="main-logo me-3"/>
-            <p class="main-judul align-items-center my-auto">LAYANAN</p>
-        </div>
-    </div>
-    <div class="mt-10">
-        <div id="pembatas1" class="d-flex justify-content-center mx-auto">
-            <p id="pembatas" class="align-items-center my-auto"><span>Export</span></p>
-        </div>
-    </div>
-    <div class="ekspor">
-        <div class="kotak">
-            <div class="judul">
-                <p class="align-items-center my-auto">Air Freight (AE)</p>
-            </div>
-            <div class="isi mt-2 d-flex">
-                <img src="{{ asset('app/assets/image/pesawat.png') }}" class="image" />
-                <p class="my-auto text-center">Layanan penyedia transportasi ekspor melalui jalur udara</p>
-            </div>
-            <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
-                <a href="/orders/create/AE" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
+        <div class="mt-5 mb-10">
+            <div class="d-flex justify-content-center">
+                <img src="{{ asset('app/assets/image/service.png') }}" class="main-logo me-3"/>
+                <p class="main-judul align-items-center my-auto">LAYANAN</p>
             </div>
         </div>
-        <div class="kotak kotak-kanan">
-            <div class="judul">
-                <p class="align-items-center my-auto">Sea Freight (OE)</p>
-            </div>
-            <div class="isi mt-2 d-flex">
-                <img src="{{ asset('app/assets/image/kapal.png') }}" class="image" />
-                <p class="my-auto text-center">Layanan penyedia transportasi ekspor melalui jalur laut</p>
-            </div>
-            <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
-                <a href="/orders/create/OE" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
+        <div class="mt-10">
+            <div id="pembatas1" class="d-flex justify-content-center mx-auto">
+                <p id="pembatas" class="align-items-center my-auto"><span>Export</span></p>
             </div>
         </div>
-    </div>
-    <div class="mt-10">
-        <div id="pembatas1" class="d-flex justify-content-center mx-auto">
-            <p id="pembatas" class="align-items-center my-auto"><span>Import</span></p>
-        </div>
-    </div>
-    <div class="impor">
-        <div class="kotak">
-            <div class="judul">
-                <p class="align-items-center my-auto">Air Freight (AI)</p>
-            </div>
-            <div class="isi mt-2 d-flex">
-                <img src="{{ asset('app/assets/image/pesawat.png') }}" class="image" />
-                <p class="my-auto text-center">Layanan penyedia transportasi ekspor melalui jalur udara</p>
-            </div>
-            <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
-                <a href="/orders/create/AI" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
-            </div>
-        </div>
-        <div class="kotak kotak-kanan">
-            <div class="judul">
-                <p class="align-items-center my-auto">Sea Freight (OI)</p>
-            </div>
-            <div class="isi mt-2 d-flex">
-                <img src="{{ asset('app/assets/image/kapal.png') }}" class="image" />
-                <p class="my-auto text-center">Layanan penyedia transportasi ekspor melalui jalur laut</p>
-            </div>
-            <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
-                <a href="/orders/create/OI" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
-            </div>
-        </div>
-    </div>
-    <div class="mt-10">
-        <div id="pembatas1" class="d-flex justify-content-center mx-auto">
-            <p id="pembatas" class="align-items-center my-auto"><span>Domestic</span></p>
-        </div>
-    </div>
-    <div class="domestic d-flex flex-column">
-        <div class="domestic1 mb-5">
-            <div class="kotak">
-                <div class="judul">
-                    <p class="align-items-center my-auto">Inland Truck (IT)</p>
+        <div class="ekspor d-flex justify-content-md-between flex-md-row flex-column">
+            <div class="kotak-luar mx-auto my-2"> 
+                <div class="kotak bg-white w-100 pb-3">
+                    <div class="judul" >
+                        <p class="align-items-center my-auto">Air Freight (AE)</p>
+                    </div>
+                    <div class="isi mt-2 d-flex flex-column flex-lg-row p-2">
+                        <img src="{{ asset('app/assets/image/pesawat.png') }}" class="image mx-auto" />
+                        <p class="my-auto text-center">Mengekspor layanan penyedia transportasi melalui udara.</p>
+                    </div>
                 </div>
-                <div class="isi mt-2 d-flex">
-                    <img src="{{ asset('app/assets/image/inland.png') }}" class="image" />
-                    <p class="my-auto text-center">Layanan penyedia transportasi domestik melalui jalur darat</p>
-                </div>
-                <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
-                    <a href="/orders/create/IT" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
+                <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
+                    <a href="/orders/create/AE" class="text-center mx-auto my-auto" style="text-decoration:none; color: white;">GO</a> 
                 </div>
             </div>
-            <div class="kotak kotak-kanan">
-                <div class="judul">
-                    <p class="align-items-center my-auto">Project Cargo (PC)</p>
+            <div class="kotak-luar mx-auto my-2"> 
+                <div class="kotak bg-white w-100 pb-3">
+                    <div class="judul" >
+                        <p class="align-items-center my-auto">Sea Freight (OE)</p>
+                    </div>
+                    <div class="isi mt-2 d-flex flex-column flex-lg-row p-2">
+                        <img src="{{ asset('app/assets/image/kapal.png') }}" class="image mx-auto" />
+                        <p class="my-auto text-center">Ekspor jasa penyedia transportasi melalui laut.</p>
+                    </div>
                 </div>
-                <div class="isi mt-2 d-flex">
-                    <img src="{{ asset('app/assets/image/cargo.png') }}" class="image" />
-                    <p class="mx-auto my-auto text-center" style="padding-right: 30px;">Layanan penyedia transportasi project cargo</p>
-                </div>
-                <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
-                    <a href="/orders/create/PC" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
+                <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
+                    <a href="/orders/create/OE" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
                 </div>
             </div>
         </div>
-        <div class="domestic2 mt-5 mb-5">
-            <div class="kotak">
-                <div class="judul">
-                    <p class="align-items-center my-auto">Air Freight (ADOM)</p>
+        <div class="mt-10">
+            <div id="pembatas1" class="d-flex justify-content-center mx-auto">
+                <p id="pembatas" class="align-items-center my-auto"><span>Import</span></p>
+            </div>
+        </div>
+        <div class="impor d-flex justify-content-md-between flex-md-row flex-column">
+            <div class="kotak-luar mx-auto my-2"> 
+                <div class="kotak bg-white w-100 pb-3">
+                    <div class="judul" >
+                        <p class="align-items-center my-auto">Air Freight (AI)</p>
+                    </div>
+                    <div class="isi mt-2 d-flex flex-column flex-lg-row p-2">
+                        <img src="{{ asset('app/assets/image/pesawat.png') }}" class="image mx-auto" />
+                        <p class="my-auto text-center">Impor jasa penyedia transportasi melalui udara.</p>
+                    </div>
                 </div>
-                <div class="isi mt-2 d-flex">
-                    <img src="{{ asset('app/assets/image/pesawat.png') }}" class="image" />
-                    <p class="my-auto text-center">Layanan penyedia transportasi ekspor melalui jalur udara</p>
-                </div>
-                <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
-                    <a href="/orders/create/ADOM" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
+                <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
+                    <a href="/orders/create/AI" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
                 </div>
             </div>
-            <div class="kotak kotak-kanan">
-                <div class="judul">
-                    <p class="align-items-center my-auto">Sea Freight (ODOM)</p>
+            <div class="kotak-luar mx-auto my-2"> 
+                <div class="kotak bg-white w-100 pb-3">
+                    <div class="judul" >
+                        <p class="align-items-center my-auto">Sea Freight (OI)</p>
+                    </div>
+                    <div class="isi mt-2 d-flex flex-column flex-lg-row p-2">
+                        <img src="{{ asset('app/assets/image/kapal.png') }}" class="image mx-auto" />
+                        <p class="my-auto text-center">Impor jasa penyedia transportasi melalui laut.</p>
+                    </div>
                 </div>
-                <div class="isi mt-2 d-flex">
-                    <img src="{{ asset('app/assets/image/kapal.png') }}" class="image" />
-                    <p class="my-auto text-center">Layanan penyedia transportasi ekspor melalui jalur laut</p>
-                </div>
-                <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560; width: 100px; height:100px;">
-                    <a href="/orders/create/ODOM" class="text-center mx-auto" style="text-decoration:none; color: white;">GO</a> 
+                <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
+                    <a href="//orders/create/OI" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
                 </div>
             </div>
         </div>
-    </div>
+        <div class="mt-10">
+            <div id="pembatas1" class="d-flex justify-content-center mx-auto">
+                <p id="pembatas" class="align-items-center my-auto"><span>Domestic</span></p>
+            </div>
+        </div>
+        <div class="domestic d-flex justify-content-md-between flex-column">
+            <div class="d-flex justify-content-md-between flex-md-row flex-column">
+                <div class="kotak-luar mx-auto my-2"> 
+                    <div class="kotak bg-white w-100 pb-3">
+                        <div class="judul" >
+                            <p class="align-items-center my-auto">Inland Truck (IT)</p>
+                        </div>
+                        <div class="isi mt-2 d-flex flex-column flex-lg-row p-2">
+                            <img src="{{ asset('app/assets/image/inland.png') }}" class="image mx-auto" />
+                            <p class="my-auto text-center">Layanan penyedia transportasi domestik melalui darat.</p>
+                        </div>
+                    </div>
+                    <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
+                        <a href="/orders/create/IT" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
+                    </div>
+                </div>
+                <div class="kotak-luar mx-auto my-2"> 
+                    <div class="kotak bg-white w-100 pb-3">
+                        <div class="judul" >
+                            <p class="align-items-center my-auto">Project Cargo (PC)</p>
+                        </div>
+                        <div class="isi mt-2 d-flex flex-column flex-lg-row p-2">
+                            <img src="{{ asset('app/assets/image/cargo.png') }}" class="image mx-auto" />
+                            <p class="my-auto text-center">Layanan penyedia transportasi kargo proyek.</p>
+                        </div>
+                    </div>
+                    <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
+                        <a href="/orders/create/PC" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-md-between flex-md-row flex-column">
+                <div class="kotak-luar mx-auto my-2"> 
+                    <div class="kotak bg-white w-100 pb-3">
+                        <div class="judul" >
+                            <p class="align-items-center my-auto">Air Freight (ADOM)</p>
+                        </div>
+                        <div class="isi mt-2 d-flex flex-column flex-lg-row p-2">
+                            <img src="{{ asset('app/assets/image/pesawat.png') }}" class="image mx-auto" />
+                            <p class="my-auto text-center">Layanan penyedia transportasi domestik melalui udara.</p>
+                        </div>
+                    </div>
+                    <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
+                        <a href="/orders/create/ADOM" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
+                    </div>
+                </div>
+                <div class="kotak-luar mx-auto my-2"> 
+                    <div class="kotak bg-white w-100 pb-3">
+                        <div class="judul" >
+                            <p class="align-items-center my-auto">Sea Freight (ODOM)</p>
+                        </div>
+                        <div class="isi mt-2 d-flex flex-column flex-lg-row p-2">
+                            <img src="{{ asset('app/assets/image/kapal.png') }}" class="image mx-auto" />
+                            <p class="my-auto text-center">Layanan penyedia transportasi domestik melalui laut.</p>
+                        </div>
+                    </div>
+                    <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
+                        <a href="/orders/create/ODOM" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
     @endauth
     @else
     <div class="mt-5 mb-10">
@@ -588,7 +620,7 @@
     <div class="ekspor d-flex justify-content-md-between flex-md-row flex-column">
         <div class="kotak-luar mx-auto my-2"> 
             <div class="kotak bg-white w-100 pb-3">
-                <div class="judul" style="background-color: ">
+                <div class="judul" >
                     <p class="align-items-center my-auto">Air Freight (AE)</p>
                 </div>
                 <div class="isi mt-2 d-flex flex-column flex-lg-row p-2">
@@ -602,7 +634,7 @@
         </div>
         <div class="kotak-luar mx-auto my-2"> 
             <div class="kotak bg-white w-100 pb-3">
-                <div class="judul" style="background-color: ">
+                <div class="judul" >
                     <p class="align-items-center my-auto">Sea Freight (OE)</p>
                 </div>
                 <div class="isi mt-2 d-flex flex-column flex-lg-row p-2">
@@ -623,7 +655,7 @@
     <div class="impor d-flex justify-content-md-between flex-md-row flex-column">
         <div class="kotak-luar mx-auto my-2"> 
             <div class="kotak bg-white w-100 pb-3">
-                <div class="judul" style="background-color: ">
+                <div class="judul" >
                     <p class="align-items-center my-auto">Air Freight (AI)</p>
                 </div>
                 <div class="isi mt-2 d-flex flex-column flex-lg-row p-2">
@@ -637,7 +669,7 @@
         </div>
         <div class="kotak-luar mx-auto my-2"> 
             <div class="kotak bg-white w-100 pb-3">
-                <div class="judul" style="background-color: ">
+                <div class="judul" >
                     <p class="align-items-center my-auto">Sea Freight (OI)</p>
                 </div>
                 <div class="isi mt-2 d-flex flex-column flex-lg-row p-2">
@@ -659,7 +691,7 @@
         <div class="d-flex justify-content-md-between flex-md-row flex-column">
             <div class="kotak-luar mx-auto my-2"> 
                 <div class="kotak bg-white w-100 pb-3">
-                    <div class="judul" style="background-color: ">
+                    <div class="judul" >
                         <p class="align-items-center my-auto">Inland Truck (IT)</p>
                     </div>
                     <div class="isi mt-2 d-flex flex-column flex-lg-row p-2">
@@ -673,7 +705,7 @@
             </div>
             <div class="kotak-luar mx-auto my-2"> 
                 <div class="kotak bg-white w-100 pb-3">
-                    <div class="judul" style="background-color: ">
+                    <div class="judul" >
                         <p class="align-items-center my-auto">Project Cargo (PC)</p>
                     </div>
                     <div class="isi mt-2 d-flex flex-column flex-lg-row p-2">
@@ -689,7 +721,7 @@
         <div class="d-flex justify-content-md-between flex-md-row flex-column">
             <div class="kotak-luar mx-auto my-2"> 
                 <div class="kotak bg-white w-100 pb-3">
-                    <div class="judul" style="background-color: ">
+                    <div class="judul" >
                         <p class="align-items-center my-auto">Air Freight (ADOM)</p>
                     </div>
                     <div class="isi mt-2 d-flex flex-column flex-lg-row p-2">
@@ -703,7 +735,7 @@
             </div>
             <div class="kotak-luar mx-auto my-2"> 
                 <div class="kotak bg-white w-100 pb-3">
-                    <div class="judul" style="background-color: ">
+                    <div class="judul" >
                         <p class="align-items-center my-auto">Sea Freight (ODOM)</p>
                     </div>
                     <div class="isi mt-2 d-flex flex-column flex-lg-row p-2">
