@@ -57,6 +57,14 @@
         border-radius: 20px 20px 0 0;
     }
 
+    .main-judul {
+        font-size: 60px;
+    }
+
+    .main-logo {
+        width: 100px;
+    }
+
     .judul>p {
         width: 100%; 
         text-align: center; 
@@ -129,6 +137,60 @@
         .isi>p {font-size: 25px;}
         .isi {margin-bottom: 50px;}
     }
+    @media screen and (max-width: 500px) {
+        .main-judul {
+            font-size: 40px;
+            font-weight: bold;
+        }
+        .main-logo {
+            width: 80px;
+        }
+        .judul>p {
+            font-size: 40px;
+        }
+        .image {
+            width: 150px;
+        }
+        .isi>p {
+            font-size: 20px;
+        }
+        .kotak {
+            height: 350px;
+        }
+        .tombol>a {
+            margin-top: auto;
+            margin-bottom: auto;
+            font-size: 28px;
+        }
+    }
+    @media screen and (max-width: 400px) {
+        .main-judul {
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .main-logo {
+            width: 60px;
+        }
+        .judul>p {
+            font-size: 30px;
+        }
+        .image {
+            width: 100px;
+        }
+        .isi>p {
+            font-size: 15px;
+        }
+        .kotak {
+            height: 310px;
+        }
+        .tombol {
+            width: 80px;
+            height: 80px;
+        }
+        .tombol>a {
+            font-size: 24px;
+        }
+    }
 </style>
 @endsection
 
@@ -137,8 +199,8 @@
     @if (Auth::user()->language == 1)
     <div class="mt-5 mb-10">
         <div class="d-flex justify-content-center">
-            <img src="{{ asset('app/assets/image/service.png') }}" style="width:100px;" />
-            <p class="align-items-center my-auto" style="font-size: 60px;">SERVICE</p>
+            <img src="{{ asset('app/assets/image/service.png') }}" class="main-logo me-3"/>
+            <p class="main-judul align-items-center my-auto">SERVICE</p>
         </div>
     </div>
     <div class="mt-10">
@@ -265,8 +327,8 @@
     @elseif (Auth::user()->language == 2)
     <div class="mt-5 mb-10">
         <div class="d-flex justify-content-center">
-            <img src="{{ asset('app/assets/image/service.png') }}" style="width:100px;" />
-            <p class="align-items-center my-auto" style="font-size: 60px;">SERVICE</p>
+            <img src="{{ asset('app/assets/image/service.png') }}" class="main-logo me-3"/>
+            <p class="main-judul align-items-center my-auto">LAYANAN</p>
         </div>
     </div>
     <div class="mt-10">
@@ -394,8 +456,8 @@
     @else
     <div class="mt-5 mb-10">
         <div class="d-flex justify-content-center">
-            <img src="{{ asset('app/assets/image/service.png') }}" style="width:100px;" />
-            <p class="align-items-center my-auto" style="font-size: 60px;">SERVICE</p>
+            <img src="{{ asset('app/assets/image/service.png') }}" class="main-logo me-3"/>
+            <p class="main-judul align-items-center my-auto">SERVICE</p>
         </div>
     </div>
     <div class="mt-10">

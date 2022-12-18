@@ -12,6 +12,12 @@
         background-size: 100%;
     }
 
+    .logo {
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .outside {
         display: flex;
         justify-content: space-around;
@@ -23,12 +29,17 @@
         box-shadow: 10px 10px #001560;
         padding: 30px;
     }
+    @media screen and (max-width: 500px) {
+        .logo {
+            width: 160px;
+        }
+    }
 </style>
 @endsection
 @section('isi')
 <div class="outside mt-5">
     <div>
-        <img src="{{ asset('app/assets/image/logo_jayamas.png') }}" style="width: 200px;"/>
+        <img src="{{ asset('app/assets/image/logo_jayamas.png') }}" class="logo"/>
         <h1 style="font-family: 'Titillium Web', sans-serif; color: white;" class="mb-3"><b>PT. INDOTRANS</b></h1>
         <h1 style="font-family: 'Titillium Web', sans-serif; color: white;"><b>JAYAMAS ABADI</b></h1>
     </div>

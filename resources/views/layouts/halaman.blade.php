@@ -29,43 +29,11 @@
         }
     </style>
     <style>
-        @media only screen and (max-width: 820px) {
-            .nav-top-left > img{
-                width:74.5px !important;
-                height:42.5px !important;
-            }
-            .nav-top-left > p {
-                font-size:18px!important;
-            }
-            .nav-top-right > p {
-                font-size:16px !important;
-            }
-            .nav-bottom > p{
-                font-size:12px!important;
-            }
-            .nav-bottom {
-                height:40px!important;
-            }
+
+        .logo {
+            width: 100px;
+            margin-right: 15px;
         }
-        @media only screen and (max-width: 450px) {
-            .nav-top-left > img{
-                width:54.5px !important;
-                height:28.5px !important;
-            }
-            .nav-top-left > p {
-                font-size:14px!important;
-            }
-            .nav-top-right > p {
-                font-size:11px !important;
-            }
-            .nav-bottom {
-                height:30px!important;
-            }
-            .nav-bottom a {
-                font-size:12px !important;
-            }
-        }
-    
         .nav-top {
             width:90%;
             margin-left: auto;
@@ -105,9 +73,9 @@
             color: white;
             font-weight: bold;
         }
-    
+
         /* DROPDOWN */
-    
+
         .dropbtn {
             background-color:#011D83;
             color: white;
@@ -115,12 +83,12 @@
             font-size: 16px;
             border: none;
         }
-    
+
         .dropdown {
             position: relative;
             display: inline-block;
         }
-    
+
         .dropdown-content {
             display: none;
             position: absolute;
@@ -129,30 +97,99 @@
             box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             z-index: 9999;
         }
-    
+
+        .tulisanJudul{
+            color:#011D83;
+            font-weight:bolder;
+        }
+        
         .dropdown-content a {
             color: black;
             padding: 12px 16px;
             text-decoration: none;
             display: block;
         }
-    
-        .dropdown-content a:hover {background-color: #ddd;}
-    
-        .dropdown:hover .dropdown-content {display: block;}
-    
-        .dropdown:hover .dropbtn {background-color:#011D83;}
-    
+        #pembatas1 p {
+            width: 100%; 
+            text-align: center; 
+            border-bottom: 1px solid #011D83; 
+            line-height: 0.1em;
+            margin-top: auto;
+            margin-bottom: auto;
+            color: #011D83;
+            font-weight: bolder;
+        } 
+
+        #pembatas span { 
+            background: white; 
+            padding:0 10px; 
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        #pembatas1 {
+            background-color: white;
+            border-radius: 20px;
+            height:50px;
+            margin-right: auto;
+            margin-left: auto;
+            padding:10px;
+            display: flex;
+            box-shadow: 5px 5px 5px;
+        }
+
+        .kiri, .kanan, .bawah{
+            border-radius: 25px;
+            box-shadow:10px 10px #011D83;
+        }
+        p.tulisan-tiga{
+            font-weight: bolder;
+        }
+        .kanan>div>a, .kiri>div>a{
+            background-color: #5571D1;
+            border-radius: 10px;
+            font-size: 30px;
+        }
+        .isi-service{
+            font-size: 20px;
+        }
+        a.isi-service{
+            background-color: #5571D1;
+            font-size: 20px;
+            width:60px;
+            border-radius: 10px;
+        }
+
+        .footer-kanan{
+            border: 10px solid #011D83;
+        }
+        .sticky_login {
+            background-color: #6586F8;
+            display:flex;
+            justify-content: space-around;
+            position:fixed;
+            bottom:0px;
+            margin-top:auto;
+            padding: 10px;
+            width:100%;
+            /* justify-content: space-between; */
+            /* top:100%; */
+            z-index:2;
+        }
+
         @media only screen and (max-width: 820px) {
-            .nav-top-left > img{
+            .logo {
                 width:74.5px !important;
                 height:42.5px !important;
             }
             .nav-top-left > p {
                 font-size:18px!important;
             }
+            .nav-top-right > a {
+                font-size:16px;
+            }
             .nav-top-right > p {
-                font-size:16px !important;
+                font-size:16px;
             }
             .nav-bottom > p{
                 font-size:12px!important;
@@ -161,143 +198,8 @@
                 height:40px!important;
             }
         }
-        @media screen and (max-width: 821px) {
-            .dropbtn {
-                padding: 8px;
-            }
-        }
-
-        /* DROPDOWN */
-    
-    
-        /* FOOTER */
-    
-        @media screen and (max-width:575px){
-            /* footer */
-            .footer-head{
-                font-size: 20px;
-            }
-    
-            .isi-footer{
-                font-size: 10px;
-            }
-    
-            .office-head{
-                font-size: 12px;
-            }
-    
-            .gambar-footer{
-                width:100px;
-                height:auto;
-            }
-    
-            .gambar-footer-kiri{
-                width:40px;
-                height:auto;
-            }
-        }
-    
-        @media screen and (min-width:576px){
-            /* footer */
-            .footer-head{
-                font-size: 23px;
-            }
-    
-            .isi-footer{
-                font-size: 11px;
-            }
-    
-            .office-head{
-                font-size: 14px;
-            }
-    
-            .gambar-footer{
-                width:110px;
-                height:auto;
-            }
-    
-            .gambar-footer-kiri{
-                width:50px;
-                height:auto;
-            }
-        }
-    
-        @media screen and (min-width:767px){
-            /* footer */
-            .footer-head{
-                font-size: 26px;
-            }
-    
-            .isi-footer{
-                font-size: 12px;
-            }
-
-            .office-head{
-                font-size: 16px;
-            }
-    
-            .gambar-footer{
-                width:120px;
-                height:auto;
-            }
-    
-            .gambar-footer-kiri{
-                width:60px;
-                height:auto;
-            }
-        }
-    
-        @media screen and (min-width:992px){
-            /* footer */
-            .footer-head{
-                font-size: 29px;
-            }
-    
-            .isi-footer{
-                font-size: 14px;
-            }
-    
-            .office-head{
-                font-size: 18px;
-            }
-    
-            .gambar-footer{
-                width:130px;
-                height:auto;
-            }
-    
-            .gambar-footer-kiri{
-                width:70px;
-                height:auto;
-            }
-        }
-    
-        @media screen and (min-width:1200px){
-            /* footer */
-            .footer-head{
-                font-size: 32px;
-            }
-    
-            .isi-footer{
-                font-size: 16px;
-            }
-    
-            .office-head{
-                font-size: 20px;
-            }
-    
-            .gambar-footer{
-                width:140px;
-                height:auto;
-            }
-    
-            .gambar-footer-kiri{
-                width:80px;
-                height:auto;
-            }
-        }
         @media only screen and (max-width: 450px) {
-            .nav-top-left > img{
+            .logo {
                 width:54.5px !important;
                 height:28.5px !important;
             }
@@ -314,55 +216,18 @@
                 font-size:12px !important;
             }
             .dropbtn {
-                padding: 0px;
                 font-size: 12px;
+                padding: 0;
             }
         }
-    body {
-        font-family:Titillium Web;
-    }
-    .nav {
-        width: 100%;
-    }
-    .nav-top {
-        width:90%;
-        margin-left: auto;
-        margin-right: auto;
-        display:flex;
-        justify-content:space-between;
-    }
-    .nav-top-left {
-        display: flex;
-    }
-    .nav-top-right {
-        display: flex;
-    }
-    .nav-top-left > img{
-        width:114.5px;
-        height:72.5px;
-    }
-    .nav-bottom {
-        color:white;
-        justify-content: space-around;
-        width:100%;
-        height:50px;
-        display:grid;
-        background-color:#011D83;
-        grid-template-columns: auto auto auto auto;
-    }
-    .top-text {
-        font-size: 30px;
-        text-decoration: none;
-        color: black;
-    }
-    .nav-text {
-        color: white;
-        text-decoration: none;
-    }
-    .nav-text:hover {
-        color: white;
-        font-weight: bold;
-    }
+
+        .dropdown-content a:hover {background-color: #ddd;}
+
+        .dropdown:hover .dropdown-content {display: block;}
+
+        .dropdown:hover .dropbtn {background-color:#011D83;}
+
+        /* DROPDOWN */
     </style>
 @yield('style')
 </head>
@@ -370,47 +235,133 @@
     
 </style>
 <body>
-    <nav class="nav" style="background-color: white;">
-        <div class="nav-top">
-            <div class="nav-top-left">
-                <a href="/"><img src="{{asset('app/assets/image/logo_jayamas.png')}}" alt="" style="width:100px; margin-right: 15px;"/></a>
-                <p style="margin-top:auto;margin-bottom:auto;font-size:30px;">PT Indotrans Jayamas Abadi</p>
-            </div>
-            @auth
-            @if (Auth::user())
-            <div class="d-flex nav-top-right">
-                <p style="margin-top:auto;margin-bottom:auto;font-size:30px;">{{ Auth::user()->username }}</p>
-                <a href="/profile" class="my-auto"><img src="{{ asset('app/'.Auth::user()->photo )}}" class="rounded-circle ms-3" style="width: 60px;" /></a>
-            </div>
-            @endauth
-            @else
-            <div class="d-flex nav-top-right">
-                <a href="{{ route('login') }}" class="top-text my-auto">Login</a>
-                <p class="top-text my-auto">&nbsp;|&nbsp;</p>
-                <a href="{{ route('register') }}" class="top-text my-auto">Register</a>
-            </div>
-            @endif
-        </div>
-        <div class="nav-bottom">
-            <a href="/aboutus" class="nav-text my-auto">About Us</a>
-            <a href="/service" class="nav-text my-auto">Services</a>
-            <a href="/visi&misi" class="nav-text my-auto">Vision & Mission</a>
-            @auth
-            @if(Auth::user())
-            <div class="dropdown">
-                <button class="dropbtn">Language</button>
-                <div class="dropdown-content">
-                    <a href="/change/language/{{ Auth::user()->id }}/1">English</a>
-                    <a href="/change/language/{{ Auth::user()->id }}/2">Indonesia</a>
+    @auth
+        @if (Auth::user()->language == 1)
+            <nav class="nav" style="background-color: white;">
+                <div class="nav-top">
+                    <div class="nav-top-left">
+                        <a href="/" class="my-auto"><img src="{{asset('app/assets/image/logo_jayamas.png')}}" class="logo"/></a>
+                        <p style="margin-top:auto;margin-bottom:auto;font-size:30px;">PT Indotrans Jayamas Abadi</p>
+                    </div>
+                    @auth
+                    @if (Auth::user())
+                    <div class="d-flex nav-top-right">
+                        <p style="margin-top:auto;margin-bottom:auto;font-size:30px;">{{ Auth::user()->username }}</p>
+                        <a href="/profile" class="my-auto"><img src="{{ asset('app/'.Auth::user()->photo )}}" class="rounded-circle ms-3" style="width: 60px;" /></a>
+                    </div>
+                    @endauth
+                    @else
+                    <div class="d-flex nav-top-right">
+                        <a href="{{ route('login') }}" class="top-text my-auto">Login</a>
+                        <p class="top-text my-auto">&nbsp;|&nbsp;</p>
+                        <a href="{{ route('register') }}" class="top-text my-auto">Register</a>
+                    </div>
+                    @endif
                 </div>
-            </div>
-            @endauth    
-            @else
-            <a href="/login" class="nav-text my-auto">Language</a>
-            @endif
-        </div>
-    </nav>
-
+                <div class="nav-bottom">
+                    <a href="/aboutus" class="nav-text my-auto">About Us</a>
+                    <a href="/service" class="nav-text my-auto">Services</a>
+                    <a href="/visi&misi" class="nav-text my-auto">Vision & Mission</a>
+                    @auth
+                    @if(Auth::user())
+                    <div class="dropdown">
+                        <button class="dropbtn">Language</button>
+                        <div class="dropdown-content">
+                            <a href="/change/language/{{ Auth::user()->id }}/1">English</a>
+                            <a href="/change/language/{{ Auth::user()->id }}/2">Indonesia</a>
+                        </div>
+                    </div>
+                    @endauth    
+                    @else
+                    <a href="/login" class="nav-text my-auto">Language</a>
+                    @endif
+                </div>
+            </nav>
+        @elseif (Auth::user()->language == 2)
+            <nav class="nav" style="background-color: white;">
+                <div class="nav-top">
+                    <div class="nav-top-left">
+                        <a href="/" class="my-auto"><img src="{{asset('app/assets/image/logo_jayamas.png')}}" class="logo"/></a>
+                        <p style="margin-top:auto;margin-bottom:auto;font-size:30px;">PT Indotrans Jayamas Abadi</p>
+                    </div>
+                    @auth
+                    @if (Auth::user())
+                    <div class="d-flex nav-top-right">
+                        <p style="margin-top:auto;margin-bottom:auto;font-size:30px;">{{ Auth::user()->username }}</p>
+                        <a href="/profile" class="my-auto"><img src="{{ asset('app/'.Auth::user()->photo )}}" class="rounded-circle ms-3" style="width: 60px;" /></a>
+                    </div>
+                    @endauth
+                    @else
+                    <div class="d-flex nav-top-right">
+                        <a href="{{ route('login') }}" class="top-text my-auto">Masuk</a>
+                        <p class="top-text my-auto">&nbsp;|&nbsp;</p>
+                        <a href="{{ route('register') }}" class="top-text my-auto">Registrasi</a>
+                    </div>
+                    @endif
+                </div>
+                <div class="nav-bottom">
+                    <a href="/aboutus" class="nav-text my-auto">Tentang Kami</a>
+                    <a href="/service" class="nav-text my-auto">Layanan</a>
+                    <a href="/visi&misi" class="nav-text my-auto">Visi & Misi</a>
+                    @auth
+                    @if(Auth::user())
+                    <div class="dropdown">
+                        <button class="dropbtn">Bahasa</button>
+                        <div class="dropdown-content">
+                            <a href="/change/language/{{ Auth::user()->id }}/1">Inggris</a>
+                            <a href="/change/language/{{ Auth::user()->id }}/2">Indonesia</a>
+                        </div>
+                    </div>
+                    @endauth    
+                    @else
+                    <a href="/login" class="nav-text my-auto">Bahasa</a>
+                    @endif
+                </div>
+            </nav>
+    @endauth
+        @else
+            <nav class="nav" style="background-color: white;">
+                <div class="nav-top">
+                    <div class="nav-top-left">
+                        <a href="/" class="my-auto"><img src="{{asset('app/assets/image/logo_jayamas.png')}}" class="logo"/></a>
+                        <p style="margin-top:auto;margin-bottom:auto;font-size:30px;">PT Indotrans Jayamas Abadi</p>
+                    </div>
+                    @auth
+                    @if (Auth::user())
+                    <div class="d-flex nav-top-right">
+                        <p style="margin-top:auto;margin-bottom:auto;font-size:30px;">{{ Auth::user()->username }}</p>
+                        <a href="/profile" class="my-auto"><img src="{{ asset('app/'.Auth::user()->photo )}}" class="rounded-circle ms-3" style="width: 60px;" /></a>
+                    </div>
+                    @endauth
+                    @else
+                    <div class="d-flex nav-top-right">
+                        <a href="{{ route('login') }}" class="top-text my-auto">Login</a>
+                        <p class="top-text my-auto">&nbsp;|&nbsp;</p>
+                        <a href="{{ route('register') }}" class="top-text my-auto">Register</a>
+                    </div>
+                    @endif
+                </div>
+                <div class="nav-bottom">
+                    <a href="/aboutus" class="nav-text my-auto">About Us</a>
+                    <a href="/service" class="nav-text my-auto">Services</a>
+                    <a href="/visi&misi" class="nav-text my-auto">Vision & Mission</a>
+                    @auth
+                    @if(Auth::user())
+                    <div class="dropdown">
+                        <button class="dropbtn">Language</button>
+                        <div class="dropdown-content">
+                            <a href="/change/language/{{ Auth::user()->id }}/1">English</a>
+                            <a href="/change/language/{{ Auth::user()->id }}/2">Indonesia</a>
+                        </div>
+                    </div>
+                    @endauth    
+                    @else
+                    <a href="/login" class="nav-text my-auto">Language</a>
+                    @endif
+                </div>
+            </nav>
+        @endif
+        
     @yield('isi')
     
     <footer class="mt-5">

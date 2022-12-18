@@ -17,6 +17,17 @@
         /* height: 757px; */
     }
 
+    .logo-login {
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .main-text-login {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .outside {
         display: flex;
         justify-content: space-around;
@@ -48,14 +59,34 @@
             width: 450px;
         }
     }
+
+    @media screen and (max-width: 500px) {
+        .logo-login {
+            width: 180px;
+        }
+        .form-login {
+            width: 350px;
+        }
+    }
+    @media screen and (max-width: 400px) {
+        .logo-login {
+            width: 160px;
+        }
+        .form-login {
+            width: 250px;
+        }
+        .button-login {
+            font-size: 20px;
+        }
+    }
 </style>
 @endsection
 @section('isi')
 <div class="outside my-5">
     <div class="logo-text">
-        <img src="{{ asset('app/assets/image/logo_jayamas.png') }}" style="width: 200px;"/>
-        <h1 style="font-family: 'Titillium Web', sans-serif; color: white;" class="mb-3"><b>PT. INDOTRANS</b></h1>
-        <h1 style="font-family: 'Titillium Web', sans-serif; color: white;"><b>JAYAMAS ABADI</b></h1>
+        <img src="{{ asset('app/assets/image/logo_jayamas.png') }}" class="logo-login"/>
+        <h1 style="font-family: 'Titillium Web', sans-serif; color: white;" class="main-text-login mb-3"><b>PT. INDOTRANS</b></h1>
+        <h1 style="font-family: 'Titillium Web', sans-serif; color: white;" class="main-text-login"><b>JAYAMAS ABADI</b></h1>
     </div>
     <div class="box">
         <div class="d-flex justify-content-center mb-5">
@@ -101,7 +132,7 @@
                         </a>
                     @endif
     
-                    <x-primary-button class="rounded-pill ml-3" style="background-color: #001560;">
+                    <x-primary-button class="button-login rounded-pill ml-3" style="background-color: #001560;">
                         {{ __('Log in') }}
                     </x-primary-button>
                 </div>

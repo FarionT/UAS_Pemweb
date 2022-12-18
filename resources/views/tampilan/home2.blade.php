@@ -737,7 +737,7 @@
             </div>
         </div>
         <footer style="background-color: #DCEBFF !important" class="">
-            <div class="d-flex gap-5" style=""> 
+            <div class="d-flex gap-5"> 
                 <hr class="flex-grow-1 my-auto" style="height:5px;color:#011D83;opacity:1;background-color:#011D83;"/><p style="color:#011D83;font-weight:900" class="titillium tulisan-tiga">GET MORE INFORMATION</p>
             </div>
             <div class="footer-bawah d-flex flex-column-reverse flex-lg-row justify-content-center">
@@ -783,7 +783,7 @@
                     </div>
                 </div>
                 <div class="footer-kanan bg-white d-flex flex-column p-5 rounded-circle mx-auto">
-                    <img src="{{asset('app/assets/image/customer_support.png')}}" class="mx-auto gambar_cs" style=""alt=""/>
+                    <img src="{{asset('app/assets/image/customer_support.png')}}" class="mx-auto gambar_cs" alt=""/>
                     <p class="titillium isi-footer text-center">We are always open to answer you, if you have something to tell us,
                         whether it is a question, suggestion or critics don’t hesitate to contact us.</p>
                     
@@ -937,7 +937,7 @@
             </div>
         </div>
         <footer style="background-color: #DCEBFF !important" class="">
-            <div class="d-flex gap-5" style=""> 
+            <div class="d-flex gap-5"> 
                 <hr class="flex-grow-1 my-auto" style="height:5px;color:#011D83;opacity:1;background-color:#011D83;"/><p style="color:#011D83;font-weight:900" class="titillium tulisan-tiga">GET MORE INFORMATION</p>
             </div>
             <div class="footer-bawah d-flex flex-column-reverse flex-lg-row justify-content-center">
@@ -983,7 +983,7 @@
                     </div>
                 </div>
                 <div class="footer-kanan bg-white d-flex flex-column p-5 rounded-circle mx-auto">
-                    <img src="{{asset('app/assets/image/customer_support.png')}}" class="mx-auto gambar_cs" style=""alt=""/>
+                    <img src="{{asset('app/assets/image/customer_support.png')}}" class="mx-auto gambar_cs" alt=""/>
                     <p class="titillium isi-footer text-center">We are always open to answer you, if you have something to tell us,
                         whether it is a question, suggestion or critics don’t hesitate to contact us.</p>
                     
@@ -1137,8 +1137,8 @@
                 </div>
             </div>
         </div>
-        <footer style="background-color: #DCEBFF !important" class="">
-            <div class="d-flex gap-5" style=""> 
+        <footer style="background-color: #DCEBFF !important" >
+            <div class="d-flex gap-5" > 
                 <hr class="flex-grow-1 my-auto" style="height:5px;color:#011D83;opacity:1;background-color:#011D83;"/><p style="color:#011D83;font-weight:900" class="titillium tulisan-tiga">GET MORE INFORMATION</p>
             </div>
             <div class="footer-bawah d-flex flex-column-reverse flex-lg-row justify-content-center">
@@ -1184,7 +1184,7 @@
                     </div>
                 </div>
                 <div class="footer-kanan bg-white d-flex flex-column p-5 rounded-circle mx-auto">
-                    <img src="{{asset('app/assets/image/customer_support.png')}}" class="mx-auto gambar_cs" style=""alt=""/>
+                    <img src="{{asset('app/assets/image/customer_support.png')}}" class="mx-auto gambar_cs" alt=""/>
                     <p class="titillium isi-footer text-center">We are always open to answer you, if you have something to tell us,
                         whether it is a question, suggestion or critics don’t hesitate to contact us.</p>
                     
