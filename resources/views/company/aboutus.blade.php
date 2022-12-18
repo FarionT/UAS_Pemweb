@@ -21,17 +21,16 @@
         } 
 
         #pembatas span { 
-            background:#B0D1FC; 
+            background:white; 
             padding:0 10px; 
         }
 
         #pembatas1 {
             width: 100%;
-            height:50px;
             padding:10px;
             display: flex;
         }
-
+        
         p#tulisanService:before, p#tulisanService:after{
             content:"";
             flex:1 1;
@@ -75,18 +74,21 @@
             }
 
             .tulisanJudul{
-                font-size: 36px;
+                font-size: 30px;
             }
 
             #tulisan-company{
-                margin-top: -30px;
+                margin-top: -25px;
             }
             #tulisan-jayamas{
-                margin-top:-45px;
+                margin-top:-40px;
             }
             #tulisan-indotrans{
-                margin-top: -25px;
-                font-size: 27px;
+                margin-top: -35px;
+                font-size: 22px;
+            }
+            #pembatas{
+                font-size: 22px;
             }
             /* footer */
             .footer-head{
@@ -137,8 +139,11 @@
                 margin-top:-50px;
             }
             #tulisan-indotrans{
-                margin-top: -25px;
+                margin-top: -40px;
                 font-size: 31px;
+            }
+            #pembatas{
+                font-size: 22px;
             }
             /* footer */
             .footer-head{
@@ -190,8 +195,11 @@
                 margin-top:-50px;
             }
             #tulisan-indotrans{
-                margin-top: -35px;
+                margin-top: -45px;
                 font-size: 40px;
+            }
+            #pembatas{
+                font-size: 22px;
             }
             /* footer */
             .footer-head{
@@ -243,6 +251,9 @@
             #tulisan-indotrans{
                 margin-top: -55px;
                 font-size: 50px;
+            }
+            #pembatas{
+                font-size: 25px;
             }
             /* footer */
             .footer-head{
@@ -297,6 +308,9 @@
             #tulisan-indotrans{
                 margin-top: -60px;
                 font-size: 60px;
+            }
+            #pembatas{
+                font-size: 30px;
             }
             /* footer */
             .footer-head{
@@ -367,7 +381,7 @@
             <div class="bg-white rounded-5 p-3 d-flex flex-column my-5">
                 <div  class="d-flex ms-4">
                     <p id="tulisan-jayamas"  class="tulisanJudul titillium">
-                        PT. INDOTRANS JAYAMAS ABADI
+                        PT. JAYAMAS ABADI
                     </p>
                 </div>
                 <div class="mx-5">
@@ -378,19 +392,19 @@
                     </ol>
                 </div>
                 <div class="d-flex flex-row justify-content-between">
-                    <img src="{{  asset('app/assets/image/image 8.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
-                    <img src="{{  asset('app/assets/image/image 8.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
-                    <img src="{{  asset('app/assets/image/image 8.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
+                    <img src="{{  asset('app/assets/image/truk1.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
+                    <img src="{{  asset('app/assets/image/truk2.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
+                    <img src="{{  asset('app/assets/image/truk3.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
                 </div>
             </div>
             <div class="my-5"></div>
-            <div class="bg-white rounded-5 p-lg-3 d-flex flex-column my-5 justify-content-end">
+            <div class="bg-white rounded-5 p-3 d-flex flex-column my-5 justify-content-end">
                 <div  class="d-flex justify-content-lg-end justify-content-center me-lg-5 mx-lg-0 mx-3">
                     <p id="tulisan-indotrans"  class="titillium">
                         PT. INDOTRANS JAYAMAS ABADI
                     </p>
                 </div>
-                <div class="mx-5">
+                <div class="mx-2 mx-lg-5">
                     <ol>
                         <li class="isi-konten kanit">Export Import by Sea</li>
                         <ol style="list-style:lower-latin">
@@ -403,9 +417,9 @@
                     </ol>
                 </div>
                 <div class="d-flex flex-row justify-content-between">
-                    <img src="{{  asset('app/assets/image/image 8.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
-                    <img src="{{  asset('app/assets/image/image 8.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
-                    <img src="{{  asset('app/assets/image/image 8.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
+                    <img src="{{  asset('app/assets/image/truk1.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
+                    <img src="{{  asset('app/assets/image/truk2.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
+                    <img src="{{  asset('app/assets/image/truk3.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
                 </div>
             </div>
             <div class="my-xl-5 my-lg-4 my-md-3 my-sm-2 my-1 py-xl-5 py-lg-4 py-md-3 py-sm-2 py-1">
@@ -464,7 +478,7 @@
             <div class="bg-white rounded-5 p-3 d-flex flex-column my-5">
                 <div  class="d-flex ms-4">
                     <p id="tulisan-jayamas"  class="tulisanJudul titillium">
-                        PT. INDOTRANS JAYAMAS ABADI
+                        PT. JAYAMAS ABADI
                     </p>
                 </div>
                 <div class="mx-5">
@@ -475,19 +489,19 @@
                     </ol>
                 </div>
                 <div class="d-flex flex-row justify-content-between">
-                    <img src="{{  asset('app/assets/image/image 8.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
-                    <img src="{{  asset('app/assets/image/image 8.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
-                    <img src="{{  asset('app/assets/image/image 8.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
+                    <img src="{{  asset('app/assets/image/truk1.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
+                    <img src="{{  asset('app/assets/image/truk2.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
+                    <img src="{{  asset('app/assets/image/truk3.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
                 </div>
             </div>
             <div class="my-5"></div>
-            <div class="bg-white rounded-5 p-lg-3 d-flex flex-column my-5 justify-content-end">
+            <div class="bg-white rounded-5 p-3 d-flex flex-column my-5 justify-content-end">
                 <div  class="d-flex justify-content-lg-end justify-content-center me-lg-5 mx-lg-0 mx-3">
                     <p id="tulisan-indotrans"  class="titillium">
                         PT. INDOTRANS JAYAMAS ABADI
                     </p>
                 </div>
-                <div class="mx-5">
+                <div class="mx-2 mx-lg-5">
                     <ol>
                         <li class="isi-konten kanit">Ekspor Impor melalui Laut</li>
                         <ol style="list-style:lower-latin">
@@ -500,9 +514,9 @@
                     </ol>
                 </div>
                 <div class="d-flex flex-row justify-content-between">
-                    <img src="{{  asset('app/assets/image/image 8.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
-                    <img src="{{  asset('app/assets/image/image 8.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
-                    <img src="{{  asset('app/assets/image/image 8.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
+                    <img src="{{  asset('app/assets/image/truk1.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
+                    <img src="{{  asset('app/assets/image/truk2.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
+                    <img src="{{  asset('app/assets/image/truk3.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
                 </div>
             </div>
             <div class="my-xl-5 my-lg-4 my-md-3 my-sm-2 my-1 py-xl-5 py-lg-4 py-md-3 py-sm-2 py-1">
@@ -562,7 +576,7 @@
             <div class="bg-white rounded-5 p-3 d-flex flex-column my-5">
                 <div  class="d-flex ms-4">
                     <p id="tulisan-jayamas"  class="tulisanJudul titillium">
-                        PT. INDOTRANS JAYAMAS ABADI
+                        PT. JAYAMAS ABADI
                     </p>
                 </div>
                 <div class="mx-5">
@@ -573,19 +587,19 @@
                     </ol>
                 </div>
                 <div class="d-flex flex-row justify-content-between">
-                    <img src="{{  asset('app/assets/image/image 8.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
-                    <img src="{{  asset('app/assets/image/image 8.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
-                    <img src="{{  asset('app/assets/image/image 8.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
+                    <img src="{{  asset('app/assets/image/truk1.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
+                    <img src="{{  asset('app/assets/image/truk2.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
+                    <img src="{{  asset('app/assets/image/truk3.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
                 </div>
             </div>
             <div class="my-5"></div>
-            <div class="bg-white rounded-5 p-lg-3 d-flex flex-column my-5 justify-content-end">
+            <div class="bg-white rounded-5 p-3 d-flex flex-column my-5 justify-content-end">
                 <div  class="d-flex justify-content-lg-end justify-content-center me-lg-5 mx-lg-0 mx-3">
                     <p id="tulisan-indotrans"  class="titillium">
                         PT. INDOTRANS JAYAMAS ABADI
                     </p>
                 </div>
-                <div class="mx-5">
+                <div class="mx-2 mx-lg-5">
                     <ol>
                         <li class="isi-konten kanit">Export Import by Sea</li>
                         <ol style="list-style:lower-latin">
@@ -598,9 +612,9 @@
                     </ol>
                 </div>
                 <div class="d-flex flex-row justify-content-between">
-                    <img src="{{  asset('app/assets/image/image 8.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
-                    <img src="{{  asset('app/assets/image/image 8.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
-                    <img src="{{  asset('app/assets/image/image 8.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
+                    <img src="{{  asset('app/assets/image/truk1.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
+                    <img src="{{  asset('app/assets/image/truk2.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
+                    <img src="{{  asset('app/assets/image/truk3.png') }}" alt="" class="rounded-4" style="width:31%; height:auto"/>
                 </div>
             </div>
             <div class="my-xl-5 my-lg-4 my-md-3 my-sm-2 my-1 py-xl-5 py-lg-4 py-md-3 py-sm-2 py-1">
