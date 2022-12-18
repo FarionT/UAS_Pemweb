@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\File;
+use App\Models\User;
 use App\Models\Order;
 
 class ProfileController extends Controller
@@ -19,8 +20,9 @@ class ProfileController extends Controller
      */
     public function edit(Request $request)
     {
+        $user = User::find($request->user()->id);
         $orders = Order::all()->where('user_id', $request->user()->id);
-        return view('profile.edit', ['user' => $request->user(), 'orders' => $orders]);
+        return view('profile.edit', ['user' => $user, 'orders' => $orders]);
     }
 
     /**

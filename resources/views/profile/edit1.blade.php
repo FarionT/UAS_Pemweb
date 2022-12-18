@@ -1,6 +1,6 @@
 @extends('layouts.halaman')
 @section('title', 'Profile')
-
+@vite(['resources/css/app.css', 'resources/js/app.js'])
 @section('style')
 <style>
 
@@ -88,64 +88,12 @@
     .btn-delete:hover{
         background-color: #0B5ED7;
     }
-
-    .box-input>input {
-        width: 100%;
-        border: 0px;
-        box-shadow: 0 0 0.125rem .25rem rgba(0,0,0,.075);
-        margin-bottom: 16px;
-    }
-
-    /* MODAL */
-
-
-    /* The Modal (background) */
-    .confirm-user-deletion {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    }
-
-    /* Modal Content/Box */
-    .modal-content {
-        background-color: #fefefe;
-        margin: 15% auto; /* 15% from the top and centered */
-        padding: 20px;
-        border: 1px solid #888;
-        width: 80%; /* Could be more or less, depending on screen size */
-    }
-
-    /* The Close Button */
-    .close {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-    }
-
-    .close:hover,
-    .close:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-    }
-
-
-    /* MODAL */
-
 /* ... */
     #form-control{
         max-width: 75px;
     }
     .image-upload>input {
-        display: none;
+    display: none;
     }
 
     .table{
@@ -242,21 +190,23 @@
                             <img src="{{ asset('app/assets/image/edit.png') }}" class="rounded-circle" style="width:47px; height:47px; border: 2px solid #011D83; cursor: pointer; background-color: black;"/>
                         </label>
 
-                        <input id="photo" name="photo" type="file" class="mt-1 block w-full" value="{{ old('photo') ?? $user->photo }}" autofocus autocomplete="photo" style="display: none;" />
+                        <input id="photo" name="photo" type="file" class="mt-1 block w-full" :value="old('photo', $user->photo)" autofocus autocomplete="photo" style="display: none;" />
                     </div>
 
                     <!-- <a href="/" class="tombol d-flex justify-content-center rounded-circle mx-auto " style="background-color:#001560; border:3px solid #001560;  margin-top: -45px; "><img src="{{ asset('app/assets/image/edit.png') }}" style="width:47px; height:47px;"/></a> -->
                 </div>
                 <div class="biodataSingkat col col-lg-8 col-12 my-auto mx-auto form-group col-lg-8">
                     <!-- Username -->
-                    <div class="box-input">
-                        <label>Username</label>
-                        <input id="username" name="username" type="text" class="w-100 titillium mt-1 block" value="{{ old('username') ?? $user->username }}" required autofocus autocomplete="username" />
+                    <div>
+                        <x-input-label for="username" :value="__('Username')" class="w-100 titillium"/>
+                        <x-text-input id="username" name="username" type="text" class="w-100 titillium mt-1 block" :value="old('username', $user->username)" required autofocus autocomplete="username" />
+                        <x-input-error class="w-100 titillium mt-2" :messages="$errors->get('username')" />
                     </div>
                     <!-- Email -->
-                    <div class="box-input">
-                        <label>Email</label>
-                        <input id="email" name="email" type="email" class="w-100 titillium mt-1 block w-full" value="{{ old('email') ?? $user->email }}" required autocomplete="email" />
+                    <div>
+                        <x-input-label class="w-100 titillium" for="email" :value="__('Email')" />
+                        <x-text-input id="email" name="email" type="email" class="w-100 titillium mt-1 block w-full" :value="old('email', $user->email)" required autocomplete="email" />
+                        <x-input-error class="w-100 titillium mt-2" :messages="$errors->get('email')" />
 
                         @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && ! $user->hasVerifiedEmail())
                             <div>
@@ -277,9 +227,10 @@
                         @endif
                     </div>
                     <!-- NPWP -->
-                    <div class="box-input">
-                        <label>NPWP</label>
-                        <input id="npwp" name="npwp" type="text" class="titillium mt-1 block w-full" value="{{ old('npwp') ?? $user->npwp }}" required autofocus autocomplete="npwp" />
+                    <div>
+                        <x-input-label class="titillium" for="npwp" :value="__('NPWP')" />
+                        <x-text-input id="npwp" name="npwp" type="text" class="titillium mt-1 block w-full" :value="old('npwp', $user->npwp)" required autofocus autocomplete="npwp" />
+                        <x-input-error class="titillium mt-2" :messages="$errors->get('npwp')" />
                     </div>
                 </div>
             </div>
@@ -289,17 +240,19 @@
                     <p id="pembatas" class="judul-atas w-100 tulisan-garis titillium align-items-center my-auto"><span>User Profile</span></p>
                 </div>
             </div>
-            <div class="userprofil pb-2 mt-0 w-100">
+            <div class="userprofil pb-2 mt-0 w-100" style="">
                 <div class="biodataSingkat py-2 py-lg-4 px-auto form-group form-control-lg">
                     <!-- First Name -->
-                    <div class="box-input">
-                        <label>First Name</label>
-                        <input id="firstname" name="firstname" type="text" class="titillium mt-1 block w-full" value="{{ old('firstname') ?? $user->firstname }}" required autofocus autocomplete="firstname" />
+                    <div>
+                        <x-input-label class="titillium" for="firstname" :value="__('First Name')" />
+                        <x-text-input id="firstname" name="firstname" type="text" class="titillium mt-1 block w-full" :value="old('firstname', $user->firstname)" required autofocus autocomplete="firstname" />
+                        <x-input-error class="titillium mt-2" :messages="$errors->get('firstname')" />
                     </div>
                     <!-- Last Name -->
-                    <div class="box-input">
-                        <label>Last Name</label>
-                        <input id="lastname" name="lastname" type="text" class="titillium mt-1 block w-full" value="{{ old('lastname') ?? $user->lastname }}" required autofocus autocomplete="lastname" />
+                    <div>
+                        <x-input-label class="titillium" for="lastname" :value="__('Last Name')" />
+                        <x-text-input id="lastname" name="lastname" type="text" class="titillium mt-1 block w-full" :value="old('lastname', $user->lastname)" required autofocus autocomplete="lastname" />
+                        <x-input-error class="titillium mt-2" :messages="$errors->get('lastname')" />
                     </div>
                 </div>
             </div>
@@ -308,17 +261,19 @@
                     <p id="pembatas" class="judul-atas titillium align-items-center my-auto"><span>Company Profile</span></p>
                 </div>
             </div>
-            <div class="userprofil my-4" style="height: 360px;">
+            <div class="userprofil" style="height: 300px;">
                 <div class="biodataSingkat pt-3 ps-4 form-group form-control-lg">
                     <!-- Company -->
-                    <div class="box-input">
-                        <label>Company</label>
-                        <input id="company" name="company" type="text" class="titillium mt-1 block w-full" value="{{ old('company') ?? $user->company }}" required autofocus autocomplete="company" />
+                    <div>
+                        <x-input-label class="titillium" for="company" :value="__('Company')" />
+                        <x-text-input id="company" name="company" type="text" class="titillium mt-1 block w-full" :value="old('company', $user->company)" required autofocus autocomplete="company" />
+                        <x-input-error class="titillium mt-2" :messages="$errors->get('company')" />
                     </div>
                     <!-- Email Company -->
-                    <div class="box-input">
-                        <label>Email Company</label>
-                        <input id="emailcompany" name="emailcompany" type="email" class="titillium mt-1 block w-full" value="{{ old('emailcompany') ?? $user->emailcompany }}" required autocomplete="emailcompany" />
+                    <div>
+                        <x-input-label for="emailcompany" :value="__('Email Company')" />
+                        <x-text-input id="emailcompany" name="emailcompany" type="email" class="titillium mt-1 block w-full" :value="old('emailcompany', $user->emailcompany)" required autocomplete="emailcompany" />
+                        <x-input-error class="titillium mt-2" :messages="$errors->get('emailcompany')" />
 
                         @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && ! $user->hasVerifiedEmail())
                             <div>
@@ -339,14 +294,16 @@
                         @endif
                     </div>
                     <!-- Nomor Telepon  -->
-                    <div class="box-input">
-                        <label>Nomor Telepon</label>
-                        <input id="notelp" name="notelp" type="text" class="titillium mt-1 block w-full" value="{{ old('notelp') ?? $user->notelp }}" required autofocus autocomplete="notelp" />
+                    <div>
+                        <x-input-label class="titillium" for="notelp" :value="__('Nomor Telepon')" />
+                        <x-text-input id="notelp" name="notelp" type="text" class="titillium mt-1 block w-full" :value="old('notelp', $user->notelp)" required autofocus autocomplete="notelp" />
+                        <x-input-error class="titillium mt-2" :messages="$errors->get('notelp')" />
                     </div>
                     <!-- NIB -->
-                    <div class="box-input">
-                        <label>NIB</label>
-                        <input id="nib" name="nib" type="text" class="titillium mt-1 block w-full" value="{{ old('nib') ?? $user->nib }}" required autofocus autocomplete="nib" />
+                    <div>
+                        <x-input-label class="titillium" for="nib" :value="__('NIB')" />
+                        <x-text-input id="nib" name="nib" type="text" class="titillium mt-1 block w-full" :value="old('nib', $user->nib)" required autofocus autocomplete="nib" />
+                        <x-input-error class="titillium mt-2" :messages="$errors->get('nib')" />
                     </div>
                 </div>
             </div>
@@ -439,23 +396,23 @@
                     <p id="pembatas" class="judul-atas titillium align-items-center my-auto"><span>Update Password</span></p>
                 </div>
             </div>
-            <div class="userprofil" style="height: 280px;">
+            <div class="userprofil" style="height: 250px;">
                 <div class="biodataSingkat pt-3 ps-4 form-group form-control-lg">
-                    <div class="box-input">
-                        <x-input-label class="titillium" for="current_password" value="Current Password" />
-                        <input id="current_password" name="current_password" type="password" class="titillium mt-1 block w-full" autocomplete="current-password" />
+                    <div>
+                        <x-input-label class="titillium" for="current_password" :value="__('Current Password')" />
+                        <x-text-input id="current_password" name="current_password" type="password" class="titillium mt-1 block w-full" autocomplete="current-password" />
                         <x-input-error class="titillium" :messages="$errors->updatePassword->get('current_password')" class="mt-2" />
                     </div>
 
-                    <div class="box-input">
-                        <x-input-label class="titillium" for="password" value="New Password" />
-                        <input id="password" name="password" type="password" class="titillium mt-1 block w-full" autocomplete="new-password" />
+                    <div>
+                        <x-input-label class="titillium" for="password" :value="__('New Password')" />
+                        <x-text-input id="password" name="password" type="password" class="titillium mt-1 block w-full" autocomplete="new-password" />
                         <x-input-error :messages="$errors->updatePassword->get('password')" class="titillium mt-2" />
                     </div>
 
-                    <div class="box-input">
-                        <x-input-label class="titillium" for="password_confirmation" value="Confirm Password" />
-                        <input id="password_confirmation" name="password_confirmation" type="password" class="titillium mt-1 block w-full" autocomplete="new-password" />
+                    <div>
+                        <x-input-label class="titillium" for="password_confirmation" :value="__('Confirm Password')" />
+                        <x-text-input id="password_confirmation" name="password_confirmation" type="password" class="titillium mt-1 block w-full" autocomplete="new-password" />
                         <x-input-error :messages="$errors->updatePassword->get('password_confirmation')" class="titillium mt-2" />
                     </div>
                 </div>
@@ -493,10 +450,11 @@
             </header>
 
             <div class="d-flex mt-3">
-                <button
-                id="btn"
-                class="btn btn-danger titillium"
-                >{{ __('Delete Account') }}</button>
+                <x-danger-button
+                class="titillium"
+                x-data=""
+                x-on:click.prevent="$dispatch('open-modal', 'confirm-user-deletion')"
+                >{{ __('Delete Account') }}</x-danger-button>
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
                     <a href="route('logout')"
@@ -511,8 +469,8 @@
         </div>
     </div>
 
-    <div id="confirm-user-deletion" class="confirm-user-deletion" name="confirm-user-deletion" :show="$errors->userDeletion->isNotEmpty()" focusable>
-        <form method="post" action="{{ route('profile.destroy') }}" class="modal-content p-6">
+    <x-modal name="confirm-user-deletion" :show="$errors->userDeletion->isNotEmpty()" focusable>
+        <form method="post" action="{{ route('profile.destroy') }}" class="p-6">
             @csrf
             @method('delete')
 
@@ -525,7 +483,7 @@
             <div class="mt-6">
                 <x-input-label for="password" value="Password" class="titillium sr-only" />
 
-                <input
+                <x-text-input
                     id="password"
                     name="password"
                     type="password"
@@ -537,7 +495,7 @@
             </div>
 
             <div class="mt-6 flex justify-end">
-                <x-secondary-button class="close titillium" x-on:click="$dispatch('close')">
+                <x-secondary-button class="titillium" x-on:click="$dispatch('close')">
                     {{ __('Cancel') }}
                 </x-secondary-button>
 
@@ -546,32 +504,5 @@
                 </x-danger-button>
             </div>
         </form>
-    </div>
-    <script>
-        // Get the modal
-        var modal = document.getElementById("confirm-user-deletion");
-
-        // Get the button that opens the modal
-        var btn = document.getElementById("btn");
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks on the button, open the modal
-        btn.onclick = function() {
-            modal.style.display = "block";
-        }
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
+    </x-modal>
 @endsection
