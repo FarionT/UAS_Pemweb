@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="././css/style.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.12.1/datatables.min.css"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    @yield('link')
     {{-- ini font --}}
     {{-- titilium web --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -197,6 +198,9 @@
             .nav-bottom {
                 height:40px!important;
             }
+            .dropbtn {
+                padding: 8px;
+            }
         }
         @media only screen and (max-width: 450px) {
             .logo {
@@ -237,7 +241,7 @@
 <body>
     @auth
         @if (Auth::user()->language == 1)
-            <nav class="nav" style="background-color: white;">
+        <nav class="nav" style="background-color: white;">
                 <div class="nav-top">
                     <div class="nav-top-left">
                         <a href="/" class="my-auto"><img src="{{asset('app/assets/image/logo_jayamas.png')}}" class="logo"/></a>

@@ -1,4 +1,7 @@
 @extends('layouts.halaman')
+@section('link')
+@vite(['resources/css/app.css', 'resources/js/app.js'])
+@endsection
 @section('title', 'Profile')
 
 @section('style')
@@ -172,7 +175,6 @@
 @endsection
 
 @section('isi')
-<x-app-layout >
     
     {{-- ini untuk edit profile pribadi --}}
     <div class="profilebox mx-auto my-5">
@@ -506,5 +508,4 @@
             </div>
         </form>
     </x-modal>
-</x-app-layout>
 @endsection
