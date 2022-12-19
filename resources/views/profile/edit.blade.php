@@ -140,6 +140,9 @@
         border-radius: 10px;
         font-weight: bold;
     }
+    .button-tabel-marginkanan {
+        margin-right: 16px;
+    }
 
     /* MODAL */
 
@@ -153,6 +156,14 @@
 
     .table{
         overflow:auto;
+    }
+    
+    .tindakan {
+        display: flex;
+    }
+
+    .delete-button {
+        border-radius: 20px;
     }
 
     /* ini bagian responsive */
@@ -169,9 +180,12 @@
             height:35px;
         }
         .all-button{
-            font-size: 12px;
+            font-size: 10px;
             padding:5px;
-            width:140px;
+            width:60px;
+        }
+        .button-tabel-marginkanan {
+            margin-right: 8px;
         }
         .ini-foto{
             width:39px;
@@ -194,7 +208,142 @@
             font-size:12px; 
         }
     }
-
+    @media screen and (min-width: 550px) {
+        .judul-atas{
+            font-size: 20px;
+        }
+        .subjudul{
+            margin-top: -70px;
+            height:35px;
+            width:30%;
+        }
+        #pembatas1{
+            height:35px;
+        }
+        .all-button{
+            font-size: 10px;
+            padding:5px;
+            width:60px;
+        }
+        .button-tabel-marginkanan {
+            margin-right: 8px;
+        }
+        .ini-foto{
+            width:39px;
+            height:39px;
+        }
+        .ini-profil{
+            width:180px;
+            height:auto;
+        }
+        .label-atas{
+            font-size: 14px;
+        }
+        .ini-input{
+            font-size: 12px;
+        }
+        .delete-head{
+            font-size: 20px;
+        }
+        .delete-isi{
+            font-size:12px; 
+        }
+    }
+    @media screen and (max-width:540px) {
+        .missing1 {
+            display: none;
+        }
+    }
+    @media screen and (max-width: 450px) {
+        .tindakan {
+            flex-direction: column;
+        }
+        .all-button {
+            margin-bottom: 5px;
+        }
+    }
+    @media screen and (max-width: 400px) {
+        .judul-atas{
+            font-size: 20px;
+        }
+        .subjudul{
+            margin-top: -70px;
+            height:35px;
+            width:30%;
+        }
+        #pembatas1{
+            height:35px;
+        }
+        .all-button{
+            font-size: 8px;
+            padding:3px;
+            width:40px;
+        }
+        .button-tabel-marginkanan {
+            margin-right: 8px;
+        }
+        .ini-foto{
+            width:39px;
+            height:39px;
+        }
+        .ini-profil{
+            width:160px;
+            height:auto;
+        }
+        .label-atas{
+            font-size: 14px;
+        }
+        .ini-input{
+            font-size: 12px;
+        }
+        .delete-head{
+            font-size: 20px;
+        }
+        .delete-isi{
+            font-size:12px; 
+        }
+    }
+    @media screen and (max-width: 350px) {
+        .judul-atas {
+            font-size: 16px;
+        }
+        .subjudul{
+            margin-top: -70px;
+            height:35px;
+            width:45%;
+        }
+        #pembatas1{
+            height:35px;
+        }
+        .all-button{
+            font-size: 8px;
+            padding:3px;
+            width:40px;
+        }
+        .button-tabel-marginkanan {
+            margin-right: 8px;
+        }
+        .ini-foto{
+            width:39px;
+            height:39px;
+        }
+        .ini-profil{
+            width:140px;
+            height:auto;
+        }
+        .label-atas{
+            font-size: 14px;
+        }
+        .ini-input{
+            font-size: 12px;
+        }
+        .delete-head{
+            font-size: 20px;
+        }
+        .delete-isi{
+            font-size:12px; 
+        }
+    }
     @media screen and (min-width:576px){
         .judul-atas{
             font-size: 20px;
@@ -208,9 +357,12 @@
             height:35px;
         }
         .all-button{
-            font-size: 12px;
+            font-size: 10px;
             padding:5px;
-            width:150px;
+            width:60px;
+        }
+        .button-tabel-marginkanan {
+            margin-right: 8px;
         }
         .ini-foto{
             width:39px;
@@ -223,6 +375,9 @@
         .label-atas{
             font-size: 14px;
         }
+        .label-tabel-atas, .label-tabel-bawah {
+            font-size: 10px;
+        }
         .ini-input{
             font-size: 12px;
         }
@@ -233,7 +388,11 @@
             font-size:12px; 
         }
     }
-
+    @media screen and (max-width:700px) {
+        .missing {
+            display: none;
+        }
+    }
     @media screen and (min-width:767px){
         .judul-atas{
             font-size: 20px;
@@ -249,7 +408,7 @@
         .all-button{
             font-size: 13px;
             padding:7px;
-            width:140px;
+            width:75px;
         }
         .ini-foto{
             width:39px;
@@ -262,6 +421,9 @@
         .label-atas{
             font-size: 15px;
         }
+        .label-tabel-atas, .label-tabel-bawah {
+            font-size: 12px;
+        }
         .ini-input{
             font-size: 13px;
         }
@@ -272,7 +434,11 @@
             font-size:13px; 
         }
     }
-
+    @media screen and (min-width:900px) {
+        .all-button {
+            width: 100px;
+        }
+    }
     @media screen and (min-width:992px){
         .judul-atas{
             font-size: 25px;
@@ -288,7 +454,7 @@
         .all-button{
             font-size: 15px;
             padding:10px;
-            width:150px;
+            width:120px;
         }
         .ini-foto{
             width:43px;
@@ -311,7 +477,6 @@
             font-size:14px; 
         }
     }
-
     @media screen and (min-width:1200px){
         .judul-atas{
             font-size: 30px;
@@ -325,7 +490,7 @@
         .all-button{
             font-size: 18px;
             padding:10px;
-            width:200px;
+            width:180px;
         }
         .ini-foto{
             width:47px;
@@ -480,7 +645,7 @@
             </div>
             <div class="d-flex justify-content-center flex-column">
                 <div class="d-flex justify-content-center my-2 mx-auto">
-                    <x-primary-button class="titillium all-button p-auto d-flex justify-content-center" style="background-color: #011D83;">{{ __('SAVE') }}</x-primary-button>
+                    <x-primary-button class="titillium delete-button p-auto d-flex justify-content-center" style="background-color: #011D83;">{{ __('SAVE') }}</x-primary-button>
 
                     @if (session('status') === 'profile-updated')
                         <p
@@ -520,29 +685,29 @@
             <table class="table table-responsive table-striped hover table-bordered">
                 <thead>
                     <tr style="border-bottom: 1px solid black;">
-                        <th class="label-atas titillium" style="width: auto;">ID</th>
-                        <th class="label-atas titillium" style="width: auto;">Order Date</th>
-                        <th class="label-atas titillium" style="width: auto;">Shipper</th>
-                        <th class="label-atas titillium" style="width: auto;">Consignee</th>
-                        <th class="label-atas titillium" style="width: auto;">Status</th>
-                        <th class="label-atas titillium" style="width: auto;">Tindakan</th>
+                        <th class="label-atas label-tabel-atas titillium" style="width: auto;">ID</th>
+                        <th class="label-atas label-tabel-atas titillium missing1" style="width: auto;">Order Date</th>
+                        <th class="label-atas label-tabel-atas titillium missing" style="width: auto;">Shipper</th>
+                        <th class="label-atas label-tabel-atas titillium missing" style="width: auto;">Consignee</th>
+                        <th class="label-atas label-tabel-atas titillium" style="width: auto;">Status</th>
+                        <th class="label-atas label-tabel-atas titillium" style="width: auto;">Tindakan</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach($orders as $order)
                     <tr>
-                        <td class="ini-input titillium">{{ $order->id }}</td>
-                        <td class="ini-input titillium">{{ $order->order_date }}</td>
-                        <td class="ini-input titillium">{{ $order->shipper }}</td>
-                        <td class="ini-input titillium">{{ $order->consignee }}</td>
+                        <td class="ini-input label-tabel-bawah titillium">{{ $order->id }}</td>
+                        <td class="ini-input label-tabel-bawah titillium missing1">{{ $order->order_date }}</td>
+                        <td class="ini-input label-tabel-bawah titillium missing">{{ $order->shipper }}</td>
+                        <td class="ini-input label-tabel-bawah titillium missing">{{ $order->consignee }}</td>
                         @if( $order->accept == 1)
-                            <td class="ini-input titillium">Accepted</td>
+                            <td class="ini-input label-tabel-bawah titillium">Accepted</td>
                         @else
-                            <td class="ini-input titillium">Waiting</td>
+                            <td class="ini-input label-tabel-bawah titillium">Waiting</td>
                         @endif
-                        <td class="titillium d-flex">
-                            <a href="/orders/{{ $order->id }}" class="btn all-button btn-primary me-3" style="text-decoration: none; color: white;">Detail</a>
-                            <a href="/orders/{{$order->id}}/edit" class="btn all-button btn-primary me-3" style="text-decoration: none; color: white;">Edit</a>
+                        <td class="tindakan titillium">
+                            <a href="/orders/{{ $order->id }}" class="btn all-button btn-primary button-tabel-marginkanan" style="text-decoration: none; color: white;">Detail</a>
+                            <a href="/orders/{{$order->id}}/edit" class="btn all-button btn-primary button-tabel-marginkanan" style="text-decoration: none; color: white;">Edit</a>
                             <form action="/orders/{{$order->id}}" method="post">
                                 @method('DELETE')
                                 @csrf
@@ -592,7 +757,7 @@
             </div>
             <div class="d-flex justify-content-center my-4">
                 <!-- <a href="#" class="btn btn-primary" style="background-color: #011D83; font-size: 25px;">Save</a> -->
-                <x-primary-button class="titillium all-button p-auto d-flex justify-content-center " style="background-color: #011D83;">{{ __('Save') }}</x-primary-button>
+                <x-primary-button class="titillium delete-button p-auto d-flex justify-content-center " style="background-color: #011D83;">{{ __('Save') }}</x-primary-button>
                     @if (session('status') === 'password-updated')
                         <p
                             x-data="{ show: true }"
@@ -625,7 +790,7 @@
             <div class="d-flex flex-sm-row flex-column mt-3 flex-sm-start">
                 <button
                 id="btn"
-                class="btn btn-danger titillium all-button my-2 mx-auto mx-sm-0"
+                class="btn btn-danger titillium delete-button my-2 mx-auto mx-sm-0"
                 style="font-weight:bold"
                 >{{ __('Delete Account') }}</button>
                 <form method="POST" action="{{ route('logout') }}" class="mx-auto mx-sm-0">
@@ -633,7 +798,7 @@
                     <a href="route('logout')"
                         onclick="event.preventDefault();
                         this.closest('form').submit();"
-                        class="titillium btn all-button text-white mx-sm-3 mx-auto my-2" 
+                        class="titillium btn delete-button text-white mx-sm-3 mx-auto my-2" 
                         style="font-weight: bold; background-color: #011D83;">
                         {{ __('Log Out') }}
                     </a>

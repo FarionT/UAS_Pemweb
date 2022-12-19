@@ -108,7 +108,7 @@
                 <p class="my-auto">Sorry your account have not been approved</p>
             </div>
             <div class="justify-content-center d-flex mt-3">
-                <a href="/profile" class="button text-center mx-auto btn btn-danger">Back to Previous Page</a>
+                <a href="/service" class="button text-center mx-auto btn btn-danger">Back to Previous Page</a>
             </div>
         </div>
     </div>

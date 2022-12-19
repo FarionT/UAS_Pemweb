@@ -801,13 +801,6 @@
                 </div>
             </div>
         </footer>
-        <div class="sticky_login d-flex flex-md-row flex-column">
-            <p class="my-md-auto ms-md-5 ms-0 isi-footer my-2 text-center" style="color: white;">Login or register first to unlock more features, and get more information about our updates</p>
-            <div class="d-flex my-auto mx-auto">
-                <a href="{{ route('login') }}" class="btn button-sticky rounded-pill me-3 titillium" style="background-color: #B0D1FC;">Login</a>
-                <a href="{{ route('register') }}" class="btn button-sticky rounded-pill titillium" style="background-color: #B0D1FC;">Register</a>
-            </div>
-        </div>
     @elseif (Auth::user()->language == 2)
         <nav class="nav" style="background-color: white;">
             <div class="nav-top">
@@ -1001,13 +994,6 @@
                 </div>
             </div>
         </footer>
-        <div class="sticky_login d-flex flex-md-row flex-column">
-            <p class="my-md-auto ms-md-5 ms-0 isi-footer my-2 text-center" style="color: white;">Login or register first to unlock more features, and get more information about our updates</p>
-            <div class="d-flex my-auto mx-auto">
-                <a href="{{ route('login') }}" class="btn button-sticky rounded-pill me-3 titillium" style="background-color: #B0D1FC;">Login</a>
-                <a href="{{ route('register') }}" class="btn button-sticky rounded-pill titillium" style="background-color: #B0D1FC;">Register</a>
-            </div>
-        </div>
     @endauth
     @else
         <nav class="nav" style="background-color: white;">

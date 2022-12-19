@@ -108,7 +108,7 @@
                 <p class="my-auto">Sorry your don't have access to this page</p>
             </div>
             <div class="justify-content-center d-flex mt-3">
-                <a href="/service" class="button text-center mx-auto btn btn-danger">Back to Previous Page</a>
+                <a href="/" class="button text-center mx-auto btn btn-danger">Back to Previous Page</a>
             </div>
         </div>
     </div>

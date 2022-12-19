@@ -88,16 +88,82 @@
     .btn-delete:hover{
         background-color: #0B5ED7;
     }
+
+    .box-input>input {
+        width: 100%;
+        border: 0px;
+        box-shadow: 0 0 0.125rem .25rem rgba(0,0,0,.075);
+        margin-bottom: 16px;
+    }
+
+    /* MODAL */
+
+
+    /* The Modal (background) */
+    .confirm-user-deletion {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+    }
+
+    /* The Close Button */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .all-button{
+        border-radius: 10px;
+        font-weight: bold;
+    }
+    .button-tabel-marginkanan {
+        margin-right: 16px;
+    }
+
+    /* MODAL */
+
 /* ... */
     #form-control{
         max-width: 75px;
     }
     .image-upload>input {
-    display: none;
+        display: none;
     }
 
     .table{
         overflow:auto;
+    }
+    
+    .tindakan {
+        display: flex;
+    }
+
+    .delete-button {
+        border-radius: 20px;
     }
 
     /* ini bagian responsive */
@@ -113,8 +179,171 @@
         #pembatas1{
             height:35px;
         }
+        .all-button{
+            font-size: 10px;
+            padding:5px;
+            width:60px;
+        }
+        .button-tabel-marginkanan {
+            margin-right: 8px;
+        }
+        .ini-foto{
+            width:39px;
+            height:39px;
+        }
+        .ini-profil{
+            width:180px;
+            height:auto;
+        }
+        .label-atas{
+            font-size: 14px;
+        }
+        .ini-input{
+            font-size: 12px;
+        }
+        .delete-head{
+            font-size: 20px;
+        }
+        .delete-isi{
+            font-size:12px; 
+        }
     }
-
+    @media screen and (min-width: 550px) {
+        .judul-atas{
+            font-size: 20px;
+        }
+        .subjudul{
+            margin-top: -70px;
+            height:35px;
+            width:30%;
+        }
+        #pembatas1{
+            height:35px;
+        }
+        .all-button{
+            font-size: 10px;
+            padding:5px;
+            width:60px;
+        }
+        .button-tabel-marginkanan {
+            margin-right: 8px;
+        }
+        .ini-foto{
+            width:39px;
+            height:39px;
+        }
+        .ini-profil{
+            width:180px;
+            height:auto;
+        }
+        .label-atas{
+            font-size: 14px;
+        }
+        .ini-input{
+            font-size: 12px;
+        }
+        .delete-head{
+            font-size: 20px;
+        }
+        .delete-isi{
+            font-size:12px; 
+        }
+    }
+    @media screen and (max-width:540px) {
+        .missing1 {
+            display: none;
+        }
+    }
+    @media screen and (max-width: 450px) {
+        .tindakan {
+            flex-direction: column;
+        }
+        .all-button {
+            margin-bottom: 5px;
+        }
+    }
+    @media screen and (max-width: 400px) {
+        .judul-atas{
+            font-size: 20px;
+        }
+        .subjudul{
+            margin-top: -70px;
+            height:35px;
+            width:30%;
+        }
+        #pembatas1{
+            height:35px;
+        }
+        .all-button{
+            font-size: 8px;
+            padding:3px;
+            width:40px;
+        }
+        .button-tabel-marginkanan {
+            margin-right: 8px;
+        }
+        .ini-foto{
+            width:39px;
+            height:39px;
+        }
+        .ini-profil{
+            width:160px;
+            height:auto;
+        }
+        .label-atas{
+            font-size: 14px;
+        }
+        .ini-input{
+            font-size: 12px;
+        }
+        .delete-head{
+            font-size: 20px;
+        }
+        .delete-isi{
+            font-size:12px; 
+        }
+    }
+    @media screen and (max-width: 350px) {
+        .judul-atas {
+            font-size: 16px;
+        }
+        .subjudul{
+            margin-top: -70px;
+            height:35px;
+            width:45%;
+        }
+        #pembatas1{
+            height:35px;
+        }
+        .all-button{
+            font-size: 8px;
+            padding:3px;
+            width:40px;
+        }
+        .button-tabel-marginkanan {
+            margin-right: 8px;
+        }
+        .ini-foto{
+            width:39px;
+            height:39px;
+        }
+        .ini-profil{
+            width:140px;
+            height:auto;
+        }
+        .label-atas{
+            font-size: 14px;
+        }
+        .ini-input{
+            font-size: 12px;
+        }
+        .delete-head{
+            font-size: 20px;
+        }
+        .delete-isi{
+            font-size:12px; 
+        }
+    }
     @media screen and (min-width:576px){
         .judul-atas{
             font-size: 20px;
@@ -127,8 +356,43 @@
         #pembatas1{
             height:35px;
         }
+        .all-button{
+            font-size: 10px;
+            padding:5px;
+            width:60px;
+        }
+        .button-tabel-marginkanan {
+            margin-right: 8px;
+        }
+        .ini-foto{
+            width:39px;
+            height:39px;
+        }
+        .ini-profil{
+            width:180px;
+            height:auto;
+        }
+        .label-atas{
+            font-size: 14px;
+        }
+        .label-tabel-atas, .label-tabel-bawah {
+            font-size: 10px;
+        }
+        .ini-input{
+            font-size: 12px;
+        }
+        .delete-head{
+            font-size: 20px;
+        }
+        .delete-isi{
+            font-size:12px; 
+        }
     }
-
+    @media screen and (max-width:700px) {
+        .missing {
+            display: none;
+        }
+    }
     @media screen and (min-width:767px){
         .judul-atas{
             font-size: 20px;
@@ -141,8 +405,40 @@
         #pembatas1{
             height:40px;
         }
+        .all-button{
+            font-size: 13px;
+            padding:7px;
+            width:75px;
+        }
+        .ini-foto{
+            width:39px;
+            height:39px;
+        }
+        .ini-profil{
+            width:180px;
+            height:auto;
+        }
+        .label-atas{
+            font-size: 15px;
+        }
+        .label-tabel-atas, .label-tabel-bawah {
+            font-size: 12px;
+        }
+        .ini-input{
+            font-size: 13px;
+        }
+        .delete-head{
+            font-size: 22px;
+        }
+        .delete-isi{
+            font-size:13px; 
+        }
     }
-
+    @media screen and (min-width:900px) {
+        .all-button {
+            width: 100px;
+        }
+    }
     @media screen and (min-width:992px){
         .judul-atas{
             font-size: 25px;
@@ -155,8 +451,32 @@
         #pembatas1{
             height:46px;
         }
+        .all-button{
+            font-size: 15px;
+            padding:10px;
+            width:120px;
+        }
+        .ini-foto{
+            width:43px;
+            height:43px;
+        }
+        .ini-profil{
+            width:225px;
+            height:auto;
+        }
+        .label-atas{
+            font-size: 16px;
+        }
+        .ini-input{
+            font-size: 14px;
+        }
+        .delete-head{
+            font-size: 28px;
+        }
+        .delete-isi{
+            font-size:14px; 
+        }
     }
-
     @media screen and (min-width:1200px){
         .judul-atas{
             font-size: 30px;
@@ -167,12 +487,36 @@
         #pembatas1{
             height:50px;
         }
+        .all-button{
+            font-size: 18px;
+            padding:10px;
+            width:180px;
+        }
+        .ini-foto{
+            width:47px;
+            height:47px;
+        }
+        .ini-profil{
+            width:250px;
+            height:auto;
+        }
+        .label-atas{
+            font-size: 18px;
+        }
+        .ini-input{
+            font-size: 16px;
+        }
+        .delete-head{
+            font-size: 32px;
+        }
+        .delete-isi{
+            font-size:16px; 
+        }
     }
 </style>
 @endsection
 
 @section('isi')
-<x-app-layout >
     
     {{-- ini untuk edit profile pribadi --}}
     <div class="profilebox mx-auto my-5">
@@ -184,30 +528,28 @@
             @method('patch')
             <div class="kotakprofil w-100 d-flex flex-lg-row flex-column p-3 mx-auto">
                 <div class="d-flex col col-lg-4 col-12 justify-content-center align-items-center flex-column">
-                    <img class="m-3" src="{{ asset('app/'.$user->photo) }}" style="border:1px solid gray;border-radius:15px;width:250px; height:auto;"/>
+                    <img class="m-3 ini-profil" src="{{ asset('app/'.$user->photo) }}" style="border:1px solid gray;border-radius:15px;"/>
                     
                     <div class="image-upload">
-                        <label for="photo">
-                            <img src="{{ asset('app/assets/image/edit.png') }}" class="rounded-circle" style="width:47px; height:47px; border: 2px solid #011D83; cursor: pointer; background-color: black;"/>
+                        <label for="photo" >
+                            <img src="{{ asset('app/assets/image/edit.png') }}" class="rounded-circle ini-foto" style="border: 2px solid #011D83; cursor: pointer; background-color: black;"/>
                         </label>
 
-                        <input disabled id="photo" name="photo" type="file" class="mt-1 block w-full" :value="old('photo', $user->photo)" autofocus autocomplete="photo" style="display: none;" />
+                        <input disabled id="photo" name="photo" type="file" class="mt-1 block w-full" value="{{ old('photo') ?? $user->photo }}" autofocus autocomplete="photo" style="display: none;" />
                     </div>
 
                     <!-- <a href="/" class="tombol d-flex justify-content-center rounded-circle mx-auto " style="background-color:#001560; border:3px solid #001560;  margin-top: -45px; "><img src="{{ asset('app/assets/image/edit.png') }}" style="width:47px; height:47px;"/></a> -->
                 </div>
                 <div class="biodataSingkat col col-lg-8 col-12 my-auto mx-auto form-group col-lg-8">
                     <!-- Username -->
-                    <div>
-                        <x-input-label for="username" :value="__('Username')" class="w-100 titillium"/>
-                        <x-text-input disabled id="username" name="username" type="text" class="w-100 titillium mt-1 block" :value="old('username', $user->username)" required autofocus autocomplete="username" />
-                        <x-input-error class="w-100 titillium mt-2" :messages="$errors->get('username')" />
+                    <div class="box-input">
+                        <label class="label-atas">Username</label>
+                        <input disabled id="username" name="username" type="text" class="w-100 ini-input titillium mt-1 block" value="{{ old('username') ?? $user->username }}" required autofocus autocomplete="username" />
                     </div>
                     <!-- Email -->
-                    <div>
-                        <x-input-label class="w-100 titillium" for="email" :value="__('Email')" />
-                        <x-text-input disabled id="email" name="email" type="email" class="w-100 titillium mt-1 block w-full" :value="old('email', $user->email)" required autocomplete="email" />
-                        <x-input-error class="w-100 titillium mt-2" :messages="$errors->get('email')" />
+                    <div class="box-input">
+                        <label class="label-atas">Email</label>
+                        <input disabled id="email" name="email" type="email" class="w-100 ini-input titillium mt-1 block w-full" value="{{ old('email') ?? $user->email }}" required autocomplete="email" />
 
                         @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && ! $user->hasVerifiedEmail())
                             <div>
@@ -228,10 +570,9 @@
                         @endif
                     </div>
                     <!-- NPWP -->
-                    <div>
-                        <x-input-label class="titillium" for="npwp" :value="__('NPWP')" />
-                        <x-text-input disabled id="npwp" name="npwp" type="text" class="titillium mt-1 block w-full" :value="old('npwp', $user->npwp)" required autofocus autocomplete="npwp" />
-                        <x-input-error class="titillium mt-2" :messages="$errors->get('npwp')" />
+                    <div class="box-input">
+                        <label class="label-atas">NPWP</label>
+                        <input disabled id="npwp" name="npwp" type="text" class="ini-input titillium mt-1 block w-full" value="{{ old('npwp') ?? $user->npwp }}" required autofocus autocomplete="npwp" />
                     </div>
                 </div>
             </div>
@@ -241,19 +582,17 @@
                     <p id="pembatas" class="judul-atas w-100 tulisan-garis titillium align-items-center my-auto"><span>User Profile</span></p>
                 </div>
             </div>
-            <div class="userprofil pb-2 mt-0 w-100" style="">
+            <div class="userprofil pb-2 mt-0 w-100">
                 <div class="biodataSingkat py-2 py-lg-4 px-auto form-group form-control-lg">
                     <!-- First Name -->
-                    <div>
-                        <x-input-label class="titillium" for="firstname" :value="__('First Name')" />
-                        <x-text-input disabled id="firstname" name="firstname" type="text" class="titillium mt-1 block w-full" :value="old('firstname', $user->firstname)" required autofocus autocomplete="firstname" />
-                        <x-input-error class="titillium mt-2" :messages="$errors->get('firstname')" />
+                    <div class="box-input">
+                        <label class="label-atas">First Name</label>
+                        <input disabled id="firstname" name="firstname" type="text" class="ini-input titillium mt-1 block w-full" value="{{ old('firstname') ?? $user->firstname }}" required autofocus autocomplete="firstname" />
                     </div>
                     <!-- Last Name -->
-                    <div>
-                        <x-input-label class="titillium" for="lastname" :value="__('Last Name')" />
-                        <x-text-input disabled id="lastname" name="lastname" type="text" class="titillium mt-1 block w-full" :value="old('lastname', $user->lastname)" required autofocus autocomplete="lastname" />
-                        <x-input-error class="titillium mt-2" :messages="$errors->get('lastname')" />
+                    <div class="box-input">
+                        <label class="label-atas">Last Name</label>
+                        <input disabled id="lastname" name="lastname" type="text" class="ini-input titillium mt-1 block w-full" value="{{ old('lastname') ?? $user->lastname }}" required autofocus autocomplete="lastname" />
                     </div>
                 </div>
             </div>
@@ -262,19 +601,17 @@
                     <p id="pembatas" class="judul-atas titillium align-items-center my-auto"><span>Company Profile</span></p>
                 </div>
             </div>
-            <div class="userprofil" style="height: 300px;">
+            <div class="userprofil my-4" style="height: 360px;">
                 <div class="biodataSingkat pt-3 ps-4 form-group form-control-lg">
                     <!-- Company -->
-                    <div>
-                        <x-input-label class="titillium" for="company" :value="__('Company')" />
-                        <x-text-input disabled id="company" name="company" type="text" class="titillium mt-1 block w-full" :value="old('company', $user->company)" required autofocus autocomplete="company" />
-                        <x-input-error class="titillium mt-2" :messages="$errors->get('company')" />
+                    <div class="box-input">
+                        <label class="label-atas">Company</label>
+                        <input disabled id="company" name="company" type="text" class="ini-input titillium mt-1 block w-full" value="{{ old('company') ?? $user->company }}" required autofocus autocomplete="company" />
                     </div>
                     <!-- Email Company -->
-                    <div>
-                        <x-input-label for="emailcompany" :value="__('Email Company')" />
-                        <x-text-input disabled id="emailcompany" name="emailcompany" type="email" class="titillium mt-1 block w-full" :value="old('emailcompany', $user->emailcompany)" required autocomplete="emailcompany" />
-                        <x-input-error class="titillium mt-2" :messages="$errors->get('emailcompany')" />
+                    <div class="box-input">
+                        <label class="label-atas">Email Company</label>
+                        <input disabled id="emailcompany" name="emailcompany" type="email" class="ini-input titillium mt-1 block w-full" value="{{ old('emailcompany') ?? $user->emailcompany }}" required autocomplete="emailcompany" />
 
                         @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && ! $user->hasVerifiedEmail())
                             <div>
@@ -295,16 +632,14 @@
                         @endif
                     </div>
                     <!-- Nomor Telepon  -->
-                    <div>
-                        <x-input-label class="titillium" for="notelp" :value="__('Nomor Telepon')" />
-                        <x-text-input disabled id="notelp" name="notelp" type="text" class="titillium mt-1 block w-full" :value="old('notelp', $user->notelp)" required autofocus autocomplete="notelp" />
-                        <x-input-error class="titillium mt-2" :messages="$errors->get('notelp')" />
+                    <div class="box-input">
+                        <label class="label-atas">Nomor Telepon</label>
+                        <input disabled id="notelp" name="notelp" type="text" class="ini-input titillium mt-1 block w-full" value="{{ old('notelp') ?? $user->notelp }}" required autofocus autocomplete="notelp" />
                     </div>
                     <!-- NIB -->
-                    <div>
-                        <x-input-label class="titillium" for="nib" :value="__('NIB')" />
-                        <x-text-input disabled id="nib" name="nib" type="text" class="titillium mt-1 block w-full" :value="old('nib', $user->nib)" required autofocus autocomplete="nib" />
-                        <x-input-error class="titillium mt-2" :messages="$errors->get('nib')" />
+                    <div class="box-input">
+                        <label class="label-atas">NIB</label>
+                        <input disabled id="nib" name="nib" type="text" class="ini-input titillium mt-1 block w-full" value="{{ old('nib') ?? $user->nib }}" required autofocus autocomplete="nib" />
                     </div>
                 </div>
             </div>
@@ -325,28 +660,34 @@
             <table class="table table-responsive table-striped hover table-bordered">
                 <thead>
                     <tr style="border-bottom: 1px solid black;">
-                        <th class="titillium" style="width: auto;">ID</th>
-                        <th class="titillium" style="width: auto;">Order Date</th>
-                        <th class="titillium" style="width: auto;">Shipper</th>
-                        <th class="titillium" style="width: auto;">Consignee</th>
-                        <th class="titillium" style="width: auto;">Status</th>
-                        <th class="titillium" style="width: auto;">Tindakan</th>
+                        <th class="label-atas label-tabel-atas titillium" style="width: auto;">ID</th>
+                        <th class="label-atas label-tabel-atas titillium missing1" style="width: auto;">Order Date</th>
+                        <th class="label-atas label-tabel-atas titillium missing" style="width: auto;">Shipper</th>
+                        <th class="label-atas label-tabel-atas titillium missing" style="width: auto;">Consignee</th>
+                        <th class="label-atas label-tabel-atas titillium" style="width: auto;">Status</th>
+                        <th class="label-atas label-tabel-atas titillium" style="width: auto;">Tindakan</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach($orders as $order)
                     <tr>
-                        <td class="titillium">{{ $order->id }}</td>
-                        <td class="titillium">{{ $order->order_date }}</td>
-                        <td class="titillium">{{ $order->shipper }}</td>
-                        <td class="titillium">{{ $order->consignee }}</td>
+                        <td class="ini-input label-tabel-bawah titillium">{{ $order->id }}</td>
+                        <td class="ini-input label-tabel-bawah titillium missing1">{{ $order->order_date }}</td>
+                        <td class="ini-input label-tabel-bawah titillium missing">{{ $order->shipper }}</td>
+                        <td class="ini-input label-tabel-bawah titillium missing">{{ $order->consignee }}</td>
                         @if( $order->accept == 1)
-                            <td class="titillium">Accepted</td>
+                            <td class="ini-input label-tabel-bawah titillium">Accepted</td>
                         @else
-                            <td class="titillium">Waiting</td>
+                            <td class="ini-input label-tabel-bawah titillium">Waiting</td>
                         @endif
-                        <td class="titillium d-flex">
-                            <a href="/orders/{{ $order->id }}" class="btn btn-primary me-3" style="text-decoration: none; color: white;">Detail</a>
+                        <td class="tindakan titillium">
+                            <a href="/orders/{{ $order->id }}" class="btn all-button btn-primary button-tabel-marginkanan" style="text-decoration: none; color: white;">Detail</a>
+                            <a href="/orders/{{$order->id}}/edit" class="btn all-button btn-primary button-tabel-marginkanan" style="text-decoration: none; color: white;">Edit</a>
+                            <form action="/orders/{{$order->id}}" method="post">
+                                @method('DELETE')
+                                @csrf
+                                <button class="btn btn-primary all-button btn-delete" style="background-color: #0D6EFD;" type="submit">Cancel</button>
+                            </form>
                         </td>
                     </tr>
                     @endforeach
@@ -354,5 +695,4 @@
             </table>
         </div>
     </div>
-</x-app-layout>
 @endsection
