@@ -662,8 +662,8 @@
                 @auth
                     @if (Auth::user()->role_id == 1)
                     <div class="d-flex justify-content-center flex-sm-row flex-column">
-                        <a href="/admin/account" class=" mx-sm-2 mx-auto my-2 d-flex justify-content-center titillium all-button text-decoration-none text-white align-items-center" style="background-color: #011D83; ">CONFIRM ACCOUNT</a>
-                        <a href="/orders" class="mx-sm-2 mx-auto d-flex my-2 justify-content-center titillium all-button text-decoration-none  text-white align-items-center" style=" background-color: #011D83;">VIEW ALL ORDER</a>
+                        <a href="/admin/account" class=" mx-sm-2 mx-auto my-2 d-flex justify-content-center titillium all-button text-decoration-none text-white align-items-center text-center" style="background-color: #011D83; ">CONFIRM ACCOUNT</a>
+                        <a href="/orders" class="mx-sm-2 mx-auto d-flex my-2 justify-content-center titillium all-button text-decoration-none  text-white align-items-center text-center" style=" background-color: #011D83;">VIEW ALL ORDER</a>
                     </div>
                     @endif
                 @endauth
