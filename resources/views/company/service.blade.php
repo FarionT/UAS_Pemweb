@@ -340,7 +340,7 @@
                     </div>
                 </div>
                 <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
-                    <a href="/orders/create/AE" class="text-center mx-auto my-auto" style="text-decoration:none; color: white;">GO</a> 
+                    <a href="/orders/create/{{ Auth::user()->id }}/AE" class="text-center mx-auto my-auto" style="text-decoration:none; color: white;">GO</a> 
                 </div>
             </div>
             <div class="kotak-luar mx-auto my-2"> 
@@ -354,7 +354,7 @@
                     </div>
                 </div>
                 <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
-                    <a href="/orders/create/OE" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
+                    <a href="/orders/create/{{ Auth::user()->id }}/OE" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
                 </div>
             </div>
         </div>
@@ -375,7 +375,7 @@
                     </div>
                 </div>
                 <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
-                    <a href="/orders/create/AI" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
+                    <a href="/orders/create/{{ Auth::user()->id }}/AI" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
                 </div>
             </div>
             <div class="kotak-luar mx-auto my-2"> 
@@ -389,7 +389,7 @@
                     </div>
                 </div>
                 <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
-                    <a href="//orders/create/OI" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
+                    <a href="/orders/create/{{ Auth::user()->id }}/OI" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
                 </div>
             </div>
         </div>
@@ -411,7 +411,7 @@
                         </div>
                     </div>
                     <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
-                        <a href="/orders/create/IT" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
+                        <a href="/orders/create/{{ Auth::user()->id }}/IT" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
                     </div>
                 </div>
                 <div class="kotak-luar mx-auto my-2"> 
@@ -425,7 +425,7 @@
                         </div>
                     </div>
                     <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
-                        <a href="/orders/create/PC" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
+                        <a href="/orders/create/{{ Auth::user()->id }}/PC" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
                     </div>
                 </div>
             </div>
@@ -441,7 +441,7 @@
                         </div>
                     </div>
                     <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
-                        <a href="/orders/create/ADOM" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
+                        <a href="/orders/create/{{ Auth::user()->id }}/ADOM" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
                     </div>
                 </div>
                 <div class="kotak-luar mx-auto my-2"> 
@@ -455,7 +455,7 @@
                         </div>
                     </div>
                     <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
-                        <a href="/orders/create/ODOM" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
+                        <a href="/orders/create/{{ Auth::user()->id }}/ODOM" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
                     </div>
                 </div>
             </div>
@@ -484,7 +484,7 @@
                     </div>
                 </div>
                 <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
-                    <a href="/orders/create/AE" class="text-center mx-auto my-auto" style="text-decoration:none; color: white;">GO</a> 
+                    <a href="/orders/create/{{ Auth::user()->id }}/AE" class="text-center mx-auto my-auto" style="text-decoration:none; color: white;">GO</a> 
                 </div>
             </div>
             <div class="kotak-luar mx-auto my-2"> 
@@ -498,7 +498,7 @@
                     </div>
                 </div>
                 <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
-                    <a href="/orders/create/OE" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
+                    <a href="/orders/create/{{ Auth::user()->id }}/OE" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
                 </div>
             </div>
         </div>
@@ -519,7 +519,7 @@
                     </div>
                 </div>
                 <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
-                    <a href="/orders/create/AI" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
+                    <a href="/orders/create/{{ Auth::user()->id }}/AI" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
                 </div>
             </div>
             <div class="kotak-luar mx-auto my-2"> 
@@ -533,7 +533,7 @@
                     </div>
                 </div>
                 <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
-                    <a href="//orders/create/OI" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
+                    <a href="/orders/create/{{ Auth::user()->id }}/OI" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
                 </div>
             </div>
         </div>
@@ -555,7 +555,7 @@
                         </div>
                     </div>
                     <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
-                        <a href="/orders/create/IT" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
+                        <a href="/orders/create/{{ Auth::user()->id }}/IT" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
                     </div>
                 </div>
                 <div class="kotak-luar mx-auto my-2"> 
@@ -569,7 +569,7 @@
                         </div>
                     </div>
                     <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
-                        <a href="/orders/create/PC" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
+                        <a href="/orders/create/{{ Auth::user()->id }}/PC" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
                     </div>
                 </div>
             </div>
@@ -585,7 +585,7 @@
                         </div>
                     </div>
                     <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
-                        <a href="/orders/create/ADOM" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
+                        <a href="/orders/create/{{ Auth::user()->id }}/ADOM" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
                     </div>
                 </div>
                 <div class="kotak-luar mx-auto my-2"> 
@@ -599,7 +599,7 @@
                         </div>
                     </div>
                     <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
-                        <a href="/orders/create/ODOM" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
+                        <a href="/orders/create/{{ Auth::user()->id }}/ODOM" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
                     </div>
                 </div>
             </div>
@@ -629,7 +629,7 @@
                 </div>
             </div>
             <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
-                <a href="/orders/create/AE" class="text-center mx-auto my-auto" style="text-decoration:none; color: white;">GO</a> 
+                <a href="{{ route('login') }}" class="text-center mx-auto my-auto" style="text-decoration:none; color: white;">GO</a> 
             </div>
         </div>
         <div class="kotak-luar mx-auto my-2"> 
@@ -643,7 +643,7 @@
                 </div>
             </div>
             <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
-                <a href="/orders/create/OE" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
+                <a href="{{ route('login') }}" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
             </div>
         </div>
     </div>
@@ -664,7 +664,7 @@
                 </div>
             </div>
             <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
-                <a href="/orders/create/AI" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
+                <a href="{{ route('login') }}" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
             </div>
         </div>
         <div class="kotak-luar mx-auto my-2"> 
@@ -678,7 +678,7 @@
                 </div>
             </div>
             <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
-                <a href="//orders/create/OI" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
+                <a href="{{ route('login') }}" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
             </div>
         </div>
     </div>
@@ -700,7 +700,7 @@
                     </div>
                 </div>
                 <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
-                    <a href="/orders/create/IT" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
+                    <a href="{{ route('login') }}" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
                 </div>
             </div>
             <div class="kotak-luar mx-auto my-2"> 
@@ -714,7 +714,7 @@
                     </div>
                 </div>
                 <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
-                    <a href="/orders/create/PC" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
+                    <a href="{{ route('login') }}" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
                 </div>
             </div>
         </div>
@@ -730,7 +730,7 @@
                     </div>
                 </div>
                 <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
-                    <a href="/orders/create/ADOM" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
+                    <a href="{{ route('login') }}" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
                 </div>
             </div>
             <div class="kotak-luar mx-auto my-2"> 
@@ -744,7 +744,7 @@
                     </div>
                 </div>
                 <div class="tombol mx-auto d-flex justify-content-center rounded-circle " style="background-color:#001560">
-                    <a href="/orders/create/ODOM" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
+                    <a href="{{ route('login') }}" class="text-center mx-auto my-auto align-items-center" style="text-decoration:none; color: white;">GO</a> 
                 </div>
             </div>
         </div>

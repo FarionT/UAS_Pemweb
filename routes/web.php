@@ -108,10 +108,14 @@ Route::prefix('admin')->group(function () {
 });
 
 Route::resource('orders', OrderController::class)->middleware('auth');
-Route::get('/orders/create/{id}', function($id) {
-    if(!Gate::allows('create-order')) {
+Route::get('/orders/create/{user_id}/{id}', function($user_id, $id) {
+    // if(!Gate::allows('create-order')) {
+    //     return view('company.accountapprove');
+    //     // abort('403');
+    // }
+    $user = User::find($user_id);
+    if($user->accept === 0) {
         return view('company.accountapprove');
-        // abort('403');
     }
     $order = Order::orderBy('id', 'desc')->first();
     $type_id = $id;
