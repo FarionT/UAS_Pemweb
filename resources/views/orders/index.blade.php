@@ -42,6 +42,69 @@
             border-radius: 20px;
             box-shadow: 15px 10px #001560;
         }
+        @media screen and (max-width:992px) {
+            .missing1 {
+                display: none;
+            }
+        }
+        @media screen and (max-width:767px) {
+            .missing {
+                display: none;
+            }
+        }
+        @media screen and (max-width:575px) {
+            .label-atas{
+                font-size: 14px;
+            }
+            .ini-input {
+                font-size: 12px;
+            }
+        }
+        @media screen and (max-width:400px) {
+            .ini-input {
+                font-size: 12px;
+            }
+        }
+        @media screen and (max-width:350px) {
+            .ini-input {
+                font-size: 12px;
+            }
+        }
+        @media screen and (min-width:576px) {
+            .label-tabel-atas, .label-tabel-bawah {
+                font-size: 10px;
+            }
+            .ini-input {
+                font-size: 12px;
+            }
+        }
+        @media screen and (min-width:767px) {
+            .label-tabel-atas, .label-tabel-bawah {
+                font-size: 12px;
+            }
+            .label-atas {
+                font-size: 15px;
+            }
+            .ini-input {
+                font-size: 13px;
+            }
+        }
+        @media screen and (min-width:992px) {
+            .label-atas {
+                font-size: 16px;
+            }
+            .ini-input {
+                font-size: 14px;
+            }
+        }
+        @media screen and (min-width:1200px) {
+            .label-atas {
+                font-size: 18px;
+            }
+            .ini-input {
+                font-size: 16px;
+            }
+        }
     </style>
 @endsection
 @section('isi')
@@ -54,27 +117,27 @@
             <table class="table table-striped hover table-bordered" id="mydatatable">
                 <thead>
                     <tr style="border-bottom: 1px solid black;">
-                        <th style="width: 170px;"><h3>ID</h3></th>
-                        <th style="width: 400px;"><h3>Order Date</h3></th>
-                        <th style="width: 170px;"><h3>Shipper</h3></th>
-                        <th style="width: 170px;"><h3>Consignee</h3></th>
-                        <th style="width: 170px;"><h3>Status</h3></th>
-                        <th style="width: 170px;"><h3>Tindakan</h3></th>
+                        <th class="label-atas label-tabel-atas titillium" style="width: auto;"><h3>ID</h3></th>
+                        <th class="label-atas label-tabel-atas titillium missing1" style="width: auto;"><h3>Order Date</h3></th>
+                        <th class="label-atas label-tabel-atas titillium missing" style="width: auto;"><h3>Shipper</h3></th>
+                        <th class="label-atas label-tabel-atas titillium missing" style="width: auto;"><h3>Consignee</h3></th>
+                        <th class="label-atas label-tabel-atas titillium" style="width: auto;"><h3>Status</h3></th>
+                        <th class="label-atas label-tabel-atas titillium" style="width: auto;"><h3>Tindakan</h3></th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach($orders as $order)
                     <tr>
-                        <td><h5>{{ $order->id }}</h5></td>
-                        <td><h5>{{ $order->order_date }}</h5></td>
-                        <td><h5>{{ $order->shipper }}</h5></td>
-                        <td><h5>{{ $order->consignee }}</h5></td>
+                        <td class="ini-input label-tabel-bawah titillium"><h5>{{ $order->id }}</h5></td>
+                        <td class="ini-input label-tabel-bawah titillium missing1"><h5>{{ $order->order_date }}</h5></td>
+                        <td class="ini-input label-tabel-bawah titillium missing"><h5>{{ $order->shipper }}</h5></td>
+                        <td class="ini-input label-tabel-bawah titillium missing"><h5>{{ $order->consignee }}</h5></td>
                         @if( $order->accept == 1 )
-                            <td><h5 style="color: green;">Approved</h5></td>
+                            <td class="ini-input label-tabel-bawah titillium"><h5 style="color: green;">Approved</h5></td>
                         @else
-                            <td><h5>Not Approved</h5></td>
+                            <td class="ini-input label-tabel-bawah titillium"><h5>Not Approved</h5></td>
                         @endif
-                        <td class="d-flex">
+                        <td class="tindakan titillium d-flex">
                             <a href="/orders/{{ $order->id }}" class="btn btn-primary me-3" style="text-decoration: none; color: white;">Detail</a>
                             <a href="/orders/approve/{{ $order->id }}" class="btn btn-primary me-3" style="text-decoration: none; color: white;">Approve</a>
                         </td>
@@ -83,7 +146,7 @@
                 </tbody>
             </table>
             <div class="d-flex justify-content-center">
-                <a href="/" class="btn" style="text-decoration: none; color: white; border-radius: 50px; width: 180px; background-color: #011D83"><h5 class="mx-auto my-auto">Back</h5></a>
+                <a href="/profile" class="btn" style="text-decoration: none; color: white; border-radius: 50px; width: 180px; background-color: #011D83"><h5 class="mx-auto my-auto">Back</h5></a>
             </div>
         </div>
     </div>

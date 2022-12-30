@@ -95,7 +95,7 @@
 
 @section('isi')
     <div class="title">
-        <img src="{{ asset('app/assets/image/profile.png') }}" style="width: 100px; height: auto; margin-right: 20p;">
+        <img src="{{ asset('app/assets/image/profile.png') }}" style="width: 100px; height: auto; margin-right: 20px;">
         <h1>Register</h1>
     </div>
     <div class="card">
