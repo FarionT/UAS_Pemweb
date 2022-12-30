@@ -179,8 +179,8 @@ Route::get('/orders/cancel/mail/{id}', function($id) {
     ];
     $order->delete();
 
-    //INI KIRIM KE PEMBUAT ACCOUNT
-    Mail::to('axel.ferdinand@student.umn.ac.id')->send(new CancelOrderMail($mailData));
+    //INI KIRIM KE CS
+    Mail::to('{EMAIL}')->send(new CancelOrderMail($mailData));
     return redirect('/profile');
 });
 
@@ -211,7 +211,7 @@ Route::get('/orders/mail/{user_id}/{order_id}', function($user_id, $order_id) {
     ];
 
     //INI KIRIM KE EMAIL CS
-    Mail::to('axel.ferdinand@student.umn.ac.id')->send(new OrderMail($mailData));
+    Mail::to('{EMAIL}')->send(new OrderMail($mailData));
     Storage::disk('local')->delete('temp/pdf_file.pdf');
     return redirect('/');
 });
@@ -238,7 +238,7 @@ Route::get('/orders/edit/mail/{user_id}/{order_id}', function($user_id, $order_i
     ];
 
     //INI KIRIM KE EMAIL CS
-    Mail::to('axel.ferdinand@student.umn.ac.id')->send(new EditOrderMail($mailData));
+    Mail::to('{EMAIL}')->send(new EditOrderMail($mailData));
     Storage::disk('local')->delete('temp/pdf_file.pdf');
     return redirect('/profile');
 });
@@ -263,7 +263,7 @@ Route::get('/register/mail/{id}', function($id) {
     ];
 
     //INI KIRIM KE EMAIL CS
-    Mail::to('axel.ferdinand@student.umn.ac.id')->send(new RegisterMail($mailData));
+    Mail::to('{EMAIL}')->send(new RegisterMail($mailData));
     return redirect('/');
 });
 

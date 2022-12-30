@@ -382,7 +382,7 @@
                     <div class="d-flex nav-top-right">
                         <a href="{{ route('login') }}" class="top-text my-auto">Login</a>
                         <p class="top-text my-auto">&nbsp;|&nbsp;</p>
-                        <a href="{{ route('register') }}" class="top-text my-auto">Register</a>
+                        <a href="/privacy" class="top-text my-auto">Register</a>
                     </div>
                     @endif
                 </div>
@@ -423,7 +423,7 @@
                     <div class="d-flex nav-top-right">
                         <a href="{{ route('login') }}" class="top-text my-auto">Masuk</a>
                         <p class="top-text my-auto">&nbsp;|&nbsp;</p>
-                        <a href="{{ route('register') }}" class="top-text my-auto">Registrasi</a>
+                        <a href="/privacy" class="top-text my-auto">Registrasi</a>
                     </div>
                     @endif
                 </div>
@@ -465,7 +465,7 @@
                     <div class="d-flex nav-top-right">
                         <a href="{{ route('login') }}" class="top-text my-auto">Login</a>
                         <p class="top-text my-auto">&nbsp;|&nbsp;</p>
-                        <a href="{{ route('register') }}" class="top-text my-auto">Register</a>
+                        <a href="/privacy" class="top-text my-auto">Register</a>
                     </div>
                     @endif
                 </div>

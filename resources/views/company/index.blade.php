@@ -626,7 +626,7 @@
                 <div class="d-flex nav-top-right">
                     <a href="{{ route('login') }}" class="top-text my-auto">Login</a>
                     <p class="top-text my-auto">&nbsp;|&nbsp;</p>
-                    <a href="{{ route('register') }}" class="top-text my-auto">Register</a>
+                    <a href="/privacy" class="top-text my-auto">Register</a>
                 </div>
                 @endif
             </div>
@@ -819,7 +819,7 @@
                 <div class="d-flex nav-top-right">
                     <a href="{{ route('login') }}" class="top-text my-auto">Masuk</a>
                     <p class="top-text my-auto">&nbsp;|&nbsp;</p>
-                    <a href="{{ route('register') }}" class="top-text my-auto">Registrasi</a>
+                    <a href="/privacy" class="top-text my-auto">Registrasi</a>
                 </div>
                 @endif
             </div>
@@ -1013,7 +1013,7 @@
                 <div class="d-flex nav-top-right">
                     <a href="{{ route('login') }}" class="top-text my-auto">Login</a>
                     <p class="top-text my-auto">&nbsp;|&nbsp;</p>
-                    <a href="{{ route('register') }}" class="top-text my-auto">Register</a>
+                    <a href="/privacy" class="top-text my-auto">Register</a>
                 </div>
                 @endif
             </div>
@@ -1192,7 +1192,7 @@
             <p class="my-md-auto ms-md-5 ms-0 isi-footer my-2 text-center" style="color: white;">Login or register first to unlock more features, and get more information about our updates</p>
             <div class="d-flex my-auto mx-auto">
                 <a href="{{ route('login') }}" class="btn button-sticky rounded-pill me-3 titillium" style="background-color: #B0D1FC;">Login</a>
-                <a href="{{ route('register') }}" class="btn button-sticky rounded-pill titillium" style="background-color: #B0D1FC;">Register</a>
+                <a href="/privacy" class="btn button-sticky rounded-pill titillium" style="background-color: #B0D1FC;">Register</a>
             </div>
         </div>
     @endif
