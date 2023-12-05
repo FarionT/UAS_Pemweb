@@ -34,8 +34,6 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request)
     {
-        // $photo = $request->photo->store('photo');
-        // return view('test.awok', ['photo' => $photo]);
 
         $request->validate([
             'username' => ['required', 'string', 'max:255'],
@@ -58,7 +56,8 @@ class RegisteredUserController extends Controller
             // $full_file = 'photo_profile_'.$file_name.'_'.$date;
             // $request->photo->storeAs('photo', $full_file);
             // $path = 'photo/'.$full_file;
-            $path = $request->photo->store('photo');
+            // $path = $request->photo->store('photo');
+            $path = Storage::disk('custom')->put('photo', $request->photo);
         }
         else {
             $path = 'photo/default.png';

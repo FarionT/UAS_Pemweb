@@ -45,7 +45,8 @@ class ProfileController extends Controller
 
         if($request->photo) {
             File::delete(public_path('app/'.$request->user()->photo));
-            $path = $request->photo->store('photo');
+            // $path = $request->photo->store('photo');
+            $path = Storage::disk('custom')->put('photo', $request->photo);
             $request->user()->photo = $path;
         }
 
@@ -73,7 +74,9 @@ class ProfileController extends Controller
         ]);
 
         $user = $request->user();
-        File::delete(public_path('app/'.$request->user()->photo));
+        if($request->user()->photo != 'photo/default.png'){
+            File::delete(public_path('app/'.$request->user()->photo));
+        }
 
         Auth::logout();
 

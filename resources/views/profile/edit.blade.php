@@ -120,20 +120,22 @@
         padding: 20px;
         border: 1px solid #888;
         width: 80%; /* Could be more or less, depending on screen size */
+        border-radius: 20px;
     }
 
     /* The Close Button */
     .close {
-        color: #aaa;
+        color: white;
         float: right;
-        font-size: 28px;
+        font-size: 16px;
         font-weight: bold;
+        background-color: #011D83 !important;
+        border-radius: 10px; 
     }
 
     .close:hover,
     .close:focus {
-        color: black;
-        text-decoration: none;
+        color: white;
         cursor: pointer;
     }
     .all-button{
@@ -818,26 +820,18 @@
                 {{ __('Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.') }}
             </p>
 
-            <div class="mt-6">
-                <x-input-label for="password" value="Password" class="titillium sr-only" />
-
-                <input
-                    id="password"
-                    name="password"
-                    type="password"
-                    class="titillium mt-1 block w-3/4"
-                    placeholder="Password"
-                />
-
-                <x-input-error :messages="$errors->userDeletion->get('password')" class="mt-2" />
+            <div class="box-input">
+                <x-input-label class="label-atas titillium" for="password" value="Password" />
+                <input id="password" name="password" type="password" class="titillium mt-1 block w-3/4" placeholder="Password" />
+                <x-input-error :messages="$errors->userDeletion->get('password')" class="titillium mt-2" />
             </div>
 
-            <div class="mt-6 flex justify-end">
-                <x-secondary-button class="close titillium" x-on:click="$dispatch('close')">
+            <div class="mt-6 flex justify-between">
+                <x-secondary-button class="btn close titillium my-auto" x-on:click="$dispatch('close')">
                     {{ __('Cancel') }}
                 </x-secondary-button>
 
-                <x-danger-button class="titillium ml-3">
+                <x-danger-button class="btn btn-danger titillium ml-3 my-auto">
                     {{ __('Delete Account') }}
                 </x-danger-button>
             </div>

@@ -35,6 +35,14 @@ return [
             'root' => public_path('app'),
             'throw' => false,
         ],
+        
+        'custom' => [
+            'driver' => 'local',
+            'root'   => public_path().'/../../public_html/app/',
+            'url' => env('APP_URL').'/storage',
+            'visibility' => 'public',
+            'throw' => false,
+        ],
 
         'public' => [
             'driver' => 'local',
